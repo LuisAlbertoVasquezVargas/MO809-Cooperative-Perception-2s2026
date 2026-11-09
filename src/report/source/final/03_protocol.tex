@@ -5,7 +5,7 @@ collaborative perception~\cite{li2022v2xsim}. The source recordings include
 vehicle and roadside sensors, but the experiments here exclude roadside-unit
 inputs. Cameras provide visual context; they are not inputs to this LiDAR
 detector. The official scene partitions and the recorded vehicle-only counts
-are summarized in Table~\ref{tab:dataset}~\cite{recordslides}.
+are summarized in Table~\ref{tab:dataset}.
 
 \begin{table}[htbp]
 \centering
@@ -44,13 +44,13 @@ float32 precision on one NVIDIA GeForce RTX 5060 Ti with approximately 16 GB
 of GPU memory. The recorded setup has an AMD Ryzen 7 5700X CPU with eight
 cores and sixteen threads, approximately 16 GB of system RAM, and Omarchy
 Linux. The experiment environment records Python 3.14.8, PyTorch
-2.9.1+cu128, and CUDA runtime 12.8~\cite{recordfulltest,recordtree}.
+2.9.1+cu128, and CUDA runtime 12.8.
 The following results use this recorded configuration.
 
 The checkpoint contains 15,843,505 parameters and is loaded with a strict
 state-dictionary check. The inference implementation is pinned to source
 commit \texttt{dd8fbb660300}. Its checkpoint hash and run identities are
-stored with the evaluation records~\cite{recordfulltest,recordtree}.
+stored with the evaluation records in the project repository.
 No training, checkpoint selection, or parameter update is performed in the
 reported evaluations.
 
@@ -122,7 +122,7 @@ For Box A in Table~\ref{tab:confidence-example}, the conversion is
 $e^3/(e^1+e^3)\approx0.881$. Box C ranks above A because its car score is
 higher. Box B is removed by the confidence filter. These logits are the
 worked example from the project slides, rather than outputs selected from
-the benchmark~\cite{recordfigures}.
+the benchmark.
 
 Three thresholds have different jobs. The confidence threshold acts on a
 class score. The NMS IoU threshold compares predictions with other

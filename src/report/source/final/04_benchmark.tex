@@ -10,7 +10,7 @@ separately trained detectors, and own scan only is not the paper's separately
 trained lower-bound baseline.
 
 Table~\ref{tab:full-test} contains the complete-split results from the saved
-benchmark~\cite{recordfulltest}. Cooperation raises AP by
+benchmark. Cooperation raises AP by
 \ReportGainFifty\ percentage points at IoU 0.5 and \ReportGainSeventy\ points
 at IoU 0.7. Improvements at both thresholds show that the gain is not
 restricted to lenient box overlap in this evaluation.
@@ -29,7 +29,7 @@ Both conditions use the same epoch-100 weights.}
 \caption[Recorded full-test precision--recall curves]{Recorded full-test
 precision--recall curves at IoU 0.5 and 0.7.
 The curves and plotted values are reused from the saved evaluation, without
-new inference or redrawing of the measured data~\cite{recordfulltest}.}
+new inference or redrawing of the measured data.}
 \label{fig:pr}
 \end{figure}
 
@@ -49,7 +49,7 @@ to other datasets, checkpoints, or communication conditions.
 
 \subsection{Fixed-Checkpoint Test Loss}
 The supplementary record reports classification, box-localization, and total
-test loss~\cite{recordloss}. Table~\ref{tab:loss} gives the unrounded-source
+test loss. Table~\ref{tab:loss} gives the unrounded-source
 values displayed to two decimals. The original test code sums loss across
 five padded vehicle slots, divides by five, and then averages across
 synchronized frames. Inactive slots contribute zero. Thus these values
@@ -74,9 +74,9 @@ Figure~\ref{fig:detections} shows ego vehicle 1 in raw \texttt{scene\_5},
 frame \texttt{000066}, with five participating vehicles. This example comes
 from the recorded validation scene, not the 1,000-frame test benchmark.
 Within the ego crop, there are 17 reference car boxes. Own scan only produces
-11 predictions, while cooperation produces 17. The source report records
-10 and 16 matched references, respectively, at IoU at least 0.5
-\cite{recordslides}. Equal prediction and reference counts in the cooperative
+11 predictions, while cooperation produces 17. At IoU at least 0.5, the
+predictions match 10 and 16 reference cars, respectively.
+Equal prediction and reference counts in the cooperative
 case therefore do not mean perfect matching.
 
 \begin{figure}[htbp]

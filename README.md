@@ -43,7 +43,7 @@ alignment/fusion sequence, worked metrics, synchronized camera views, and
 numerical Conv2D/Conv3D examples developed for the project.
 
 The PDF links above follow the current `main` branch. The
-[v1.0.0 release](https://github.com/LuisAlbertoVasquezVargas/MO809-Cooperative-Perception-2s2026/releases/tag/v1.0.0)
+[v1.0.1 release](https://github.com/LuisAlbertoVasquezVargas/MO809-Cooperative-Perception-2s2026/releases/tag/v1.0.1)
 provides a fixed snapshot of these deliverables and the evidence used by the
 versioned citations.
 
@@ -100,15 +100,17 @@ no model training or inference and require no original research checkout.
 
 ## Cite this deliverable
 
-The **v1.0.0** archive provides a fixed reference for this project:
+The **v1.0.1** archive provides a fixed reference for this project:
 
 > Vásquez Vargas, L. A. (2026). *Cooperative Perception with DiscoNet under
-> Perfect Communication*. MO809, 2s2026. Version 1.0.0.
+> Perfect Communication*. MO809, 2s2026. Version 1.0.1.
 
 [CITATION.cff](CITATION.cff) supplies GitHub's citation information, and
-[CITATION.bib](CITATION.bib) contains report and repository entries. The report's
-project-owned citations resolve to files in this repository at the versioned
-`v1.0.0` tag. See the [release](https://github.com/LuisAlbertoVasquezVargas/MO809-Cooperative-Perception-2s2026/releases/tag/v1.0.0)
+[CITATION.bib](CITATION.bib) contains report and repository entries. The report
+cites the DiscoNet and V2X-Sim papers, official dataset documentation, and this
+project repository. Detailed experimental records and figure provenance are
+supporting materials listed in the [evidence index](docs/EVIDENCE.md).
+See the [release](https://github.com/LuisAlbertoVasquezVargas/MO809-Cooperative-Perception-2s2026/releases/tag/v1.0.1)
 for the downloadable PDFs and checksums.
 
 ## Scientific sources and credits

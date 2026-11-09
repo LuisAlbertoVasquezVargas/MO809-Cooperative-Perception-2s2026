@@ -53,7 +53,7 @@ separately trained smaller detector.
 The detector consumes the authors' prepared V2X-Sim 2.0 detection data.
 CoPerception documents the preprocessing requirement and the availability of
 prepared inputs~\cite{coperceptiondata}. The weekly technical material
-describes the corresponding voxelization operation~\cite{recordslides}.
+describes the corresponding voxelization operation.
 Invalid coordinates are rejected, and points near the sensor origin are
 removed when both $-1<x<1$ and $-1<y<1$. Retained points satisfy
 \[
@@ -169,7 +169,7 @@ An alignment operator $\mathcal{T}_{u\to v}$ rotates and translates the
 sender's map into the receiver's coordinates. It is based on their relative
 poses, so the two maps describe the same physical region. In the recorded
 implementation, feature resampling uses bilinear interpolation, zero padding,
-and \texttt{align\_corners=False}~\cite{recordfulltest}.
+and \texttt{align\_corners=False}.
 
 \begin{figure}[htbp]
 \centering

@@ -2,7 +2,7 @@
 \label{sec:scaling}
 \subsection{Recorded Inputs and Replay Workloads}
 The runtime-only experiment fixes the checkpoint and a 30-frame cohort while
-varying $n$ from one to twenty~\cite{recordruntime}. Every frame provides five
+varying $n$ from one to twenty. Every frame provides five
 recorded vehicle inputs. For $n\leq5$, ego 1 is kept and the nearest recorded
 vehicles are added. For $n>5$, the same five scans and their recorded pairwise
 poses are cycled into additional tensors and active slots. For example,
@@ -71,7 +71,7 @@ workloads. Timings refer to full-group forward execution.}
 runtime-scaling figure. Forward timings and transfer-plus-forward
 timings have different boundaries; only the former are tabulated in
 Table~\ref{tab:runtime}. The plot retains the original measured medians and
-P95 values~\cite{recordruntime}.}
+P95 values.}
 \label{fig:runtime}
 \end{figure}
 

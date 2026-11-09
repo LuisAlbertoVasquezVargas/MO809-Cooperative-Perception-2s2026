@@ -52,8 +52,10 @@ The LaTeX executables must be on `PATH`; see [the build guide](../../docs/REPROD
 The default command, `python src/report/build.py`, still builds the original
 proposal to `output/report.pdf`. The final report uses `source/final.tex` and
 `source/final/`; its intermediates are isolated in `output/.build/final/`.
-Both use the shared metadata and bibliography. The final report adds local
-evidence citations in `source/final/evidence.bib`.
+Both use the shared metadata and bibliography. The final report adds official
+dataset documentation and one project-repository citation through
+`source/final/evidence.bib`. Individual data and provenance files remain
+supporting materials indexed in the evidence guide.
 
 `generate_final_tables.py` reads the versioned JSON/CSV files under
 `src/slides/source/assets/experiments/` at each final-report build. It checks
