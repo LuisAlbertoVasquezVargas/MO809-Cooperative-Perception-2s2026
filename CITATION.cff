@@ -4,7 +4,7 @@ title: "Cooperative Perception with DiscoNet under Perfect Communication"
 authors:
   - family-names: "Vásquez Vargas"
     given-names: "Luis Alberto"
-version: 1.0.1
+version: 1.0.2
 date-released: 2026-11-09
 url: "https://github.com/LuisAlbertoVasquezVargas/MO809-Cooperative-Perception-2s2026"
 keywords:
@@ -21,4 +21,4 @@ preferred-citation:
     - family-names: "Vásquez Vargas"
       given-names: "Luis Alberto"
   year: 2026
-  url: "https://github.com/LuisAlbertoVasquezVargas/MO809-Cooperative-Perception-2s2026/releases/tag/v1.0.1"
+  url: "https://github.com/LuisAlbertoVasquezVargas/MO809-Cooperative-Perception-2s2026/releases/tag/v1.0.2"

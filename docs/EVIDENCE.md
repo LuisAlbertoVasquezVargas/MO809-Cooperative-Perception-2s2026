@@ -2,7 +2,7 @@
 
 The report cites the project repository once for access to its supporting
 materials. This index links to the experimental records and figure sources
-bundled with the deliverable. The **v1.0.1** tag provides a fixed snapshot.
+bundled with the deliverable. The **v1.0.2** tag provides a fixed snapshot.
 
 ## Experiments
 
