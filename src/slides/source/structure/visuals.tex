@@ -1,0 +1,47 @@
+% Helpers for slides 2 onward. The frozen cover does not use these commands.
+\tikzset{
+  visual title/.style={anchor=north west,inner sep=0,align=left,
+    text=MoverNavy,font=\sffamily\bfseries\fontsize{14}{17}\selectfont},
+  visual label/.style={anchor=north west,inner sep=0,align=left,
+    text=MoverDetailBlue,font=\sffamily\bfseries\fontsize{11}{14}\selectfont},
+  visual text/.style={anchor=north west,inner sep=0,align=left,
+    text=MoverNavy,font=\sffamily\fontsize{11}{14}\selectfont},
+  visual small/.style={anchor=north west,inner sep=0,align=left,
+    text=MoverDetailBlue,font=\sffamily\fontsize{9}{11}\selectfont},
+  visual arrow/.style={-{Stealth[length=2mm]},draw=MoverCyan,line width=1.2pt},
+  visual panel/.style={draw=MoverDetailBlue!25,fill=MoverPale,
+    rounded corners=3pt,line width=0.5pt}
+}
+\newenvironment{VisualCanvas}{%
+  \begin{tikzpicture}[x=1cm,y=1cm]
+    \path[use as bounding box] (0,0) rectangle (14.8,5.75);
+}{\end{tikzpicture}}
+
+\newcommand{\VisualTakeaway}[1]{%
+  \fill[MoverPale,rounded corners=3pt] (0,0.05) rectangle (14.8,0.85);
+  \node[anchor=west,inner sep=0,text width=14.15cm,align=left,
+    text=MoverNavy,font=\sffamily\fontsize{11}{14}\selectfont]
+    at (0.25,0.45) {#1};
+}
+
+\newcommand{\VisualCar}[3]{%
+  \begin{scope}[shift={(#1,#2)}]
+    \fill[MoverNavy] (-0.44,-0.30) rectangle (-0.23,-0.13);
+    \fill[MoverNavy] (0.23,-0.30) rectangle (0.44,-0.13);
+    \fill[MoverNavy] (-0.44,0.13) rectangle (-0.23,0.30);
+    \fill[MoverNavy] (0.23,0.13) rectangle (0.44,0.30);
+    \filldraw[fill=#3,draw=white,line width=0.7pt,rounded corners=3pt]
+      (-0.55,-0.23) rectangle (0.55,0.23);
+    \fill[white,rounded corners=1pt] (-0.20,-0.16) rectangle (0.18,0.16);
+  \end{scope}%
+}
+
+% Crop only the top example from each original Figure 5 panel, in the slide
+% viewport. The downloaded PNG remains untouched, including author annotations.
+\newcommand{\DetectionExample}[2]{%
+  \begin{scope}[shift={(#1,0)}]
+    \clip (0,1.27) rectangle (4.45,5.17);
+    \node[anchor=north west,inner sep=0] at (0,5.17)
+      {\includegraphics[width=4.45cm]{assets/papers/disconet/#2}};
+  \end{scope}%
+}

@@ -1,0 +1,26 @@
+% Match MoverGeneralTitle in the current monthly MOVER presentation:
+% centered heading/title/presenter, with the presentation date in the lower-left corner.
+\begin{frame}[plain]
+  \begin{tikzpicture}[remember picture,overlay]
+    \node[text=MoverNavy,align=center,
+      font=\sffamily\fontsize{18}{22}\selectfont]
+      at ($(current page.south west)+(8cm,6.15cm)$)
+      {MO809: Course Project Proposal};
+    \node[text=MoverNavy,align=center,text width=14cm,
+      font=\sffamily\fontsize{26}{31}\selectfont]
+      at ($(current page.south west)+(8cm,4.15cm)$)
+      {\textbf{Cooperative Perception}\\
+       \textbf{with DiscoNet under}\\
+       \textbf{Perfect Communication}};
+    \node[text=MoverNavy,align=center,text width=9cm,
+      font=\sffamily\fontsize{8.8}{10.8}\selectfont]
+      at ($(current page.south west)+(8.08cm,1.84cm)$)
+      {\textbf{\underline{\MakeUppercase{\ProjectAuthor}}}\\
+       Wellington Lobato, Guilherme Maia,\\
+       Allan M. de Souza, Edmundo Madeira};
+    \node[anchor=south west,text=MoverNavy,inner sep=0pt,
+      font=\sffamily\fontsize{8.5}{10.5}\selectfont]
+      at ($(current page.south west)+(0.35cm,0.20cm)$)
+      {October 6, 2026};
+  \end{tikzpicture}
+\end{frame}

@@ -1,0 +1,42 @@
+\begin{frame}{Original vs. Tree Collaboration}
+  \SlideBody{\begin{VisualCanvas}
+    \node[final heading,font=\bfseries\fontsize{13}{16}\selectfont]
+      at (3.65,5.30) {Original: Complete Graph};
+    \node[final heading,font=\bfseries\fontsize{13}{16}\selectfont]
+      at (11.10,5.30) {Tree: Maximum Spanning Tree};
+
+    \foreach \Agent in {1,...,5} {
+      \pgfmathsetmacro{\Angle}{90+360*(\Agent-1)/5}
+      \coordinate (full-node-\Agent) at
+        ({3.65+1.45*cos(\Angle)},{2.90+1.45*sin(\Angle)});
+      \coordinate (tree-node-\Agent) at
+        ({11.10+1.45*cos(\Angle)},{2.90+1.45*sin(\Angle)});
+    }
+    \foreach \Sender in {1,...,5} {
+      \foreach \Receiver in {1,...,5} {
+        \ifnum\Sender<\Receiver
+          \draw[{Stealth[length=1.1mm]}-{Stealth[length=1.1mm]},
+            draw=MoverNavy!35,line width=0.55pt,shorten <=4pt,shorten >=4pt]
+            (full-node-\Sender) -- (full-node-\Receiver);
+        \fi
+      }
+    }
+    \input{assets/experiments/tree-2026-11-05/topology-example.tex}
+    \foreach \Agent in {1,...,5} {
+      \foreach \Prefix in {full,tree} {
+        \node[circle,fill=MoverNavy,draw=MoverCyan,line width=0.8pt,
+          minimum size=0.36cm,inner sep=0pt,text=white,
+          font=\bfseries\fontsize{8}{9}\selectfont]
+          at (\Prefix-node-\Agent) {\Agent};
+      }
+    }
+    \draw[visual arrow] (5.50,2.90) -- (9.25,2.90);
+    \node[final caption,font=\fontsize{10}{13}\selectfont] at (7.4,2.38)
+      {Kruskal Selection};
+    \node[final caption] at (3.65,1.00)
+      {$n^2$ Directed Edges};
+    \node[final caption] at (11.10,1.00)
+      {$3n-2$ Directed Edges};
+  \end{VisualCanvas}}
+  \SlideSource{Source: Own elaboration.}
+\end{frame}

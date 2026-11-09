@@ -1,0 +1,17 @@
+% src/slides/source/final/architecture/09_detection_heads.tex
+
+\begin{frame}{From Features to Detections}
+  \SlideBody{\begin{VisualCanvas}
+    \node[visual title] at (0,5.65) {$256\times256\times32$};
+    \node[visual panel,align=center,text width=4.40cm,minimum height=1.15cm]
+      (decoded) at (2.85,3.55) {\textbf{Decoded Features}};
+    \node[visual panel,align=center,text width=6.10cm,minimum height=1.15cm]
+      (classification) at (10.20,4.55) {\textbf{Classification}\\Class Scores};
+    \node[visual panel,align=center,text width=6.10cm,minimum height=1.15cm]
+      (localization) at (10.20,2.55) {\textbf{Regression}\\Box Parameters};
+    \draw[visual arrow] (decoded.east) -- (6.20,3.55) |- (classification.west);
+    \draw[visual arrow] (6.20,3.55) |- (localization.west);
+    \VisualTakeaway{Decode $\to$ Filter $\to$ Detections}
+  \end{VisualCanvas}}
+  \SlideSource{Source: CoPerception \texttt{DetModelBase.get\_cls\_loc\_result}. AI generated illustration.}
+\end{frame}

@@ -1,0 +1,21 @@
+% src/slides/source/final/sections/00_agenda.tex
+
+\begin{frame}{Agenda}
+  \SlideBody{\begin{VisualCanvas}
+    \foreach \Number/\Topic [count=\Index from 0] in {
+      01/Motivation,
+      02/Problem,
+      03/Project Objective,
+      04/Project Development,
+      05/Evaluation,
+      06/Results} {
+      \pgfmathsetmacro{\RowY}{5.05-0.84*\Index}
+      \node[anchor=west,inner sep=0pt,text=MoverNavy,
+        font=\sffamily\fontsize{9}{11}\selectfont]
+        at (0.10,\RowY) {\Number};
+      \node[anchor=west,inner sep=0pt,text=MoverNavy,
+        font=\sffamily\bfseries\fontsize{14}{17}\selectfont]
+        at (0.82,\RowY) {\Topic};
+    }
+  \end{VisualCanvas}}
+\end{frame}

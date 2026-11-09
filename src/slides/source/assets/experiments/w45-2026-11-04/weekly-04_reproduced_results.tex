@@ -1,0 +1,28 @@
+% src/slides/weekly/src/sections/11_experiments/04_reproduced_results.tex
+
+\begin{frame}[t]{\MoverContentTitle{V2X-Sim 2.0: Reproduced Results}}
+  \label{frame:experiment-reproduced-results}
+  \MoverDiscoBody{%
+    \fontsize{9}{10.8}\selectfont
+    {\fontsize{9}{10.5}\selectfont
+      \setlength{\tabcolsep}{0.16cm}
+      \renewcommand{\arraystretch}{1.05}
+      \begin{tabular}{l c c}
+        \rowcolor{MoverNavy}
+        \makebox[8.00cm][l]{\color{white}\textbf{Condition}} & \makebox[2.92cm][c]{\color{white}\textbf{AP@0.5 (\%)}} & \makebox[2.92cm][c]{\color{white}\textbf{AP@0.7 (\%)}} \\
+        \rowcolor{MoverPale}
+        Own scan only & 49.10 & 43.05 \\
+        \rowcolor{MoverCyan!13}
+        \textbf{Cooperative perception} & \textbf{70.41} & \textbf{64.82} \\
+      \end{tabular}\par
+    }
+    \vspace{0.05cm}
+    \includegraphics[width=\linewidth]{sections/11_experiments/figures/results-plots-v1.pdf}\par
+    \vspace{0.02cm}
+    {\fontsize{8.5}{10.3}\selectfont
+      Own scan only switches information sharing off; both conditions use the same weights.\par
+      \textbf{Sharing improves AP by 21.31 and 21.77 percentage points}, respectively.\par
+    }
+  }
+  \MoverSourceCorner{AI generated illustrations}
+\end{frame}

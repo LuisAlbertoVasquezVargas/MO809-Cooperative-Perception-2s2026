@@ -1,0 +1,31 @@
+% src/slides/source/final/sections/05_scaling_protocol.tex
+
+\begin{frame}{Scaling Benchmark Protocol}
+  \SlideBody{\begin{VisualCanvas}
+    \node[final heading] at (3.65,5.22) {Detection Benchmark};
+    \node[final heading] at (11.10,5.22) {Compute Stress Test};
+    \draw[draw=MoverNavy!20] (7.40,0.85) -- (7.40,5.40);
+
+    \foreach \RowY/\Label/\Description in {
+      4.55/Data/Distinct Agents from the Same Frame,
+      3.50/Sweep/{$n=1$--$5$, Where the Data Supports It},
+      2.45/Measures/{AP @ 0.5/0.7 + Inference Latency},
+      1.40/Controls/{Same Ego, Targets, Weights and Seeds}} {
+      \node[anchor=north west,inner sep=0pt,text=MoverNavy,align=left,
+        text width=6.75cm,font=\fontsize{11}{14}\selectfont]
+        at (0.15,\RowY) {\textbf{\Label}\\[0.08cm]\Description};
+    }
+    \foreach \RowY/\Label/\Description in {
+      4.55/Data/{Synthetic Features; Fixed $H,W,C$},
+      3.50/Sweep/{$n=2,4,8,16,\ldots$},
+      2.45/Measures/{Graph Latency + Peak GPU Memory},
+      1.40/Controls/{Fixed Hardware; Warmup + Repeats}} {
+      \node[anchor=north west,inner sep=0pt,text=MoverNavy,align=left,
+        text width=6.75cm,font=\fontsize{11}{14}\selectfont]
+        at (7.80,\RowY) {\textbf{\Label}\\[0.08cm]\Description};
+    }
+    \node[visual small,anchor=center] at (7.4,0.24)
+      {$n(n-1)$ Directed Peer Pairs\qquad $n^2$ Attention Pairs Including Self};
+  \end{VisualCanvas}}
+  \SlideSource{Proposed protocol; graph formulation: Li et al., DiscoNet.}
+\end{frame}

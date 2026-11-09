@@ -1,0 +1,16 @@
+{
+  "unit_tests_passed": 83,
+  "qpdf_check_passed": true,
+  "pdf_pages": 20,
+  "first_twelve_pages_exact_text_match": true,
+  "custom_slides_display_P95": false,
+  "all_fifteen_rows_and_header_text_fit": true,
+  "native_results_table_verified": true,
+  "results_table_native_capture_sha256": "a98476527ff1f1c7d919c90b395fc623aac6fbb2da68d7338820c34bb2b7af9f",
+  "figure_png_dimensions": [
+    9600,
+    5400
+  ],
+  "all_2700_timings_and_900_AP_frames_validated": true,
+  "earlier_600_predictions_AP_signatures_and_trees_unchanged": true
+}

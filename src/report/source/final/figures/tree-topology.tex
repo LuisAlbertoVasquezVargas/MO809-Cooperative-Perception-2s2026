@@ -1,0 +1,42 @@
+\begingroup
+\colorlet{MoverCyan}{ReportCyan}
+\begin{tikzpicture}[font=\small]
+  \node[font=\bfseries] at (2,4.0) {Original: complete graph};
+  \node[font=\bfseries] at (10.2,4.0) {Selected tree};
+  \foreach \Agent in {1,...,5} {
+    \pgfmathsetmacro{\Angle}{90+360*(\Agent-1)/5}
+    \coordinate (full-node-\Agent) at
+      ({2+1.45*cos(\Angle)},{2.15+1.45*sin(\Angle)});
+    \coordinate (tree-node-\Agent) at
+      ({10.2+1.45*cos(\Angle)},{2.15+1.45*sin(\Angle)});
+  }
+  \foreach \Sender in {1,...,5} {
+    \foreach \Receiver in {1,...,5} {
+      \ifnum\Sender<\Receiver
+        \draw[{Stealth[length=1.2mm]}-{Stealth[length=1.2mm]},
+          draw=ReportNavy!40,line width=0.6pt,
+          shorten <=8pt,shorten >=8pt]
+          (full-node-\Sender) -- (full-node-\Receiver);
+      \fi
+    }
+  }
+  % The saved n=5 preflight links from the versioned topology-example.tex.
+  \foreach \From/\To in {3/4,1/2,2/3,4/5} {
+    \draw[{Stealth[length=1.2mm]}-{Stealth[length=1.2mm]},
+      draw=ReportCyan,line width=1pt,shorten <=8pt,shorten >=8pt]
+      (tree-node-\From) -- (tree-node-\To);
+  }
+  \foreach \Agent in {1,...,5} {
+    \foreach \Prefix in {full,tree} {
+      \node[circle,fill=ReportNavy,draw=ReportCyan,line width=0.8pt,
+        minimum size=0.45cm,inner sep=0pt,text=white,font=\bfseries]
+        at (\Prefix-node-\Agent) {\Agent};
+    }
+  }
+  \draw[-{Stealth[length=2mm]},draw=ReportNavy,line width=0.9pt]
+    (4.0,2.15) -- (8.2,2.15);
+  \node[align=center] at (6.1,1.65) {Coarse scoring\\and Kruskal selection};
+  \node at (2,0.35) {$n^2=25$ fine pairs};
+  \node at (10.2,0.35) {$3n-2=13$ fine pairs};
+\end{tikzpicture}
+\endgroup

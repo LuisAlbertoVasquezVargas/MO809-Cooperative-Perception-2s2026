@@ -1,0 +1,38 @@
+% Shared presentation for every table in the final report.
+\definecolor{ReportTableStripe}{HTML}{F2F5F9}
+\definecolor{ReportTableSubhead}{HTML}{E4ECF4}
+\definecolor{ReportTableSummary}{HTML}{E3F1F3}
+\definecolor{ReportTableRule}{HTML}{B9CDD9}
+\definecolor{ReportTableText}{HTML}{253345}
+
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}
+\newcolumntype{P}[1]{>{\raggedright\arraybackslash}p{#1}}
+
+\newcommand{\ReportTableHead}{\rowcolor{ReportNavy}}
+\newcommand{\ReportTableSubheadRow}{\rowcolor{ReportTableSubhead}}
+\newcommand{\ReportTH}[1]{{\leavevmode\color{white}\bfseries\boldmath #1}}
+\newcommand{\ReportSubTH}[1]{{\leavevmode\color{ReportNavy}\bfseries\boldmath #1}}
+\newcommand{\ReportTableDivider}{\hline}
+\newcommand{\ReportShape}[1]{\ensuremath{\mathsf{#1}}}
+
+\NewDocumentEnvironment{ReportTable}{O{1.30} m +b}{%
+  \begingroup
+  \sffamily\small\color{ReportTableText}
+  \renewcommand{\arraystretch}{#1}
+  \setlength{\extrarowheight}{1.5pt}
+  \setlength{\tabcolsep}{9pt}
+  \setlength{\arrayrulewidth}{0.6pt}
+  \arrayrulecolor{ReportTableRule}
+  \rowcolors{2}{white}{ReportTableStripe}
+  \begin{tabularx}{\linewidth}{#2}
+    \noalign{\global\rownum=1}
+    \showrowcolors
+    #3
+    \hiderowcolors
+  \end{tabularx}
+  \endgroup
+}{}
+
+\captionsetup[table]{font={small,sf},labelfont={bf,color=ReportNavy},
+  justification=raggedright,singlelinecheck=false,skip=8pt}

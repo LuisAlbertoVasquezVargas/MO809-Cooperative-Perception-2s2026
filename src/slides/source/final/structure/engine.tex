@@ -1,0 +1,270 @@
+% src/slides/source/final/structure/engine.tex
+% Adapted from the research presentation template, November 3, 2026.
+
+% Use Carlito through its TeX package so builds do not depend on the user's
+% Lua font database being initialized. Use lining numerals throughout the deck
+% so digits in body text and section covers align with capital letters.
+\usepackage[sfdefault,lining]{carlito}
+\pdfmapfile{+carlito.map}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{colortbl}
+
+\usetikzlibrary{calc,positioning}
+
+\graphicspath{{assets/}}
+
+\definecolor{MoverNavy}{HTML}{071E47}
+\definecolor{MoverSectionNavy}{HTML}{061E4A}
+\definecolor{MoverBlue}{HTML}{006CA8}
+\definecolor{MoverCyan}{HTML}{0695A1}
+
+\mode<presentation>
+{
+  \usefonttheme{professionalfonts}
+
+  \setbeamertemplate{navigation symbols}{}
+  \setbeamertemplate{headline}{}
+
+  \setbeamercolor{normal text}{
+    fg=MoverNavy,
+    bg=white
+  }
+
+  \setbeamercolor{structure}{
+    fg=MoverNavy
+  }
+
+  \setbeamercolor{frametitle}{
+    fg=white,
+    bg=MoverBlue
+  }
+
+  \setbeamersize{
+    text margin left=0.56cm,
+    text margin right=0.10cm
+  }
+}
+
+\setbeamertemplate{footline}{}
+\setbeamertemplate{background}{
+  \begin{tikzpicture}[remember picture,overlay]
+    \node[anchor=north west,inner sep=0pt]
+      at ($(current page.north west)+(0.10cm,-0.08cm)$)
+      {\includegraphics[width=2.65cm]{logos/mover_fubep.png}};
+
+    \node[anchor=south west,inner sep=0pt]
+      at ($(current page.south west)+(11.75cm,0.10cm)$)
+      {\includegraphics[height=0.62cm]{logos/unicamp.png}};
+    \node[anchor=south west,inner sep=0pt]
+      at ($(current page.south west)+(12.62cm,0.10cm)$)
+      {\includegraphics[height=0.62cm]{logos/ufmg.jpg}};
+    \node[anchor=south west,inner sep=0pt]
+      at ($(current page.south west)+(13.78cm,0.10cm)$)
+      {\includegraphics[width=2.05cm]{logos/eldorado.png}};
+  \end{tikzpicture}
+}
+
+\setbeamertemplate{frametitle}{
+  \nointerlineskip
+  \vskip0.50cm
+
+  \hspace*{-0.56cm}%
+  \hbox{%
+    \begin{beamercolorbox}[
+      wd=9.97cm,
+      ht=0.76cm,
+      dp=0.40cm,
+      leftskip=0.25cm,
+      rightskip=0.30cm
+    ]{frametitle}
+      \usebeamerfont{frametitle}
+      % Keep title numerals at capital height and on the same baseline (2D, 3D).
+      \MoverContentTitleFont
+      % Slightly strengthen Carlito Regular; scope the PDF state to the title.
+      \pdfliteral direct{2 Tr 0.18 w 1 G}%
+      \insertframetitle
+      \pdfliteral direct{0 Tr 0 w}%
+    \end{beamercolorbox}%
+  }
+
+  \vskip-0.22cm
+
+  \begin{tikzpicture}[remember picture,overlay]
+    \fill[MoverCyan]
+      ($(current page.north west)+(11.47cm,0cm)$)
+      rectangle
+      ($(current page.north east)+(0cm,-0.37cm)$);
+
+    \node[
+      anchor=west,
+      text=white,
+      inner sep=0pt,
+      font=\carlitoTLF\upshape\fontsize{7}{8}\selectfont
+    ] at ($(current page.north west)+(11.59cm,-0.185cm)$) {
+      \FinalSlideCounter
+    };
+  \end{tikzpicture}
+}
+
+\setbeamerfont{itemize/enumerate body}{
+  size=\fontsize{8.5}{10.2}\selectfont
+}
+
+\setbeamerfont{itemize/enumerate subbody}{
+  size=\fontsize{8.5}{10.2}\selectfont
+}
+
+\setbeamertemplate{itemize item}{
+  \raise0.25ex
+  \hbox{
+    \fontsize{6.5}{6.5}\selectfont
+    $\bullet$
+  }
+}
+
+\setbeamertemplate{itemize subitem}{
+  \raise0.18ex
+  \hbox{
+    \fontsize{6.5}{6.5}\selectfont
+    $\circ$
+  }
+}
+
+\setbeamertemplate{itemize subsubitem}{
+  \raise0.25ex
+  \hbox{
+    \fontsize{6.5}{6.5}\selectfont
+    $\bullet$
+  }
+}
+
+\setlength{\leftmargini}{0.49cm}
+\setlength{\leftmarginii}{0.79cm}
+
+\newcommand{\MoverListSpacing}{
+  \setlength{\itemsep}{0.04cm}
+  \setlength{\parskip}{0pt}
+  \setlength{\parsep}{0pt}
+  \setlength{\topsep}{0pt}
+}
+
+\newcommand{\MoverTitleSlide}{
+  \begin{frame}
+    % Align numerals with capitals in dataset names, 3D, and dates.
+    \carlitoLF
+    \begin{tikzpicture}[remember picture,overlay]
+      \node[
+        text=MoverNavy,
+        align=center,
+        font=\bfseries\fontsize{30}{36}\selectfont
+      ] at ($(current page.south west)+(8.00cm,5.91cm)$) {
+        \FinalCoverTitleWeight{\MoverPresentationTitle}
+      };
+
+      \node[
+        anchor=south west,
+        text=MoverNavy,
+        inner sep=0pt,
+        font=\fontsize{8.5}{10.5}\selectfont
+      ] at ($(current page.south west)+(0.35cm,0.20cm)$) {
+        \MoverPresentationDate
+      };
+
+      \node[
+        text=MoverNavy,
+        align=center,
+        text width=11.40cm,
+        font=\fontsize{7.6}{9.2}\selectfont
+      ] at ($(current page.south west)+(8.00cm,4.17cm)$) {
+        \MoverDatasetDescription\\[0.08cm]
+        \MoverDatasetReleaseReference
+      };
+
+      \node[
+        text=MoverNavy,
+        align=center,
+        text width=8.15cm,
+        font=\fontsize{8.8}{10.8}\selectfont
+      ] at ($(current page.south west)+(8.08cm,2.14cm)$) {
+        \textbf{\underline{\MoverResearcherRole,}}\\
+        \MoverResearcherNames
+      };
+    \end{tikzpicture}
+  \end{frame}
+}
+
+\newcommand{\MoverThanksSlide}{
+  \begin{frame}
+    \begin{tikzpicture}[remember picture,overlay]
+      \node[
+        text=MoverNavy,
+        align=center,
+        font=\fontsize{34}{40}\selectfont
+      ] at ($(current page.south west)+(8.00cm,4.50cm)$) {
+        Thank You
+      };
+
+      \node[
+        text=MoverNavy,
+        align=center,
+        font=\fontsize{13}{16}\selectfont
+      ] at ($(current page.south west)+(8.00cm,3.78cm)$) {
+        Questions?
+      };
+    \end{tikzpicture}
+  \end{frame}
+}
+
+\newcommand{\MoverSectionPrefix}{}
+
+\AtBeginSection[]
+{
+  \begin{frame}
+    \begin{tikzpicture}[remember picture,overlay]
+      \node[
+        text=MoverSectionNavy,
+        align=center,
+        font=\bfseries\fontsize{28}{34}\selectfont
+      ] at ($(current page.south west)+(8.00cm,4.50cm)$) {
+        \MoverSectionPrefix\insertsection
+      };
+
+    \end{tikzpicture}
+  \end{frame}
+}
+
+\newcommand{\MoverPrompt}[1]{
+  \textbf{\underline{#1}}
+}
+
+\newcommand{\MoverContentTitleFont}{\carlitoLF\mdseries\upshape\fontsize{18.5}{22}\selectfont}
+\newcommand{\MoverContentTitle}[1]{{\MoverContentTitleFont #1}}
+\newcommand{\MoverContentTitleLong}[1]{\MoverContentTitle{#1}}
+\newcommand{\MoverContentTitleCompact}[1]{\MoverContentTitle{#1}}
+\newcommand{\MoverIssueLegendStyle}{\fontsize{7.5}{9.0}\selectfont}
+\newenvironment{MoverIssueLegend}{%
+  \begin{minipage}[c][5.45cm][c]{\linewidth}%
+  \raggedright\MoverIssueLegendStyle
+}{%
+  \end{minipage}%
+}
+
+\newcommand{\MoverSourceCorner}[2][0pt]{
+  \smash{%
+    \begin{tikzpicture}[remember picture,overlay]
+      \node[
+        anchor=south east,
+        text=MoverNavy,
+        fill=white,
+        fill opacity=0.88,
+        text opacity=1,
+        inner sep=1.0pt,
+        font=\fontsize{5.8}{6.8}\selectfont
+      ] at ($(current page.south east)+(-0.22cm,1.02cm)+(0pt,#1)$) {
+        \begin{NoHyper}\textit{Source:} #2\end{NoHyper}
+      };
+    \end{tikzpicture}%
+  }
+}

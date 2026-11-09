@@ -1,0 +1,19 @@
+*.pdf binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.npz binary
+*.ttf binary
+*.zip binary
+*.py text eol=lf
+*.tex text eol=lf
+*.bib text eol=lf
+*.md text eol=lf
+*.json text eol=lf
+*.jsonl text eol=lf
+*.toml text eol=lf
+*.cff text eol=lf
+
+# Preserve the exact bytes used by archived provenance checksums.
+src/slides/source/assets/** -text
+src/report/source/assets/** -text

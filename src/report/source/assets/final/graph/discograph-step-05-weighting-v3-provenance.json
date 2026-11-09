@@ -1,0 +1,126 @@
+{
+  "created_at": "2026-11-04T20:11:22+00:00",
+  "tool": "Built-in imagegen materials, exact vector composition",
+  "generator_sha256": "e9a44395174717081e930f51b286f23055df2551c75aec9f0ae6cdfceb6f35c5",
+  "reference_sha256": "45fee614e4b26aab3193a7302e878b41521bbd65d231d3cbb8b7adb7af4d0e6e",
+  "source_note": "Step-by-step DiscoGraph teaching diagram; feature values, score fields and pose correspondence are illustrative.",
+  "mode": "tensor",
+  "material_prompt_set": [
+    {
+      "role": "front",
+      "asset": "tensor-front-material-imagegen-v1.png",
+      "sha256": "cee3e10a8f9ade55016191fb6af271fcbbbb5797dea4c667ad5686c68bc64cf9",
+      "native_pixels": [
+        1254,
+        1254
+      ],
+      "prompt": "tensor-front-material-imagegen-v1-prompt.txt",
+      "prompt_sha256": "ef11a228d56f0abc2e234307edacf7b46edc580d4c4fea9a87cb6251c7c76976"
+    },
+    {
+      "role": "channels",
+      "asset": "tensor-channel-material-imagegen-v1.png",
+      "sha256": "cf5fbf37aa9e174f2ae2ba25a165f31ecf1a6be8e492d8bb878f7275f3900a13",
+      "native_pixels": [
+        1254,
+        1254
+      ],
+      "prompt": "tensor-channel-material-imagegen-v1-prompt.txt",
+      "prompt_sha256": "2d878a9486b7d22dc8cc8a8243ff1d1dabdd8af5f294289628f6ede9a8ce427d"
+    },
+    {
+      "role": "cell",
+      "asset": "tensor-cell-material-imagegen-v1.png",
+      "sha256": "c4eec17b6708cbeab9a3e19380d940ad33dd60572cad5c4d9d973e20407fad27",
+      "native_pixels": [
+        1254,
+        1254
+      ],
+      "prompt": "tensor-cell-material-imagegen-v1-prompt.txt",
+      "prompt_sha256": "d11a19b8eb100245492bcba5daf4c8c197e1e69feadd6bfbdf1c19b96ff321a7"
+    }
+  ],
+  "styled_faces": [
+    {
+      "role": "top",
+      "original_geometry": "155.200,175.680 244.800,144.320 524.800,144.320 435.200,175.680",
+      "original_fill": "#FBE8D0",
+      "material_sampling_pixels": 735.3590221104477
+    },
+    {
+      "role": "side",
+      "original_geometry": "435.200,175.680 524.800,144.320 524.800,424.320 435.200,455.680",
+      "original_fill": "#E8AA65",
+      "material_sampling_pixels": 704.8666812878655
+    },
+    {
+      "role": "front",
+      "original_geometry": "155.200,175.680 435.200,175.680 435.200,455.680 155.200,455.680",
+      "original_fill": "#FFF0DB",
+      "material_sampling_pixels": 700.0
+    },
+    {
+      "role": "top",
+      "original_geometry": "1965.200,175.680 2054.800,144.320 2334.800,144.320 2245.200,175.680",
+      "original_fill": "#FBE8D0",
+      "material_sampling_pixels": 735.3590221104477
+    },
+    {
+      "role": "side",
+      "original_geometry": "2245.200,175.680 2334.800,144.320 2334.800,424.320 2245.200,455.680",
+      "original_fill": "#E8AA65",
+      "material_sampling_pixels": 704.8666812878655
+    },
+    {
+      "role": "front",
+      "original_geometry": "1965.200,175.680 2245.200,175.680 2245.200,455.680 1965.200,455.680",
+      "original_fill": "#FFF0DB",
+      "material_sampling_pixels": 700.0
+    }
+  ],
+  "physical_width_cm": 14.65,
+  "raster_export_pixels": [
+    6000,
+    1500
+  ],
+  "requested_raster_width": 6000,
+  "material_repeat_scale": 1,
+  "source_material_side_pixels": 1254,
+  "materials_upscaled": false,
+  "pdf_texture_limit_ppi": 1200,
+  "pdf_material_compositing": "Multiply blend on original face colors; no low-resolution SVG filter fallback.",
+  "checks": {
+    "all_original_geometry_preserved": true,
+    "all_text_and_glyph_labels_preserved": true,
+    "all_arrow_paths_preserved": true,
+    "semantic_palette_preserved": true,
+    "numerical_values_unchanged": true,
+    "rgb_data_faces_unchanged": false
+  },
+  "assets": {
+    "discograph-step-05-weighting-v3.svg": "3561dc14c8143476c738d822e4e48e21ffd964a092641d05cf10805f58270dce",
+    "discograph-step-05-weighting-v3.pdf": "12235037cb6a541073e47c30c9392d3618a77eeb814f700a1d89c689a984684b",
+    "discograph-step-05-weighting-v3.png": "6f7b12c95678baaa9d3381b410183086fb77e9bdf0d8ce1d96a98fd715517b30"
+  },
+  "weighting_layout": {
+    "combined_pdf_page": 30,
+    "asset": "discograph-step-05-weighting-v3.pdf",
+    "removed": [
+      "First Three Channel Values Shown",
+      "numerical vector multiplication example",
+      "Scaling changes the feature values; it preserves H,W,C"
+    ],
+    "larger_centered_diagram": true,
+    "front_side_svg_units": 280,
+    "raster_dimensions": [
+      6000,
+      1500
+    ],
+    "tensor_dimensions_and_weight_map_values_preserved": true,
+    "rendered_slide_visually_checked": true
+  },
+  "combined_pdf_page": 30,
+  "combined_pdf_total_pages": 64,
+  "supersedes_in_active_deck": "discograph-step-05-weighting-v2.pdf",
+  "render_validation": "Slide30 checked at1900px in the64-page PDF. Three requested items are absent; enlarged tensor/map diagram, operation label, dimensions and native footer remain separate."
+}

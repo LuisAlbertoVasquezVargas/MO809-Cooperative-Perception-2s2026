@@ -1,0 +1,173 @@
+{
+  "created_at": "2026-11-04T19:04:22+00:00",
+  "tool": "Built-in imagegen materials, exact vector composition",
+  "generator_sha256": "e9a44395174717081e930f51b286f23055df2551c75aec9f0ae6cdfceb6f35c5",
+  "reference_sha256": "b977501816ee95affb88c3e260d48840bd6288aa1736e96c7ef636fd05235cdf",
+  "source_note": "Step-by-step DiscoGraph teaching diagram; feature values, score fields and pose correspondence are illustrative.",
+  "mode": "tensor",
+  "material_prompt_set": [
+    {
+      "role": "front",
+      "asset": "tensor-front-material-imagegen-v1.png",
+      "sha256": "cee3e10a8f9ade55016191fb6af271fcbbbb5797dea4c667ad5686c68bc64cf9",
+      "native_pixels": [
+        1254,
+        1254
+      ],
+      "prompt": "tensor-front-material-imagegen-v1-prompt.txt",
+      "prompt_sha256": "ef11a228d56f0abc2e234307edacf7b46edc580d4c4fea9a87cb6251c7c76976"
+    },
+    {
+      "role": "channels",
+      "asset": "tensor-channel-material-imagegen-v1.png",
+      "sha256": "cf5fbf37aa9e174f2ae2ba25a165f31ecf1a6be8e492d8bb878f7275f3900a13",
+      "native_pixels": [
+        1254,
+        1254
+      ],
+      "prompt": "tensor-channel-material-imagegen-v1-prompt.txt",
+      "prompt_sha256": "2d878a9486b7d22dc8cc8a8243ff1d1dabdd8af5f294289628f6ede9a8ce427d"
+    },
+    {
+      "role": "cell",
+      "asset": "tensor-cell-material-imagegen-v1.png",
+      "sha256": "c4eec17b6708cbeab9a3e19380d940ad33dd60572cad5c4d9d973e20407fad27",
+      "native_pixels": [
+        1254,
+        1254
+      ],
+      "prompt": "tensor-cell-material-imagegen-v1-prompt.txt",
+      "prompt_sha256": "d11a19b8eb100245492bcba5daf4c8c197e1e69feadd6bfbdf1c19b96ff321a7"
+    }
+  ],
+  "styled_faces": [
+    {
+      "role": "top",
+      "original_geometry": "290.200,130.680 379.800,99.320 549.800,99.320 460.200,130.680",
+      "original_fill": "#FAFAFA",
+      "material_sampling_pixels": 481.83558458170825
+    },
+    {
+      "role": "side",
+      "original_geometry": "460.200,130.680 549.800,99.320 549.800,269.320 460.200,300.680",
+      "original_fill": "#F0F0F0",
+      "material_sampling_pixels": 434.7335464050652
+    },
+    {
+      "role": "front",
+      "original_geometry": "290.200,130.680 460.200,130.680 460.200,300.680 290.200,300.680",
+      "original_fill": "#FFFFFF",
+      "material_sampling_pixels": 425.0
+    },
+    {
+      "role": "top",
+      "original_geometry": "290.200,520.680 379.800,489.320 549.800,489.320 460.200,520.680",
+      "original_fill": "#FBE8D0",
+      "material_sampling_pixels": 481.83558458170836
+    },
+    {
+      "role": "side",
+      "original_geometry": "460.200,520.680 549.800,489.320 549.800,659.320 460.200,690.680",
+      "original_fill": "#E8AA65",
+      "material_sampling_pixels": 434.7335464050651
+    },
+    {
+      "role": "front",
+      "original_geometry": "290.200,520.680 460.200,520.680 460.200,690.680 290.200,690.680",
+      "original_fill": "#FFF0DB",
+      "material_sampling_pixels": 425.0
+    },
+    {
+      "role": "top",
+      "original_geometry": "1675.400,326.360 1765.000,295.000 1935.000,295.000 1845.400,326.360",
+      "original_fill": "#FAFAFA",
+      "material_sampling_pixels": 481.83558458170825
+    },
+    {
+      "role": "side",
+      "original_geometry": "1845.400,326.360 1935.000,295.000 1935.000,465.000 1845.400,496.360",
+      "original_fill": "#F0F0F0",
+      "material_sampling_pixels": 434.7335464050651
+    },
+    {
+      "role": "top",
+      "original_geometry": "1765.000,295.000 1854.600,263.640 2024.600,263.640 1935.000,295.000",
+      "original_fill": "#FBE8D0",
+      "material_sampling_pixels": 481.83558458170825
+    },
+    {
+      "role": "side",
+      "original_geometry": "1935.000,295.000 2024.600,263.640 2024.600,433.640 1935.000,465.000",
+      "original_fill": "#E8AA65",
+      "material_sampling_pixels": 434.7335464050651
+    },
+    {
+      "role": "front",
+      "original_geometry": "1675.400,326.360 1845.400,326.360 1845.400,496.360 1675.400,496.360",
+      "original_fill": "#FFFFFF",
+      "material_sampling_pixels": 425.0
+    }
+  ],
+  "physical_width_cm": 14.65,
+  "raster_export_pixels": [
+    6000,
+    2000
+  ],
+  "requested_raster_width": 6000,
+  "material_repeat_scale": 1,
+  "source_material_side_pixels": 1254,
+  "materials_upscaled": false,
+  "pdf_texture_limit_ppi": 1200,
+  "pdf_material_compositing": "Multiply blend on original face colors; no low-resolution SVG filter fallback.",
+  "checks": {
+    "all_original_geometry_preserved": true,
+    "all_text_and_glyph_labels_preserved": true,
+    "all_arrow_paths_preserved": true,
+    "semantic_palette_preserved": true,
+    "numerical_values_unchanged": true,
+    "rgb_data_faces_unchanged": false
+  },
+  "assets": {
+    "discograph-step-02-pairing-v3.svg": "a87751dde8ac5e51c6873d4f345d759f12286ff198827610d51569892fd55765",
+    "discograph-step-02-pairing-v3.pdf": "27a971e6354f911f1953aa2f349a21d47394f267522b4aadd6df2bcbd6c3b528",
+    "discograph-step-02-pairing-v3.png": "c8c2c3cf46361603b5dbafb9e46e2b31308c7a44143d173399948551169da53b"
+  },
+  "reusable_blocks_style": {
+    "reference_figure": "unit-2d-rich-v1.svg",
+    "reference_sha256": "e127bd8e8a7bdf174ceacd68b768abfc0ed55ee89c20b3c60ca83eac13d30885",
+    "operation_font": {
+      "font-family": "Liberation Mono,monospace",
+      "font-size": "42",
+      "font-weight": "bold"
+    },
+    "tensor_names": "Bold serif headings above the tensor faces.",
+    "dimensions": "Italic H/W/C symbols below the tensors; square front faces.",
+    "material_sources": {
+      "tensor-front-material-imagegen-v1.png": "cee3e10a8f9ade55016191fb6af271fcbbbb5797dea4c667ad5686c68bc64cf9",
+      "tensor-channel-material-imagegen-v1.png": "cf5fbf37aa9e174f2ae2ba25a165f31ecf1a6be8e492d8bb878f7275f3900a13",
+      "tensor-cell-material-imagegen-v1.png": "c4eec17b6708cbeab9a3e19380d940ad33dd60572cad5c4d9d973e20407fad27"
+    },
+    "material_policy": "Reuse approved materials with exact vector composition and 6000-pixel exports. One quiet material cell per actual numerical cell. Recorded values and heatmap colors preserved.",
+    "combined_pdf_pages": [
+      23,
+      24,
+      26,
+      27,
+      28,
+      29,
+      30
+    ],
+    "combined_pdf_total_pages": 59,
+    "checks": {
+      "all_seven_figures_visually_checked": true,
+      "numeric_examples_and_tensor_dimensions_unchanged": true,
+      "shared_operation_font_verified": true,
+      "all_hw_front_faces_square": true,
+      "no_visible_overlaps": true
+    }
+  },
+  "combined_pdf_page": 27,
+  "combined_pdf_total_pages": 64,
+  "rendered_slide_visually_checked": true,
+  "supersedes_in_active_deck": "discograph-step-02-pairing-v2.pdf"
+}

@@ -1,0 +1,28 @@
+{
+  "kind": "Exact AP worked example reused from the experiment report",
+  "source_report": "src/demos/disconet/docs/experiments/single-frame-disconet-report.pdf",
+  "source_provenance": "src/demos/disconet/docs/experiments/single-frame-disconet-report.provenance.json",
+  "source_provenance_sha256": "cd52f23e8da6763f34d71f2f1584f2f5ecac8b201ac74d21111a18afdfe662e8",
+  "source_ap_page_pdf_sha256": "f25ea55744ccab02b34253182b366148fa6f6b19fdc89bbb6f1a8a8181187b58",
+  "source_example": {
+    "kind": "Illustrative example; not measured benchmark detections",
+    "reference_cars": 3,
+    "confidence_scores": [
+      0.99,
+      0.96,
+      0.92,
+      0.83
+    ],
+    "true_positive_flags": [
+      1,
+      0,
+      1,
+      1
+    ],
+    "ap_percent": 83.33333333333333,
+    "integration": "Area under the precision envelope; same formula as the pinned authors' average_precision mode=area",
+    "illustration_credit": "AI generated illustration"
+  },
+  "source_function": "src/demos/disconet/disconet_demo/experiment_slides.py:ap_worked_example",
+  "new_inference_or_training": false
+}

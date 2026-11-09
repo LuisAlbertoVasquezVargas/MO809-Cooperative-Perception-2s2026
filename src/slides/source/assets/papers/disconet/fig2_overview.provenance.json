@@ -1,0 +1,36 @@
+{
+  "created_at": "2026-11-05T13:05:58.213440+00:00",
+  "asset": "fig2_overview.pdf",
+  "sha256": "abc3c3fa0a68a68b5299a14b43fd1a98d187e70070c1975d6f8197a45d13fe0b",
+  "paper": "Learning Distilled Collaboration Graph for Multi-Agent Perception",
+  "authors": "Yiming Li et al.",
+  "source_url": "https://arxiv.org/abs/2111.00643v2",
+  "html_figure_url": "https://arxiv.org/html/2111.00643v2/overview.png",
+  "source_pdf_sha256": "15774a9bb1f25607b2cb9bc3672103e0c5a74323d694b52fab64cf3825cf3af2",
+  "source_pdf_page": 3,
+  "figure_number": 2,
+  "figure_description": "Overall teacher-student training framework",
+  "viewport_bp_bottom_left_origin": [
+    111,
+    540,
+    500,
+    721
+  ],
+  "output_page_size_bp": [
+    389,
+    181
+  ],
+  "extraction": "pdfLaTeX graphicx imports and clips the original PDF page, then ships the cropped figure as one page. Original vector paths, embedded fonts and point-cloud images are retained; no rasterization or redrawing.",
+  "extractor": "fig2_overview.extract.tex",
+  "preservation": "Complete figure including dashed boundaries, teacher/student paths, input views, graph, losses, labels and all arrows. Only the external paragraph caption and body text are outside the viewport.",
+  "ai_generated": false,
+  "usage": "src/slides/source/final/core/02b_paper_architecture.tex",
+  "placement": "PDF page 9 in the continuous main sequence, following the collaboration-strategy figure on page 8.",
+  "validation": {
+    "visual_review": "The architecture slide was inspected at 1600-pixel width. All four dashed outer boundaries, teacher/student labels, graph, losses and arrows remain visible; source credit and institutional logos are unobstructed.",
+    "vector_preservation": "Original embedded Type 1 fonts are retained in the single-page cropped PDF. No image generation, retouching or rasterization was used.",
+    "placement": "Page 7 is the Problem illustration, page 8 the collaboration strategy, and page 9 the complete original architecture.",
+    "pdf_build": "Passed: 29 PDF pages in one continuous main sequence; no overfull boxes or slide-body overflow warnings.",
+    "cover": "The five-minute deck cover is pixel-identical to the approved cover before the weekly-results import."
+  }
+}

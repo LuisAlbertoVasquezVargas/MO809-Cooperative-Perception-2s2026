@@ -1,0 +1,309 @@
+{
+  "kind": "Fixed-checkpoint detection loss on the original test split",
+  "run": "runs/test-loss-v2-no-rsu-20261103",
+  "completed_utc": "2026-11-03T13:07:42.866586+00:00",
+  "full_test_split": true,
+  "frames": 1000,
+  "active_vehicle_views": 4000,
+  "checkpoint": {
+    "sha256": "6455ec85ad85f5b82f1c4e97f9dba20714373b4eeec00c7bf5c5893758a0f109",
+    "epoch": 100,
+    "parameters": 15843505,
+    "strict_state_dict": true,
+    "source_commit": "dd8fbb660300ee763e0bac870f63fc4987440a35",
+    "feature_alignment": {
+      "align_corners": false,
+      "mode": "bilinear",
+      "padding_mode": "zeros"
+    }
+  },
+  "benchmark_run": "runs/benchmark-v2-no-rsu-20261103T092543Z",
+  "accuracy_metrics_sha256": "bd72ac87d04ddc2c8b26533e59bd22e3fa166aaed343e677adfca2f263e47066",
+  "precision_recall_sha256": "d6e0e491138c1443242a6f3829ed02b3c54dbdcd3557e346624b7b517bf50681",
+  "definition": "Total = original softmax focal classification loss + original decoded box-corner localization loss; no teacher/distillation term during evaluation",
+  "normalization": "Original test code sums each component across the five padded vehicle slots and divides by five, then reports the mean over synchronized frames; absent slots have zero labels/masks and contribute zero loss",
+  "history_scope": "One evaluation pass of the fixed epoch-100 checkpoint; no training/validation history is reconstructed",
+  "mean_loss": {
+    "cooperative": {
+      "classification": 1528.446245223999,
+      "localization": 9579.84708605957,
+      "total": 11108.293312255859
+    },
+    "own_scan_only": {
+      "classification": 2978.192284057617,
+      "localization": 13844.239997802735,
+      "total": 16822.432311767578
+    }
+  },
+  "per_scene": [
+    {
+      "scene": 5,
+      "scene_label": "#6",
+      "frames": 100,
+      "active_vehicle_views": 400,
+      "mean_loss": {
+        "cooperative": {
+          "classification": 821.7817349243164,
+          "localization": 3328.034813232422,
+          "total": 4149.816540527344
+        },
+        "own_scan_only": {
+          "classification": 1704.2332275390625,
+          "localization": 7994.53630859375,
+          "total": 9698.769521484375
+        }
+      }
+    },
+    {
+      "scene": 8,
+      "scene_label": "#9",
+      "frames": 100,
+      "active_vehicle_views": 500,
+      "mean_loss": {
+        "cooperative": {
+          "classification": 1077.1488635253907,
+          "localization": 3591.4043237304686,
+          "total": 4668.553166503906
+        },
+        "own_scan_only": {
+          "classification": 2085.724014892578,
+          "localization": 7354.005505371094,
+          "total": 9439.72955078125
+        }
+      }
+    },
+    {
+      "scene": 19,
+      "scene_label": "#20",
+      "frames": 100,
+      "active_vehicle_views": 400,
+      "mean_loss": {
+        "cooperative": {
+          "classification": 1373.8370245361327,
+          "localization": 15761.953994140626,
+          "total": 17135.79095703125
+        },
+        "own_scan_only": {
+          "classification": 3894.49982421875,
+          "localization": 18939.887412109376,
+          "total": 22834.387294921875
+        }
+      }
+    },
+    {
+      "scene": 27,
+      "scene_label": "#28",
+      "frames": 100,
+      "active_vehicle_views": 300,
+      "mean_loss": {
+        "cooperative": {
+          "classification": 2361.7375341796874,
+          "localization": 14794.859189453126,
+          "total": 17156.596669921873
+        },
+        "own_scan_only": {
+          "classification": 2758.522320556641,
+          "localization": 15153.950478515624,
+          "total": 17912.472705078126
+        }
+      }
+    },
+    {
+      "scene": 28,
+      "scene_label": "#29",
+      "frames": 100,
+      "active_vehicle_views": 300,
+      "mean_loss": {
+        "cooperative": {
+          "classification": 1569.1629968261718,
+          "localization": 10958.208081054687,
+          "total": 12527.37109375
+        },
+        "own_scan_only": {
+          "classification": 2627.6708068847656,
+          "localization": 14199.00626953125,
+          "total": 16826.677158203125
+        }
+      }
+    },
+    {
+      "scene": 29,
+      "scene_label": "#30",
+      "frames": 100,
+      "active_vehicle_views": 400,
+      "mean_loss": {
+        "cooperative": {
+          "classification": 1374.634539794922,
+          "localization": 11944.923735351562,
+          "total": 13319.558203125
+        },
+        "own_scan_only": {
+          "classification": 2844.0082067871094,
+          "localization": 14569.860986328125,
+          "total": 17413.86923828125
+        }
+      }
+    },
+    {
+      "scene": 91,
+      "scene_label": "#92",
+      "frames": 100,
+      "active_vehicle_views": 400,
+      "mean_loss": {
+        "cooperative": {
+          "classification": 1365.7863836669922,
+          "localization": 6110.561088867187,
+          "total": 7476.347465820312
+        },
+        "own_scan_only": {
+          "classification": 2271.013712158203,
+          "localization": 9445.898984375,
+          "total": 11716.912734375
+        }
+      }
+    },
+    {
+      "scene": 92,
+      "scene_label": "#93",
+      "frames": 100,
+      "active_vehicle_views": 300,
+      "mean_loss": {
+        "cooperative": {
+          "classification": 660.1876057434082,
+          "localization": 4461.82158203125,
+          "total": 5122.009191894531
+        },
+        "own_scan_only": {
+          "classification": 909.011220703125,
+          "localization": 4920.721279296875,
+          "total": 5829.732492675781
+        }
+      }
+    },
+    {
+      "scene": 96,
+      "scene_label": "#97",
+      "frames": 100,
+      "active_vehicle_views": 500,
+      "mean_loss": {
+        "cooperative": {
+          "classification": 2439.2796435546875,
+          "localization": 10121.135185546875,
+          "total": 12560.414892578125
+        },
+        "own_scan_only": {
+          "classification": 5364.377690429687,
+          "localization": 21201.42619140625,
+          "total": 26565.803984375
+        }
+      }
+    },
+    {
+      "scene": 97,
+      "scene_label": "#98",
+      "frames": 100,
+      "active_vehicle_views": 500,
+      "mean_loss": {
+        "cooperative": {
+          "classification": 2240.9061254882813,
+          "localization": 14725.5688671875,
+          "total": 16966.47494140625
+        },
+        "own_scan_only": {
+          "classification": 5322.86181640625,
+          "localization": 24663.1065625,
+          "total": 29985.9684375
+        }
+      }
+    }
+  ],
+  "checks": [
+    {
+      "scene": 5,
+      "active_vehicle_inputs": 4,
+      "original_loader_targets_identical": true,
+      "saved_accuracy_predictions_identical": true
+    },
+    {
+      "scene": 8,
+      "active_vehicle_inputs": 5,
+      "original_loader_targets_identical": true,
+      "saved_accuracy_predictions_identical": true
+    },
+    {
+      "scene": 19,
+      "active_vehicle_inputs": 4,
+      "original_loader_targets_identical": true,
+      "saved_accuracy_predictions_identical": true
+    },
+    {
+      "scene": 27,
+      "active_vehicle_inputs": 3,
+      "original_loader_targets_identical": true,
+      "saved_accuracy_predictions_identical": true
+    },
+    {
+      "scene": 28,
+      "active_vehicle_inputs": 3,
+      "original_loader_targets_identical": true,
+      "saved_accuracy_predictions_identical": true
+    },
+    {
+      "scene": 29,
+      "active_vehicle_inputs": 4,
+      "original_loader_targets_identical": true,
+      "saved_accuracy_predictions_identical": true
+    },
+    {
+      "scene": 91,
+      "active_vehicle_inputs": 4,
+      "original_loader_targets_identical": true,
+      "saved_accuracy_predictions_identical": true
+    },
+    {
+      "scene": 92,
+      "active_vehicle_inputs": 3,
+      "original_loader_targets_identical": true,
+      "saved_accuracy_predictions_identical": true
+    },
+    {
+      "scene": 96,
+      "active_vehicle_inputs": 5,
+      "original_loader_targets_identical": true,
+      "saved_accuracy_predictions_identical": true
+    },
+    {
+      "scene": 97,
+      "active_vehicle_inputs": 5,
+      "original_loader_targets_identical": true,
+      "saved_accuracy_predictions_identical": true
+    }
+  ],
+  "elapsed_seconds": 150.9309935190031,
+  "environment": {
+    "python": "3.14.8",
+    "torch": "2.9.1+cu128",
+    "numpy": "2.3.5"
+  },
+  "specification_sha256": "87845cbe130d6dd5e68ae1664b58918866c255c18980341be38d11a8e209c19d",
+  "loss_run_metrics_sha256": "ca80869368da9fecbaaf12a9c98f3830e0047fa6abe1959096081105dca6e110",
+  "timing_scope": "Additional loss pass after initial model/criterion setup; includes data reading, both forwards, loss calculation, saving and ten scene-start target/prediction parity checks",
+  "accuracy_record_sha256": "6d8eacbde99b2fa715dcf4f60ff668dc2812903878d42fe96057e89dec9e66b2",
+  "source_sha256": {
+    "evaluate_test_loss.py": "83bcd700ef0af979953a7d1e8d768ddc9499471238620c8ff373f124175c333c",
+    "disconet_demo/test_loss.py": "a9c6bb6e23c9bb2562cbcfbf88c119efdd1861e0e38b96e264741788d4321747",
+    "disconet_demo/model.py": "7c4932244b5655b91c3b365be587c5596c3af944924d471bbcd228eea01dcea4",
+    "vendor/coperception/coperception/utils/loss.py": "94fa7351e4eff720d6edaf554bb9a5765d3a668a0e020238c7f1694bab19cf7a",
+    "vendor/coperception/coperception/utils/CoDetModule.py": "a8f4a3e62147bec6a51a9b737ad9f8488716e487c937a15c5bb97dd51895816b",
+    "vendor/coperception/coperception/utils/detection_util.py": "5063ce38b1efadd0b7820e862201d8d20d8ce82dc60af40e4f0865ef21ebe6f8",
+    "vendor/coperception/coperception/datasets/V2XSimDet.py": "dfefd6a68cd037ee7b492a296c150d91d157aa28277e56a96551a0f39322a613",
+    "vendor/coperception/coperception/configs/Config.py": "f56f82fbeff79299e0e91b8d7432c800cb992a53be583405e44f0b1a8be7e240"
+  },
+  "validation": {
+    "frame_hashes_checked": 1000,
+    "all_original_test_frames_present": true,
+    "target_and_prediction_parity_scenes": 10,
+    "original_ap_recomputed_from_curves": true
+  },
+  "exporter_sha256": "4fbd91b5f19145a7678ff056ff12956fe0889f53b9fde199dd91cea747a676a0"
+}

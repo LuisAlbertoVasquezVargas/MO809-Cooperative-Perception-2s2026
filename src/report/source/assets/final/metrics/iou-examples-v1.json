@@ -1,0 +1,91 @@
+{
+  "kind": "Illustrative geometry, not measured benchmark detections",
+  "generator": "src/demos/slides/export_detection_metrics.py",
+  "generator_sha256": "3e44fa65e01e592b3bc402bc8f2aa048b817262eb78434b36ba101243088c129",
+  "font": "Carlito, matching native slide text; PDF font embedded",
+  "format": "Editable SVG text, vector PDF and 6000-pixel-wide PNG",
+  "illustration_credit": "AI generated illustrations",
+  "geometry": "Equal-scale axes; each rectangle is 4 by 2 area units",
+  "overlap_example": {
+    "reference_area": 8,
+    "prediction_area": 8,
+    "intersection_area": 6,
+    "union_area": 10,
+    "iou": 0.6
+  },
+  "threshold_examples": [
+    {
+      "example": "A",
+      "reference_xywh": [
+        0,
+        0,
+        4.0,
+        2.0
+      ],
+      "prediction_xywh": [
+        2.0,
+        0,
+        4.0,
+        2.0
+      ],
+      "intersection_area": 4.0,
+      "union_area": 12.0,
+      "iou": 0.3333333333333333,
+      "matches_at_0.5": false,
+      "matches_at_0.7": false
+    },
+    {
+      "example": "B",
+      "reference_xywh": [
+        0,
+        0,
+        4.0,
+        2.0
+      ],
+      "prediction_xywh": [
+        1.0,
+        0,
+        4.0,
+        2.0
+      ],
+      "intersection_area": 6.0,
+      "union_area": 10.0,
+      "iou": 0.6,
+      "matches_at_0.5": true,
+      "matches_at_0.7": false
+    },
+    {
+      "example": "C",
+      "reference_xywh": [
+        0,
+        0,
+        4.0,
+        2.0
+      ],
+      "prediction_xywh": [
+        0.4444444444444444,
+        0,
+        4.0,
+        2.0
+      ],
+      "intersection_area": 7.111111111111111,
+      "union_area": 8.88888888888889,
+      "iou": 0.7999999999999999,
+      "matches_at_0.5": true,
+      "matches_at_0.7": true
+    }
+  ],
+  "notation": "IoU@0.5 is presented as shorthand for an IoU matching threshold of 0.5; AP@0.5 reports AP using this threshold",
+  "references": [
+    "https://docs.pytorch.org/vision/stable/generated/torchvision.ops.box_iou.html",
+    "https://github.com/coperception/coperception/blob/master/coperception/utils/mean_ap.py"
+  ],
+  "output_sha256": {
+    "iou-overlap-v1.pdf": "3c68161ce816e6c4dd0e6e773bd4c902522315f7ebfe33abc75223ec858399a9",
+    "iou-overlap-v1.svg": "8692ca58c66eea03c048f769058d14fad43b673b41796f30c9278c2d95bd760e",
+    "iou-overlap-v1.png": "bbe8e7dbbb0a80fc065a81c2b31f0800af7d517d95ed27b4cc51245c9b24485c",
+    "iou-thresholds-v1.pdf": "ed2df6e5fe0affd3fa2506cb37a19a870839dd6bb044c6137583c529eca80a8c",
+    "iou-thresholds-v1.svg": "7dcab1a425d94b78acdb85702e1d37c494cde3bb5e10cd2fc483e87a9620daf2",
+    "iou-thresholds-v1.png": "f26f28e3166432a53f6df31852f349213ab4a7fd8864282427224615915ad7a6"
+  }
+}

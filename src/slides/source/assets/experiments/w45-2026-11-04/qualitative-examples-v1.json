@@ -1,0 +1,191 @@
+{
+  "reference_pdf_sha256": "cc242255015ddcc3ae2fad19da95e7daaa871bf11b2d7b94a37a699bf036e586",
+  "reference_pages": [
+    2,
+    3
+  ],
+  "source_run": "v2-scene_5-frame-060-20261101T165111971209Z",
+  "source_sha256": {
+    "manifest.json": "f7137a31ce88bd1ddb6e43435d171d2f129090710e1786fb11a5db4bd054d57f",
+    "predictions.json": "34cd6c28edd64e5cc97317f8f2064beb95097d51f14bcba5a456040da68ef819",
+    "report.provenance.json": "ecd0ee410e1f6b09147904f5433c1fd25f29105fba1661ee0716750e88d5f31c",
+    "lidar": "74da4e5318a40e6a8f559d4eef1a57bd8bda5ee819fd7b95fe9cd345cc67055e",
+    "camera_receipt": "bc2ed6bef82e51112c87871b6d5aa11ba27b5fec9aa5e065e2d155fd48ce2843",
+    "coordinate_adapter": "53423aab1ba5fcec880f62fc4770e8d3f980874a732ba714ab5b99e35988a399"
+  },
+  "scene": "scene_5",
+  "sequence_frame_index": 60,
+  "raw_frame_id": "000066",
+  "sample_token": "79o3trz3ne588xg5zq71794b789lfg4v",
+  "ego_agent_id": 1,
+  "participating_agent_ids": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "counts": {
+    "reference_cars": 17,
+    "own_scan_predictions": 11,
+    "cooperative_predictions": 17
+  },
+  "scope": "Single-frame qualitative example; prediction counts are not accuracy scores",
+  "coordinates": "Calibrated vehicle-relative front-up display about the LiDAR origin; stored model coordinates remain unchanged",
+  "other_agents": [
+    {
+      "agent_id": 2,
+      "center_world_m": [
+        -16.845670700073242,
+        135.13331604003906,
+        0.0
+      ],
+      "center_lidar_m": [
+        21.71415954827026,
+        -12.668030555272917,
+        -1.3787471055984497
+      ],
+      "center_display_m": [
+        12.668030555272917,
+        21.71415954827026
+      ],
+      "distance_from_ego_lidar_m": 25.139286446457955,
+      "inside_plot": true
+    },
+    {
+      "agent_id": 3,
+      "center_world_m": [
+        -78.08499145507812,
+        83.57809448242188,
+        -0.8254725337028503
+      ],
+      "center_lidar_m": [
+        74.847868839018,
+        -72.54293525996263,
+        -2.2042196393013
+      ],
+      "center_display_m": [
+        72.54293525996263,
+        74.847868839018
+      ],
+      "distance_from_ego_lidar_m": 104.23378015726942,
+      "inside_plot": false
+    },
+    {
+      "agent_id": 4,
+      "center_world_m": [
+        -0.6559972763061523,
+        158.386474609375,
+        0.0
+      ],
+      "center_lidar_m": [
+        -1.953030752714966,
+        2.910127624558972,
+        -1.3787471055984497
+      ],
+      "center_display_m": [
+        -2.910127624558972,
+        -1.953030752714966
+      ],
+      "distance_from_ego_lidar_m": 3.5047356408539048,
+      "inside_plot": true
+    },
+    {
+      "agent_id": 5,
+      "center_world_m": [
+        19.947425842285156,
+        141.34771728515625,
+        0.1020183265209198
+      ],
+      "center_lidar_m": [
+        14.542979463372347,
+        23.95061103887395,
+        -1.27672877907753
+      ],
+      "center_display_m": [
+        -23.95061103887395,
+        14.542979463372347
+      ],
+      "distance_from_ego_lidar_m": 28.02017167698122,
+      "inside_plot": true
+    }
+  ],
+  "cameras": [
+    {
+      "view": "FRONT_LEFT",
+      "asset": "example-camera-front-left-v1.jpg",
+      "sha256": "52066da36e2c66dbb2abb59b7b634d762db856c4ca840dc7c21b805b9c9b489e",
+      "native_dimensions_pixels": [
+        1600,
+        900
+      ],
+      "source": "sweeps/CAM_FRONT_LEFT_id_1/scene_5_000066.jpg"
+    },
+    {
+      "view": "FRONT",
+      "asset": "example-camera-front-v1.jpg",
+      "sha256": "7b7a94da4adb327c134d44b8a4e4981fe25e915e094daccfd1b175acc7c2247d",
+      "native_dimensions_pixels": [
+        1600,
+        900
+      ],
+      "source": "sweeps/CAM_FRONT_id_1/scene_5_000066.jpg"
+    },
+    {
+      "view": "FRONT_RIGHT",
+      "asset": "example-camera-front-right-v1.jpg",
+      "sha256": "8e5cf086cb48e7255711b415d1cbffeefc24556b4848f2dd97ea2b671ca86110",
+      "native_dimensions_pixels": [
+        1600,
+        900
+      ],
+      "source": "sweeps/CAM_FRONT_RIGHT_id_1/scene_5_000066.jpg"
+    },
+    {
+      "view": "BACK_LEFT",
+      "asset": "example-camera-back-left-v1.jpg",
+      "sha256": "28c7558e5ec8717637b636ead13b25c91f2bcddce665465937c8d2d98a4a3c71",
+      "native_dimensions_pixels": [
+        1600,
+        900
+      ],
+      "source": "sweeps/CAM_BACK_LEFT_id_1/scene_5_000066.jpg"
+    },
+    {
+      "view": "BACK",
+      "asset": "example-camera-back-v1.jpg",
+      "sha256": "9d95844a67c49ad28ca306a7239d1eedea7ac903ce71fef12dbd5b0907339efd",
+      "native_dimensions_pixels": [
+        1600,
+        900
+      ],
+      "source": "sweeps/CAM_BACK_id_1/scene_5_000066.jpg"
+    },
+    {
+      "view": "BACK_RIGHT",
+      "asset": "example-camera-back-right-v1.jpg",
+      "sha256": "a962834c0af3b618342a19520c1adcd5eaca0e0928b0339588d86365a7e88242",
+      "native_dimensions_pixels": [
+        1600,
+        900
+      ],
+      "source": "sweeps/CAM_BACK_RIGHT_id_1/scene_5_000066.jpg"
+    }
+  ],
+  "camera_used_as_model_input": false,
+  "camera_images_modified": false,
+  "orientation_asset": {
+    "sha256": "243c0ac19224e1612f354fa1b1fe272122cdad486c13c0dcae675a83c5202633"
+  },
+  "inference_rerun": false,
+  "predictions_changed": false,
+  "output_sha256": {
+    "example-detections-v1.pdf": "4753330d38bd8605583e142901ab7a7941cc1555a5e2021c89e50ecf9a1f7884",
+    "example-detections-v1.svg": "d815aeaf689f7a057c7274b7b16c02871dad2c57381674b8cd02b3ade4da00a8",
+    "example-detections-v1.png": "eef2bbed68de1a2a1efa7965ef25cdf4be913a70b2ae3a56812869c62762d913",
+    "example-detections-data-v1.npz": "d6506fe911f701841968afc8954cb0ad7f70eed4aa7bf29246a198d57eaa8aa4"
+  },
+  "generator": "src/demos/slides/export_qualitative_examples.py",
+  "generator_sha256": "aa8502dc07d845da9789b514c0c37f8b461d299445d831a2376e3bf686bd66d8",
+  "font": "Carlito; embedded PDF labels and editable SVG text"
+}

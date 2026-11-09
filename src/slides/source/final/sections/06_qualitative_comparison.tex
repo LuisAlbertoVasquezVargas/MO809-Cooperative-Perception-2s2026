@@ -1,0 +1,18 @@
+% src/slides/source/final/sections/06_qualitative_comparison.tex
+
+\begin{frame}{Qualitative Comparison}
+  \SlideBody{\begin{VisualCanvas}
+    \node[visual title] at (0,5.65) {Own Scan Only};
+    \node[visual title] at (5.05,5.65) {Early Fusion};
+    \node[visual title] at (10.10,5.65) {DiscoNet};
+    \foreach \PanelX in {0,5.05,10.10} {
+      \draw[visual panel] (\PanelX,1.65) rectangle +(4.60,3.35);
+      \node[align=center,text width=4.10cm,
+        font=\fontsize{12}{15}\selectfont] at (\PanelX+2.30,3.325)
+        {Awaiting Matched\\Detection Overlay};
+    }
+    \node[visual text,text width=14.6cm] at (0,1.30)
+      {Use one held-out scene, one ego frame, and one plotting scale.};
+    \VisualTakeaway{Include a reference/prediction legend and box counts in each completed plot.}
+  \end{VisualCanvas}}
+\end{frame}

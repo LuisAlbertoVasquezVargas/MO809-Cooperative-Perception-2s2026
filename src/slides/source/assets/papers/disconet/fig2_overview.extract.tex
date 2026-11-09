@@ -1,0 +1,17 @@
+% src/slides/source/assets/papers/disconet/fig2_overview.extract.tex
+
+% Re-extraction only; the presentation uses the bundled fig2_overview.pdf.
+% Supply the original paper path by defining DiscoNetPaper before input.
+\documentclass{article}
+\usepackage{graphicx}
+\providecommand{\DiscoNetPaper}{paper-2111.00643v2.pdf}
+\pdfminorversion=7
+\pdfinfo{/Title (DiscoNet Figure 2) /Author (Yiming Li et al.)}
+\begin{document}
+\setbox0=\hbox{\includegraphics[page=3,viewport=111 540 500 721,clip]{\DiscoNetPaper}}
+\pdfpagewidth=\wd0
+\pdfpageheight=\dimexpr\ht0+\dp0\relax
+\hoffset=-1in
+\voffset=-1in
+\shipout\box0
+\end{document}

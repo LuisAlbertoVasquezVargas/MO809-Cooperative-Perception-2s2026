@@ -1,0 +1,121 @@
+{
+  "copied_on": "2026-11-03",
+  "scope": "Bundled teaching illustrations and architecture references. No model execution or benchmark results are imported.",
+  "assets": [
+    {
+      "local": "encoder/encoder-stage-pipeline-imagegen-v9.png",
+      "sha256": "48b565b61881c19f8940c8f3de7be54563f980e224e02c0064c9aff322830ec7"
+    },
+    {
+      "local": "encoder/encoder-stage-pipeline-v9-provenance.json",
+      "sha256": "a31664147a130a7fe8698e7e35b79345b6443a661e09062c9e781b71acdba458"
+    },
+    {
+      "local": "encoder/encoder-stage-pipeline-v9-prompt.txt",
+      "sha256": "13a5fa848c477c6dfc27f59ca2b86dd20a30fbda8c4f38bf45610599f6545032"
+    },
+    {
+      "local": "encoder/encoder-stage-pipeline-v4.svg",
+      "sha256": "a048adee3400f967a4726903d2b1bbeb195b609c3bb6e82a1b68e0161f67247d"
+    },
+    {
+      "local": "decoder/decoder-stage-pipeline-v6.pdf",
+      "sha256": "66430a0f24823829c57aac8c9f91a4f71e4a0d16ec5c55353b110e386c197559"
+    },
+    {
+      "local": "decoder/decoder-stage-pipeline-v6.svg",
+      "sha256": "b0edc3dbc1d43bc06bfc5001a6bc844a1aa54f8a2388631fb04e89a1a8821d8b"
+    },
+    {
+      "local": "decoder/decoder-stage-pipeline-v6-provenance.json",
+      "sha256": "eea684b1c3e5f14df6daea31ecec9e5c07159269911196872b410c5981a1c905"
+    },
+    {
+      "local": "blocks/unit-2d-cubes-v4.pdf",
+      "sha256": "c89b7127fc88454ee452ad0250d17292d975e7c037f4b114b7ec360ba6712a76"
+    },
+    {
+      "local": "blocks/unit-2d-cubes-v4.svg",
+      "sha256": "684521355556f047ed93614fd77e09fc2668bd6531d1bf40a528d59289b2b695"
+    },
+    {
+      "local": "blocks/encoder-stage-cubes-v2.pdf",
+      "sha256": "7129faac7ec1f7690811ca06cb2bd123a05a38726f8e5633f60a2404573f443a"
+    },
+    {
+      "local": "blocks/encoder-stage-cubes-v2.svg",
+      "sha256": "cb200c99ad77244d8e9a9b6d2f2d349824318b58dfa827278e3c8cf613fc91a2"
+    },
+    {
+      "local": "blocks/decoder-stage-cubes-v6.pdf",
+      "sha256": "fcea2fe230f957a50ec99818033f7101e340650a62e3d08bbf88ecc7b6851c23"
+    },
+    {
+      "local": "blocks/decoder-stage-cubes-v6.svg",
+      "sha256": "f99dcb2be2f77054c632d2a39fbe1553613d2ecf621b1a7ebf577732ae31f491"
+    },
+    {
+      "local": "blocks/stage-pipelines-v7-contracts.json",
+      "sha256": "81fadc1c40f72a3454a41ee977330b5197e4aa3faf97abac74ed21057d49bfa0"
+    },
+    {
+      "local": "graph/discograph-three-agents-imagegen-v3.png",
+      "sha256": "bc78a83d78ce1d17454c6ad7c1ef7ea93bcdc39e1c78f1dfca3b306d8b549791"
+    },
+    {
+      "local": "graph/discograph-three-agents-imagegen-v3-provenance.json",
+      "sha256": "027d80ae31b018229313e0f48b51abc4221463e54b642632789350197e4f0de8"
+    },
+    {
+      "local": "graph/discograph-three-agents-v2-spatial-map.pdf",
+      "sha256": "6b08da3cbf8010538b5ea8e0c40211c402c75d23b70443a7255220d00ad08404"
+    },
+    {
+      "local": "graph/discograph-three-agents-v2-spatial-map.svg",
+      "sha256": "b446f3592626152389279d935099c7a4ef2827522340eb67f0c201f9422e9cdc"
+    },
+    {
+      "local": "graph/discograph-three-agents-v2-provenance.json",
+      "sha256": "24786587a90f1b7420bb9e40115021ec2d62e7a7838900f3d1702163f4c21f59"
+    },
+    {
+      "local": "preprocessing/w44_raw_scan-imagegen-v3.png",
+      "sha256": "20fcbca66e803e6f0d98d69599cd3b7cbff3c1c1f67db882bf808e7eb04dfdf9"
+    },
+    {
+      "local": "preprocessing/w44_occupancy_layers-imagegen-v3.png",
+      "sha256": "9767ea0c9a9213561f9b22fe371cd82cbd3ad3b1f0bec93479c88c7954c02f9b"
+    },
+    {
+      "local": "preprocessing/w44_occupancy_layers-imagegen-v3-provenance.json",
+      "sha256": "8f115599002b571907097e53ee63b581db763bfa38a2d58349cd165c912783b2"
+    }
+  ],
+  "code_references": [
+    {
+      "file": "encoder_pipeline.py",
+      "sha256": "1c293d8af55dd1bec390bde66f61816c185426782c522a2ac1d1e3fea6305a7e"
+    },
+    {
+      "file": "custom_blocks.py",
+      "sha256": "42fa40bc7d54c6cad749e494ed7fb26f4ab6b2b456e441842393da81d0eca54d"
+    },
+    {
+      "file": "stage_blocks.py",
+      "sha256": "3af9be9dc6557eac0e1b094b9df1b9f2e2528e79772e672e6ab4ecee8b5c44b0"
+    },
+    {
+      "file": "decoder_pipeline.py",
+      "sha256": "c47f431a4629e55f6e6b9b5e1e530cb3df1136db6730685250dc4ddef1d5ec23"
+    },
+    {
+      "file": "DiscoNet.py",
+      "sha256": "56531825feef469014072bb2c4c5a306fee4e6ad89f732c966543dd931d3a4a3"
+    },
+    {
+      "file": "DetModelBase.py",
+      "sha256": "1e3602f1a15795cecdd226c43c9f0a6339f962b2f2e4fdc0c9201a80a71aa259"
+    }
+  ],
+  "metadata_policy": "Machine paths, private source-repository identifiers, and transient generation IDs are omitted. Bundled filenames, checksums, public attribution, and technical evidence are retained."
+}

@@ -1,0 +1,16 @@
+\newcommand{\ReportConvThreeRow}[3]{%
+  \begin{minipage}[c]{0.57\linewidth}
+    \centering\small\textbf{#1}\par\smallskip
+    \includegraphics[width=\linewidth]{convolution/conv-palette-v2-conv3d-d#2r0c0.pdf}
+  \end{minipage}\hfill
+  \begin{minipage}[c]{0.19\linewidth}
+    \centering\small\textbf{Kernel}\par\smallskip
+    \includegraphics[width=\linewidth]{convolution/conv-palette-v2-kernel3d-rich-v1.pdf}
+  \end{minipage}\hfill
+  \begin{minipage}[c]{0.20\linewidth}
+    \centering\small\textbf{Output: #3}\par\smallskip
+    \includegraphics[width=\linewidth]{convolution/conv3d-output-parallelepipeds-v3-d#2r0c0-rich-v1.pdf}
+  \end{minipage}%
+}
+\ReportConvThreeRow{Frames 0 and 1}{0}{$d=0$}\par\bigskip
+\ReportConvThreeRow{Frames 1 and 2}{1}{$d=1$}

@@ -1,0 +1,56 @@
+% src/eqm/source/styles/logo-ic-unicamp.sty
+
+\ProvidesPackage{logo-ic-unicamp}
+\RequirePackage{graphicx}
+
+\newcommand{\LogoIcUnicampSize}{60pt}
+\newcommand{\LogoIcUnicampFile}{logo-ic-unicamp.pdf}
+
+\advance \endlinechar by -256 %
+
+\def\LogoIcUnicampWidth{\LogoIcUnicampSize}    %
+\def\LogoIcUnicampHeight{\LogoIcUnicampSize}   %
+
+\newcommand{\LogoIcUnicampBare}{
+  \hbox{\includegraphics*[width=\LogoIcUnicampWidth]{\LogoIcUnicampFile}}
+}
+
+\newcommand{\LogoIcUnicamp}{
+  \vbox to \LogoIcUnicampHeight{
+    \offinterlineskip
+    \hrule height 0pt width 0pt depth 0pt
+    \vss
+    \LogoIcUnicampBare
+    \vss
+    \hrule height 0pt width 0pt depth 0pt
+  }
+}
+
+\newcommand{\LogoIcUnicampFont}{
+  \fontfamily{cmss}\fontseries{bx}\fontshape{n}\fontsize{7pt}{8pt}\selectfont
+}
+
+\newcommand{\LogoIcUnicampWithName}{
+  \vbox to \LogoIcUnicampHeight{
+    \offinterlineskip
+    \hrule height 0pt width 0pt depth 0pt
+    \kern 1pt
+    \hbox to \LogoIcUnicampWidth{
+      \hss
+      \scalebox{0.82}{\hbox{\LogoIcUnicampBare}}
+      \hss
+    }
+    \kern 1pt
+    \hbox to \LogoIcUnicampWidth{
+      \LogoIcUnicampFont {~}I\hss N\hss S\hss T\hss I\hss T\hss U\hss T\hss O\hss {~}\hss D\hss E{~}%
+    }
+    \vspace{0.1ex} %
+    \hbox to \LogoIcUnicampWidth{
+      \LogoIcUnicampFont {~}C\hss O\hss M\hss P\hss U\hss T\hss A\hss \c{C}\hss \~{A}O{~}
+    }
+    \kern 2pt
+    \vss
+  }
+}
+
+\advance \endlinechar by 256 %

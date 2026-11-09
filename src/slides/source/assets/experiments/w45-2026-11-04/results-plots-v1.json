@@ -1,0 +1,77 @@
+{
+  "reference_pdf_sha256": "cc242255015ddcc3ae2fad19da95e7daaa871bf11b2d7b94a37a699bf036e586",
+  "reference_page": 12,
+  "source_records": {
+    "full-test-v2-no-rsu-2026-11-03.json": {
+      "sha256": "6d8eacbde99b2fa715dcf4f60ff668dc2812903878d42fe96057e89dec9e66b2"
+    },
+    "test-loss-v2-no-rsu-2026-11-03.json": {
+      "sha256": "2114449ac78e8b06fec311f378a38e6c7eb100a372d581bba16a7f410ce3e18d"
+    },
+    "precision-recall.npz": {
+      "sha256": "d6e0e491138c1443242a6f3829ed02b3c54dbdcd3557e346624b7b517bf50681"
+    }
+  },
+  "scope": "Original full test split, fixed epoch-100 checkpoint, sharing off versus on",
+  "frames": 1000,
+  "vehicle_views": 4000,
+  "scene_labels": [
+    "#6",
+    "#9",
+    "#20",
+    "#28",
+    "#29",
+    "#30",
+    "#92",
+    "#93",
+    "#97",
+    "#98"
+  ],
+  "frames_per_scene": [
+    100,
+    100,
+    100,
+    100,
+    100,
+    100,
+    100,
+    100,
+    100,
+    100
+  ],
+  "loss_metric": "Mean total test loss over synchronized frames",
+  "loss_normalization": "Original test code sums each component across the five padded vehicle slots and divides by five, then reports the mean over synchronized frames; absent slots have zero labels/masks and contribute zero loss",
+  "ap_percent": {
+    "own_scan_only": {
+      "0.5": 49.10165071487427,
+      "0.7": 43.049514293670654
+    },
+    "cooperative": {
+      "0.5": 70.4119861125946,
+      "0.7": 64.82367515563965
+    }
+  },
+  "inference_rerun": false,
+  "new_training": false,
+  "removed_table_columns_restored": false,
+  "verified_curve_ap_percent": {
+    "own_scan_only_iou_0.5": 49.101651305477965,
+    "cooperative_iou_0.5": 70.41198874881418,
+    "own_scan_only_iou_0.7": 43.049514278426194,
+    "cooperative_iou_0.7": 64.82367487194979
+  },
+  "font": "Carlito, embedded PDF labels and editable SVG text",
+  "generator": "src/demos/slides/export_reproduced_results.py",
+  "generator_sha256": "1d34a9f7d0a23aeb9a34f71315459b8477dd50732863efec267e78f451a9e908",
+  "output_sha256": {
+    "results-plots-v1.pdf": "45010f89633f389541f327e9590e0f3c30cb476505b310d13639a40eda35a1c6",
+    "results-plots-v1.svg": "81c7e6194c6b2f171d542661b48b6cbebff277bbf9c72b57614cf8b65d50ca98",
+    "results-plots-v1.png": "97c9995095b4307b6b15e61af342ece63000b206a0b189ebf4a415089f88407f",
+    "results-plots-data-v1.npz": "3a20b7b3561f464123f2cfd0fc35894a0d14b703c985f8fe50c38a68758cf8aa"
+  },
+  "displayed_plots": [
+    "Precision/recall at IoU 0.5",
+    "Precision/recall at IoU 0.7"
+  ],
+  "loss_plot_shown": false
+}

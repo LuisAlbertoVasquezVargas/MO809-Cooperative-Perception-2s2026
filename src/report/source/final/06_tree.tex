@@ -1,0 +1,124 @@
+\section{Original versus Tree Collaboration}
+\label{sec:tree}
+\subsection{Coarse Attention and Maximum Spanning Tree}
+The second custom experiment asks whether restricting expensive
+fine-resolution collaboration reduces execution time and how much detection
+quality is lost. The released weights are reused without retraining
+\cite{recordtree}. The variant has three stages:
+\begin{enumerate}
+  \item \textbf{Coarse scoring.} Each $32\times32$ feature map is pooled to
+    $4\times4$. All ordered pairs are aligned and scored at this coarse
+    resolution, with weights normalized over senders. Each directional
+    attention map is reduced to its mean squared attention.
+  \item \textbf{Tree selection.} The two directional scores of an unordered
+    vehicle pair are averaged. Descending Kruskal selection keeps the
+    highest-scoring links that do not create a cycle, until $n-1$ remain.
+    This is a maximum spanning tree, rather than a minimum spanning tree.
+  \item \textbf{Fine fusion.} Each selected edge is used in both directions,
+    and every self pair is retained. The original $32\times32$ alignment and
+    scoring are applied only to these pairs. Attention is renormalized over
+    the retained senders, and the normal decoder and heads follow.
+\end{enumerate}
+
+For each receiver--sender pair, the coarse attention statistic can be written
+as
+\[
+ q_{u\to v}=\frac{1}{H_cW_c}\sum_{r,c}a^{\mathrm{coarse}}_{u\to v}(r,c)^2,
+ \qquad q_{\{u,v\}}=\frac{q_{u\to v}+q_{v\to u}}{2},
+ \quad H_c=W_c=4.
+\]
+The undirected tree determines which directed fine interactions are retained.
+Fine pair evaluations change from $n^2$ to
+\[
+ n+2(n-1)=3n-2.
+\]
+At $n=15$, that is 225 original fine pairs versus 43 tree fine pairs, in
+addition to the tree variant's 225 coarse pairs. Only the fine-pair count
+becomes linear. Coarse scoring remains quadratic, and CPU Kruskal selection
+introduces additional work. This is not a claim of linear complexity for the
+complete algorithm.
+
+There is one fusion round. A receiver can use its immediate tree neighbors,
+but a path in the spanning tree does not transmit every remote vehicle's
+features across multiple hops during that round. Sparsity therefore changes
+the available information as well as the amount of computation.
+
+\begin{figure}[htbp]
+\centering
+\input{final/figures/tree-topology}
+\caption[Complete collaboration and the saved five-slot tree]{The project
+topology diagram adapted for the report, using the saved five-slot preflight
+tree. Double arrows denote interactions in both directions. Self links
+are counted in the computation but omitted from the drawing. The original
+has 25 fine pairs; the tree has 13 fine pairs plus coarse scoring.}
+\label{fig:tree-topology}
+\end{figure}
+
+Figure~\ref{fig:tree-topology} gives a concrete example of what a receiver
+loses when edges are removed. In the displayed tree, node 1 has node 2 as
+its only peer neighbor. Its fine fusion can combine the self contribution
+and node 2, while the original graph can use all five inputs. Node 3 has
+two peer neighbors and can combine those with its own features. A path
+from node 1 to node 5 establishes graph connectivity, but it does not
+make node 5's original map an immediate input to node 1 in one fusion round.
+
+The displayed topology is one saved preflight example. Selection is driven
+by the coarse attention scores of the evaluated input group; the figure
+does not assign a fixed chain to every frame. It illustrates the difference
+between retaining connectivity and retaining all direct fine observations.
+
+\subsection{Matched Timing and Accuracy Protocol}
+The comparison uses the same 30 ego-1 views from three recorded test scenes
+at every condition, with 427 reference car boxes counted once across the
+cohort. Both methods use the unchanged checkpoint, float32 precision, and
+the same retained-prediction settings. There are three timing trials and 90
+samples per method and $n$, covering $n=1,\ldots,15$. The specification records
+twenty warmups per method/count/trial, shuffled condition order with seed
+zero, deterministic cuDNN, and TF32 disabled.
+
+The timer includes the complete model, coarse scoring, CPU tree selection,
+fine fusion, decoder, and heads. Inputs are already on the GPU. Reads and
+packing, transfers, warmups, model loading, box decoding, NMS, and AP scoring
+are outside the forward timer. AP is evaluated separately on the original
+ego-1 labels. The run contains 2,700 timed forwards in total, and recorded ego
+outputs are identical across timing trials for a given condition.
+
+As in the runtime-only workload, $n\leq5$ uses distinct recorded inputs,
+while larger $n$ replays the five recorded scans and poses. AP above five
+describes the behavior of those repeated inputs, not the benefit of extra
+independently recorded viewpoints.
+
+\subsection{Complete Results and Trade-Off}
+Table~\ref{tab:tree} reproduces all fifteen measured conditions from the
+versioned CSV and checks them against the saved JSON during report builds.
+The AP values are percentages; differences between them are percentage points.
+
+\begin{table}[htbp]
+\centering
+\caption{Matched Original/Tree comparison on 30 ego-1 views. Below the rule
+after $n=5$, additional slots replay the five recorded inputs. The table is
+separate from the full-test benchmark and the runtime-only sweep.}
+\label{tab:tree}
+\input{tree-table.generated}
+\end{table}
+
+At $n=15$, median time falls from \ReportOriginalTime\ to \ReportTreeTime\ ms,
+a \ReportTreeReduction\% reduction. AP@0.5 decreases from
+\ReportOriginalAPFifty\% to \ReportTreeAPFifty\%, a loss of
+\ReportTreeDropFifty\ percentage points. AP@0.7 decreases from
+\ReportOriginalAPSeventy\% to \ReportTreeAPSeventy\%, a loss of
+\ReportTreeDropSeventy\ points. This is a substantial runtime reduction
+accompanied by a substantial accuracy loss, rather than an improvement at
+unchanged detection quality.
+
+The same trade-off is visible within the distinct-input region. At $n=5$,
+median time falls from 41.57 to 36.54 ms, while AP@0.5 falls from 74.46\% to
+62.65\% and AP@0.7 from 67.53\% to 53.66\%. Thus the accuracy penalty is not
+only an artifact of replaying inputs above five.
+
+At $n=1$ and $n=2$, the original and tree graphs coincide, and the saved
+predictions are identical. Small differences in their medians are timing
+variation, not evidence of a useful speed or accuracy difference. At larger
+$n$, the original AP is not strictly monotonic, and replay does not create
+new information. No general claim that increasing slots must improve
+detection follows from the table.

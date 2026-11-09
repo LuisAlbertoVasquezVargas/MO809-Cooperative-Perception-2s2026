@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2400" height="540" viewBox="0 0 2400 540">
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#464B50"/></marker></defs>
+<rect width="2400" height="540" fill="white"/>
+<g font-family="Liberation Serif,serif" fill="#071E47" stroke-linejoin="round">
+<polygon points="68.000,176.200 132.000,153.800 372.000,153.800 308.000,176.200" fill="#FAFAFA" stroke="#464B50" stroke-width="2.2"/>
+<polygon points="308.000,176.200 372.000,153.800 372.000,393.800 308.000,416.200" fill="#F0F0F0" stroke="#464B50" stroke-width="2.2"/>
+<polygon points="68.000,176.200 308.000,176.200 308.000,416.200 68.000,416.200" fill="#FFFFFF" stroke="#464B50" stroke-width="2.2"/>
+<text x="220" y="465" text-anchor="middle" font-size="50"><tspan font-style="italic">H</tspan><tspan baseline-shift="sub" font-size="70%">in</tspan> × <tspan font-style="italic">W</tspan><tspan baseline-shift="sub" font-size="70%">in</tspan> × <tspan font-style="italic">C</tspan><tspan baseline-shift="sub" font-size="70%">in</tspan></text>
+<text x="220" y="110.0" text-anchor="middle" font-size="44" font-weight="bold">Input</text>
+<polygon points="1076.000,247.400 1204.000,202.600 1324.000,202.600 1196.000,247.400" fill="#FAFAFA" stroke="#464B50" stroke-width="2.2"/>
+<polygon points="1196.000,247.400 1324.000,202.600 1324.000,322.600 1196.000,367.400" fill="#F0F0F0" stroke="#464B50" stroke-width="2.2"/>
+<polygon points="1076.000,247.400 1196.000,247.400 1196.000,367.400 1076.000,367.400" fill="#FFFFFF" stroke="#464B50" stroke-width="2.2"/>
+<text x="1200" y="465" text-anchor="middle" font-size="50"><tspan font-style="italic">H</tspan><tspan baseline-shift="sub" font-size="70%">out</tspan> × <tspan font-style="italic">W</tspan><tspan baseline-shift="sub" font-size="70%">out</tspan> × <tspan font-style="italic">C</tspan><tspan baseline-shift="sub" font-size="70%">out</tspan></text>
+<polygon points="2056.000,247.400 2184.000,202.600 2304.000,202.600 2176.000,247.400" fill="#FAFAFA" stroke="#464B50" stroke-width="2.2"/>
+<polygon points="2176.000,247.400 2304.000,202.600 2304.000,322.600 2176.000,367.400" fill="#F0F0F0" stroke="#464B50" stroke-width="2.2"/>
+<polygon points="2056.000,247.400 2176.000,247.400 2176.000,367.400 2056.000,367.400" fill="#FFFFFF" stroke="#464B50" stroke-width="2.2"/>
+<text x="2180" y="465" text-anchor="middle" font-size="50"><tspan font-style="italic">H</tspan><tspan baseline-shift="sub" font-size="70%">out</tspan> × <tspan font-style="italic">W</tspan><tspan baseline-shift="sub" font-size="70%">out</tspan> × <tspan font-style="italic">C</tspan><tspan baseline-shift="sub" font-size="70%">out</tspan></text>
+<text x="2180" y="170.0" text-anchor="middle" font-size="44" font-weight="bold">Output</text>
+<polyline points="382.000,285.000 1066.000,285.000" fill="none" stroke="#464B50" stroke-width="2.2" marker-end="url(#arrow)"/>
+<text x="724.0" y="112" text-anchor="middle" font-size="42" font-weight="bold" font-family="Liberation Mono,monospace">nn.Conv2d(c_in, c_out,</text>
+<text x="724.0" y="162.4" text-anchor="middle" font-size="42" font-weight="bold" font-family="Liberation Mono,monospace">kernel_size=3, stride=r,</text>
+<text x="724.0" y="212.8" text-anchor="middle" font-size="42" font-weight="bold" font-family="Liberation Mono,monospace">padding=1)</text>
+<polyline points="1334.000,285.000 2046.000,285.000" fill="none" stroke="#464B50" stroke-width="2.2" marker-end="url(#arrow)"/>
+<text x="1690.0" y="170" text-anchor="middle" font-size="50" font-weight="bold" font-family="Liberation Mono,monospace">norm_relu(c_out)</text>
+</g>
+</svg>

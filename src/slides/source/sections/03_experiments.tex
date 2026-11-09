@@ -1,0 +1,33 @@
+\begin{frame}{Experiments and Tools}
+  \SlideBody{\begin{VisualCanvas}
+    \node[visual title] at (0,5.70) {1. Detection Quality};
+    \node[visual title] at (5.05,5.70) {2. Datasets};
+    \node[visual title] at (10.10,5.70) {3. Simulators};
+    \draw[MoverDetailBlue!30,line width=0.6pt] (4.80,1.15) -- (4.80,5.70);
+    \draw[MoverDetailBlue!30,line width=0.6pt] (9.85,1.15) -- (9.85,5.70);
+
+    \draw[visual panel] (0,3.37) rectangle (4.55,4.98);
+    \node[anchor=center,text=MoverBlue,font=\sffamily\bfseries\fontsize{22}{26}\selectfont]
+      at (2.275,4.175) {AP @ 0.5};
+    \draw[visual panel] (0,1.36) rectangle (4.55,2.97);
+    \node[anchor=center,text=MoverBlue,font=\sffamily\bfseries\fontsize{22}{26}\selectfont]
+      at (2.275,2.165) {AP @ 0.7};
+    \node[visual small] at (0,0.90) {AP: Average precision};
+    \node[visual small] at (0,0.52) {IoU: Intersection over union};
+
+    \draw[visual panel] (5.05,3.37) rectangle (9.60,4.98);
+    \node[anchor=center,text=MoverBlue,font=\sffamily\bfseries\fontsize{22}{26}\selectfont]
+      at (7.325,4.175) {\href{https://arxiv.org/abs/2202.08449}{V2X-Sim}};
+    \draw[visual panel] (5.05,1.36) rectangle (9.60,2.97);
+    \node[anchor=center,text=MoverBlue,font=\sffamily\bfseries\fontsize{22}{26}\selectfont]
+      at (7.325,2.165) {\href{https://arxiv.org/abs/2109.07644}{OPV2V}};
+
+    \node[visual label,font=\sffamily\bfseries\fontsize{18}{22}\selectfont] at (10.10,4.98)
+      {\href{https://carla.org/}{CARLA}};
+    \node[anchor=north,inner sep=0] at (12.40,4.30)
+      {\includegraphics[height=2.80cm]{assets/papers/disconet/camera.png}};
+    \node[visual text,font=\sffamily\fontsize{10}{12}\selectfont] at (10.10,1.30)
+      {Urban driving simulation};
+
+  \end{VisualCanvas}}
+\end{frame}

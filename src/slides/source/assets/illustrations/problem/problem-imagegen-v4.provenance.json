@@ -1,0 +1,42 @@
+{
+  "created_at": "2026-11-04T17:00:31.589161+00:00",
+  "tool": "Built-in image_gen.imagegen",
+  "mode": "Edit of the existing v3 illustration",
+  "asset": "problem-model-distillation-imagegen-v4.png",
+  "sha256": "6e1e309b54c814f897e993e74d9f3209978d95b64479bcc8a7c4508b7391603c",
+  "native_dimensions_px": [
+    2172,
+    724
+  ],
+  "prompt_file": "problem-imagegen-v4.prompt.txt",
+  "references": [
+    "problem-model-distillation-imagegen-v3.png"
+  ],
+  "postprocessing": "None; copied unchanged at native resolution.",
+  "user_request": "Improve the diagram and remove the redundant Conceptual Distillation caption.",
+  "changes": [
+    "Fewer overlapping neural-network connections and more distinct layers.",
+    "Three teacher scene-view tiles visibly converge before the teacher network.",
+    "Student inputs distinguish a local scene tile from shared feature grids.",
+    "Consistent orange target vehicle and detection-outline styling on both paths.",
+    "The redundant caption is removed from the native slide."
+  ],
+  "scientific_scope": "Illustrative knowledge-transfer metaphor. Network size, node counts, scene tiles and matching output-car symbols are not measured architecture, parameter counts, predictions or equal-accuracy results. The previously documented common DiscoNet teacher/student backbone is unchanged.",
+  "paper_context_record": "problem-imagegen-v3.provenance.json",
+  "native_slide_elements": [
+    "Research question",
+    "Teacher/student headings",
+    "Holistic View and Local + Shared Features labels",
+    "Dashed training-only distillation arrow",
+    "Source credit"
+  ],
+  "previous_version": "problem-model-distillation-imagegen-v3.png",
+  "usage": "src/slides/source/final/core/02_problem.tex",
+  "validation": {
+    "asset_integrity": "Copied asset SHA256 matches generated original.",
+    "pdf_build": "Passed: final.pdf contains 31 pages (27 main + 4 appendix); no overfull boxes or slide-body overflow warnings.",
+    "native_text": "Teacher/student labels and training-only distillation text remain selectable; removed caption is absent from page 7.",
+    "visual_review": "Page 7 inspected at 1800-pixel width after relocating Teacher/Holistic View and Student/Local + Shared Features below the illustration. Diagram and training-only arrow shifted up together; question, outputs, labels and source credit have clear spacing without overlaps.",
+    "preservation": "Earlier image versions and prompts remain; no shared slide styles or frozen proposal-cover sources were changed."
+  }
+}

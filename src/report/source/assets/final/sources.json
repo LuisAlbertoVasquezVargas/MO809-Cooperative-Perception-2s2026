@@ -1,0 +1,159 @@
+{
+  "imported_on": "2026-11-09",
+  "scope": "Bundled project figures and worked examples, identified by local filenames and SHA-256. No new model execution or image generation.",
+  "assets": [
+    {
+      "local": "graph/discograph-step-01-alignment-v3.pdf",
+      "sha256": "6e568c09144b95be35e198545920f54a9c992b71a43e46e8eb0f5cc9899d162e"
+    },
+    {
+      "local": "graph/discograph-step-01-alignment-v3-provenance.json",
+      "sha256": "03cdbfdacff37e77e2c0592fd2212332f80e9efa1251aad3316073bc21359370"
+    },
+    {
+      "local": "graph/discograph-rotation-translation-v3.pdf",
+      "sha256": "761c6b751c5cf40d129b997dd18f0c46102e12e18514d702d7cd3b7789249fb3"
+    },
+    {
+      "local": "graph/discograph-rotation-translation-v3-provenance.json",
+      "sha256": "3e54dc5b6b295f672e4704e1d2c4075d27a0eebe3c379ec46d5d6e1c31091cd8"
+    },
+    {
+      "local": "graph/discograph-step-02-pairing-v3.pdf",
+      "sha256": "27a971e6354f911f1953aa2f349a21d47394f267522b4aadd6df2bcbd6c3b528"
+    },
+    {
+      "local": "graph/discograph-step-02-pairing-v3-provenance.json",
+      "sha256": "dc53055fad0765f7216086fcbf7a34c008718e386e845d80778f235601cf4bac"
+    },
+    {
+      "local": "graph/discograph-step-03-scores-v4.pdf",
+      "sha256": "9db5cfecc6059299aaa7f9ad2198689d6f22552f16ba1f4da301034080d6a8d6"
+    },
+    {
+      "local": "graph/discograph-step-03-scores-v4-provenance.json",
+      "sha256": "ef685f1b789fda7e524223d46213c16c2d3b0fcb689086d0ae47f01bbe50de03"
+    },
+    {
+      "local": "graph/discograph-step-04-softmax-v3.pdf",
+      "sha256": "662c61bc6d8116b10f4af955b812a799fc5a4386b6804b3dec66cdd58d49ddf5"
+    },
+    {
+      "local": "graph/discograph-step-04-softmax-v3-provenance.json",
+      "sha256": "d96ac7ff0e4737b455b4e2d21129feb0c0835e5a9b60eb1c5214dc10b356e24c"
+    },
+    {
+      "local": "graph/discograph-step-05-weighting-v3.pdf",
+      "sha256": "12235037cb6a541073e47c30c9392d3618a77eeb814f700a1d89c689a984684b"
+    },
+    {
+      "local": "graph/discograph-step-05-weighting-v3-provenance.json",
+      "sha256": "91c282813fff4edf892e64855ba5bff3d8332ac92dfee4ad1db27451988cfb83"
+    },
+    {
+      "local": "graph/discograph-step-06-fusion-v3.pdf",
+      "sha256": "dca07ca7474926e86dbd473c978fe4c3f8f1a0e82bdc3d5cfedf676b1e981b35"
+    },
+    {
+      "local": "graph/discograph-step-06-fusion-v3-provenance.json",
+      "sha256": "751d1dac99d3c3993285a0f5a29f56329fe2316b16ed11ee991bc2809ce76230"
+    },
+    {
+      "local": "graph/feature_alignment_example_v1.py",
+      "sha256": "796128ea4e7294b3291e3e84ac5de410f6a1172a43a4c2da43671dde65fbf1e7"
+    },
+    {
+      "local": "metrics/iou-overlap-v1.pdf",
+      "sha256": "3c68161ce816e6c4dd0e6e773bd4c902522315f7ebfe33abc75223ec858399a9"
+    },
+    {
+      "local": "metrics/iou-thresholds-v1.pdf",
+      "sha256": "ed2df6e5fe0affd3fa2506cb37a19a870839dd6bb044c6137583c529eca80a8c"
+    },
+    {
+      "local": "metrics/iou-examples-v1.json",
+      "sha256": "7c35441bb915679a8f73214b86b62e46781c5c21f42f66aab31b02c4c1ff8ef3"
+    },
+    {
+      "local": "metrics/ap-example-curve-v1.pdf",
+      "sha256": "bbafaad2a5576faee94383fd974c62f905d839a11f46412da19def92d34122f4"
+    },
+    {
+      "local": "metrics/ap-example-v1.json",
+      "sha256": "9ad3d4fa7ed2cf7c678474201b34bb14cc47ec7a2f79ad0423aa8e2fff81b125"
+    },
+    {
+      "local": "metrics/ap-example-source-v1.json",
+      "sha256": "9d5f0c01a4fd351af4c68542cfd5b8a2796d4d90b0f1b6406e7d0a87700cdb08"
+    },
+    {
+      "local": "metrics/confidence-example-v1.json",
+      "sha256": "51a1490d8e7378cce815021f7423fa3bec7c043c0c38b64f10a5a7cf73f75ea8"
+    },
+    {
+      "local": "cameras/example-camera-front-left-v1.jpg",
+      "sha256": "52066da36e2c66dbb2abb59b7b634d762db856c4ca840dc7c21b805b9c9b489e"
+    },
+    {
+      "local": "cameras/example-camera-front-v1.jpg",
+      "sha256": "7b7a94da4adb327c134d44b8a4e4981fe25e915e094daccfd1b175acc7c2247d"
+    },
+    {
+      "local": "cameras/example-camera-front-right-v1.jpg",
+      "sha256": "8e5cf086cb48e7255711b415d1cbffeefc24556b4848f2dd97ea2b671ca86110"
+    },
+    {
+      "local": "cameras/example-camera-back-left-v1.jpg",
+      "sha256": "28c7558e5ec8717637b636ead13b25c91f2bcddce665465937c8d2d98a4a3c71"
+    },
+    {
+      "local": "cameras/example-camera-back-v1.jpg",
+      "sha256": "9d95844a67c49ad28ca306a7239d1eedea7ac903ce71fef12dbd5b0907339efd"
+    },
+    {
+      "local": "cameras/example-camera-back-right-v1.jpg",
+      "sha256": "a962834c0af3b618342a19520c1adcd5eaca0e0928b0339588d86365a7e88242"
+    },
+    {
+      "local": "convolution/conv-palette-v2-inputs.pdf",
+      "sha256": "037fb8e4c71444803e3d86a6053553e279acb27a149479f29416d8ae13663c76"
+    },
+    {
+      "local": "convolution/conv-palette-v2-kernels-rich-v1.pdf",
+      "sha256": "bc7615b9119fc67d5859d66c6897180a304acc6a8053db909a2a1a78160d215e"
+    },
+    {
+      "local": "convolution/conv-palette-v2-conv2d-r0c0-rich-v1.pdf",
+      "sha256": "803146ee0ab5d743305c570b452bd80192a20f07cd17b47cd2639e1cb992968a"
+    },
+    {
+      "local": "convolution/conv-palette-v2-conv3d-d0r0c0.pdf",
+      "sha256": "24200c1c2424163a57b572c45b0bf9aeae184becfc7d987405ed48347fb5d525"
+    },
+    {
+      "local": "convolution/conv-palette-v2-conv3d-d1r0c0.pdf",
+      "sha256": "259a0c4d87140173c617484f487c8f791a07215840bb3474500dd7a70b1e2d73"
+    },
+    {
+      "local": "convolution/conv-palette-v2-kernel3d-rich-v1.pdf",
+      "sha256": "5f9a2c90381aa16a77b8caa36ffe03d8c57a44da46a7fb3f5de30321809fe790"
+    },
+    {
+      "local": "convolution/conv3d-output-parallelepipeds-v3-d0r0c0-rich-v1.pdf",
+      "sha256": "9972b4101d1a74dfe09d92e7e19c6b1850fea646810205be55567d0105b339bc"
+    },
+    {
+      "local": "convolution/conv3d-output-parallelepipeds-v3-d1r0c0-rich-v1.pdf",
+      "sha256": "201c150f2f93e2d3fa78487f21f07e68fef84558ab060fb5e2201926c14ef841"
+    },
+    {
+      "local": "convolution/conv3d-sliding-v6-calculations.json",
+      "sha256": "76ae07b8c1e4929091fef97582a37ccb480f5d07e8ad798affd927d545ce9f51"
+    },
+    {
+      "local": "convolution/conv-palette-v1.json",
+      "sha256": "001c23a1e51b2669008a7cb8dcb707bdd1b3ba9598d56161a12e46892f6ee076"
+    }
+  ],
+  "metadata_policy": "Machine paths, private source-repository identifiers, and transient generation IDs are omitted. Bundled filenames, checksums, public attribution, and technical evidence are retained."
+}

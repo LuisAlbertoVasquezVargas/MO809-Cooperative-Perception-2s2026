@@ -1,0 +1,1085 @@
+{
+  "completed": true,
+  "kind": "Runtime-only model-slot scaling with explicitly replayed V2X-Sim inputs",
+  "run": "runs/runtime-workload-20261104T200914Z",
+  "dataset": "V2X-Sim 2.0",
+  "n_definition": "Number of model input slots; above five, slots replay recorded inputs",
+  "recorded_vehicle_limit": 5,
+  "frames": 30,
+  "measured_n": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20
+  ],
+  "AP_evaluated": false,
+  "checkpoint": {
+    "sha256": "6455ec85ad85f5b82f1c4e97f9dba20714373b4eeec00c7bf5c5893758a0f109",
+    "epoch": 100,
+    "parameters": 15843505,
+    "strict_state_dict": true,
+    "source_commit": "dd8fbb660300ee763e0bac870f63fc4987440a35",
+    "feature_alignment": {
+      "align_corners": false,
+      "mode": "bilinear",
+      "padding_mode": "zeros"
+    }
+  },
+  "device": {
+    "requested": "auto",
+    "resolved": "cuda:0",
+    "name": "NVIDIA GeForce RTX 5060 Ti",
+    "reason": "CUDA is usable",
+    "torch": "2.9.1+cu128",
+    "cuda_runtime": "12.8"
+  },
+  "timing_repeats": 3,
+  "warmup_per_condition_per_trial": 20,
+  "timed_forwards": 1800,
+  "warmup_forwards": 1200,
+  "own_scan_parity_first_frame": {
+    "cls": 0.0,
+    "loc": 0.0
+  },
+  "first_frame_output_signatures_by_n": {
+    "5": {
+      "cls": {
+        "shape": [
+          5,
+          393216,
+          2
+        ],
+        "sha256": "48e17b543a0690dcd87c67499163980c2a8bfb8369a45f061b6f148437e6ca01"
+      },
+      "loc": {
+        "shape": [
+          5,
+          256,
+          256,
+          6,
+          1,
+          6
+        ],
+        "sha256": "bb4225f0ddfeb884ca3e770e115efaecef80bb135c52f097cbe77e25f6687871"
+      }
+    },
+    "20": {
+      "cls": {
+        "shape": [
+          20,
+          393216,
+          2
+        ],
+        "sha256": "34cfe128d54febc231b7cc2263d6818406ec4f2a9e5c1080f1d19c6b62fde665"
+      },
+      "loc": {
+        "shape": [
+          20,
+          256,
+          256,
+          6,
+          1,
+          6
+        ],
+        "sha256": "2c06071ae186085e22d062028ae0ccbfc34cc16780148a793ba05791dbfe2bfa"
+      }
+    },
+    "7": {
+      "cls": {
+        "shape": [
+          7,
+          393216,
+          2
+        ],
+        "sha256": "b299ee86b618cd399eafd231b8edc3db5c36e2c00717682ae22a475c660fe43c"
+      },
+      "loc": {
+        "shape": [
+          7,
+          256,
+          256,
+          6,
+          1,
+          6
+        ],
+        "sha256": "b15e5dd6d5d1c5e93b5801970bf1908c09c4d4ce24bb0066779e48c6ec4ca088"
+      }
+    },
+    "3": {
+      "cls": {
+        "shape": [
+          3,
+          393216,
+          2
+        ],
+        "sha256": "76db13e18ecd0a0a2f7d5be050ebf41abbd14eb95937bf7c031553a8a9bddecf"
+      },
+      "loc": {
+        "shape": [
+          3,
+          256,
+          256,
+          6,
+          1,
+          6
+        ],
+        "sha256": "292cd78faff2f6587a0ab7db641228371f4aa6b26e9da0e038f8010132921e68"
+      }
+    },
+    "14": {
+      "cls": {
+        "shape": [
+          14,
+          393216,
+          2
+        ],
+        "sha256": "81aa291bf2d9c502d4552f5f71f7fb814099fb6f7b196c4f4ddc433268d35c7f"
+      },
+      "loc": {
+        "shape": [
+          14,
+          256,
+          256,
+          6,
+          1,
+          6
+        ],
+        "sha256": "866c5e713fa3db14955a5e2e2b55c967084c52cd14d6776eb10d6dead1ca26c3"
+      }
+    },
+    "17": {
+      "cls": {
+        "shape": [
+          17,
+          393216,
+          2
+        ],
+        "sha256": "736d4897ef7734b83d5b762221f3b17c4bf10d395d3a56c76eeb50c3e71cc77d"
+      },
+      "loc": {
+        "shape": [
+          17,
+          256,
+          256,
+          6,
+          1,
+          6
+        ],
+        "sha256": "4d55a055f361cb0bfd030c700cac94194f6d17da95b31760f550d222c703e880"
+      }
+    },
+    "4": {
+      "cls": {
+        "shape": [
+          4,
+          393216,
+          2
+        ],
+        "sha256": "146d02c112d5f5efec43bc819b0cedacd8a19ed590a13453d35a73a895488f2b"
+      },
+      "loc": {
+        "shape": [
+          4,
+          256,
+          256,
+          6,
+          1,
+          6
+        ],
+        "sha256": "9422b2d74e5e9e32cbf6f3e90c5456277b76d9f7bf8cb0a53e3f7ed68f25dd93"
+      }
+    },
+    "12": {
+      "cls": {
+        "shape": [
+          12,
+          393216,
+          2
+        ],
+        "sha256": "224f91e0f6d4bbe17ee213ada7eefcdf2595898c77f017a310b9f7b353e6dfe6"
+      },
+      "loc": {
+        "shape": [
+          12,
+          256,
+          256,
+          6,
+          1,
+          6
+        ],
+        "sha256": "120b43fd321b30240ff6be8fb60a7178368321ea282e292690c7d3088a9d7954"
+      }
+    },
+    "11": {
+      "cls": {
+        "shape": [
+          11,
+          393216,
+          2
+        ],
+        "sha256": "67a199f70e3a6779abe3aef8afa8e0a3d18096d2fe7f6d494508c4a039889bde"
+      },
+      "loc": {
+        "shape": [
+          11,
+          256,
+          256,
+          6,
+          1,
+          6
+        ],
+        "sha256": "e1192d9b333600364155ab10be6e370579ab7c2964c3d9846d10adfed0e26658"
+      }
+    },
+    "9": {
+      "cls": {
+        "shape": [
+          9,
+          393216,
+          2
+        ],
+        "sha256": "0c1f3888ccdcc9c18952b75f8fc6f50aa99c01476793d846014ac733280a0400"
+      },
+      "loc": {
+        "shape": [
+          9,
+          256,
+          256,
+          6,
+          1,
+          6
+        ],
+        "sha256": "a44d801a402713f361184cd2e0a680b0031ae756750ff7e3dd05697b8e079fd4"
+      }
+    },
+    "1": {
+      "cls": {
+        "shape": [
+          1,
+          393216,
+          2
+        ],
+        "sha256": "66ba360346e7a6643061c527cf7d87358657cfea551d3a616794930b6bdc4b8c"
+      },
+      "loc": {
+        "shape": [
+          1,
+          256,
+          256,
+          6,
+          1,
+          6
+        ],
+        "sha256": "1dfbc86b0b6f9b5f065272d951574e0f0ee8dc70dce752a1bf9be3f189e55d23"
+      }
+    },
+    "13": {
+      "cls": {
+        "shape": [
+          13,
+          393216,
+          2
+        ],
+        "sha256": "630c5819b9e62f64d9a1fa9a8c683d975f1f6f255d438547e7887cccce204582"
+      },
+      "loc": {
+        "shape": [
+          13,
+          256,
+          256,
+          6,
+          1,
+          6
+        ],
+        "sha256": "f90d36ddbbb1c7a47e8a5787a0d5df099b4bf3a65432d926945ed3c1c350520f"
+      }
+    },
+    "8": {
+      "cls": {
+        "shape": [
+          8,
+          393216,
+          2
+        ],
+        "sha256": "34e4727cf9b0a8fcd9df0cd596b9aaa8579073253e353d95e3a8a3c427b09e77"
+      },
+      "loc": {
+        "shape": [
+          8,
+          256,
+          256,
+          6,
+          1,
+          6
+        ],
+        "sha256": "dee54a36c90e96b815ffd2904ae6c699cdddd3c7d7892c798613aa6083248f34"
+      }
+    },
+    "6": {
+      "cls": {
+        "shape": [
+          6,
+          393216,
+          2
+        ],
+        "sha256": "1b070af79d07168995efc701691098566d070646ac4126b1855afedb776a38d3"
+      },
+      "loc": {
+        "shape": [
+          6,
+          256,
+          256,
+          6,
+          1,
+          6
+        ],
+        "sha256": "a30851c33fb6402bf3507746c91a91d42099ff8a75740784fae1f0bb315a84d0"
+      }
+    },
+    "19": {
+      "cls": {
+        "shape": [
+          19,
+          393216,
+          2
+        ],
+        "sha256": "9b2e7cb3e5df709c418630a0b7ed0591cdfaa04aee8b8cde98184e821885a34f"
+      },
+      "loc": {
+        "shape": [
+          19,
+          256,
+          256,
+          6,
+          1,
+          6
+        ],
+        "sha256": "9f8456acb3f41d6e29ef209e04ed62742da668e5a913f76cd3d634a34c1262dc"
+      }
+    },
+    "18": {
+      "cls": {
+        "shape": [
+          18,
+          393216,
+          2
+        ],
+        "sha256": "6ab247c8fed2fad56789daac1a6a4b176059ed646153b0e9c154dcd06c65682e"
+      },
+      "loc": {
+        "shape": [
+          18,
+          256,
+          256,
+          6,
+          1,
+          6
+        ],
+        "sha256": "82debea47c7aa7aac5abac787429032e0e73f180e8f793128edd10e9eb9c0397"
+      }
+    },
+    "15": {
+      "cls": {
+        "shape": [
+          15,
+          393216,
+          2
+        ],
+        "sha256": "e479310bd0e1bf38a714c1074d741b84dff6ade9d7f622046e44506c638c2d4d"
+      },
+      "loc": {
+        "shape": [
+          15,
+          256,
+          256,
+          6,
+          1,
+          6
+        ],
+        "sha256": "b259e2da144ec9bd2802f327a4a8f631efda5cf7354b39192df3103d1a80951b"
+      }
+    },
+    "10": {
+      "cls": {
+        "shape": [
+          10,
+          393216,
+          2
+        ],
+        "sha256": "8ca04b0e2e9a96553a0d577da7e905455cddd6a8fdd4ad7acf5b7750bca40dd9"
+      },
+      "loc": {
+        "shape": [
+          10,
+          256,
+          256,
+          6,
+          1,
+          6
+        ],
+        "sha256": "28256260d11d2d025f6356e4a9bdd2d336df6d65eaf18b60a8b6ff02715c1dc0"
+      }
+    },
+    "2": {
+      "cls": {
+        "shape": [
+          2,
+          393216,
+          2
+        ],
+        "sha256": "be84f3ef9a693af06612512d3fd245227ac8ad548284add40b24e15fd4a74fd3"
+      },
+      "loc": {
+        "shape": [
+          2,
+          256,
+          256,
+          6,
+          1,
+          6
+        ],
+        "sha256": "463a2e674ae68f781a19bb46c0a8a160c856368360260f165a85dd1ce9837b99"
+      }
+    },
+    "16": {
+      "cls": {
+        "shape": [
+          16,
+          393216,
+          2
+        ],
+        "sha256": "a9abdc91ecc8ed810bd817762df9e2d1658ee6d5ee413f17d5081995e6449604"
+      },
+      "loc": {
+        "shape": [
+          16,
+          256,
+          256,
+          6,
+          1,
+          6
+        ],
+        "sha256": "599b771a2399925b8efa5eb632192c2fbbfd8971c79e2e14e352b31e3460068d"
+      }
+    }
+  },
+  "first_frame_repeated_trial_bit_identical": true,
+  "results": [
+    {
+      "n": 1,
+      "distinct_recorded_vehicles": 1,
+      "replayed_input_slots": 0,
+      "input_kind": "Distinct Recorded Inputs",
+      "forward": {
+        "samples": 90,
+        "median_ms": 7.76379950093542,
+        "p95_ms": 7.830957999794919,
+        "mean_ms": 7.775021577698579,
+        "min_ms": 7.719827999608242,
+        "max_ms": 7.892682999226963
+      },
+      "transfer_forward": {
+        "samples": 90,
+        "median_ms": 8.364000998881238,
+        "p95_ms": 8.43043349987056,
+        "mean_ms": 8.375920199897438,
+        "min_ms": 8.316024999658111,
+        "max_ms": 8.517561000189744
+      },
+      "peak_allocated_bytes": 282915840
+    },
+    {
+      "n": 2,
+      "distinct_recorded_vehicles": 2,
+      "replayed_input_slots": 0,
+      "input_kind": "Distinct Recorded Inputs",
+      "forward": {
+        "samples": 90,
+        "median_ms": 13.568733500505914,
+        "p95_ms": 17.306229949917906,
+        "mean_ms": 14.226884466734191,
+        "min_ms": 13.165471000320395,
+        "max_ms": 18.692527000894188
+      },
+      "transfer_forward": {
+        "samples": 90,
+        "median_ms": 14.687579500787251,
+        "p95_ms": 19.111531000180545,
+        "mean_ms": 15.571567922294586,
+        "min_ms": 14.272813001298346,
+        "max_ms": 20.398784999997588
+      },
+      "peak_allocated_bytes": 250164224
+    },
+    {
+      "n": 3,
+      "distinct_recorded_vehicles": 3,
+      "replayed_input_slots": 0,
+      "input_kind": "Distinct Recorded Inputs",
+      "forward": {
+        "samples": 90,
+        "median_ms": 21.845811499588308,
+        "p95_ms": 22.114433100705355,
+        "mean_ms": 21.919621099975,
+        "min_ms": 21.6905230008706,
+        "max_ms": 25.320283999462845
+      },
+      "transfer_forward": {
+        "samples": 90,
+        "median_ms": 23.469552500500868,
+        "p95_ms": 23.791443550999247,
+        "mean_ms": 23.55808943345134,
+        "min_ms": 23.301057999560726,
+        "max_ms": 27.599837998423027
+      },
+      "peak_allocated_bytes": 338663424
+    },
+    {
+      "n": 4,
+      "distinct_recorded_vehicles": 4,
+      "replayed_input_slots": 0,
+      "input_kind": "Distinct Recorded Inputs",
+      "forward": {
+        "samples": 90,
+        "median_ms": 31.639562999771442,
+        "p95_ms": 32.16384650049804,
+        "mean_ms": 31.76646310011064,
+        "min_ms": 31.060515999342897,
+        "max_ms": 34.429932000421104
+      },
+      "transfer_forward": {
+        "samples": 90,
+        "median_ms": 33.96773400072561,
+        "p95_ms": 34.494039698893175,
+        "mean_ms": 34.00967423333188,
+        "min_ms": 33.26433899928816,
+        "max_ms": 36.66858500037051
+      },
+      "peak_allocated_bytes": 425859584
+    },
+    {
+      "n": 5,
+      "distinct_recorded_vehicles": 5,
+      "replayed_input_slots": 0,
+      "input_kind": "Distinct Recorded Inputs",
+      "forward": {
+        "samples": 90,
+        "median_ms": 41.41541899934964,
+        "p95_ms": 41.817492151130864,
+        "mean_ms": 41.52777102236642,
+        "min_ms": 40.994957998918835,
+        "max_ms": 45.1881359986146
+      },
+      "transfer_forward": {
+        "samples": 90,
+        "median_ms": 44.209012500687095,
+        "p95_ms": 45.259102350064495,
+        "mean_ms": 44.322461044470806,
+        "min_ms": 43.732254998758435,
+        "max_ms": 47.917562998918584
+      },
+      "peak_allocated_bytes": 514768896
+    },
+    {
+      "n": 6,
+      "distinct_recorded_vehicles": 5,
+      "replayed_input_slots": 1,
+      "input_kind": "Replayed-Input Workload",
+      "forward": {
+        "samples": 90,
+        "median_ms": 52.48648599990702,
+        "p95_ms": 56.074496699693555,
+        "mean_ms": 52.992848866698395,
+        "min_ms": 52.11397200037027,
+        "max_ms": 57.96480599929055
+      },
+      "transfer_forward": {
+        "samples": 90,
+        "median_ms": 55.96207900089212,
+        "p95_ms": 59.781313099938416,
+        "mean_ms": 56.571600844472414,
+        "min_ms": 55.484567001258256,
+        "max_ms": 62.18624500070291
+      },
+      "peak_allocated_bytes": 602506240
+    },
+    {
+      "n": 7,
+      "distinct_recorded_vehicles": 5,
+      "replayed_input_slots": 2,
+      "input_kind": "Replayed-Input Workload",
+      "forward": {
+        "samples": 90,
+        "median_ms": 66.34008250057377,
+        "p95_ms": 66.94585499981258,
+        "mean_ms": 66.48814797772502,
+        "min_ms": 65.60380299924873,
+        "max_ms": 70.74609499977669
+      },
+      "transfer_forward": {
+        "samples": 90,
+        "median_ms": 70.55083100021875,
+        "p95_ms": 71.49330999936865,
+        "mean_ms": 70.74672824437584,
+        "min_ms": 69.61926599979051,
+        "max_ms": 75.31191399903037
+      },
+      "peak_allocated_bytes": 1031695360
+    },
+    {
+      "n": 8,
+      "distinct_recorded_vehicles": 5,
+      "replayed_input_slots": 3,
+      "input_kind": "Replayed-Input Workload",
+      "forward": {
+        "samples": 90,
+        "median_ms": 80.02722500077653,
+        "p95_ms": 83.18067400032305,
+        "mean_ms": 80.48536775560125,
+        "min_ms": 78.82942600008391,
+        "max_ms": 84.20024699989881
+      },
+      "transfer_forward": {
+        "samples": 90,
+        "median_ms": 85.66118300041126,
+        "p95_ms": 88.74109189955561,
+        "mean_ms": 85.81027703330619,
+        "min_ms": 83.3257220001542,
+        "max_ms": 89.70952100025897
+      },
+      "peak_allocated_bytes": 1081438720
+    },
+    {
+      "n": 9,
+      "distinct_recorded_vehicles": 5,
+      "replayed_input_slots": 4,
+      "input_kind": "Replayed-Input Workload",
+      "forward": {
+        "samples": 90,
+        "median_ms": 93.15586750017246,
+        "p95_ms": 96.70110054976249,
+        "mean_ms": 93.78614402230596,
+        "min_ms": 92.36264799983473,
+        "max_ms": 102.09604299961939
+      },
+      "transfer_forward": {
+        "samples": 90,
+        "median_ms": 99.53140949983208,
+        "p95_ms": 102.8006795498186,
+        "mean_ms": 100.04233013340935,
+        "min_ms": 97.97711399914988,
+        "max_ms": 109.71745799906785
+      },
+      "peak_allocated_bytes": 1132764160
+    },
+    {
+      "n": 10,
+      "distinct_recorded_vehicles": 5,
+      "replayed_input_slots": 5,
+      "input_kind": "Replayed-Input Workload",
+      "forward": {
+        "samples": 90,
+        "median_ms": 103.5313460006364,
+        "p95_ms": 128.97652924975773,
+        "mean_ms": 106.84361915559242,
+        "min_ms": 102.31748899968807,
+        "max_ms": 142.2737060001964
+      },
+      "transfer_forward": {
+        "samples": 90,
+        "median_ms": 110.08841500006383,
+        "p95_ms": 137.7721345998907,
+        "mean_ms": 113.8253934777822,
+        "min_ms": 107.92411699912918,
+        "max_ms": 151.70906300045317
+      },
+      "peak_allocated_bytes": 1182786560
+    },
+    {
+      "n": 11,
+      "distinct_recorded_vehicles": 5,
+      "replayed_input_slots": 6,
+      "input_kind": "Replayed-Input Workload",
+      "forward": {
+        "samples": 90,
+        "median_ms": 118.58088999997562,
+        "p95_ms": 121.91570799923284,
+        "mean_ms": 119.45448133331713,
+        "min_ms": 117.1542390002287,
+        "max_ms": 130.6960080000863
+      },
+      "transfer_forward": {
+        "samples": 90,
+        "median_ms": 125.92811850026919,
+        "p95_ms": 129.5419326503179,
+        "mean_ms": 126.65553614442615,
+        "min_ms": 123.37874399963766,
+        "max_ms": 138.31645299978845
+      },
+      "peak_allocated_bytes": 1232162816
+    },
+    {
+      "n": 12,
+      "distinct_recorded_vehicles": 5,
+      "replayed_input_slots": 7,
+      "input_kind": "Replayed-Input Workload",
+      "forward": {
+        "samples": 90,
+        "median_ms": 136.31573299971933,
+        "p95_ms": 139.17110885086004,
+        "mean_ms": 136.43087269994996,
+        "min_ms": 132.99032500071917,
+        "max_ms": 148.394345998895
+      },
+      "transfer_forward": {
+        "samples": 90,
+        "median_ms": 143.49578299970744,
+        "p95_ms": 147.4252383494786,
+        "mean_ms": 144.08330417789128,
+        "min_ms": 139.6175920017413,
+        "max_ms": 155.82894500039401
+      },
+      "peak_allocated_bytes": 1283119616
+    },
+    {
+      "n": 13,
+      "distinct_recorded_vehicles": 5,
+      "replayed_input_slots": 8,
+      "input_kind": "Replayed-Input Workload",
+      "forward": {
+        "samples": 90,
+        "median_ms": 150.4307240002163,
+        "p95_ms": 154.80201134905656,
+        "mean_ms": 150.9709354998146,
+        "min_ms": 147.63020400096138,
+        "max_ms": 159.31867499966756
+      },
+      "transfer_forward": {
+        "samples": 90,
+        "median_ms": 158.44357249989116,
+        "p95_ms": 163.8248894998469,
+        "mean_ms": 158.86395313322686,
+        "min_ms": 154.79968600084248,
+        "max_ms": 169.47527199954493
+      },
+      "peak_allocated_bytes": 1332250624
+    },
+    {
+      "n": 14,
+      "distinct_recorded_vehicles": 5,
+      "replayed_input_slots": 9,
+      "input_kind": "Replayed-Input Workload",
+      "forward": {
+        "samples": 90,
+        "median_ms": 169.6880825002154,
+        "p95_ms": 182.08666074933717,
+        "mean_ms": 170.38360573341276,
+        "min_ms": 165.18371500023932,
+        "max_ms": 192.87565700142295
+      },
+      "transfer_forward": {
+        "samples": 90,
+        "median_ms": 177.91164000027493,
+        "p95_ms": 192.3424937506752,
+        "mean_ms": 179.04980893345055,
+        "min_ms": 173.09133900016604,
+        "max_ms": 206.26872799948615
+      },
+      "peak_allocated_bytes": 1383355392
+    },
+    {
+      "n": 15,
+      "distinct_recorded_vehicles": 5,
+      "replayed_input_slots": 10,
+      "input_kind": "Replayed-Input Workload",
+      "forward": {
+        "samples": 90,
+        "median_ms": 186.6294809997271,
+        "p95_ms": 211.3875319996623,
+        "mean_ms": 189.46142848894345,
+        "min_ms": 183.519427999272,
+        "max_ms": 226.22731699993892
+      },
+      "transfer_forward": {
+        "samples": 90,
+        "median_ms": 195.47505149967037,
+        "p95_ms": 223.35297400095442,
+        "mean_ms": 198.58176194443837,
+        "min_ms": 191.79142199936905,
+        "max_ms": 238.39588000009826
+      },
+      "peak_allocated_bytes": 1432634368
+    },
+    {
+      "n": 16,
+      "distinct_recorded_vehicles": 5,
+      "replayed_input_slots": 11,
+      "input_kind": "Replayed-Input Workload",
+      "forward": {
+        "samples": 90,
+        "median_ms": 206.61347700024635,
+        "p95_ms": 209.355167049398,
+        "mean_ms": 206.99067396665973,
+        "min_ms": 203.5972009998659,
+        "max_ms": 213.01833299912687
+      },
+      "transfer_forward": {
+        "samples": 90,
+        "median_ms": 215.67399300056422,
+        "p95_ms": 219.44513574935627,
+        "mean_ms": 216.2819671555351,
+        "min_ms": 212.43778399912117,
+        "max_ms": 224.209639000037
+      },
+      "peak_allocated_bytes": 1482838528
+    },
+    {
+      "n": 17,
+      "distinct_recorded_vehicles": 5,
+      "replayed_input_slots": 12,
+      "input_kind": "Replayed-Input Workload",
+      "forward": {
+        "samples": 90,
+        "median_ms": 238.92853100096545,
+        "p95_ms": 242.22107105097166,
+        "mean_ms": 239.3025694443875,
+        "min_ms": 235.16436099998828,
+        "max_ms": 247.32071499965969
+      },
+      "transfer_forward": {
+        "samples": 90,
+        "median_ms": 248.8491479998629,
+        "p95_ms": 253.0227346492211,
+        "mean_ms": 249.53059234442966,
+        "min_ms": 244.75610199988296,
+        "max_ms": 263.1011599987687
+      },
+      "peak_allocated_bytes": 2137818112
+    },
+    {
+      "n": 18,
+      "distinct_recorded_vehicles": 5,
+      "replayed_input_slots": 13,
+      "input_kind": "Replayed-Input Workload",
+      "forward": {
+        "samples": 90,
+        "median_ms": 260.3908470000533,
+        "p95_ms": 268.2602122506978,
+        "mean_ms": 261.3564001221878,
+        "min_ms": 256.69504899997264,
+        "max_ms": 272.05713500006823
+      },
+      "transfer_forward": {
+        "samples": 90,
+        "median_ms": 270.7078644998546,
+        "p95_ms": 279.8723406503086,
+        "mean_ms": 271.88726273327325,
+        "min_ms": 266.68407099896285,
+        "max_ms": 285.85847499925876
+      },
+      "peak_allocated_bytes": 2187645952
+    },
+    {
+      "n": 19,
+      "distinct_recorded_vehicles": 5,
+      "replayed_input_slots": 14,
+      "input_kind": "Replayed-Input Workload",
+      "forward": {
+        "samples": 90,
+        "median_ms": 282.99332300048263,
+        "p95_ms": 287.3552531509631,
+        "mean_ms": 283.1619591556066,
+        "min_ms": 278.15880599882803,
+        "max_ms": 289.942413000972
+      },
+      "transfer_forward": {
+        "samples": 90,
+        "median_ms": 293.53951050052274,
+        "p95_ms": 298.3889489993089,
+        "mean_ms": 293.9396531777068,
+        "min_ms": 288.7007009994704,
+        "max_ms": 301.0916980001639
+      },
+      "peak_allocated_bytes": 2237745152
+    },
+    {
+      "n": 20,
+      "distinct_recorded_vehicles": 5,
+      "replayed_input_slots": 15,
+      "input_kind": "Replayed-Input Workload",
+      "forward": {
+        "samples": 90,
+        "median_ms": 306.0480695003207,
+        "p95_ms": 310.52068124927246,
+        "mean_ms": 306.47330705552224,
+        "min_ms": 300.9427519991732,
+        "max_ms": 311.8094169985852
+      },
+      "transfer_forward": {
+        "samples": 90,
+        "median_ms": 318.06567200055724,
+        "p95_ms": 322.3817629007499,
+        "mean_ms": 318.0498519332913,
+        "min_ms": 311.79354800042347,
+        "max_ms": 328.73971499975596
+      },
+      "peak_allocated_bytes": 2288769536
+    }
+  ],
+  "specification_sha256": "de9625634d42f9ce37276edd3bbd1d9570009233fa4906ec9d1d78dcd0a973b6",
+  "cohort_sha256": "1bf09774e2ae267a96c29fe0a5ee634873ff285b29ab2fb03660ff586837bf4f",
+  "timings_sha256": "4e253f70baf935b9cee0094dae434fa5d8d1a90863cc06ec6e6c64a8b9b9192c",
+  "total_seconds": 448.5211846919992,
+  "run_metrics_sha256": "fcdde9cc32e4eb9ad398b2c47e87055da4dae2d5143cd0ff00bf4ef003fbe12f",
+  "summary_csv": "docs/experiments/runtime-workload-v2x-sim-2026-11-04.csv",
+  "summary_csv_sha256": "534589573d90a832efa5643a21f85cee1b6248b4caa2610e930b085dce3dbbba",
+  "cohort": {
+    "raw_scene_names": [
+      "scene_9",
+      "scene_97",
+      "scene_98"
+    ],
+    "prepared_scene_ids": [
+      8,
+      96,
+      97
+    ],
+    "frames_per_scene": 10,
+    "prepared_frame_indices": [
+      0,
+      11,
+      22,
+      33,
+      44,
+      55,
+      66,
+      77,
+      88,
+      99
+    ],
+    "ego_agent_id": 1,
+    "recorded_vehicle_ids": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "verified_source_files": 150
+  },
+  "protocol": {
+    "n_definition": "Number of model input slots; above five, slots replay recorded inputs",
+    "replay_policy": "For n>5, cycle original vehicle IDs 1,2,3,4,5 with their recorded pairwise poses; allocate n tensors and n model slots",
+    "unique_input_policy": "For n<=5, fixed ego 1 and nested nearest recorded vehicles by XY pose distance",
+    "forward_timing": "CUDA-synchronized host wall time for the full n-slot encoder, pairwise fusion, decoder and detection heads; inputs already on device",
+    "transfer_forward_timing": "Host-to-device transfer of n prepared inputs and pose/count tensors plus full n-slot forward",
+    "outside_timing": "File reads, CPU input packing, raw LiDAR preprocessing, warmups, model loading, output validation, box decoding, AP, file export and wireless transmission",
+    "precision": "float32",
+    "trial_orders": [
+      [
+        5,
+        20,
+        7,
+        3,
+        14,
+        17,
+        4,
+        12,
+        11,
+        9,
+        1,
+        13,
+        8,
+        6,
+        19,
+        18,
+        15,
+        10,
+        2,
+        16
+      ],
+      [
+        12,
+        17,
+        5,
+        8,
+        7,
+        3,
+        4,
+        6,
+        19,
+        2,
+        11,
+        10,
+        15,
+        20,
+        9,
+        14,
+        13,
+        16,
+        18,
+        1
+      ],
+      [
+        8,
+        12,
+        20,
+        11,
+        6,
+        9,
+        5,
+        15,
+        13,
+        10,
+        19,
+        17,
+        14,
+        3,
+        7,
+        4,
+        2,
+        18,
+        16,
+        1
+      ]
+    ],
+    "seed": 0,
+    "tf32": false,
+    "code_sha256": {
+      "evaluate_runtime_workload.py": "dbc7d6c1f1dbf87d89ae7b34964a9b4cd4b7567b990887c7e9486a6196ff02a0",
+      "disconet_demo/runtime_workload.py": "5c62a6441d5c6d323ebf0ca39537d8340a988fb9cfd235dbf553ad0871956139",
+      "disconet_demo/agent_sweep.py": "ec4166f24454c546a25ce8fe423bd5f25e35dcac5f69264e8112fa66f33710ec",
+      "disconet_demo/benchmark.py": "e7cf70665b3553c88dddcd1b91557a758d65c9279776532d3fe7c14c5994b1fc",
+      "disconet_demo/model.py": "cfbaee90cd8a312df4fb32971d9ecc0fbc26aba7a9c15b1960abb4f29fe7c4f3",
+      "disconet_demo/device.py": "01ef8c15aa246d70891600e7a32db6c4a7172d9a468c441d107aec4c07ad1a6e",
+      "evaluate_benchmark.py": "49a63015afcaa723787a62dc12fb09f43544c962ab7d91264b369d2d5b0cd0b7"
+    }
+  },
+  "validation": {
+    "all_150_recorded_source_hashes_checked": true,
+    "all_source_slot_and_pose_mappings_checked": true,
+    "all_1800_timing_samples_checked": true,
+    "all_timing_summaries_recomputed": true,
+    "same_30_frames_at_every_n": true,
+    "exactly_n_active_model_slots": true,
+    "replay_counts_explicit": true,
+    "first_frame_repeated_trial_bit_identical": true
+  },
+  "interpretation": "Runtime scaling of n model slots. n>5 reuses the five synchronized V2X-Sim input scans and their poses; it does not represent n distinct recorded vehicles. No AP is evaluated."
+}

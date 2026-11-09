@@ -1,0 +1,138 @@
+{
+  "imported_at": "2026-11-05T13:39:47.133962+00:00",
+  "weekly_meeting_date": "2026-11-04",
+  "weekly_meeting_week": 45,
+  "source_pdf_sha256": "dc6d9b2acef84caadf1efbce0838fbd27c4a051ac782097a5d249b467b177f9a",
+  "published_source_fingerprint": "742e774ef548847090d86a5123bd141509395a9a5def3a8d643ffa4c6fef6a59",
+  "source_slides": {
+    "qualitative_example": 40,
+    "setup": 42,
+    "full_test_results": 43,
+    "runtime_scaling": 44
+  },
+  "scope": {
+    "full_test": "1,000 synchronized frames; 4,000 vehicle views; fixed epoch-100 checkpoint; sharing off versus on; no new training.",
+    "qualitative_example": "One recorded frame, scene_5/raw 000066; 17 reference cars, 11 own-scan predictions, 17 cooperative predictions. Counts are not AP.",
+    "runtime": "Separate 30-frame workload; n=1..20 model input slots; n>5 replays recorded scans and poses; no AP evaluated.",
+    "new_experiments_run_for_import": false,
+    "original_quantitative_figures_modified": false
+  },
+  "assets": [
+    {
+      "file": "results-plots-v1.pdf",
+      "sha256": "45010f89633f389541f327e9590e0f3c30cb476505b310d13639a40eda35a1c6",
+      "bytes": 750080
+    },
+    {
+      "file": "results-plots-v1.svg",
+      "sha256": "81c7e6194c6b2f171d542661b48b6cbebff277bbf9c72b57614cf8b65d50ca98",
+      "bytes": 6670123
+    },
+    {
+      "file": "results-plots-v1.json",
+      "sha256": "1f22c838eedc19e55868e6cf9f007a482510967de5fdbdd8161a014d4cf42f15",
+      "bytes": 2505
+    },
+    {
+      "file": "results-plots-data-v1.npz",
+      "sha256": "3a20b7b3561f464123f2cfd0fc35894a0d14b703c985f8fe50c38a68758cf8aa",
+      "bytes": 944673
+    },
+    {
+      "file": "example-detections-v1.pdf",
+      "sha256": "4753330d38bd8605583e142901ab7a7941cc1555a5e2021c89e50ecf9a1f7884",
+      "bytes": 2162951
+    },
+    {
+      "file": "example-detections-v1.svg",
+      "sha256": "d815aeaf689f7a057c7274b7b16c02871dad2c57381674b8cd02b3ade4da00a8",
+      "bytes": 7843800
+    },
+    {
+      "file": "qualitative-examples-v1.json",
+      "sha256": "101543b765bd274fa94f6cec1331b5370d7869b5bb541aca5f0f6819dedc9fbb",
+      "bytes": 5833
+    },
+    {
+      "file": "example-detections-data-v1.npz",
+      "sha256": "d6506fe911f701841968afc8954cb0ad7f70eed4aa7bf29246a198d57eaa8aa4",
+      "bytes": 143465
+    },
+    {
+      "file": "runtime-scaling-v1.pdf",
+      "sha256": "90ffac721d0f847fbf0521653a0bf1c696e1136aabbffdd0d30fc3fdf1b72e54",
+      "bytes": 48398
+    },
+    {
+      "file": "runtime-scaling-v1.svg",
+      "sha256": "c81df0b4c43f66c3a0939b88b79f368404dcaa2d198546dd4747f258705225a1",
+      "bytes": 61361
+    },
+    {
+      "file": "runtime-scaling-v1.json",
+      "sha256": "64059b1f857a49bdd03327d454e017fa79018afde49e95ff21d459ee17501a57",
+      "bytes": 18414
+    },
+    {
+      "file": "experiment-setup-v1.json",
+      "sha256": "b7775a12395c1cc7f9b893ec1260640b42e35ee62897b689f51024f832de9783",
+      "bytes": 2709
+    },
+    {
+      "file": "weekly-04_reproduced_results.tex",
+      "sha256": "109feb1c51b20b29cd6ef0a670a8de2cc4ef92b787b5a8d764917a6532d9cf22",
+      "bytes": 1235
+    },
+    {
+      "file": "weekly-05_qualitative_examples.tex",
+      "sha256": "8c508f955c8e379657be6ba11a62225530a1f87137dcdae5084e63805bb927df",
+      "bytes": 1774
+    },
+    {
+      "file": "weekly-06_experiment_setup.tex",
+      "sha256": "20d15baf97f5d707f6711e1fa8dc31a88294ae209e62c5f1409eefc766cf58cf",
+      "bytes": 2183
+    },
+    {
+      "file": "weekly-07_runtime_scaling.tex",
+      "sha256": "526c7f1a342ef7c796dee2f72515bce25a5367cc27a3c5a9a46e62290a557dfb",
+      "bytes": 385
+    },
+    {
+      "file": "weekly-03_dataset_analysis.tex",
+      "sha256": "1eec400dd4e883fe331791de7e3d67305ada81927257171abbf0e2dbd6e09c09",
+      "bytes": 3113
+    },
+    {
+      "file": "weekly-source-records.json",
+      "sha256": "35beb2ea25e45a587520b4c1cec617c919635a9cad5fc3ee37defdab3f0246be",
+      "bytes": 8035
+    },
+    {
+      "file": "runtime-workload-source.json",
+      "sha256": "33c578a67a07d9c17a4d6ee94aba67cd20c738839642515eadc7c59b56534eec",
+      "bytes": 27433
+    },
+    {
+      "file": "runtime-workload-scope.json",
+      "sha256": "ed02091a75165b18dcc42aaf0e8c4522aeac8459726b51800a8e8716f1e0b296",
+      "bytes": 2047
+    },
+    {
+      "file": "runtime-workload-summary.csv",
+      "sha256": "534589573d90a832efa5643a21f85cee1b6248b4caa2610e930b085dce3dbbba",
+      "bytes": 2351
+    },
+    {
+      "file": "full-test-v2-no-rsu-2026-11-03.json",
+      "sha256": "6d8eacbde99b2fa715dcf4f60ff668dc2812903878d42fe96057e89dec9e66b2",
+      "bytes": 16599
+    },
+    {
+      "file": "test-loss-v2-no-rsu-2026-11-03.json",
+      "sha256": "2114449ac78e8b06fec311f378a38e6c7eb100a372d581bba16a7f410ce3e18d",
+      "bytes": 10026
+    }
+  ],
+  "metadata_policy": "Machine paths, private source-repository identifiers, and transient generation IDs are omitted. Bundled filenames, checksums, public attribution, and technical evidence are retained."
+}

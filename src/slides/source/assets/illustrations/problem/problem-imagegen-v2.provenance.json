@@ -1,0 +1,37 @@
+{
+  "created_at": "2026-11-03T15:18:13.223908+00:00",
+  "tool": "Built-in image_gen.imagegen",
+  "mode": "Brand-new text-to-image generation; no input images supplied",
+  "asset": "problem-holistic-onboard-imagegen-v2.png",
+  "sha256": "8886d8c8fdf9d52e8fb89672d8c7194417dc7b27069f2206a882141dbd0bcd91",
+  "native_dimensions_px": [
+    2172,
+    724
+  ],
+  "prompt_file": "problem-imagegen-v2.prompt.txt",
+  "references": [],
+  "postprocessing": "None; copied unchanged into the repository.",
+  "concept": "Broad holistic multi-vehicle supervision guiding an onboard collaborative perception model, linked by the same orange target vehicle.",
+  "usage": "src/slides/source/final/core/02_problem.tex",
+  "native_slide_elements": [
+    "Research question",
+    "Teacher/student headings and role labels",
+    "Dashed training-only distillation arrow",
+    "Source credit"
+  ],
+  "scope": "Conceptual educational illustration, not a recorded detection example, measured accuracy result, parameter-count comparison, or hardware design.",
+  "visual_metaphors": [
+    "Onboard chip represents learned perception, not installed project hardware.",
+    "Matching target outlines illustrate retained detection information as the research question, not a validated guarantee."
+  ],
+  "previous_version_preserved": "problem-distillation-imagegen-v1.png",
+  "review": {
+    "new_asset_visually_checked": true,
+    "integrated_slide_visually_checked": true,
+    "no_input_images_used": true,
+    "distinct_from_slide_5": true,
+    "native_question_and_training_only_arrow_preserved": true,
+    "build": "passed",
+    "pdf_pages": 31
+  }
+}

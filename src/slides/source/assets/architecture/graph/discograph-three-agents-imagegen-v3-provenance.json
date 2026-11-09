@@ -1,0 +1,64 @@
+{
+  "asset": "src/slides/weekly/src/img/disconet/graph/discograph-three-agents-imagegen-v3.png",
+  "asset_sha256": "bc78a83d78ce1d17454c6ad7c1ef7ea93bcdc39e1c78f1dfca3b306d8b549791",
+  "created_on": "2026-10-29",
+  "tool": "image_gen.imagegen",
+  "mode": "built-in targeted image edit",
+  "transparent_background": false,
+  "dimensions_px": [
+    1536,
+    1024
+  ],
+  "scope": "Slide 11 only; n=3 teaching illustration. Official demo remains n=5.",
+  "reference": {
+    "path": "src/slides/weekly/src/img/disconet/graph/discograph-three-agents-imagegen-v2.png",
+    "sha256": "388d3400e30945ef959474574c1c8d9ce64cf2c791c543182a0e50d4556060cd",
+    "role": "Edit target; preserve graph layout and topology"
+  },
+  "prompts": [
+    {
+      "path": "src/slides/weekly/src/img/disconet/graph/discograph-three-agents-imagegen-v3-prompt.txt",
+      "sha256": "53bfc3d875d3720c41bed7e5c7dc59f70d32b049244918d2fd24f09e169fb85e"
+    }
+  ],
+  "postprocessing": "Copied unchanged into the repository; no raster edits outside imagegen.",
+  "visual_review": {
+    "agents": [
+      1,
+      2,
+      3
+    ],
+    "directed_edges_including_self_loops": 9,
+    "selected_edge": "2 -> 1",
+    "self_loops": [
+      1,
+      2,
+      3
+    ],
+    "edge_labels": [
+      "W_2->1",
+      "W_3->1",
+      "W_1->1"
+    ],
+    "targeted_correction": "Only Car 2 body paint changed to orange; Car 1 stays silver and Car 3 blue. Labels, three-node topology, self-loops, selected edge and heatmap retained."
+  },
+  "spatial_map": {
+    "path": "src/slides/weekly/src/img/disconet/graph/discograph-three-agents-v2-spatial-map.pdf",
+    "renderer": "Matplotlib vector cells, separate from the generated illustration",
+    "shape": [
+      32,
+      32
+    ],
+    "origin": "Synthetic illustrative fields normalized across three senders",
+    "data_provenance": "discograph-three-agents-v2-provenance.json",
+    "miniature_in_generated_graph": "Qualitative depiction of a spatial map; numerical interpretation uses the vector panel."
+  },
+  "source_url": "https://proceedings.neurips.cc/paper_files/paper/2021/file/f702defbc67edb455949f46babab0c18-Paper.pdf#page=4",
+  "derived_from": "discograph-three-agents-imagegen-v2-provenance.json",
+  "request": "Make cars 1 and 2 different colors.",
+  "car_colors": {
+    "1": "silver",
+    "2": "burnt orange/copper",
+    "3": "blue"
+  }
+}

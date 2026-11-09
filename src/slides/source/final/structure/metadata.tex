@@ -1,0 +1,22 @@
+% src/slides/source/final/structure/metadata.tex
+
+% Trim the bold glyph edges slightly without changing font metrics or color.
+\newcommand{\FinalCoverTitleWeight}[1]{%
+  \pdfliteral direct{2 Tr 0.24 w 1 G}%
+  #1%
+  \pdfliteral direct{0 Tr 0 w}%
+}
+
+\newcommand{\MoverPresentationTitle}{MO809: Final Presentation}
+\newcommand{\MoverPresentationDate}{\FinalPresentationDate}
+\newcommand{\MoverDatasetDescription}{%
+  {\fontsize{19}{24}\selectfont\bfseries
+  \FinalCoverTitleWeight{Cooperative Perception with DiscoNet}\\[0.12cm]
+  \FinalCoverTitleWeight{Under Perfect Communication}}}
+\newcommand{\MoverDatasetReleaseReference}{%
+  Learning Distilled Collaboration Graph for Multi-Agent Perception\\[0.08cm]
+  Li et al., NeurIPS 2021}
+\newcommand{\MoverResearcherRole}{\MakeUppercase{\ProjectAuthor}}
+\newcommand{\MoverResearcherNames}{%
+  Wellington Lobato, Guilherme Maia,\\
+  Allan M. de Souza, Edmundo Madeira}

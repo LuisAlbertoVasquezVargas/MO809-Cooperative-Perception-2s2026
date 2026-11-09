@@ -1,0 +1,92 @@
+{
+  "kind": "Illustrative AP example, not measured benchmark detections",
+  "source": "ap-example-source-v1.json",
+  "source_sha256": "9d5f0c01a4fd351af4c68542cfd5b8a2796d4d90b0f1b6406e7d0a87700cdb08",
+  "generator": "src/demos/slides/export_ap_example.py",
+  "generator_sha256": "37d8ccc2e78f0f6cd0962303873c23e886dfe22836a4d1772a524417fc369f7d",
+  "reference_cars": 3,
+  "rows": [
+    [
+      "1",
+      "0.99",
+      "TP",
+      "1 / 0",
+      "100.0%",
+      "33.3%"
+    ],
+    [
+      "2",
+      "0.96",
+      "FP",
+      "1 / 1",
+      "50.0%",
+      "33.3%"
+    ],
+    [
+      "3",
+      "0.92",
+      "TP",
+      "2 / 1",
+      "66.7%",
+      "66.7%"
+    ],
+    [
+      "4",
+      "0.83",
+      "TP",
+      "3 / 1",
+      "75.0%",
+      "100.0%"
+    ]
+  ],
+  "cumulative_tp": [
+    1,
+    1,
+    2,
+    3
+  ],
+  "cumulative_fp": [
+    0,
+    1,
+    1,
+    1
+  ],
+  "precision": [
+    1.0,
+    0.5,
+    0.6666666666666666,
+    0.75
+  ],
+  "recall": [
+    0.3333333333333333,
+    0.3333333333333333,
+    0.6666666666666666,
+    1.0
+  ],
+  "padded_recall": [
+    0.0,
+    0.3333333333333333,
+    0.3333333333333333,
+    0.6666666666666666,
+    1.0,
+    1.0
+  ],
+  "precision_envelope": [
+    1.0,
+    1.0,
+    0.75,
+    0.75,
+    0.75,
+    0.0
+  ],
+  "ap_exact_fraction": "5/6",
+  "ap_percent": 83.33333333333334,
+  "font": "Carlito, embedded in PDF; editable SVG text",
+  "illustration_credit": "AI generated illustration",
+  "output_sha256": {
+    "05_ap_example_rows.tex": "880c70b572e33429ecf3611ce3c2e1814f1ff59b53fc3df0d1fc4d060e6a572b",
+    "ap-example-curve-v1.pdf": "bbafaad2a5576faee94383fd974c62f905d839a11f46412da19def92d34122f4",
+    "ap-example-curve-v1.svg": "b086e506d1d9b69b19199829bdd17c966bb99b71ca1422776443d110cf95d2c7",
+    "ap-example-curve-v1.png": "d683f3730222d60539b49f44c1dae78f4405d84077217153f0eeb1022fcdff45"
+  }
+}

@@ -1,0 +1,27 @@
+\input{assets/experiments/tree-2026-11-05/table-rows.tex}
+\begin{frame}{Runtime and Detection AP}
+  \definecolor{TreeDistinctLight}{HTML}{EAF1F6}
+  \definecolor{TreeDistinctAlt}{HTML}{D8E5EF}
+  \definecolor{TreeReplayLight}{HTML}{E5F2EF}
+  \definecolor{TreeReplayAlt}{HTML}{CCE5DC}
+  \SlideBody{\begin{VisualCanvas}
+    \node[anchor=north,inner sep=0pt,text=MoverNavy,
+      font=\fontsize{9}{10.5}\selectfont] at (7.4,5.58) {%
+      \setlength{\tabcolsep}{0.06cm}
+      \setlength{\arrayrulewidth}{0.5pt}
+      \arrayrulecolor{MoverNavy!35}
+      \renewcommand{\arraystretch}{0.78}
+      \begin{tabular}{>{\centering\arraybackslash}p{0.60cm}|*{2}{>{\centering\arraybackslash}p{2.20cm}}|*{2}{>{\centering\arraybackslash}p{2.20cm}}|*{2}{>{\centering\arraybackslash}p{2.20cm}}}
+        \rowcolor{MoverNavy}
+        \color{white}\textbf{$n$} &
+        \color{white}\shortstack{\textbf{Original}\\\textbf{Median (ms)}} &
+        \color{white}\shortstack{\textbf{Tree}\\\textbf{Median (ms)}} &
+        \color{white}\shortstack{\textbf{Original}\\\textbf{AP@0.5 (\%)}} &
+        \color{white}\shortstack{\textbf{Tree}\\\textbf{AP@0.5 (\%)}} &
+        \color{white}\shortstack{\textbf{Original}\\\textbf{AP@0.7 (\%)}} &
+        \color{white}\shortstack{\textbf{Tree}\\\textbf{AP@0.7 (\%)}} \\
+        \TreeStudyTableRows
+      \end{tabular}};
+  \end{VisualCanvas}}
+  \SlideSource{Source: Own elaboration.}
+\end{frame}

@@ -1,0 +1,892 @@
+{
+  "completed": true,
+  "kind": "Original DiscoNet versus coarse-attention Kruskal tree",
+  "run": "runs/tree-comparison-20261105T140612Z",
+  "dataset": "V2X-Sim 2.0",
+  "measured_n": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "methods": [
+    "original",
+    "tree"
+  ],
+  "frames": 30,
+  "ego_agent_id": 1,
+  "AP_evaluated": true,
+  "AP_policy": "all_active",
+  "checkpoint": {
+    "sha256": "6455ec85ad85f5b82f1c4e97f9dba20714373b4eeec00c7bf5c5893758a0f109",
+    "epoch": 100,
+    "parameters": 15843505,
+    "strict_state_dict": true,
+    "source_commit": "dd8fbb660300ee763e0bac870f63fc4987440a35",
+    "feature_alignment": {
+      "align_corners": false,
+      "mode": "bilinear",
+      "padding_mode": "zeros"
+    }
+  },
+  "device": {
+    "requested": "auto",
+    "resolved": "cuda:0",
+    "name": "NVIDIA GeForce RTX 5060 Ti",
+    "reason": "CUDA is usable",
+    "torch": "2.9.1+cu128",
+    "cuda_runtime": "12.8"
+  },
+  "timing_repeats": 3,
+  "warmup_per_condition_per_trial": 20,
+  "timed_forwards": 2700,
+  "warmup_forwards": 1800,
+  "all_ego_outputs_bit_identical_across_trials": true,
+  "n_le_2_methods_bit_identical": true,
+  "results": [
+    {
+      "n": 1,
+      "distinct_recorded_vehicles": 1,
+      "replayed_input_slots": 0,
+      "original": {
+        "forward_median_ms": 7.816738499968778,
+        "timing_samples": 90,
+        "AP": {
+          "policy": "all_active",
+          "vehicle_views": 30,
+          "omitted_active_views": 0,
+          "iou_0.5": {
+            "ap": 0.48913589119911194,
+            "ap_percent": 48.913589119911194,
+            "ground_truth_boxes": 427,
+            "predicted_boxes": 334,
+            "recall": 0.5105386416861827,
+            "precision": 0.652694582939148
+          },
+          "iou_0.7": {
+            "ap": 0.45537689328193665,
+            "ap_percent": 45.537689328193665,
+            "ground_truth_boxes": 427,
+            "predicted_boxes": 334,
+            "recall": 0.477751756440281,
+            "precision": 0.6107784509658813
+          }
+        }
+      },
+      "tree": {
+        "forward_median_ms": 7.863762000397401,
+        "timing_samples": 90,
+        "AP": {
+          "policy": "all_active",
+          "vehicle_views": 30,
+          "omitted_active_views": 0,
+          "iou_0.5": {
+            "ap": 0.48913589119911194,
+            "ap_percent": 48.913589119911194,
+            "ground_truth_boxes": 427,
+            "predicted_boxes": 334,
+            "recall": 0.5105386416861827,
+            "precision": 0.652694582939148
+          },
+          "iou_0.7": {
+            "ap": 0.45537689328193665,
+            "ap_percent": 45.537689328193665,
+            "ground_truth_boxes": 427,
+            "predicted_boxes": 334,
+            "recall": 0.477751756440281,
+            "precision": 0.6107784509658813
+          }
+        }
+      }
+    },
+    {
+      "n": 2,
+      "distinct_recorded_vehicles": 2,
+      "replayed_input_slots": 0,
+      "original": {
+        "forward_median_ms": 13.340305499696115,
+        "timing_samples": 90,
+        "AP": {
+          "policy": "all_active",
+          "vehicle_views": 30,
+          "omitted_active_views": 0,
+          "iou_0.5": {
+            "ap": 0.6094471216201782,
+            "ap_percent": 60.94471216201782,
+            "ground_truth_boxes": 427,
+            "predicted_boxes": 345,
+            "recall": 0.629976580796253,
+            "precision": 0.7797101736068726
+          },
+          "iou_0.7": {
+            "ap": 0.5366840958595276,
+            "ap_percent": 53.66840958595276,
+            "ground_truth_boxes": 427,
+            "predicted_boxes": 345,
+            "recall": 0.5597189695550351,
+            "precision": 0.6927536129951477
+          }
+        }
+      },
+      "tree": {
+        "forward_median_ms": 13.25222549985483,
+        "timing_samples": 90,
+        "AP": {
+          "policy": "all_active",
+          "vehicle_views": 30,
+          "omitted_active_views": 0,
+          "iou_0.5": {
+            "ap": 0.6094471216201782,
+            "ap_percent": 60.94471216201782,
+            "ground_truth_boxes": 427,
+            "predicted_boxes": 345,
+            "recall": 0.629976580796253,
+            "precision": 0.7797101736068726
+          },
+          "iou_0.7": {
+            "ap": 0.5366840958595276,
+            "ap_percent": 53.66840958595276,
+            "ground_truth_boxes": 427,
+            "predicted_boxes": 345,
+            "recall": 0.5597189695550351,
+            "precision": 0.6927536129951477
+          }
+        }
+      }
+    },
+    {
+      "n": 3,
+      "distinct_recorded_vehicles": 3,
+      "replayed_input_slots": 0,
+      "original": {
+        "forward_median_ms": 21.990436499891075,
+        "timing_samples": 90,
+        "AP": {
+          "policy": "all_active",
+          "vehicle_views": 30,
+          "omitted_active_views": 0,
+          "iou_0.5": {
+            "ap": 0.6651853322982788,
+            "ap_percent": 66.51853322982788,
+            "ground_truth_boxes": 427,
+            "predicted_boxes": 317,
+            "recall": 0.6721311475409836,
+            "precision": 0.9053627848625183
+          },
+          "iou_0.7": {
+            "ap": 0.5871047377586365,
+            "ap_percent": 58.71047377586365,
+            "ground_truth_boxes": 427,
+            "predicted_boxes": 317,
+            "recall": 0.6018735362997658,
+            "precision": 0.8107255697250366
+          }
+        }
+      },
+      "tree": {
+        "forward_median_ms": 21.40900699987469,
+        "timing_samples": 90,
+        "AP": {
+          "policy": "all_active",
+          "vehicle_views": 30,
+          "omitted_active_views": 0,
+          "iou_0.5": {
+            "ap": 0.6016842126846313,
+            "ap_percent": 60.168421268463135,
+            "ground_truth_boxes": 427,
+            "predicted_boxes": 326,
+            "recall": 0.6159250585480094,
+            "precision": 0.8067484498023987
+          },
+          "iou_0.7": {
+            "ap": 0.5233652591705322,
+            "ap_percent": 52.33652591705322,
+            "ground_truth_boxes": 427,
+            "predicted_boxes": 326,
+            "recall": 0.5433255269320844,
+            "precision": 0.7116564512252808
+          }
+        }
+      }
+    },
+    {
+      "n": 4,
+      "distinct_recorded_vehicles": 4,
+      "replayed_input_slots": 0,
+      "original": {
+        "forward_median_ms": 31.392105000122683,
+        "timing_samples": 90,
+        "AP": {
+          "policy": "all_active",
+          "vehicle_views": 30,
+          "omitted_active_views": 0,
+          "iou_0.5": {
+            "ap": 0.7080278992652893,
+            "ap_percent": 70.80278992652893,
+            "ground_truth_boxes": 427,
+            "predicted_boxes": 322,
+            "recall": 0.711943793911007,
+            "precision": 0.9440993666648865
+          },
+          "iou_0.7": {
+            "ap": 0.6339413523674011,
+            "ap_percent": 63.39413523674011,
+            "ground_truth_boxes": 427,
+            "predicted_boxes": 322,
+            "recall": 0.6440281030444965,
+            "precision": 0.8540372848510742
+          }
+        }
+      },
+      "tree": {
+        "forward_median_ms": 29.3819970002005,
+        "timing_samples": 90,
+        "AP": {
+          "policy": "all_active",
+          "vehicle_views": 30,
+          "omitted_active_views": 0,
+          "iou_0.5": {
+            "ap": 0.5805657505989075,
+            "ap_percent": 58.05657505989075,
+            "ground_truth_boxes": 427,
+            "predicted_boxes": 316,
+            "recall": 0.5925058548009368,
+            "precision": 0.800632894039154
+          },
+          "iou_0.7": {
+            "ap": 0.5037000179290771,
+            "ap_percent": 50.370001792907715,
+            "ground_truth_boxes": 427,
+            "predicted_boxes": 316,
+            "recall": 0.5199063231850117,
+            "precision": 0.702531635761261
+          }
+        }
+      }
+    },
+    {
+      "n": 5,
+      "distinct_recorded_vehicles": 5,
+      "replayed_input_slots": 0,
+      "original": {
+        "forward_median_ms": 41.57028200006607,
+        "timing_samples": 90,
+        "AP": {
+          "policy": "all_active",
+          "vehicle_views": 30,
+          "omitted_active_views": 0,
+          "iou_0.5": {
+            "ap": 0.7446235418319702,
+            "ap_percent": 74.46235418319702,
+            "ground_truth_boxes": 427,
+            "predicted_boxes": 335,
+            "recall": 0.747072599531616,
+            "precision": 0.9522387981414795
+          },
+          "iou_0.7": {
+            "ap": 0.6752997040748596,
+            "ap_percent": 67.52997040748596,
+            "ground_truth_boxes": 427,
+            "predicted_boxes": 335,
+            "recall": 0.6838407494145199,
+            "precision": 0.8716418147087097
+          }
+        }
+      },
+      "tree": {
+        "forward_median_ms": 36.53516800022771,
+        "timing_samples": 90,
+        "AP": {
+          "policy": "all_active",
+          "vehicle_views": 30,
+          "omitted_active_views": 0,
+          "iou_0.5": {
+            "ap": 0.6265154480934143,
+            "ap_percent": 62.65154480934143,
+            "ground_truth_boxes": 427,
+            "predicted_boxes": 309,
+            "recall": 0.6370023419203747,
+            "precision": 0.8802589178085327
+          },
+          "iou_0.7": {
+            "ap": 0.5365692973136902,
+            "ap_percent": 53.65692973136902,
+            "ground_truth_boxes": 427,
+            "predicted_boxes": 309,
+            "recall": 0.5550351288056206,
+            "precision": 0.7669903039932251
+          }
+        }
+      }
+    },
+    {
+      "n": 6,
+      "distinct_recorded_vehicles": 5,
+      "replayed_input_slots": 1,
+      "original": {
+        "forward_median_ms": 52.42777000012211,
+        "timing_samples": 90,
+        "AP": {
+          "policy": "all_active",
+          "vehicle_views": 30,
+          "omitted_active_views": 0,
+          "iou_0.5": {
+            "ap": 0.7353782653808594,
+            "ap_percent": 73.53782653808594,
+            "ground_truth_boxes": 427,
+            "predicted_boxes": 330,
+            "recall": 0.7377049180327869,
+            "precision": 0.9545454382896423
+          },
+          "iou_0.7": {
+            "ap": 0.6661118268966675,
+            "ap_percent": 66.61118268966675,
+            "ground_truth_boxes": 427,
+            "predicted_boxes": 330,
+            "recall": 0.6744730679156908,
+            "precision": 0.8727272748947144
+          }
+        }
+      },
+      "tree": {
+        "forward_median_ms": 43.631321500015474,
+        "timing_samples": 90,
+        "AP": {
+          "policy": "all_active",
+          "vehicle_views": 30,
+          "omitted_active_views": 0,
+          "iou_0.5": {
+            "ap": 0.5771457552909851,
+            "ap_percent": 57.71457552909851,
+            "ground_truth_boxes": 427,
+            "predicted_boxes": 323,
+            "recall": 0.594847775175644,
+            "precision": 0.7863777279853821
+          },
+          "iou_0.7": {
+            "ap": 0.5069065093994141,
+            "ap_percent": 50.690650939941406,
+            "ground_truth_boxes": 427,
+            "predicted_boxes": 323,
+            "recall": 0.5269320843091335,
+            "precision": 0.6965944170951843
+          }
+        }
+      }
+    },
+    {
+      "n": 7,
+      "distinct_recorded_vehicles": 5,
+      "replayed_input_slots": 2,
+      "original": {
+        "forward_median_ms": 66.66675450014736,
+        "timing_samples": 90,
+        "AP": {
+          "policy": "all_active",
+          "vehicle_views": 30,
+          "omitted_active_views": 0,
+          "iou_0.5": {
+            "ap": 0.7392604351043701,
+            "ap_percent": 73.92604351043701,
+            "ground_truth_boxes": 427,
+            "predicted_boxes": 336,
+            "recall": 0.7423887587822015,
+            "precision": 0.9434523582458496
+          },
+          "iou_0.7": {
+            "ap": 0.6669911742210388,
+            "ap_percent": 66.69911742210388,
+            "ground_truth_boxes": 427,
+            "predicted_boxes": 336,
+            "recall": 0.6768149882903981,
+            "precision": 0.8601190447807312
+          }
+        }
+      },
+      "tree": {
+        "forward_median_ms": 52.88604850011325,
+        "timing_samples": 90,
+        "AP": {
+          "policy": "all_active",
+          "vehicle_views": 30,
+          "omitted_active_views": 0,
+          "iou_0.5": {
+            "ap": 0.5787176489830017,
+            "ap_percent": 57.87176489830017,
+            "ground_truth_boxes": 427,
+            "predicted_boxes": 316,
+            "recall": 0.5925058548009368,
+            "precision": 0.800632894039154
+          },
+          "iou_0.7": {
+            "ap": 0.5057085156440735,
+            "ap_percent": 50.57085156440735,
+            "ground_truth_boxes": 427,
+            "predicted_boxes": 316,
+            "recall": 0.522248243559719,
+            "precision": 0.7056962251663208
+          }
+        }
+      }
+    },
+    {
+      "n": 8,
+      "distinct_recorded_vehicles": 5,
+      "replayed_input_slots": 3,
+      "original": {
+        "forward_median_ms": 79.82843999980105,
+        "timing_samples": 90,
+        "AP": {
+          "policy": "all_active",
+          "vehicle_views": 30,
+          "omitted_active_views": 0,
+          "iou_0.5": {
+            "ap": 0.7380111813545227,
+            "ap_percent": 73.80111813545227,
+            "ground_truth_boxes": 427,
+            "predicted_boxes": 339,
+            "recall": 0.7423887587822015,
+            "precision": 0.9351032376289368
+          },
+          "iou_0.7": {
+            "ap": 0.6690221428871155,
+            "ap_percent": 66.90221428871155,
+            "ground_truth_boxes": 427,
+            "predicted_boxes": 339,
+            "recall": 0.6791569086651054,
+            "precision": 0.8554572463035583
+          }
+        }
+      },
+      "tree": {
+        "forward_median_ms": 60.46927599982155,
+        "timing_samples": 90,
+        "AP": {
+          "policy": "all_active",
+          "vehicle_views": 30,
+          "omitted_active_views": 0,
+          "iou_0.5": {
+            "ap": 0.591634213924408,
+            "ap_percent": 59.163421392440796,
+            "ground_truth_boxes": 427,
+            "predicted_boxes": 329,
+            "recall": 0.6088992974238876,
+            "precision": 0.7902735471725464
+          },
+          "iou_0.7": {
+            "ap": 0.5201441049575806,
+            "ap_percent": 52.01441049575806,
+            "ground_truth_boxes": 427,
+            "predicted_boxes": 329,
+            "recall": 0.5409836065573771,
+            "precision": 0.7021276354789734
+          }
+        }
+      }
+    },
+    {
+      "n": 9,
+      "distinct_recorded_vehicles": 5,
+      "replayed_input_slots": 4,
+      "original": {
+        "forward_median_ms": 92.06519000008484,
+        "timing_samples": 90,
+        "AP": {
+          "policy": "all_active",
+          "vehicle_views": 30,
+          "omitted_active_views": 0,
+          "iou_0.5": {
+            "ap": 0.7449634075164795,
+            "ap_percent": 74.49634075164795,
+            "ground_truth_boxes": 427,
+            "predicted_boxes": 336,
+            "recall": 0.747072599531616,
+            "precision": 0.949404776096344
+          },
+          "iou_0.7": {
+            "ap": 0.6706120371818542,
+            "ap_percent": 67.06120371818542,
+            "ground_truth_boxes": 427,
+            "predicted_boxes": 336,
+            "recall": 0.6791569086651054,
+            "precision": 0.863095223903656
+          }
+        }
+      },
+      "tree": {
+        "forward_median_ms": 67.48163100019156,
+        "timing_samples": 90,
+        "AP": {
+          "policy": "all_active",
+          "vehicle_views": 30,
+          "omitted_active_views": 0,
+          "iou_0.5": {
+            "ap": 0.6155770421028137,
+            "ap_percent": 61.55770421028137,
+            "ground_truth_boxes": 427,
+            "predicted_boxes": 331,
+            "recall": 0.6323185011709602,
+            "precision": 0.8157099485397339
+          },
+          "iou_0.7": {
+            "ap": 0.5333098769187927,
+            "ap_percent": 53.33098769187927,
+            "ground_truth_boxes": 427,
+            "predicted_boxes": 331,
+            "recall": 0.5550351288056206,
+            "precision": 0.7160120606422424
+          }
+        }
+      }
+    },
+    {
+      "n": 10,
+      "distinct_recorded_vehicles": 5,
+      "replayed_input_slots": 5,
+      "original": {
+        "forward_median_ms": 102.8031649998411,
+        "timing_samples": 90,
+        "AP": {
+          "policy": "all_active",
+          "vehicle_views": 30,
+          "omitted_active_views": 0,
+          "iou_0.5": {
+            "ap": 0.7446235418319702,
+            "ap_percent": 74.46235418319702,
+            "ground_truth_boxes": 427,
+            "predicted_boxes": 335,
+            "recall": 0.747072599531616,
+            "precision": 0.9522387981414795
+          },
+          "iou_0.7": {
+            "ap": 0.6752997040748596,
+            "ap_percent": 67.52997040748596,
+            "ground_truth_boxes": 427,
+            "predicted_boxes": 335,
+            "recall": 0.6838407494145199,
+            "precision": 0.8716418147087097
+          }
+        }
+      },
+      "tree": {
+        "forward_median_ms": 70.11970049961747,
+        "timing_samples": 90,
+        "AP": {
+          "policy": "all_active",
+          "vehicle_views": 30,
+          "omitted_active_views": 0,
+          "iou_0.5": {
+            "ap": 0.6171736121177673,
+            "ap_percent": 61.71736121177673,
+            "ground_truth_boxes": 427,
+            "predicted_boxes": 326,
+            "recall": 0.6323185011709602,
+            "precision": 0.8282208442687988
+          },
+          "iou_0.7": {
+            "ap": 0.5366368889808655,
+            "ap_percent": 53.66368889808655,
+            "ground_truth_boxes": 427,
+            "predicted_boxes": 326,
+            "recall": 0.5573770491803278,
+            "precision": 0.7300613522529602
+          }
+        }
+      }
+    },
+    {
+      "n": 11,
+      "distinct_recorded_vehicles": 5,
+      "replayed_input_slots": 6,
+      "original": {
+        "forward_median_ms": 118.76184799984912,
+        "timing_samples": 90,
+        "AP": {
+          "policy": "all_active",
+          "vehicle_views": 30,
+          "omitted_active_views": 0,
+          "iou_0.5": {
+            "ap": 0.7400491237640381,
+            "ap_percent": 74.00491237640381,
+            "ground_truth_boxes": 427,
+            "predicted_boxes": 330,
+            "recall": 0.7423887587822015,
+            "precision": 0.960606038570404
+          },
+          "iou_0.7": {
+            "ap": 0.6704860329627991,
+            "ap_percent": 67.04860329627991,
+            "ground_truth_boxes": 427,
+            "predicted_boxes": 330,
+            "recall": 0.6791569086651054,
+            "precision": 0.8787878751754761
+          }
+        }
+      },
+      "tree": {
+        "forward_median_ms": 76.93385650009077,
+        "timing_samples": 90,
+        "AP": {
+          "policy": "all_active",
+          "vehicle_views": 30,
+          "omitted_active_views": 0,
+          "iou_0.5": {
+            "ap": 0.585665762424469,
+            "ap_percent": 58.5665762424469,
+            "ground_truth_boxes": 427,
+            "predicted_boxes": 322,
+            "recall": 0.6018735362997658,
+            "precision": 0.7981366515159607
+          },
+          "iou_0.7": {
+            "ap": 0.5043829083442688,
+            "ap_percent": 50.43829083442688,
+            "ground_truth_boxes": 427,
+            "predicted_boxes": 322,
+            "recall": 0.5245901639344263,
+            "precision": 0.695652186870575
+          }
+        }
+      }
+    },
+    {
+      "n": 12,
+      "distinct_recorded_vehicles": 5,
+      "replayed_input_slots": 7,
+      "original": {
+        "forward_median_ms": 133.48628049971012,
+        "timing_samples": 90,
+        "AP": {
+          "policy": "all_active",
+          "vehicle_views": 30,
+          "omitted_active_views": 0,
+          "iou_0.5": {
+            "ap": 0.7416948676109314,
+            "ap_percent": 74.16948676109314,
+            "ground_truth_boxes": 427,
+            "predicted_boxes": 333,
+            "recall": 0.7447306791569087,
+            "precision": 0.954954981803894
+          },
+          "iou_0.7": {
+            "ap": 0.6720462441444397,
+            "ap_percent": 67.20462441444397,
+            "ground_truth_boxes": 427,
+            "predicted_boxes": 333,
+            "recall": 0.6814988290398126,
+            "precision": 0.8738738894462585
+          }
+        }
+      },
+      "tree": {
+        "forward_median_ms": 82.84377849986413,
+        "timing_samples": 90,
+        "AP": {
+          "policy": "all_active",
+          "vehicle_views": 30,
+          "omitted_active_views": 0,
+          "iou_0.5": {
+            "ap": 0.5876850485801697,
+            "ap_percent": 58.76850485801697,
+            "ground_truth_boxes": 427,
+            "predicted_boxes": 318,
+            "recall": 0.6018735362997658,
+            "precision": 0.8081761002540588
+          },
+          "iou_0.7": {
+            "ap": 0.5072081089019775,
+            "ap_percent": 50.720810890197754,
+            "ground_truth_boxes": 427,
+            "predicted_boxes": 318,
+            "recall": 0.5269320843091335,
+            "precision": 0.7075471878051758
+          }
+        }
+      }
+    },
+    {
+      "n": 13,
+      "distinct_recorded_vehicles": 5,
+      "replayed_input_slots": 8,
+      "original": {
+        "forward_median_ms": 147.97141150029347,
+        "timing_samples": 90,
+        "AP": {
+          "policy": "all_active",
+          "vehicle_views": 30,
+          "omitted_active_views": 0,
+          "iou_0.5": {
+            "ap": 0.7435706257820129,
+            "ap_percent": 74.3570625782013,
+            "ground_truth_boxes": 427,
+            "predicted_boxes": 336,
+            "recall": 0.747072599531616,
+            "precision": 0.949404776096344
+          },
+          "iou_0.7": {
+            "ap": 0.6718368530273438,
+            "ap_percent": 67.18368530273438,
+            "ground_truth_boxes": 427,
+            "predicted_boxes": 336,
+            "recall": 0.6814988290398126,
+            "precision": 0.8660714030265808
+          }
+        }
+      },
+      "tree": {
+        "forward_median_ms": 86.51939850005874,
+        "timing_samples": 90,
+        "AP": {
+          "policy": "all_active",
+          "vehicle_views": 30,
+          "omitted_active_views": 0,
+          "iou_0.5": {
+            "ap": 0.5949632525444031,
+            "ap_percent": 59.49632525444031,
+            "ground_truth_boxes": 427,
+            "predicted_boxes": 327,
+            "recall": 0.6112412177985949,
+            "precision": 0.7981651425361633
+          },
+          "iou_0.7": {
+            "ap": 0.5161459445953369,
+            "ap_percent": 51.61459445953369,
+            "ground_truth_boxes": 427,
+            "predicted_boxes": 327,
+            "recall": 0.5386416861826698,
+            "precision": 0.7033638954162598
+          }
+        }
+      }
+    },
+    {
+      "n": 14,
+      "distinct_recorded_vehicles": 5,
+      "replayed_input_slots": 9,
+      "original": {
+        "forward_median_ms": 165.7889409998461,
+        "timing_samples": 90,
+        "AP": {
+          "policy": "all_active",
+          "vehicle_views": 30,
+          "omitted_active_views": 0,
+          "iou_0.5": {
+            "ap": 0.7489591836929321,
+            "ap_percent": 74.89591836929321,
+            "ground_truth_boxes": 427,
+            "predicted_boxes": 337,
+            "recall": 0.7517564402810304,
+            "precision": 0.9525222778320312
+          },
+          "iou_0.7": {
+            "ap": 0.6749539971351624,
+            "ap_percent": 67.49539971351624,
+            "ground_truth_boxes": 427,
+            "predicted_boxes": 337,
+            "recall": 0.6838407494145199,
+            "precision": 0.8664688467979431
+          }
+        }
+      },
+      "tree": {
+        "forward_median_ms": 92.72947399995246,
+        "timing_samples": 90,
+        "AP": {
+          "policy": "all_active",
+          "vehicle_views": 30,
+          "omitted_active_views": 0,
+          "iou_0.5": {
+            "ap": 0.6093230247497559,
+            "ap_percent": 60.932302474975586,
+            "ground_truth_boxes": 427,
+            "predicted_boxes": 330,
+            "recall": 0.6252927400468384,
+            "precision": 0.8090909123420715
+          },
+          "iou_0.7": {
+            "ap": 0.5275232195854187,
+            "ap_percent": 52.75232195854187,
+            "ground_truth_boxes": 427,
+            "predicted_boxes": 330,
+            "recall": 0.550351288056206,
+            "precision": 0.7121211886405945
+          }
+        }
+      }
+    },
+    {
+      "n": 15,
+      "distinct_recorded_vehicles": 5,
+      "replayed_input_slots": 10,
+      "original": {
+        "forward_median_ms": 185.0505559996236,
+        "timing_samples": 90,
+        "AP": {
+          "policy": "all_active",
+          "vehicle_views": 30,
+          "omitted_active_views": 0,
+          "iou_0.5": {
+            "ap": 0.7446235418319702,
+            "ap_percent": 74.46235418319702,
+            "ground_truth_boxes": 427,
+            "predicted_boxes": 335,
+            "recall": 0.747072599531616,
+            "precision": 0.9522387981414795
+          },
+          "iou_0.7": {
+            "ap": 0.6752997040748596,
+            "ap_percent": 67.52997040748596,
+            "ground_truth_boxes": 427,
+            "predicted_boxes": 335,
+            "recall": 0.6838407494145199,
+            "precision": 0.8716418147087097
+          }
+        }
+      },
+      "tree": {
+        "forward_median_ms": 99.24803550029537,
+        "timing_samples": 90,
+        "AP": {
+          "policy": "all_active",
+          "vehicle_views": 30,
+          "omitted_active_views": 0,
+          "iou_0.5": {
+            "ap": 0.6047799587249756,
+            "ap_percent": 60.47799587249756,
+            "ground_truth_boxes": 427,
+            "predicted_boxes": 325,
+            "recall": 0.6206088992974239,
+            "precision": 0.8153846263885498
+          },
+          "iou_0.7": {
+            "ap": 0.5245426297187805,
+            "ap_percent": 52.45426297187805,
+            "ground_truth_boxes": 427,
+            "predicted_boxes": 325,
+            "recall": 0.5480093676814989,
+            "precision": 0.7200000286102295
+          }
+        }
+      }
+    }
+  ],
+  "specification_sha256": "df5a00d0eae0129e302be36ab012e6635b1972299002baec544b2a57f3ed67f1",
+  "cohort_sha256": "f99f152fdee09455d19e19041f9d7bb1e8d8e2b8137ed40764ea8311151b1e08",
+  "preflight_sha256": "1b847b9c063a78eed8ee239ae70da44503523c8ce3c43e8fa8caeaa6456e5392",
+  "timings_sha256": "7e579ef76a08d160f7db8f705237dfdb770502cbe4d2d15330c03de8459cb776",
+  "frame_manifest_sha256": "a06b9bd77a05ac8c2edc906a024fb80801cbb4c8a880f33e01e2d63fe441325a",
+  "precision_recall_sha256": "a262f3f4a9f5dbc16244f5c88a375ec2f112ec491b2a1e622ce172cd2cc7c5a1",
+  "measurement_and_postprocessing_seconds": 457.6070248249998,
+  "total_seconds": 469.55038582900033
+}

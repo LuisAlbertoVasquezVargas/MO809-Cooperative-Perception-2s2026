@@ -1,0 +1,164 @@
+{
+  "created_at": "2026-11-04T20:14:16+00:00",
+  "tool": "Built-in imagegen materials, exact vector composition",
+  "generator_sha256": "e9a44395174717081e930f51b286f23055df2551c75aec9f0ae6cdfceb6f35c5",
+  "reference_sha256": "d57961c1e360e0a4c85fac363aa1d3bfae62ae655ac1edd8de88e8bf9e2a3ab7",
+  "source_note": "Step-by-step DiscoGraph teaching diagram; feature values, score fields and pose correspondence are illustrative.",
+  "mode": "tensor",
+  "material_prompt_set": [
+    {
+      "role": "front",
+      "asset": "tensor-front-material-imagegen-v1.png",
+      "sha256": "cee3e10a8f9ade55016191fb6af271fcbbbb5797dea4c667ad5686c68bc64cf9",
+      "native_pixels": [
+        1254,
+        1254
+      ],
+      "prompt": "tensor-front-material-imagegen-v1-prompt.txt",
+      "prompt_sha256": "ef11a228d56f0abc2e234307edacf7b46edc580d4c4fea9a87cb6251c7c76976"
+    },
+    {
+      "role": "channels",
+      "asset": "tensor-channel-material-imagegen-v1.png",
+      "sha256": "cf5fbf37aa9e174f2ae2ba25a165f31ecf1a6be8e492d8bb878f7275f3900a13",
+      "native_pixels": [
+        1254,
+        1254
+      ],
+      "prompt": "tensor-channel-material-imagegen-v1-prompt.txt",
+      "prompt_sha256": "2d878a9486b7d22dc8cc8a8243ff1d1dabdd8af5f294289628f6ede9a8ce427d"
+    },
+    {
+      "role": "cell",
+      "asset": "tensor-cell-material-imagegen-v1.png",
+      "sha256": "c4eec17b6708cbeab9a3e19380d940ad33dd60572cad5c4d9d973e20407fad27",
+      "native_pixels": [
+        1254,
+        1254
+      ],
+      "prompt": "tensor-cell-material-imagegen-v1-prompt.txt",
+      "prompt_sha256": "d11a19b8eb100245492bcba5daf4c8c197e1e69feadd6bfbdf1c19b96ff321a7"
+    }
+  ],
+  "styled_faces": [
+    {
+      "role": "top",
+      "original_geometry": "105.200,185.680 194.800,154.320 414.800,154.320 325.200,185.680",
+      "original_fill": "#FAFAFA",
+      "material_sampling_pixels": 594.6122449278954
+    },
+    {
+      "role": "side",
+      "original_geometry": "325.200,185.680 414.800,154.320 414.800,374.320 325.200,405.680",
+      "original_fill": "#F0F0F0",
+      "material_sampling_pixels": 556.6276245763473
+    },
+    {
+      "role": "front",
+      "original_geometry": "105.200,185.680 325.200,185.680 325.200,405.680 105.200,405.680",
+      "original_fill": "#FFFFFF",
+      "material_sampling_pixels": 550.0
+    },
+    {
+      "role": "top",
+      "original_geometry": "635.200,185.680 724.800,154.320 944.800,154.320 855.200,185.680",
+      "original_fill": "#FBE8D0",
+      "material_sampling_pixels": 594.6122449278954
+    },
+    {
+      "role": "side",
+      "original_geometry": "855.200,185.680 944.800,154.320 944.800,374.320 855.200,405.680",
+      "original_fill": "#E8AA65",
+      "material_sampling_pixels": 556.6276245763474
+    },
+    {
+      "role": "front",
+      "original_geometry": "635.200,185.680 855.200,185.680 855.200,405.680 635.200,405.680",
+      "original_fill": "#FFF0DB",
+      "material_sampling_pixels": 550.0
+    },
+    {
+      "role": "top",
+      "original_geometry": "1165.200,185.680 1254.800,154.320 1474.800,154.320 1385.200,185.680",
+      "original_fill": "#DCEAF6",
+      "material_sampling_pixels": 594.6122449278954
+    },
+    {
+      "role": "side",
+      "original_geometry": "1385.200,185.680 1474.800,154.320 1474.800,374.320 1385.200,405.680",
+      "original_fill": "#8AAFD2",
+      "material_sampling_pixels": 556.6276245763474
+    },
+    {
+      "role": "front",
+      "original_geometry": "1165.200,185.680 1385.200,185.680 1385.200,405.680 1165.200,405.680",
+      "original_fill": "#EDF4FA",
+      "material_sampling_pixels": 550.0
+    },
+    {
+      "role": "top",
+      "original_geometry": "2015.200,185.680 2104.800,154.320 2324.800,154.320 2235.200,185.680",
+      "original_fill": "#FAFAFA",
+      "material_sampling_pixels": 594.6122449278954
+    },
+    {
+      "role": "side",
+      "original_geometry": "2235.200,185.680 2324.800,154.320 2324.800,374.320 2235.200,405.680",
+      "original_fill": "#F0F0F0",
+      "material_sampling_pixels": 556.6276245763473
+    },
+    {
+      "role": "front",
+      "original_geometry": "2015.200,185.680 2235.200,185.680 2235.200,405.680 2015.200,405.680",
+      "original_fill": "#FFFFFF",
+      "material_sampling_pixels": 550.0
+    }
+  ],
+  "physical_width_cm": 14.65,
+  "raster_export_pixels": [
+    6000,
+    1400
+  ],
+  "requested_raster_width": 6000,
+  "material_repeat_scale": 1,
+  "source_material_side_pixels": 1254,
+  "materials_upscaled": false,
+  "pdf_texture_limit_ppi": 1200,
+  "pdf_material_compositing": "Multiply blend on original face colors; no low-resolution SVG filter fallback.",
+  "checks": {
+    "all_original_geometry_preserved": true,
+    "all_text_and_glyph_labels_preserved": true,
+    "all_arrow_paths_preserved": true,
+    "semantic_palette_preserved": true,
+    "numerical_values_unchanged": true,
+    "rgb_data_faces_unchanged": false
+  },
+  "assets": {
+    "discograph-step-06-fusion-v3.svg": "b6cef79e0facb5436d29e2be1818364b70e501674ea03cf8d1282828f2cb74c0",
+    "discograph-step-06-fusion-v3.pdf": "dca07ca7474926e86dbd473c978fe4c3f8f1a0e82bdc3d5cfedf676b1e981b35",
+    "discograph-step-06-fusion-v3.png": "d231a795928a9171ec47d1d0ea17299df7634f1a8bcb2890fc352d74929b5658"
+  },
+  "fusion_layout": {
+    "combined_pdf_page": 31,
+    "asset": "discograph-step-06-fusion-v3.pdf",
+    "removed": [
+      "three numerical weighted-contribution examples",
+      "Their Sum at (r,c)",
+      "fused example vector",
+      "Repeat for all cells and receivers sentence",
+      "unused channel-example introduction"
+    ],
+    "larger_centered_diagram": true,
+    "front_side_svg_units": 220,
+    "raster_dimensions": [
+      6000,
+      1400
+    ],
+    "tensor_dimensions_and_matched_cells_preserved": true,
+    "rendered_slide_visually_checked": true
+  },
+  "combined_pdf_page": 31,
+  "combined_pdf_total_pages": 64,
+  "supersedes_in_active_deck": "discograph-step-06-fusion-v2.pdf",
+  "render_validation": "Slide31 reviewed at1900px from the last successful combined PDF. Removed all screenshot text; remaining diagram enlarged/centered, with clear labels and footer."
+}

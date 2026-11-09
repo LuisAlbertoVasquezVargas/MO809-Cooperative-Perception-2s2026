@@ -1,0 +1,41 @@
+% src/slides/source/final/core/03b_scaling_proposal.tex
+
+\begin{frame}{Our Proposal: Accuracy and Scale}
+  \SlideBody{\begin{VisualCanvas}
+    \node[final statement,font=\fontsize{16}{20}\selectfont]
+      at (7.4,5.35) {Benchmark the Limits of Full Collaboration};
+
+    % Each drawn connection represents both directed peer interactions.
+    % Self-pairs are included in attention, but omitted from these glyphs.
+    \foreach \AgentCount/\CenterX/\PairCount in {2/2.5/2,4/7.4/12,8/12.3/56} {
+      \node[final heading] at (\CenterX,4.65) {$n=\AgentCount$};
+      \foreach \Agent in {1,...,\AgentCount} {
+        \pgfmathsetmacro{\Angle}{90+360*(\Agent-1)/\AgentCount}
+        \coordinate (agent-\AgentCount-\Agent) at
+          ({\CenterX+1.10*cos(\Angle)},{3.00+1.10*sin(\Angle)});
+      }
+      \foreach \Sender in {1,...,\AgentCount} {
+        \foreach \Receiver in {1,...,\AgentCount} {
+          \ifnum\Sender<\Receiver
+            \draw[{Stealth[length=1.0mm]}-{Stealth[length=1.0mm]},
+              draw=MoverNavy!40,line width=0.5pt,shorten <=3pt,shorten >=3pt]
+              (agent-\AgentCount-\Sender) -- (agent-\AgentCount-\Receiver);
+          \fi
+        }
+      }
+      \foreach \Agent in {1,...,\AgentCount} {
+        \filldraw[fill=MoverNavy,draw=MoverCyan,line width=0.8pt]
+          (agent-\AgentCount-\Agent) circle (0.10cm);
+      }
+      \node[final caption,text width=4.4cm] at (\CenterX,1.35)
+        {\PairCount\ Directed Peer Pairs};
+    }
+    \draw[visual arrow] (3.95,3.00) -- (5.95,3.00);
+    \draw[visual arrow] (8.85,3.00) -- (10.85,3.00);
+    % For fixed feature dimensions, pairwise work is quadratic in agent count.
+    \node[final caption] at (7.4,0.78)
+      {Quadratic Pairwise Work: $n(n-1)=\mathcal{O}(n^2)$};
+    \node[final caption] at (7.4,0.20)
+      {Measure AP and Time Inference};
+  \end{VisualCanvas}}
+\end{frame}

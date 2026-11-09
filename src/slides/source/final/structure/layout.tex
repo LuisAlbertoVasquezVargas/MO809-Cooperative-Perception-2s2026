@@ -1,0 +1,72 @@
+% src/slides/source/final/structure/layout.tex
+
+% Local compatibility helpers let the final deck reuse the proposal's content
+% without editing its frozen cover or changing its rendering.
+\usepackage{booktabs}
+\usepackage{array}
+\usetikzlibrary{arrows.meta}
+\DeclareUnicodeCharacter{2192}{\textrightarrow}
+\definecolor{MoverDetailBlue}{HTML}{071E47}
+\definecolor{MoverPale}{HTML}{EDF5F8}
+\hypersetup{colorlinks=true,urlcolor=MoverBlue,linkcolor=MoverNavy}
+
+\newif\ifFinalAppendix
+\newcommand{\FinalSlideCounter}{%
+  \ifFinalAppendix
+    A\insertframenumberinappendix{} / A\insertappendixframenumber
+  \else
+    \insertframenumber{} / \insertmainframenumber
+  \fi
+}
+
+\newsavebox{\SlideMeasure}
+\newcommand{\SlideBody}[1]{%
+  \sbox{\SlideMeasure}{%
+    \begin{minipage}{14.80cm}
+      \sffamily\fontsize{10.5}{12.8}\selectfont\raggedright
+      #1\par
+    \end{minipage}}
+  \ifdim\dimexpr\ht\SlideMeasure+\dp\SlideMeasure\relax>5.90cm
+    \PackageWarning{final-slides}{Slide \insertframenumber\space body exceeds 5.90cm}
+  \fi
+  \begin{tikzpicture}[remember picture,overlay]
+    \node[anchor=north west,inner sep=0pt]
+      at ($(current page.north west)+(0.60cm,-1.94cm)$)
+      {\usebox{\SlideMeasure}};
+  \end{tikzpicture}%
+}
+\newcommand{\SlideSource}[1]{%
+  \begin{tikzpicture}[remember picture,overlay]
+    \node[anchor=south west,inner sep=0pt,text width=10.8cm,align=left,
+      text=MoverNavy,font=\sffamily\fontsize{7}{9}\selectfont]
+      at ($(current page.south west)+(0.60cm,0.39cm)$){\begin{NoHyper}#1\end{NoHyper}};
+  \end{tikzpicture}%
+}
+\newcommand{\FinalPoint}[2]{%
+  {\bfseries\fontsize{14}{17}\selectfont #1\par}
+  \vspace{0.12cm}#2\par\vspace{0.36cm}
+}
+\newcommand{\FinalAgendaEntry}[3]{%
+  \begin{minipage}[t][1.60cm][t]{6.95cm}
+    \makebox[0.62cm][l]{{\fontsize{9}{11}\selectfont #1}}%
+    \begin{minipage}[t]{6.23cm}
+      \raggedright
+      {\fontsize{14}{17}\selectfont\bfseries\strut #2\par}
+      \vspace{0.07cm}
+      {\fontsize{9.5}{12}\selectfont #3\par}
+    \end{minipage}
+  \end{minipage}\par
+}
+\newcommand{\FinalTakeaway}[1]{%
+  \begin{tikzpicture}[remember picture,overlay]
+    \node[anchor=south west,fill=MoverPale,text=MoverNavy,
+      inner sep=5pt,text width=14.1cm,
+      font=\sffamily\fontsize{10}{12}\selectfont]
+      at ($(current page.south west)+(0.65cm,1.18cm)$) {#1};
+  \end{tikzpicture}%
+}
+\newcommand{\FinalTensorLegend}{%
+  {\fontsize{8.5}{10.5}\selectfont
+  Tensor shape: $H\times W\times C$\hfill
+  $H$ = grid height, $W$ = grid width, $C$ = channels; batch omitted.\par}%
+}

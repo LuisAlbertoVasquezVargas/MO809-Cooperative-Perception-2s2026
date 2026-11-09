@@ -1,0 +1,19 @@
+Use case: scientific-educational.
+Asset type: polished conceptual illustration for slide 7 of a university presentation on DiscoNet, diagram only.
+Primary request: turn the approved three-column teaching sketch into an elegant, high-resolution scientific illustration. Explain own-scan perception versus a holistic early-fusion teacher versus a feature-sharing collaborative student. Render only the visual objects and their within-column arrows; all headings, question, captions, and the training-only distillation annotation will be added as native slide typography.
+
+Input images:
+Image 1 is a SEMANTIC AND COMPOSITION REFERENCE, not an edit target. Preserve its three roles and left-to-right order. Ignore and exclude its entire slide chrome, question, headings, words, logos and source credit.
+Image 2 is a STYLE REFERENCE for dimensional point clouds, learned feature stacks, cyan/orange contributors, clean navy arrows and white scientific-slide backgrounds.
+
+Composition: a very wide, shallow panoramic strip, ideally 4:1 (requested 3072 x 768 or higher native resolution). Three evenly spaced groups centered at 1/6, 1/2 and 5/6 of the width. Upper inputs around the upper half, a receiver vehicle around 80% down in EACH group. The three receiver vehicles must be identical in design and scale, with centers on the same baseline. Keep outer margins and white gutters, no enclosing panels, no background gradients.
+
+LEFT, own-scan perception: one sparse cyan point-cloud tile, suggesting only one local LiDAR view. One thin navy arrow points down from that tile into one small teal receiver car. No neighbor information, no feature grids, no extra input tile.
+MIDDLE, early-fusion teacher: TWO complementary raw point-cloud tiles, one cyan and one orange, with two distinct thin arrows converging down into one small teal receiver car. Raw point geometry from different viewpoints gives a holistic observation. Do not substitute feature grids in this group.
+RIGHT, DiscoNet student: TWO learned spatial feature-map stacks, one cyan and one orange, with precisely tiled cells and modest channel depth, similar to Image 2. Two thin arrows converge down into one small teal receiver car. These are learned feature representations, not raw points or detected boxes.
+
+Teacher-to-student relation: reserve clear white horizontal space between the middle and right receiver cars at their baseline. DO NOT DRAW the cross-column distillation arrow: native vector overlay will add the dashed teacher-to-student training-only arrow and label. No arrows linking the left baseline to the other groups.
+
+Style: restrained premium 3D scientific illustration, crisp isometric point-cloud tiles and feature tensors, subtle dimensional shading, sharp edges, subtle shadows restricted immediately beneath objects. Pure white background. Cyan #0695A1, orange #D97920, dark navy #071E47, neutral white/gray surfaces. Consistent lighting and perspective. Receiver cars are small, clean isometric top-down vehicles with dark wheels, a white windshield and teal body, facing the same direction. Keep them simple and recognizable. No road, scenery, decorative UI, people or extraneous objects.
+Scientific constraints: this is explanatory artwork, not a recorded experiment. Do not imply measured compression factors, model-parameter counts, detection scores or guaranteed accuracy. Do not make the student car or model smaller than the teacher. Preserve inputs -> receiver arrow direction.
+Text: NONE. No letters, numbers, labels, titles, captions, equations, logos, watermarks or source credit. No shaded panels or separators. No baked-in slide frame. Deliver one complete, polished, spacious illustration strip.

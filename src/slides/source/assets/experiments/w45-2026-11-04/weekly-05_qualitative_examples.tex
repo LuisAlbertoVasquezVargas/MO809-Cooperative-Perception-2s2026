@@ -1,0 +1,46 @@
+% src/slides/weekly/src/sections/11_experiments/05_qualitative_examples.tex
+
+\begin{frame}[t]{\MoverContentTitle{V2X-Sim 2.0: Car Detections}}
+  \label{frame:experiment-example-detections}
+  \MoverDiscoBody{%
+    {\fontsize{8.5}{10}\selectfont
+      Example 1: scene\_5, raw frame 000066; vehicle 1, five participating vehicles.\par
+    }
+    \vspace{0.02cm}
+    {\centering
+      \includegraphics[width=14.50cm]{sections/11_experiments/figures/example-detections-v1.pdf}\par
+    }
+    \vspace{0.02cm}
+    {\fontsize{8}{9}\selectfont
+      Front is $+y$, right is $+x$; $(0,0)$ is the LiDAR sensor. References can include cars hidden from its scan.\par
+    }
+  }
+  \MoverSourceCorner{AI generated illustration}
+\end{frame}
+
+\newcommand{\MoverExampleCamera}[2]{%
+  \begin{minipage}[t]{4.80cm}
+    \centering\fontsize{9}{10.5}\selectfont
+    \strut\textbf{#1}\par
+    \vspace{0.02cm}
+    \includegraphics[width=4.00cm]{sections/11_experiments/figures/#2}\par
+  \end{minipage}%
+}
+
+\begin{frame}[t]{\MoverContentTitle{V2X-Sim 2.0: Camera Views}}
+  \label{frame:experiment-example-cameras}
+  \MoverDiscoBody{%
+    {\fontsize{8.5}{10.5}\selectfont
+      Six synchronized views provide context; the detector uses LiDAR. Camera and LiDAR positions differ.\par
+    }
+    \vspace{0.05cm}
+    \MoverExampleCamera{Front Left}{example-camera-front-left-v1.jpg}\hfill
+    \MoverExampleCamera{Front}{example-camera-front-v1.jpg}\hfill
+    \MoverExampleCamera{Front Right}{example-camera-front-right-v1.jpg}
+    \par\vspace{0.04cm}
+    \MoverExampleCamera{Rear Left}{example-camera-back-left-v1.jpg}\hfill
+    \MoverExampleCamera{Rear}{example-camera-back-v1.jpg}\hfill
+    \MoverExampleCamera{Rear Right}{example-camera-back-right-v1.jpg}
+  }
+  \MoverSourceCorner{V2X-Sim 2.0}
+\end{frame}

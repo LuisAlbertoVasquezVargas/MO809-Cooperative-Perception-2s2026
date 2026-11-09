@@ -1,0 +1,61 @@
+{
+  "created_at": "2026-11-04T19:20:24.955874+00:00",
+  "tool": "Built-in image_gen.imagegen",
+  "mode": "Three independent text-to-image calls; no image references",
+  "user_request": "Add Source: on slide 12 and generate its illustrations with the imagegen skill.",
+  "usage": "src/slides/source/final/core/04_development.tex",
+  "assets": [
+    {
+      "role": "data",
+      "asset": "data-imagegen-v1.png",
+      "prompt_file": "data-imagegen-v1.prompt.txt",
+      "native_dimensions_px": [
+        1536,
+        1024
+      ],
+      "sha256": "5f0f332243e3e8d271a9939919a5eda39f1706a206e34e2d87fc6d5481a55470"
+    },
+    {
+      "role": "models",
+      "asset": "models-imagegen-v1.png",
+      "prompt_file": "models-imagegen-v1.prompt.txt",
+      "native_dimensions_px": [
+        1536,
+        1024
+      ],
+      "sha256": "b1be509d65c5fb728bd68f43e16ea5935d789b2331da59f0d9ae9da36c4f2f69"
+    },
+    {
+      "role": "evidence",
+      "asset": "evidence-imagegen-v1.png",
+      "prompt_file": "evidence-imagegen-v1.prompt.txt",
+      "native_dimensions_px": [
+        1536,
+        1024
+      ],
+      "sha256": "23f35f46a7237e08ab1f73e4a597353b1314ba0aa68e23c2948614cafb97289d"
+    }
+  ],
+  "postprocessing": "None; copied unchanged at native resolution.",
+  "native_slide_elements": [
+    "Data, Models and Evidence headings",
+    "V2X-Sim 2.0",
+    "Compatible Checkpoints",
+    "AP + Scaling Curves",
+    "Between-column arrows",
+    "Source: AI generated illustrations."
+  ],
+  "scientific_scope": {
+    "data": "Illustrative multi-vehicle simulation and occupancy glyph; not a screenshot or sensor sample from V2X-Sim 2.0.",
+    "models": "Neural network and weight-card connector symbolize pretrained-model compatibility; no actual layer counts or completed compatibility check is represented.",
+    "evidence": "Uncalibrated curve glyphs and detection outlines symbolize planned evaluation products. They are not recorded curves, AP values, predictions or empirical trend claims."
+  },
+  "preservation": "Notebook, Plots and Report remain removed from the slide.",
+  "validation": {
+    "asset_integrity": "All three project PNGs match the generated originals and recorded SHA-256 hashes.",
+    "visual_review": "Slide 12 inspected at 1800-pixel width; illustrations, short connecting arrows, labels, dataset release and Source credit fit without overlaps.",
+    "native_text": "Source: AI generated illustrations. and all six heading/caption labels verified as selectable PDF text.",
+    "removed_content": "Notebook, Plots and Report remain absent from slide 12.",
+    "pdf_build": "Passed without overfull boxes or slide-body overflow warnings."
+  }
+}

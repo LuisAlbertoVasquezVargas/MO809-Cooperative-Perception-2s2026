@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="865" height="230" viewBox="0 0 865 230">
+<title>One directed student edge and its spatial weight matrix</title>
+<desc>Two vehicle nodes, neighbor j and ego i, connected by a directed edge. A dashed callout links this edge to an illustrative four by four matrix. Darker cells show stronger contribution at a BEV location. This is a schematic, not measured weights.</desc>
+<defs><marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 Z" fill="#0695A1"/></marker><linearGradient id="scale"><stop stop-color="#EEF5F8"/><stop offset="1" stop-color="#006CA8"/></linearGradient></defs>
+<g font-family="Carlito, sans-serif" fill="#071E47">
+<path d="M98 102 H214" stroke="#0695A1" stroke-width="5" marker-end="url(#arrow)"/>
+<circle cx="60" cy="102" r="33" fill="#D3EFF0" stroke="#0695A1" stroke-width="3"/>
+<circle cx="255" cy="102" r="33" fill="#EEF5F8" stroke="#006CA8" stroke-width="3"/>
+<text x="60" y="113" font-size="36" text-anchor="middle" font-style="italic">j</text>
+<text x="255" y="113" font-size="36" text-anchor="middle" font-style="italic">i</text>
+<text x="151" y="60" font-size="29" text-anchor="middle">Features</text>
+<text x="60" y="167" font-size="28" text-anchor="middle">Neighbor</text>
+<text x="255" y="167" font-size="28" text-anchor="middle">Ego</text>
+<path d="M151 113 V199 H359 L397 152" fill="none" stroke="#46789B" stroke-width="2.5" stroke-dasharray="7 6"/>
+<rect x="400" y="27" width="40" height="40" fill="#d1e5ee" stroke="white" stroke-width="2"/><rect x="440" y="27" width="40" height="40" fill="#c3dcea" stroke="white" stroke-width="2"/><rect x="480" y="27" width="40" height="40" fill="#a7cce0" stroke="white" stroke-width="2"/><rect x="520" y="27" width="40" height="40" fill="#bedae8" stroke="white" stroke-width="2"/><rect x="400" y="67" width="40" height="40" fill="#c3dcea" stroke="white" stroke-width="2"/><rect x="440" y="67" width="40" height="40" fill="#72aece" stroke="white" stroke-width="2"/><rect x="480" y="67" width="40" height="40" fill="#2481b4" stroke="white" stroke-width="2"/><rect x="520" y="67" width="40" height="40" fill="#8fbed8" stroke="white" stroke-width="2"/><rect x="400" y="107" width="40" height="40" fill="#d6e7f0" stroke="white" stroke-width="2"/><rect x="440" y="107" width="40" height="40" fill="#539cc4" stroke="white" stroke-width="2"/><rect x="480" y="107" width="40" height="40" fill="#0c73ac" stroke="white" stroke-width="2"/><rect x="520" y="107" width="40" height="40" fill="#6baacc" stroke="white" stroke-width="2"/><rect x="400" y="147" width="40" height="40" fill="#dbeaf2" stroke="white" stroke-width="2"/><rect x="440" y="147" width="40" height="40" fill="#bedae8" stroke="white" stroke-width="2"/><rect x="480" y="147" width="40" height="40" fill="#83b7d4" stroke="white" stroke-width="2"/><rect x="520" y="147" width="40" height="40" fill="#b2d3e4" stroke="white" stroke-width="2"/><text x="480" y="225" font-size="25" text-anchor="middle" fill="#46789B">Illustrative attention</text>
+<text x="610" y="52" font-size="29" font-weight="bold">Attention weight</text>
+<rect x="610" y="78" width="240" height="18" rx="4" fill="url(#scale)"/>
+<text x="610" y="129" font-size="26">Low</text><text x="850" y="129" font-size="26" text-anchor="end">High</text>
+<text x="610" y="182" font-size="28">Darker = stronger</text>
+<text x="610" y="218" font-size="28">contribution</text>
+</g></svg>

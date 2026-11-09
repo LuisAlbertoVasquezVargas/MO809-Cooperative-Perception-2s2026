@@ -1,0 +1,25 @@
+{
+  "tool": "Built-in image_gen",
+  "created_at": "2026-11-03T08:19:53+00:00",
+  "asset": "w44_occupancy_layers-imagegen-v3.png",
+  "edit_target": "src/slides/weekly/src/img/disconet/demo-v2x-sim-2.0/w44_occupancy_layers-imagegen-v1.png",
+  "edit_target_sha256": "4cf8dfa22b7170167da1ac1a4ab1391dd8384ba78ae3c82dd978e2495c670175",
+  "asset_sha256": "9767ea0c9a9213561f9b22fe371cd82cbd3ad3b1f0bec93479c88c7954c02f9b",
+  "native_dimensions_px": [
+    1536,
+    1024
+  ],
+  "prompt_file": "w44_occupancy_layers-imagegen-v3-prompt.txt",
+  "prompt": "Use case: precise-object-edit.\nAsset type: existing scientific slide illustration, minimal face-color correction.\nInput image 1 is the EDIT TARGET, not a style reference.\n\nChange ONLY the TWO uncolored right-side faces that belong to the already teal-filled occupied voxels in the enlarged column on the far right. In the upper three-voxel stack, the lowest voxel already has a teal front face: fill that same voxel's narrow right-side quadrilateral teal too. In the lower three-voxel stack, the middle voxel already has a teal front face: fill that same voxel's narrow right-side quadrilateral teal too. Match the existing teal fill (#0695A1 approximately); a restrained darker teal side shade is acceptable to show depth. The teal must extend continuously around each occupied voxel, bounded precisely by its existing blue outlines. Preserve all outlines and compartment boundaries. Leave every unoccupied voxel white at the front and pale gray at the side. Do not fill the top white voxels or the topmost horizontal faces.\n\nPreserve the entire rest of the original image: occupancy pattern cell by cell; square grid, orange selected cell and two orange magnification connectors; both three-compartment stacks and ellipsis; exact geometry and perspective; background, margins, aspect ratio, line thickness, fonts, colors and positions of labels. Keep all text exactly: '256 × 256 cells', 'x (m)', 'y (m)', '13 height layers', '0.4 m', '0.25 m × 0.25 m'. Do not redraw or reframe the composition. No added text, legends, logos or watermarks. Sharp edges and lettering at the original resolution or higher.\n",
+  "request": "Fill the missing visible side faces of the enlarged occupied voxels on slide 7.",
+  "changes": "Extend the teal occupancy fill onto the right face of the upper stack bottom voxel and the lower stack middle voxel.",
+  "preserved": "Occupancy pattern, grid geometry, orange zoom box and connectors, occupied/empty layer examples, all labels and dimensions, navy text, white background and framing.",
+  "fidelity": "Conceptual height-occupancy illustration; the example layers are not measured inference outputs.",
+  "slide_source": "src/slides/weekly/src/sections/09_w44/05_pipeline_overview.tex",
+  "checks": {
+    "generated_asset_visually_checked": true,
+    "rendered_slide_visually_checked": true,
+    "live_primary_pdf_page": 7,
+    "live_primary_pdf_total_pages": 51
+  }
+}

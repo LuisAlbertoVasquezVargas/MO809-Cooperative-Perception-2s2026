@@ -1,0 +1,40 @@
+{
+  "created_at": "2026-11-03T15:30:08.187263+00:00",
+  "tool": "Built-in image_gen.imagegen",
+  "mode": "New text-to-image generation; no reference images",
+  "asset": "problem-model-distillation-imagegen-v3.png",
+  "sha256": "700024d8fb1ab7be1cd176e280a11eb5c4f99cb1154e9f13d7324320a84d6417",
+  "native_dimensions_px": [
+    2172,
+    724
+  ],
+  "prompt_file": "problem-imagegen-v3.prompt.txt",
+  "references": [],
+  "postprocessing": "None; copied unchanged.",
+  "concept": "Generic knowledge-distillation metaphor: large holistic teacher network -> compact collaborative student, both addressing the same detection task.",
+  "scientific_scope": "Conceptual glyph scale, not the actual DiscoNet network topology or a measured parameter-count/accuracy comparison.",
+  "paper_url": "https://arxiv.org/html/2111.00643v2",
+  "paper_sections": [
+    "2.2",
+    "2.3",
+    "II.1",
+    "II.2"
+  ],
+  "paper_check": "DiscoNet describes a common student/teacher encoder-decoder backbone. Its teacher has privileged holistic inputs; student collaboration is trained through feature distillation. A smaller student parameter count is not established by this illustration.",
+  "native_slide_elements": [
+    "Research question",
+    "Role labels",
+    "Training-only distillation arrow",
+    "Conceptual Distillation caption",
+    "Source credit"
+  ],
+  "accuracy_scope": "Matching target-car symbols denote the shared task, not verified equal predictions or accuracy.",
+  "previous_version": "problem-holistic-onboard-imagegen-v2.png",
+  "usage": "src/slides/source/final/core/02_problem.tex",
+  "validation": {
+    "visual_review": "Reviewed slide 7 rendered at 1600 px; model-size contrast, native labels, training-only arrow and conceptual caption are legible without overlaps.",
+    "pdf_build": "Passed; 31 PDF pages, no overfull boxes or body-overflow warnings.",
+    "pdf_sources": "No external URL annotations; paper year appears only on the cover; source credits contain no MOVER mention.",
+    "asset_integrity": "Selected asset SHA256 matches the recorded hash."
+  }
+}

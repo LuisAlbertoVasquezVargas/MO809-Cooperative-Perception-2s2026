@@ -1,0 +1,122 @@
+{
+  "imported_at": "2026-11-05T15:04:59.637630+00:00",
+  "run": "runs/tree-comparison-20261105T140612Z",
+  "source_report_sha256": "0cac3d08dc73015d218a42f1956097680e8b91f75d21f44a1e428ed129a6c49b",
+  "source_report_pages": [
+    19,
+    20
+  ],
+  "scope": {
+    "frames": 30,
+    "ego_agent_id": 1,
+    "timing_trials": 3,
+    "timing_samples_per_entry": 90,
+    "reference_car_boxes": 427,
+    "n": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "n_definition": "Model input slots; n>5 replays five recorded scans and poses",
+    "checkpoint_unchanged": true,
+    "new_training_or_inference_for_import": false
+  },
+  "verified_for_import": {
+    "CSV_matches_saved_metrics": true,
+    "all_2700_timings_recomputed": true,
+    "source_hashes_match_record": true
+  },
+  "n15": {
+    "runtime_reduction_percent": 46.367069818208364,
+    "AP50_drop_percentage_points": 13.984358310699463,
+    "AP70_drop_percentage_points": 15.07570743560791
+  },
+  "assets": [
+    {
+      "file": "tree-comparison.json",
+      "sha256": "f6ba0585e874f7ae27be208c3f8146114cb3053d4ee4d7adbd64956786c0c803",
+      "bytes": 37158
+    },
+    {
+      "file": "tree-comparison.csv",
+      "sha256": "02b824fca1c3dde23555aa95d5b07c43010470e2bd9e872eca24d2776b657c61",
+      "bytes": 1815
+    },
+    {
+      "file": "run-metrics.json",
+      "sha256": "959a2addc7e37da14579a0e6254592ee05d1e6d13dbeb7a19d6255ededcf136b",
+      "bytes": 27117
+    },
+    {
+      "file": "specification.json",
+      "sha256": "df5a00d0eae0129e302be36ab012e6635b1972299002baec544b2a57f3ed67f1",
+      "bytes": 9264
+    },
+    {
+      "file": "cohort.json",
+      "sha256": "f99f152fdee09455d19e19041f9d7bb1e8d8e2b8137ed40764ea8311151b1e08",
+      "bytes": 175071
+    },
+    {
+      "file": "preflight.json",
+      "sha256": "1b847b9c063a78eed8ee239ae70da44503523c8ce3c43e8fa8caeaa6456e5392",
+      "bytes": 9147
+    },
+    {
+      "file": "timings.jsonl",
+      "sha256": "7e579ef76a08d160f7db8f705237dfdb770502cbe4d2d15330c03de8459cb776",
+      "bytes": 602957
+    },
+    {
+      "file": "frame-manifest.json",
+      "sha256": "a06b9bd77a05ac8c2edc906a024fb80801cbb4c8a880f33e01e2d63fe441325a",
+      "bytes": 124803
+    },
+    {
+      "file": "precision-recall.npz",
+      "sha256": "a262f3f4a9f5dbc16244f5c88a375ec2f112ec491b2a1e622ce172cd2cc7c5a1",
+      "bytes": 146716
+    },
+    {
+      "file": "status.json",
+      "sha256": "2852a5005cc88d202b63af0739438f84d928d448042c7946d8c4cf60ca4a2761",
+      "bytes": 114
+    },
+    {
+      "file": "report-validation.json",
+      "sha256": "2e5997a20b1b231292186ae8fd3f32f5ca4e0fd4326d4441aeb49282bc369547",
+      "bytes": 539
+    }
+  ],
+  "generated_files": [
+    {
+      "file": "generate_table.py",
+      "sha256": "d64aa76057a1d5c21cab5f564a7bfc99a2ad311da491e1398cb841a8e016bbaf"
+    },
+    {
+      "file": "table-rows.tex",
+      "sha256": "a00233e38602da1224c3ddedac0429bc1b0291789682b0b5c5a6ba1761f90c5a"
+    },
+    {
+      "file": "summary-values.tex",
+      "sha256": "6d3c8534fc8b98a7d0bfaaf242091d008602a62a682c6993a7223474b9310770"
+    },
+    {
+      "file": "topology-example.tex",
+      "sha256": "791429e18f8490f2d379884b3a893d992ed83eeaf5eb56176ba367b4e8328951"
+    }
+  ],
+  "metadata_policy": "Machine paths, private source-repository identifiers, and transient generation IDs are omitted. Bundled filenames, checksums, public attribution, and technical evidence are retained."
+}

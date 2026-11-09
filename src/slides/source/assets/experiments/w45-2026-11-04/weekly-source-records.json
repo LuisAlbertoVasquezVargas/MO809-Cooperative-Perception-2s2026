@@ -1,0 +1,186 @@
+{
+  "section": "Experiments",
+  "dataset": "V2X-Sim 2.0, prepared vehicle LiDAR inputs, no roadside unit",
+  "source_directory": "src/demos/disconet/docs/experiments/",
+  "source_sha256": {
+    "authors-training-setup-2026-11-03.json": "72b75ae4669d1588ca4acf62cf07eab6bb2f5e531e6360883556e7e2393d5182",
+    "authors-partition-vehicle-statistics.csv": "95f043aa475339bb926df4119e10a88288af6aa8b2576130f4d3641256c80e69",
+    "full-test-v2-no-rsu-2026-11-03.json": "6d8eacbde99b2fa715dcf4f60ff668dc2812903878d42fe96057e89dec9e66b2",
+    "test-loss-v2-no-rsu-2026-11-03.json": "2114449ac78e8b06fec311f378a38e6c7eb100a372d581bba16a7f410ce3e18d",
+    "test-loss-accuracy-summary.csv": "31d3dd90889682ab59a3875bd2070e34bd938374a23da12228b216f334b6dd25",
+    "reproduction-audit-2026-11-03.json": "66780fd583d92aa920fa44305d45903c475f5cf47b919749dad4e5f4c042c440",
+    "experiment-setup-2026-11-03.json": "015ecbbcb4be1f031cb7450712945451e5a151133070cb8bb30031392ecefc86",
+    "runtime-workload-v2x-sim-2026-11-04.json": "33c578a67a07d9c17a4d6ee94aba67cd20c738839642515eadc7c59b56534eec"
+  },
+  "new_inference_or_training": false,
+  "dataset_tables": "Official partition totals and ten (partition, nonempty vehicle inputs) groups; raw point counts rounded to one decimal using M/B suffixes",
+  "dataset_table_style": {
+    "reference_sha256": "cc242255015ddcc3ae2fad19da95e7daaa871bf11b2d7b94a37a699bf036e586",
+    "reference_pages": [
+      5,
+      6
+    ],
+    "partition_fill_hex": {
+      "train": "#EAF1F6",
+      "validation": "#FFF0D9",
+      "test": "#E5F2EF"
+    },
+    "scope": "Same partition fill colors in both native dataset tables"
+  },
+  "result_scope": "Original full test split, same epoch-100 student, sharing on versus off; additional test-loss pass uses the same fixed checkpoint",
+  "visible_result_columns": [
+    "Condition",
+    "AP@0.5 (%)",
+    "AP@0.7 (%)"
+  ],
+  "result_plots": {
+    "source_report_page": 12,
+    "figure": "figures/results-plots-v1.pdf",
+    "provenance": "figures/results-plots-v1.json",
+    "data_snapshot": "figures/results-plots-data-v1.npz",
+    "plots": [
+      "Precision/recall at IoU 0.5",
+      "Precision/recall at IoU 0.7"
+    ],
+    "test_loss_plot_shown": false,
+    "placement": "On Reproduced Results, below the AP table",
+    "table_loss_columns_restored": false
+  },
+  "excluded_result": "November 4 agent-count sweep uses a different cohort and is not mixed with the full-test comparison",
+  "metrics_example": {
+    "kind": "Illustrative, not measured benchmark results",
+    "reference_cars": 3,
+    "scores": [
+      0.99,
+      0.96,
+      0.92,
+      0.83
+    ],
+    "true_positive_flags": [
+      1,
+      0,
+      1,
+      1
+    ],
+    "ap_percent": 83.33333333333333,
+    "integration": "Area under interpolated precision envelope",
+    "report_example_reused": {
+      "source": "figures/ap-example-source-v1.json",
+      "verification": "figures/ap-example-v1.json",
+      "native_table_rows": "figures/05_ap_example_rows.tex",
+      "curve": "figures/ap-example-curve-v1.pdf",
+      "columns": [
+        "Top k",
+        "Score",
+        "Result",
+        "TP / FP So Far",
+        "Precision",
+        "Recall"
+      ],
+      "ap_exact_fraction": "5/6"
+    }
+  },
+  "references": {
+    "documentation": "https://coperception.readthedocs.io/en/latest/tools/det/",
+    "checkpoint_log": "https://github.com/coperception/coperception/issues/25#issuecomment-1477206911",
+    "iou": "https://docs.pytorch.org/vision/stable/generated/torchvision.ops.box_iou.html",
+    "matching": "https://github.com/coperception/coperception/blob/master/coperception/utils/mean_ap.py"
+  },
+  "iou_explanation": {
+    "slides": [
+      "Intersection over Union (IoU)",
+      "IoU: Matching Thresholds",
+      "DiscoNet Confidence Scores",
+      "Precision, Recall, and AP"
+    ],
+    "definition": "Intersection area divided by union area; thresholds specify the minimum fraction required for a match",
+    "threshold_notation": "IoU@0.5 is shorthand for a matching threshold of 0.5 (50% of union area); AP@0.5 is AP evaluated at that IoU threshold",
+    "figure_record": "figures/iou-examples-v1.json",
+    "figure_record_sha256": "7c35441bb915679a8f73214b86b62e46781c5c21f42f66aab31b02c4c1ff8ef3",
+    "new_benchmark_measurements": false,
+    "active_overlap_illustration": {
+      "asset": "figures/iou-overlap-imagegen-v1.png",
+      "provenance": "figures/iou-overlap-imagegen-v1.provenance.json",
+      "mode": "Built-in imagegen",
+      "native_dimensions_pixels": [
+        2172,
+        724
+      ]
+    },
+    "definition_slide_layout": "Centered introduction and imagegen illustration, followed by one centered LaTeX display equation with stacked definition/numeric fractions and a separate centered range note"
+  },
+  "confidence_example": {
+    "source": "figures/confidence-example-v1.json",
+    "slide": "02_confidence_scores.tex",
+    "class_order": [
+      "background",
+      "car"
+    ],
+    "logits": [
+      [
+        1.0,
+        3.0
+      ],
+      [
+        2.0,
+        1.0
+      ],
+      [
+        1.0,
+        4.0
+      ]
+    ],
+    "score_threshold_exclusive": 0.7,
+    "new_benchmark_measurements": false,
+    "step_titles_only": true,
+    "layout": "Three numbered headings across the top, centered softmax formula, native logit/score table beside the worked Box A calculation"
+  },
+  "qualitative_examples": {
+    "source_report_pages": [
+      2,
+      3
+    ],
+    "provenance": "figures/qualitative-examples-v1.json",
+    "slide_source": "05_qualitative_examples.tex",
+    "placement": "After Dataset Analysis, before Experiment Setup",
+    "detection_figure": "figures/example-detections-v1.pdf",
+    "data_snapshot": "figures/example-detections-data-v1.npz",
+    "scope": "Recorded single-frame qualitative comparison, separate from the full-test AP results",
+    "camera_images": "Six unmodified original 1600 by 900 RGB images from the matching frame"
+  },
+  "experiment_setup": {
+    "source_report_page": 7,
+    "slide_source": "06_experiment_setup.tex",
+    "provenance": "figures/experiment-setup-v1.json",
+    "placement": "After the qualitative detection and camera examples, immediately before Reproduced Results",
+    "presentation": "Native hardware/software tables with expanded vertical spacing; model, execution and dataset details retained only in provenance"
+  },
+  "runtime_scaling": {
+    "source_report_page": 18,
+    "slide_source": "07_runtime_scaling.tex",
+    "figure": "figures/runtime-scaling-v1.pdf",
+    "provenance_and_data": "figures/runtime-scaling-v1.json",
+    "placement": "Last content slide of Experiments, after Reproduced Results",
+    "presentation": "Enlarged chart only; introductory line, summary and timing notes omitted",
+    "scope": "Runtime-only model input scaling on the same 30 frames; separate from the original full-test AP comparison",
+    "input_counts": "1 through 20 model input slots; slots above five repeat the five recorded scans and poses",
+    "AP_evaluated": false,
+    "new_inference_or_training": false
+  },
+  "visible_source_credits": {
+    "scope": "Experiments section only",
+    "policy": "Short AI illustration credits for visible legends; original camera images use a short V2X-Sim 2.0 credit. Detailed factual sources remain in these records and asset provenance",
+    "by_frame": {
+      "frame:experiment-metrics": "AI generated illustrations",
+      "frame:experiment-iou-thresholds": "AI generated illustrations",
+      "frame:experiment-confidence": "AI generated illustration",
+      "frame:experiment-precision-recall": "AI generated illustration",
+      "frame:experiment-dataset-analysis": "AI generated illustrations",
+      "frame:experiment-reproduced-results": "AI generated illustrations",
+      "frame:experiment-example-detections": "AI generated illustration",
+      "frame:experiment-example-cameras": "V2X-Sim 2.0",
+      "frame:experiment-setup": "AI generated illustrations",
+      "frame:experiment-runtime-scaling": "AI generated illustration"
+    }
+  }
+}

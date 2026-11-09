@@ -1,0 +1,70 @@
+% Original Figure 2 point-cloud panels, shown through TeX viewports.
+% Viewport coordinates use the source image's 2041 x 936 pixel / 72 dpi box.
+\newcommand{\DiscoNetPointView}[5]{%
+  \includegraphics[viewport=#1 #2 #3 #4,clip,width=#5]{assets/papers/disconet/overview.png}%
+}
+\begin{frame}{LiDAR View Aggregation}
+  \SlideBody{%
+    \centering
+    {\fontsize{11}{14}\selectfont
+      LiDAR Points in Bird's-Eye View (BEV)\par}
+    \vspace{0.10cm}
+    \begin{minipage}[t]{5.45cm}
+      \centering
+      {\fontsize{11}{13}\selectfont\color{MoverDetailBlue}\textbf{1. Local Views}\par}
+      \vspace{0.08cm}
+      \begin{minipage}[c][3.00cm][c]{\linewidth}
+        \centering
+        \begin{minipage}[c]{1.50cm}
+          \centering
+          \DiscoNetPointView{26}{672}{171}{824}{1.50cm}\par
+          \vspace{0.10cm}
+          {\fontsize{10}{12}\selectfont Agent 1\par}
+        \end{minipage}\hfill
+        \begin{minipage}[c]{1.50cm}
+          \centering
+          \DiscoNetPointView{185}{672}{330}{824}{1.50cm}\par
+          \vspace{0.10cm}
+          {\fontsize{10}{12}\selectfont Agent 2\par}
+        \end{minipage}\hfill
+        \makebox[0.32cm]{…}\hfill
+        \begin{minipage}[c]{1.50cm}
+          \centering
+          \DiscoNetPointView{383}{675}{527}{825}{1.50cm}\par
+          \vspace{0.10cm}
+          {\fontsize{10}{12}\selectfont Agent M\par}
+        \end{minipage}
+      \end{minipage}\par
+      {\fontsize{10.5}{13}\selectfont Each vehicle's own points.\par}
+    \end{minipage}\hfill
+    \begin{minipage}[t]{0.60cm}
+      \vspace{1.62cm}
+      \centering{\color{MoverCyan}\fontsize{18}{20}\selectfont →}
+    \end{minipage}\hfill
+    \begin{minipage}[t]{3.85cm}
+      \centering
+      {\fontsize{11}{13}\selectfont\color{MoverDetailBlue}\textbf{2. Align and Combine}\par}
+      \vspace{0.08cm}
+      \begin{minipage}[c][3.00cm][c]{\linewidth}
+        \centering
+        \DiscoNetPointView{607}{639}{891}{924}{2.95cm}
+      \end{minipage}\par
+      {\fontsize{10.5}{13}\selectfont Align using poses\\into one frame.\par}
+    \end{minipage}\hfill
+    \begin{minipage}[t]{0.60cm}
+      \vspace{1.62cm}
+      \centering{\color{MoverCyan}\fontsize{18}{20}\selectfont →}
+    \end{minipage}\hfill
+    \begin{minipage}[t]{3.80cm}
+      \centering
+      {\fontsize{11}{13}\selectfont\color{MoverDetailBlue}\textbf{3. Ego-Centered Crop}\par}
+      \vspace{0.08cm}
+      \begin{minipage}[c][3.00cm][c]{\linewidth}
+        \centering
+        \DiscoNetPointView{1047}{699}{1230}{888}{2.60cm}
+      \end{minipage}\par
+      {\fontsize{10.5}{13}\selectfont Agent 1's frame,\\cropped to its region.\par}
+    \end{minipage}\par
+  }
+  \SlideSource{Source: \href{https://arxiv.org/html/2111.00643v2\#S2.SS2}{Li et al., Fig. 2}.}
+\end{frame}

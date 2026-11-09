@@ -1,0 +1,29 @@
+{
+  "stem": "discograph-step-04-softmax-v3",
+  "assets": {
+    "discograph-step-04-softmax-v3.svg": "7a756c36fc47c1612294278fe3fdfc87e9c265801553e3314d9706dbd2b927d6",
+    "discograph-step-04-softmax-v3.pdf": "662c61bc6d8116b10f4af955b812a799fc5a4386b6804b3dec66cdd58d49ddf5",
+    "discograph-step-04-softmax-v3.png": "52b1be15dc5b4bb84ff9bb5ec1f19c301346e081b8bda0d516debaa7dc458300"
+  },
+  "provenance": "discograph-step-04-softmax-v3-provenance.json",
+  "styled_faces": 0,
+  "rendering": "Exact vector cells and labels; schematic scores and their per-cell softmax.",
+  "softmax_summary": {
+    "combined_pdf_page": 29,
+    "asset": "discograph-step-04-softmax-v3.pdf",
+    "explanation": "Softmax across agents produces weights summing to 1 at each cell. Higher scores receive higher weights.",
+    "example_weights": [
+      0.1,
+      0.8,
+      0.1
+    ],
+    "derivation_steps_removed": true,
+    "heatmap_colors_and_values_preserved": true,
+    "maps_are_exact_32_by_32": true,
+    "rendered_slide_visually_checked": true
+  },
+  "combined_pdf_page": 29,
+  "combined_pdf_total_pages": 64,
+  "supersedes_in_active_deck": "discograph-step-04-softmax-v2.pdf",
+  "render_validation": "Page29 visually checked in the64-page combined PDF. Short summary and larger maps are readable; formula/call labels, score/weight values, footer and source credit are separate."
+}

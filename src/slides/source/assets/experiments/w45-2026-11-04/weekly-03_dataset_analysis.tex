@@ -1,0 +1,68 @@
+% src/slides/weekly/src/sections/11_experiments/03_dataset_analysis.tex
+
+\begin{frame}[t]{\MoverContentTitle{V2X-Sim 2.0: Dataset Analysis}}
+  \label{frame:experiment-dataset-analysis}
+  \definecolor{MoverDatasetTrainFill}{HTML}{EAF1F6}
+  \definecolor{MoverDatasetValidationFill}{HTML}{FFF0D9}
+  \definecolor{MoverDatasetTestFill}{HTML}{E5F2EF}
+  \MoverDiscoBody{%
+    100 scenes, 10,000 synchronized frames and 37,200 vehicle scans; roadside unit excluded.
+    \par\vspace{0.15cm}
+    \begin{minipage}[t]{6.20cm}
+      \raggedright\fontsize{9.5}{11}\selectfont
+      {\fontsize{11}{13}\selectfont\textbf{Official Partitions}}\par
+      \vspace{0.12cm}
+      {\fontsize{9}{10.5}\selectfont
+        \setlength{\tabcolsep}{0.08cm}
+        \renewcommand{\arraystretch}{1.05}
+        \begin{tabular}{l r r r r}
+          \rowcolor{MoverNavy}
+          \color{white}\textbf{Partition} & \color{white}\textbf{Scenes} & \color{white}\textbf{Frames} & \color{white}\textbf{Scans} & \color{white}\textbf{Points} \\
+          \rowcolor{MoverDatasetTrainFill}
+          Train & 80 & 8,000 & 29,200 & 1.0 B \\
+          \rowcolor{MoverDatasetValidationFill}
+          Validation & 10 & 1,000 & 4,000 & 106.8 M \\
+          \rowcolor{MoverDatasetTestFill}
+          Test & 10 & 1,000 & 4,000 & 100.8 M \\
+          \textbf{Total} & \textbf{100} & \textbf{10,000} & \textbf{37,200} & \textbf{1.2 B} \\
+        \end{tabular}\par
+      }
+      \vspace{0.18cm}
+      \textbf{One scan} = one vehicle at one frame.
+    \end{minipage}\hfill
+    \begin{minipage}[t]{8.00cm}
+      \raggedright\fontsize{9.5}{11}\selectfont
+      {\fontsize{11}{13}\selectfont\textbf{Grouped by Vehicle Inputs}}\par
+      \vspace{0.12cm}
+      {\fontsize{9}{10.5}\selectfont
+        \setlength{\tabcolsep}{0.14cm}
+        \renewcommand{\arraystretch}{1.00}
+        \begin{tabular}{l r r r r r}
+          \rowcolor{MoverNavy}
+          \color{white}\textbf{Partition} & \color{white}\textbf{Inputs} & \color{white}\textbf{Scenes} & \color{white}\textbf{Frames} & \color{white}\textbf{Scans} & \color{white}\textbf{Points} \\
+          \rowcolor{MoverDatasetTrainFill}
+          Train & 2 & 4 & 400 & 800 & 28.9 M \\
+          \rowcolor{MoverDatasetTrainFill}
+          & 3 & 37 & 3,700 & 11,100 & 375.4 M \\
+          \rowcolor{MoverDatasetTrainFill}
+          & 4 & 22 & 2,200 & 8,800 & 294.8 M \\
+          \rowcolor{MoverDatasetTrainFill}
+          & 5 & 17 & 1,700 & 8,500 & 333.9 M \\
+          \rowcolor{MoverDatasetValidationFill}
+          Validation & 3 & 3 & 300 & 900 & 22.0 M \\
+          \rowcolor{MoverDatasetValidationFill}
+          & 4 & 4 & 400 & 1,600 & 48.4 M \\
+          \rowcolor{MoverDatasetValidationFill}
+          & 5 & 3 & 300 & 1,500 & 36.4 M \\
+          \rowcolor{MoverDatasetTestFill}
+          Test & 3 & 3 & 300 & 900 & 22.7 M \\
+          \rowcolor{MoverDatasetTestFill}
+          & 4 & 4 & 400 & 1,600 & 41.0 M \\
+          \rowcolor{MoverDatasetTestFill}
+          & 5 & 3 & 300 & 1,500 & 37.1 M \\
+        \end{tabular}\par
+      }
+    \end{minipage}
+  }
+  \MoverSourceCorner{AI generated illustrations}
+\end{frame}

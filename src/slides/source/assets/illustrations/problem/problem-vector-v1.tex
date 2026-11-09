@@ -1,0 +1,35 @@
+% src/slides/source/final/core/02_problem.tex
+
+\begin{frame}{Problem}
+  \SlideBody{\begin{VisualCanvas}
+    \node[final statement,text width=14.4cm,
+      font=\sffamily\fontsize{16}{20}\selectfont] at (7.4,5.20)
+      {Can a Holistic Early-Fusion Model Be Compressed\\
+      While Preserving Detection Accuracy?};
+    \node[final heading] at (2.4,4.15) {Own Scan Only};
+    \node[final heading] at (7.4,4.30) {Early Fusion};
+    \node[final heading] at (12.4,4.30) {DiscoNet};
+    \node[visual small,anchor=center] at (7.4,3.88) {Teacher};
+    \node[visual small,anchor=center] at (12.4,3.88) {Student};
+    \FinalCloudIcon{2.4}{2.95}
+    \FinalCloudIcon{6.5}{2.95}
+    \FinalCloudIcon{8.3}{2.95}
+    \FinalGridIcon{11.6}{2.95}
+    \FinalGridIcon{13.2}{2.95}
+    \VisualCar{2.4}{1.45}{MoverCyan}
+    \VisualCar{7.4}{1.45}{MoverCyan}
+    \VisualCar{12.4}{1.45}{MoverCyan}
+    \draw[visual arrow] (2.4,2.25) -- (2.4,1.78);
+    \draw[visual arrow] (6.5,2.25) -- (7.25,1.78);
+    \draw[visual arrow] (8.3,2.25) -- (7.55,1.78);
+    \draw[visual arrow] (11.6,2.15) -- (12.25,1.78);
+    \draw[visual arrow] (13.2,2.15) -- (12.55,1.78);
+    \draw[visual arrow,dashed] (7.98,1.45) --
+      node[above,align=center,text=MoverNavy,font=\fontsize{9}{11}\selectfont]
+        {Distillation\\Training Only} (11.82,1.45);
+    \node[final caption] at (2.4,0.65) {No Sharing};
+    \node[final caption] at (7.4,0.65) {Holistic View};
+    \node[final caption] at (12.4,0.65) {Learned Features};
+  \end{VisualCanvas}}
+  \SlideSource{Source: AI generated illustrations.}
+\end{frame}

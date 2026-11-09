@@ -1,0 +1,53 @@
+% src/slides/weekly/src/sections/11_experiments/06_experiment_setup.tex
+
+\begin{frame}[t]{\MoverContentTitle{Experiment Setup}}
+  \label{frame:experiment-setup}
+  \definecolor{MoverSetupBlueFill}{HTML}{EAF1F6}
+  \definecolor{MoverSetupBlueAltFill}{HTML}{D8E5EF}
+  \definecolor{MoverSetupGreenFill}{HTML}{E5F2EF}
+  \definecolor{MoverSetupGreenAltFill}{HTML}{CCE5DC}
+  \MoverDiscoBody{%
+    \fontsize{9.5}{11.5}\selectfont
+    Configuration of the completed 1,000-frame benchmark.
+    \par\vspace{0.40cm}
+    \begin{minipage}[t]{7.15cm}
+      \vspace{0pt}
+      \fontsize{9.5}{11.5}\selectfont
+      \setlength{\tabcolsep}{0.14cm}
+      \renewcommand{\arraystretch}{1.65}
+      \begin{tabular}{>{\raggedright\arraybackslash}p{2.25cm} >{\raggedright\arraybackslash}p{4.34cm}}
+        \rowcolor{MoverNavy}
+        \multicolumn{2}{l}{\color{white}\fontsize{11}{13}\selectfont\textbf{Hardware}} \\
+        \rowcolor{MoverSetupBlueFill}
+        \textbf{GPU} & NVIDIA GeForce RTX 5060 Ti \\
+        \rowcolor{MoverSetupBlueAltFill}
+        \textbf{GPU Memory} & 16 GB \\
+        \rowcolor{MoverSetupBlueFill}
+        \textbf{CPU} & AMD Ryzen 7 5700X \\
+        \rowcolor{MoverSetupBlueAltFill}
+        \textbf{CPU Cores} & 8 cores / 16 threads \\
+        \rowcolor{MoverSetupBlueFill}
+        \textbf{System RAM} & 16 GB \\
+      \end{tabular}\par
+    \end{minipage}\hfill
+    \begin{minipage}[t]{7.15cm}
+      \vspace{0pt}
+      \fontsize{9.5}{11.5}\selectfont
+      \setlength{\tabcolsep}{0.14cm}
+      \renewcommand{\arraystretch}{1.65}
+      \begin{tabular}{>{\raggedright\arraybackslash}p{2.25cm} >{\raggedright\arraybackslash}p{4.34cm}}
+        \rowcolor{MoverNavy}
+        \multicolumn{2}{l}{\color{white}\fontsize{11}{13}\selectfont\textbf{Software}} \\
+        \rowcolor{MoverSetupGreenFill}
+        \textbf{OS} & Omarchy (Linux) \\
+        \rowcolor{MoverSetupGreenAltFill}
+        \textbf{Python} & 3.14.8 \\
+        \rowcolor{MoverSetupGreenFill}
+        \textbf{PyTorch} & 2.9.1+cu128 \\
+        \rowcolor{MoverSetupGreenAltFill}
+        \textbf{CUDA Runtime} & 12.8 \\
+      \end{tabular}\par
+    \end{minipage}
+  }
+  \MoverSourceCorner{AI generated illustrations}
+\end{frame}

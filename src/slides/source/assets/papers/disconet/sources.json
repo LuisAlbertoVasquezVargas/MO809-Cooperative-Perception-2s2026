@@ -1,0 +1,60 @@
+{
+  "paper": "https://arxiv.org/abs/2111.00643v2",
+  "retrieved": "2026-10-03",
+  "assets": [
+    {
+      "file": "fig1_ours.svg",
+      "url": "https://arxiv.org/html/2111.00643v2/fig1_ours.svg",
+      "sha256": "fa2b6b19bafc110fbdd1fd49ecd13691190ed542c4f25d1d863dd32bbd14628a",
+      "bytes": 61900
+    },
+    {
+      "file": "camera.png",
+      "url": "https://arxiv.org/html/2111.00643v2/camera.png",
+      "sha256": "a1d15f922be0e5793c641aef2ffa30fab76438dd0162e265a62f69a76196fec6",
+      "bytes": 2564667
+    },
+    {
+      "file": "pointcloud.png",
+      "url": "https://arxiv.org/html/2111.00643v2/pointcloud.png",
+      "sha256": "9f8fc89e113d681374319421ea7202c2acdd1cf7ab6392edda2fd46d8aa3b689",
+      "bytes": 649260
+    },
+    {
+      "file": "edge1.png",
+      "url": "https://arxiv.org/html/2111.00643v2/edge1.png",
+      "sha256": "2185c69cec6a5c88b2cee632a47999548c166c98dda60c154f86813ff57a21dd",
+      "bytes": 156656
+    },
+    {
+      "file": "edge2.png",
+      "url": "https://arxiv.org/html/2111.00643v2/edge2.png",
+      "sha256": "3d519dd001a2e67e7d54c073b1f5d127a164254dc5f1909c4e1ef31e76b861fd",
+      "bytes": 281768
+    },
+    {
+      "file": "edge3.png",
+      "url": "https://arxiv.org/html/2111.00643v2/edge3.png",
+      "sha256": "86d6297acd5ae8a02d8a1654011020f1c02b3a945f112ae7d0d02f1b90d96213",
+      "bytes": 174139
+    },
+    {
+      "file": "overview.png",
+      "url": "https://arxiv.org/html/2111.00643v2/overview.png",
+      "sha256": "81f0b43f07c12967b07f62dc2bb221d56ab251d6c56f8a93fff1915ec3994a0a",
+      "bytes": 564640
+    },
+    {
+      "file": "fig1_early.svg",
+      "url": "https://arxiv.org/html/2111.00643v2/fig1_early.svg",
+      "sha256": "166574e2a4d3400ee21f303012dad2d7f6f7258c490a08e1e78db42c1cbc14b1",
+      "bytes": 32031
+    },
+    {
+      "file": "fig1_int.svg",
+      "url": "https://arxiv.org/html/2111.00643v2/fig1_int.svg",
+      "sha256": "e80ff291919f28346a107baaece7595647076530cfe3c436a3409809cdf04995",
+      "bytes": 32619
+    }
+  ]
+}

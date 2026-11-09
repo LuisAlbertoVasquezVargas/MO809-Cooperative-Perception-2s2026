@@ -1,0 +1,11 @@
+% Separate runtime workload: 30 frames, three repeats, n=1..20 input slots.
+% Above five slots, recorded scans and poses repeat; no AP is evaluated here.
+\begin{frame}{Runtime Grows with the Graph}
+  \SlideBody{\begin{VisualCanvas}
+    \node[inner sep=0pt] at (7.4,3.00)
+      {\includegraphics[width=14.4cm,height=5.35cm,keepaspectratio]{assets/experiments/w45-2026-11-04/runtime-scaling-v1.pdf}};
+    \node[final caption,font=\fontsize{10.5}{13}\selectfont] at (7.4,0.13)
+      {Median Forward: 7.8 $\rightarrow$ 306.0 ms\qquad 30 Frames $\times$ 3 Repeats};
+  \end{VisualCanvas}}
+  \SlideSource{Source: Recorded runtime sweep, November 4; $n>5$ repeats recorded inputs; no AP measured.}
+\end{frame}

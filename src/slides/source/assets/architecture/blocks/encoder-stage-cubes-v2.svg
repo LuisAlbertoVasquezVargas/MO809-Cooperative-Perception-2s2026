@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2400" height="540" viewBox="0 0 2400 540">
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#464B50"/></marker></defs>
+<rect width="2400" height="540" fill="white"/>
+<g font-family="Liberation Serif,serif" fill="#071E47" stroke-linejoin="round">
+<polygon points="65.000,190.250 95.000,179.750 295.000,179.750 265.000,190.250" fill="#FAFAFA" stroke="#464B50" stroke-width="2.2"/>
+<polygon points="265.000,190.250 295.000,179.750 295.000,379.750 265.000,390.250" fill="#F0F0F0" stroke="#464B50" stroke-width="2.2"/>
+<polygon points="65.000,190.250 265.000,190.250 265.000,390.250 65.000,390.250" fill="#FFFFFF" stroke="#464B50" stroke-width="2.2"/>
+<text x="180" y="465" text-anchor="middle" font-size="50"><tspan font-style="italic">H</tspan><tspan baseline-shift="sub" font-size="70%">in</tspan> × <tspan font-style="italic">W</tspan><tspan baseline-shift="sub" font-size="70%">in</tspan> × <tspan font-style="italic">C</tspan><tspan baseline-shift="sub" font-size="70%">in</tspan></text>
+<text x="180" y="130.0" text-anchor="middle" font-size="44" font-weight="bold">Input</text>
+<polygon points="870.000,245.500 930.000,224.500 1030.000,224.500 970.000,245.500" fill="#FAFAFA" stroke="#464B50" stroke-width="2.2"/>
+<polygon points="970.000,245.500 1030.000,224.500 1030.000,324.500 970.000,345.500" fill="#F0F0F0" stroke="#464B50" stroke-width="2.2"/>
+<polygon points="870.000,245.500 970.000,245.500 970.000,345.500 870.000,345.500" fill="#FFFFFF" stroke="#464B50" stroke-width="2.2"/>
+<text x="950" y="465" text-anchor="middle" font-size="50"><tspan font-style="italic">H</tspan><tspan baseline-shift="sub" font-size="70%">out</tspan> × <tspan font-style="italic">W</tspan><tspan baseline-shift="sub" font-size="70%">out</tspan> × <tspan font-style="italic">C</tspan><tspan baseline-shift="sub" font-size="70%">out</tspan></text>
+<polygon points="1520.000,245.500 1580.000,224.500 1680.000,224.500 1620.000,245.500" fill="#FAFAFA" stroke="#464B50" stroke-width="2.2"/>
+<polygon points="1620.000,245.500 1680.000,224.500 1680.000,324.500 1620.000,345.500" fill="#F0F0F0" stroke="#464B50" stroke-width="2.2"/>
+<polygon points="1520.000,245.500 1620.000,245.500 1620.000,345.500 1520.000,345.500" fill="#FFFFFF" stroke="#464B50" stroke-width="2.2"/>
+<text x="1600" y="465" text-anchor="middle" font-size="50"><tspan font-style="italic">H</tspan><tspan baseline-shift="sub" font-size="70%">out</tspan> × <tspan font-style="italic">W</tspan><tspan baseline-shift="sub" font-size="70%">out</tspan> × <tspan font-style="italic">C</tspan><tspan baseline-shift="sub" font-size="70%">out</tspan></text>
+<polygon points="2070.000,245.500 2130.000,224.500 2230.000,224.500 2170.000,245.500" fill="#FAFAFA" stroke="#464B50" stroke-width="2.2"/>
+<polygon points="2170.000,245.500 2230.000,224.500 2230.000,324.500 2170.000,345.500" fill="#F0F0F0" stroke="#464B50" stroke-width="2.2"/>
+<polygon points="2070.000,245.500 2170.000,245.500 2170.000,345.500 2070.000,345.500" fill="#FFFFFF" stroke="#464B50" stroke-width="2.2"/>
+<text x="2150" y="465" text-anchor="middle" font-size="50"><tspan font-style="italic">H</tspan><tspan baseline-shift="sub" font-size="70%">out</tspan> × <tspan font-style="italic">W</tspan><tspan baseline-shift="sub" font-size="70%">out</tspan> × <tspan font-style="italic">C</tspan><tspan baseline-shift="sub" font-size="70%">out</tspan></text>
+<text x="2150" y="180.0" text-anchor="middle" font-size="44" font-weight="bold">Output</text>
+<polyline points="305.000,285.000 860.000,285.000" fill="none" stroke="#464B50" stroke-width="2.2" marker-end="url(#arrow)"/>
+<text x="582.5" y="175" text-anchor="middle" font-size="40" font-weight="bold" font-family="Liberation Mono,monospace">unit_2d_down(c_in)</text>
+<polyline points="1040.000,285.000 1510.000,285.000" fill="none" stroke="#464B50" stroke-width="2.2" marker-end="url(#arrow)"/>
+<text x="1275.0" y="175" text-anchor="middle" font-size="40" font-weight="bold" font-family="Liberation Mono,monospace">unit_2d_keep(c_out)</text>
+<polyline points="1690.000,285.000 2060.000,285.000" fill="none" stroke="#464B50" stroke-width="2.2" marker-end="url(#arrow)"/>
+<text x="1875.0" y="175" text-anchor="middle" font-size="40" font-weight="bold" font-family="Liberation Mono,monospace">unit_3d(c_out)</text>
+</g>
+</svg>

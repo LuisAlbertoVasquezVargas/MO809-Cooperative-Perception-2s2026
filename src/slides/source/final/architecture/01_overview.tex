@@ -1,0 +1,30 @@
+% src/slides/source/final/architecture/01_overview.tex
+
+\begin{frame}{Student Architecture}
+  \SlideBody{\begin{VisualCanvas}
+    \node[visual small,anchor=center,align=center,text width=3.5cm] (neighbors)
+      at (7.30,4.70) {Neighbors};
+    \tikzset{architecture step/.style={visual panel,align=center,
+      text width=2.30cm,minimum height=1.25cm,
+      font=\fontsize{10}{12}\selectfont}}
+    \node[architecture step] (input) at (1.30,3.45)
+      {\textbf{Occupancy Input}\\$256\times256\times13$};
+    \node[architecture step] (encoder) at (4.30,3.45)
+      {\textbf{Encoder}\\Stages 0--4};
+    \node[architecture step] (graph) at (7.30,3.45)
+      {\textbf{DiscoGraph}\\$32\times32\times256$};
+    \node[architecture step] (decoder) at (10.30,3.45)
+      {\textbf{Decoder}\\$256\times256\times32$};
+    \node[architecture step] (heads) at (13.30,3.45)
+      {\textbf{Detection Heads}\\Scores and Boxes};
+    \draw[visual arrow] (input.east) -- (encoder.west);
+    \draw[visual arrow] (encoder.east) -- (graph.west);
+    \draw[visual arrow] (graph.east) -- (decoder.west);
+    \draw[visual arrow] (decoder.east) -- (heads.west);
+    \draw[visual arrow] (neighbors.south) -- (graph.north);
+    \draw[visual arrow] (encoder.south) -- (4.30,1.85) -- (10.30,1.85) -- (decoder.south);
+    \node[visual small,anchor=center,align=center,text width=7.5cm]
+      at (7.30,1.45) {Local Features: Stages 0--2, 4};
+  \end{VisualCanvas}}
+  \SlideSource{Source: Li et al., Sec. 2; CoPerception implementation. AI generated illustration.}
+\end{frame}

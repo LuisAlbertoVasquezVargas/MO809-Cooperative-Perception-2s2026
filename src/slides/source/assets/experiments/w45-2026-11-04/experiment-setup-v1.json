@@ -1,0 +1,63 @@
+{
+  "kind": "Native slide adaptation of the recorded benchmark setup",
+  "reference_pdf_sha256": "cc242255015ddcc3ae2fad19da95e7daaa871bf11b2d7b94a37a699bf036e586",
+  "reference_page": 7,
+  "source_sha256": "015ecbbcb4be1f031cb7450712945451e5a151133070cb8bb30031392ecefc86",
+  "source_snapshot": {
+    "kind": "Hardware and software snapshot for the completed full benchmark presentation",
+    "captured_utc": "2026-11-03T10:25:23.186740+00:00",
+    "benchmark_record": "docs/experiments/full-test-v2-no-rsu-2026-11-03.json",
+    "benchmark_record_sha256": "6d8eacbde99b2fa715dcf4f60ff668dc2812903878d42fe96057e89dec9e66b2",
+    "hardware": {
+      "gpu": "NVIDIA GeForce RTX 5060 Ti",
+      "gpu_memory_total_mib": 16311,
+      "cpu": "AMD Ryzen 7 5700X",
+      "cpu_cores": 8,
+      "cpu_logical_threads": 16,
+      "system_ram_total_kib": 16280632
+    },
+    "software": {
+      "os": "Omarchy (Linux)",
+      "kernel": "7.2.8-9-omarchy",
+      "nvidia_driver_snapshot": "615.78.08",
+      "python": "3.14.8",
+      "pytorch": "2.9.1+cu128",
+      "cuda_runtime": "12.8",
+      "numpy": "2.3.5",
+      "shapely": "2.1.2",
+      "matplotlib": "3.10.8"
+    },
+    "evidence_scope": {
+      "recorded_in_benchmark": "GPU identity, Python, PyTorch, CUDA runtime, NumPy, settings, coverage and timing from saved run",
+      "host_snapshot": "CPU, memory, OS, kernel and GPU driver inspected after the run; driver version was not logged by the benchmark",
+      "other_libraries": "Shapely and Matplotlib from the unchanged experiment environment"
+    },
+    "active_vehicle_count_histogram_frames": {
+      "3": 300,
+      "4": 400,
+      "5": 300
+    },
+    "aggregation": "One active agent at one frame is one vehicle view. Match within each view, then pool all views for AP. The same car seen by different agents contributes a separate reference in each view.",
+    "timing_scope": "Whole test split, both sharing conditions together; includes loading, inference, decoding/NMS, writing and AP. Excludes data download, initial checkpoint loading and figure export.",
+    "illustration_credit": "AI generated illustration"
+  },
+  "model_and_execution": {
+    "model": "Official DiscoNet student",
+    "checkpoint_epoch": 100,
+    "fusion_layer": 3,
+    "roadside_unit": false,
+    "gpus": 1,
+    "precision": "float32",
+    "synchronized_frames_per_batch": 1,
+    "seed": 0,
+    "inference_only": true
+  },
+  "dataset": {
+    "name": "V2X-Sim 2.0",
+    "partition": "Official prepared detection Test split",
+    "scenes": 10,
+    "frames": 1000
+  },
+  "memory_display": "Rounded whole-number GB, matching report page 7; exact quantities retained in the source snapshot",
+  "new_inference_or_training": false
+}

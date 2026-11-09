@@ -1,0 +1,4 @@
+Carlito from Google Fonts
+https://github.com/google/fonts/tree/3dd78844021e948ceb633d1dcee3f7885561b5d9/ofl/carlito
+License: SIL Open Font License 1.1 (OFL.txt)
+Downloaded: 2026-10-03

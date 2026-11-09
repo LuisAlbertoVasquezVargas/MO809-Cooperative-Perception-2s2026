@@ -1,0 +1,29 @@
+\input{assets/experiments/tree-2026-11-05/summary-values.tex}
+\begin{frame}{Runtime and Accuracy Trade-Off}
+  \SlideBody{\begin{VisualCanvas}
+    \node[final caption,font=\fontsize{12}{15}\selectfont] at (7.4,5.35)
+      {At $n=15$\quad Original $\rightarrow$ Tree};
+    \node[final heading,font=\bfseries\fontsize{13}{16}\selectfont] at (2.4,4.55) {Inference Time};
+    \node[final heading,font=\bfseries\fontsize{13}{16}\selectfont] at (7.4,4.55) {AP@0.5};
+    \node[final heading,font=\bfseries\fontsize{13}{16}\selectfont] at (12.4,4.55) {AP@0.7};
+    \foreach \Col in {4.9,9.9} {\draw[draw=MoverNavy!20] (\Col,1.55) -- (\Col,4.80);}
+    \node[final statement,font=\bfseries\fontsize{32}{38}\selectfont]
+      at (2.4,3.45) {\TreeStudyTimeReduction\%};
+    \node[final statement,font=\bfseries\fontsize{32}{38}\selectfont]
+      at (7.4,3.45) {\TreeStudyAPFiftyDelta};
+    \node[final statement,font=\bfseries\fontsize{32}{38}\selectfont]
+      at (12.4,3.45) {\TreeStudyAPSeventyDelta};
+    \node[final caption,font=\fontsize{11}{14}\selectfont] at (2.4,2.65) {Less Inference Time};
+    \node[final caption,font=\fontsize{11}{14}\selectfont] at (7.4,2.65) {Percentage Points};
+    \node[final caption,font=\fontsize{11}{14}\selectfont] at (12.4,2.65) {Percentage Points};
+    \node[final caption,font=\fontsize{11}{14}\selectfont] at (2.4,1.90)
+      {\TreeStudyOriginalTime\ $\rightarrow$ \TreeStudyTreeTime\ ms};
+    \node[final caption,font=\fontsize{11}{14}\selectfont] at (7.4,1.90)
+      {\TreeStudyOriginalAPFifty\% $\rightarrow$ \TreeStudyTreeAPFifty\%};
+    \node[final caption,font=\fontsize{11}{14}\selectfont] at (12.4,1.90)
+      {\TreeStudyOriginalAPSeventy\% $\rightarrow$ \TreeStudyTreeAPSeventy\%};
+    \node[final caption,font=\bfseries\fontsize{12}{15}\selectfont] at (7.4,1.08)
+      {Lower Runtime Comes with Lower Detection AP};
+  \end{VisualCanvas}}
+  \SlideSource{Source: Own elaboration.}
+\end{frame}

@@ -1,0 +1,86 @@
+% src/slides/source/final/structure/minimal-layout.tex
+
+\tikzset{
+  final heading/.style={text=MoverNavy,align=center,inner sep=0pt,
+    font=\sffamily\bfseries\fontsize{15}{19}\selectfont},
+  final caption/.style={text=MoverNavy,align=center,inner sep=0pt,
+    font=\sffamily\fontsize{12}{15}\selectfont},
+  final statement/.style={text=MoverNavy,align=center,inner sep=0pt,
+    font=\sffamily\fontsize{18}{23}\selectfont},
+  final icon/.style={draw=MoverNavy,line width=0.9pt,line cap=round,line join=round}
+}
+
+% Keep takeaways to a short label, without a paragraph-sized banner.
+\renewcommand{\VisualTakeaway}[1]{%
+  \node[final caption,text width=14.4cm] at (7.40,0.45) {#1};
+}
+\renewcommand{\FinalTakeaway}[1]{%
+  \begin{tikzpicture}[remember picture,overlay]
+    \node[final caption,anchor=south,text width=14.4cm]
+      at ($(current page.south west)+(8.00cm,1.20cm)$) {#1};
+  \end{tikzpicture}%
+}
+
+\newcommand{\FinalCloudIcon}[2]{%
+  \begin{scope}[shift={(#1,#2)}]
+    \foreach \Point in {(-0.80,-0.35),(-0.62,0.20),(-0.45,0.62),(-0.33,-0.56),
+      (-0.15,0.34),(0.02,-0.08),(0.21,0.60),(0.34,-0.42),(0.49,0.10),
+      (0.65,0.44),(0.80,-0.19)} {
+      \fill[MoverCyan] \Point circle (0.055);
+    }
+  \end{scope}%
+}
+\newcommand{\FinalGridIcon}[2]{%
+  \begin{scope}[shift={(#1,#2)}]
+    \fill[MoverPale] (-0.72,-0.72) rectangle (0.72,0.72);
+    \fill[MoverCyan!65] (-0.72,0.24) rectangle (-0.24,0.72);
+    \fill[MoverCyan!35] (0,-0.24) rectangle (0.48,0.24);
+    \draw[draw=MoverNavy!55,step=0.24,line width=0.5pt]
+      (-0.72,-0.72) grid (0.72,0.72);
+  \end{scope}%
+}
+\newcommand{\FinalTableIcon}[2]{%
+  \begin{scope}[shift={(#1,#2)}]
+    \draw[final icon] (-1,-0.8) rectangle (1,0.8);
+    \fill[MoverPale] (-0.98,0.27) rectangle (0.98,0.78);
+    \foreach \Row in {-0.27,0.27} {\draw[final icon] (-1,\Row) -- (1,\Row);}
+    \foreach \Col in {-0.33,0.33} {\draw[final icon] (\Col,-0.8) -- (\Col,0.8);}
+  \end{scope}%
+}
+\newcommand{\FinalOverlayIcon}[2]{%
+  \begin{scope}[shift={(#1,#2)}]
+    \draw[draw=MoverNavy!25,line width=0.7pt] (-1.20,-0.9) rectangle (1.20,0.9);
+    \draw[draw=MoverCyan,line width=1.7pt,rounded corners=2pt]
+      (-0.70,-0.5) rectangle (0.35,0.55);
+    \draw[draw=MoverNavy,dashed,line width=0.9pt,rounded corners=2pt]
+      (-0.60,-0.45) rectangle (0.45,0.60);
+  \end{scope}%
+}
+\newcommand{\FinalNotebookIcon}[2]{%
+  \begin{scope}[shift={(#1,#2)}]
+    \draw[final icon,rounded corners=2pt] (-0.82,-1.0) rectangle (0.82,1.0);
+    \draw[draw=MoverCyan,line width=1pt] (-0.52,0.62) -- (0.52,0.62);
+    \draw[final icon] (-0.18,0.28) -- (-0.45,0.04) -- (-0.18,-0.20);
+    \draw[final icon] (0.18,0.28) -- (0.45,0.04) -- (0.18,-0.20);
+    \draw[final icon] (-0.50,-0.61) -- (0.50,-0.61);
+  \end{scope}%
+}
+\newcommand{\FinalModelIcon}[2]{%
+  \begin{scope}[shift={(#1,#2)}]
+    \foreach \LeftY in {-0.38,0.38} {
+      \foreach \RightY in {-0.38,0.38} {
+        \draw[draw=MoverNavy!35,line width=0.7pt] (-0.9,\LeftY) -- (0,\RightY);
+        \draw[draw=MoverNavy!35,line width=0.7pt] (0,\LeftY) -- (0.9,\RightY);
+      }
+    }
+    \foreach \Col in {-0.9,0,0.9} {
+      \foreach \Row in {-0.38,0.38} {
+        \filldraw[fill=white,draw=MoverCyan,line width=1pt] (\Col,\Row) circle (0.13);
+      }
+    }
+  \end{scope}%
+}
+\renewcommand{\FinalTensorLegend}{%
+  {\centering\fontsize{9}{11}\selectfont
+  $H$ = Height\quad $W$ = Width\quad $C$ = Channels\par}%
+}

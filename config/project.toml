@@ -1,0 +1,20 @@
+[project]
+title = "Cooperative Perception with DiscoNet"
+course = "MO809 - Topics of Distributed Computing"
+author = "Luis Alberto Vásquez Vargas"
+status = "completed"
+semester = "2s2026"
+
+[paper]
+title = "Learning Distilled Collaboration Graph for Multi-Agent Perception"
+authors = "Yiming Li, Shunli Ren, Pengxiang Wu, Siheng Chen, Chen Feng, Wenjun Zhang"
+year = "2021"
+doi = ""
+url = "https://arxiv.org/abs/2111.00643"
+method = "DiscoNet"
+target_result = "Evaluate a fixed DiscoNet student with sharing disabled/enabled; analyze runtime scaling and a matched Original/Tree inference-time ablation."
+
+[deadlines]
+proposal = ""
+presentation = "November 5, 2026"
+report = ""

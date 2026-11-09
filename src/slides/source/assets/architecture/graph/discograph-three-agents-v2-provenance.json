@@ -1,0 +1,39 @@
+{
+  "kind": "Three-agent illustration for slide 11 only",
+  "generator": "src/demos/disconet/export_discograph_n3.py",
+  "generator_sha256": "471f39ff910867e0d7805c4115d7a00e2a3cac9654d2e89d67013cbafd7ff754",
+  "base_generator_sha256": "a948399b201ea96cba5bad37876e5053a34df460d66936246f80847ddbc9ce09",
+  "nodes": 3,
+  "directed_edges_including_self": 9,
+  "receiver": 1,
+  "selected_sender": 2,
+  "scope": "Slide-specific teaching illustration; inference remains configured for five agents",
+  "weight_origin": "First three illustrative Gaussian score fields, renormalized across three senders",
+  "experimental_measurement": false,
+  "weights_shape": [
+    3,
+    32,
+    32
+  ],
+  "sender_sum_max_error": 2.220446049250313e-16,
+  "data_file": "discograph-three-agents-v2-weights.npz",
+  "data_sha256": "7978f0de2829c30bef28f8914ccd42315dc00abdb5a2cf79e1064f81d847f8a5",
+  "rendering": {
+    "font": "Carlito",
+    "heatmap": "Exact 32x32 vector cells, no smoothing",
+    "range": [
+      0,
+      1
+    ],
+    "png_dpi": 600
+  },
+  "source_url": "https://proceedings.neurips.cc/paper_files/paper/2021/file/f702defbc67edb455949f46babab0c18-Paper.pdf#page=4",
+  "outputs": {
+    "discograph-three-agents-v2-geometry-guide.pdf": "4f6a6b353db3e7a8ab4aaf8b13c3cd6413300d70cae7a6df91104b9443f79d0f",
+    "discograph-three-agents-v2-geometry-guide.svg": "bd9e018dbbd4828cbd10dacb6ad63ee2351013bade8a09aae7ff57a7ab2c16d1",
+    "discograph-three-agents-v2-geometry-guide.png": "210144837d6660113d8adf6c121287c7db810455e90c60faf0aa7efbff50a9c2",
+    "discograph-three-agents-v2-spatial-map.pdf": "6b08da3cbf8010538b5ea8e0c40211c402c75d23b70443a7255220d00ad08404",
+    "discograph-three-agents-v2-spatial-map.svg": "b446f3592626152389279d935099c7a4ef2827522340eb67f0c201f9422e9cdc",
+    "discograph-three-agents-v2-spatial-map.png": "317fd3dea5901d2646acbbf64b8c4aad4f8196c7fe69a9025b20d18d8adc4375"
+  }
+}

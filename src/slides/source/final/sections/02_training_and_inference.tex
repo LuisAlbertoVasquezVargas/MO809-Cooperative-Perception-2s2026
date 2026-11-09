@@ -1,0 +1,25 @@
+% src/slides/source/final/sections/02_training_and_inference.tex
+
+\begin{frame}{Training and Inference}
+  \SlideBody{\begin{VisualCanvas}
+    \node[visual title] at (0,5.65) {Training};
+    \node[visual title] at (8.05,5.65) {Inference};
+    \draw[MoverNavy!20] (7.50,1.05) -- (7.50,5.65);
+
+    \node[visual panel,align=center,text width=5.95cm,minimum height=1.05cm]
+      (teacher) at (3.50,4.40) {Early-Fusion Teacher\\Combined Raw LiDAR};
+    \node[visual panel,align=center,text width=5.95cm,minimum height=1.05cm]
+      (student) at (3.50,1.95) {DiscoNet Student\\Cooperative Features};
+    \draw[visual arrow] (teacher.south) -- node[right,align=left,
+      font=\fontsize{11}{14}\selectfont] {Knowledge\\Distillation} (student.north);
+
+    \node[visual panel,align=center,text width=5.95cm,minimum height=1.05cm]
+      (features) at (11.30,4.40) {Aligned Features};
+    \node[visual panel,align=center,text width=5.95cm,minimum height=1.05cm]
+      (detections) at (11.30,1.95) {Detected Objects};
+    \draw[visual arrow] (features.south) -- node[right,align=left,
+      font=\fontsize{11}{14}\selectfont] {Fuse $\to$ Detect} (detections.north);
+    \VisualTakeaway{Teacher for Training\qquad Student for Inference}
+  \end{VisualCanvas}}
+  \SlideSource{Source: Li et al., Sec. 2. AI generated illustration.}
+\end{frame}

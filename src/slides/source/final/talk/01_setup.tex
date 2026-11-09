@@ -1,0 +1,53 @@
+% Editable tables from the recorded configuration and the user's reference.
+\begin{frame}{Experiment Setup}
+  \definecolor{MoverSetupBlueFill}{HTML}{EAF1F6}
+  \definecolor{MoverSetupBlueAltFill}{HTML}{D8E5EF}
+  \definecolor{MoverSetupGreenFill}{HTML}{E5F2EF}
+  \definecolor{MoverSetupGreenAltFill}{HTML}{CCE5DC}
+  \SlideBody{\begin{VisualCanvas}
+    \node[anchor=west,inner sep=0pt,text=MoverNavy!75,
+      font=\fontsize{11}{14}\selectfont] at (0.0,5.35)
+      {Configuration of the completed 1,000-frame benchmark};
+
+    \node[anchor=north west,inner sep=0pt,text=MoverNavy] at (0.0,4.60) {%
+      \begin{minipage}{7.0cm}
+        \fontsize{10}{12.5}\selectfont
+        \setlength{\tabcolsep}{0.15cm}
+        \renewcommand{\arraystretch}{1.65}
+        \begin{tabular}{>{\raggedright\arraybackslash}p{2.15cm} >{\raggedright\arraybackslash}p{4.25cm}}
+          \rowcolor{MoverNavy}
+          \multicolumn{2}{l}{\color{white}\fontsize{12}{14}\selectfont\textbf{Hardware}} \\
+          \rowcolor{MoverSetupBlueFill}
+          \textbf{GPU} & NVIDIA GeForce RTX 5060 Ti \\
+          \rowcolor{MoverSetupBlueAltFill}
+          \textbf{GPU Memory} & 16 GB \\
+          \rowcolor{MoverSetupBlueFill}
+          \textbf{CPU} & AMD Ryzen 7 5700X \\
+          \rowcolor{MoverSetupBlueAltFill}
+          \textbf{CPU Cores} & 8 cores / 16 threads \\
+          \rowcolor{MoverSetupBlueFill}
+          \textbf{System RAM} & 16 GB \\
+        \end{tabular}
+      \end{minipage}};
+
+    \node[anchor=north west,inner sep=0pt,text=MoverNavy] at (7.8,4.60) {%
+      \begin{minipage}{7.0cm}
+        \fontsize{10}{12.5}\selectfont
+        \setlength{\tabcolsep}{0.15cm}
+        \renewcommand{\arraystretch}{1.65}
+        \begin{tabular}{>{\raggedright\arraybackslash}p{2.50cm} >{\raggedright\arraybackslash}p{3.90cm}}
+          \rowcolor{MoverNavy}
+          \multicolumn{2}{l}{\color{white}\fontsize{12}{14}\selectfont\textbf{Software}} \\
+          \rowcolor{MoverSetupGreenFill}
+          \textbf{OS} & Omarchy (Linux) \\
+          \rowcolor{MoverSetupGreenAltFill}
+          \textbf{Python} & 3.14.8 \\
+          \rowcolor{MoverSetupGreenFill}
+          \textbf{PyTorch} & 2.9.1+cu128 \\
+          \rowcolor{MoverSetupGreenAltFill}
+          \textbf{CUDA Runtime} & 12.8 \\
+        \end{tabular}
+      \end{minipage}};
+  \end{VisualCanvas}}
+  \SlideSource{Source: Recorded benchmark configuration, November 3.}
+\end{frame}

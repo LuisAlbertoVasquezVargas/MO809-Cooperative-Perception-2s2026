@@ -1,0 +1,17 @@
+% src/slides/source/final/architecture/04_encoder_stage.tex
+
+\begin{frame}{Encoder Stage}
+  \SlideBody{%
+    \centering
+    \includegraphics[width=14.65cm,height=3.55cm,keepaspectratio]{assets/architecture/blocks/encoder-stage-cubes-v2.pdf}\par
+    \vspace{0.22cm}
+    {\fontsize{11}{14}\selectfont
+      Stage 0: Initial + Keep\qquad Stages 1--4: Down + Keep\par}
+    \vspace{0.15cm}
+    {\fontsize{11}{14}\selectfont
+      Stages 1--2: + \texttt{unit\_3d}\quad Pointwise; Singleton Depth; Same $H/W/C$\par}
+    \vspace{0.22cm}
+    \FinalTensorLegend
+  }
+  \SlideSource{Based on CoPerception encoder blocks. AI generated illustration.}
+\end{frame}

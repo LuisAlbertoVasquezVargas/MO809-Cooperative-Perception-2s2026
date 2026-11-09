@@ -1,0 +1,13 @@
+{
+  "date": "2026-11-09",
+  "kind": "Selected first-generation reconstruction used in Appendix E",
+  "original_user_wording_recovered": false,
+  "backend": "Built-in image_gen",
+  "baseline_supplied_to_generator": false,
+  "prompt_file": "first-prompt.txt",
+  "submitted_prompt_file": "submitted-first-prompt.txt",
+  "image_file": "layout-preservation-initial.png",
+  "image_sha256": "2d9cca5e2621db35dbc4bc91279bf6ef3327ce22ddd6af4f15baec5d275e74c6",
+  "baseline_file": "../lidar-cooperation-v2.png",
+  "baseline_sha256": "e3291077c60ed836771082b847e58dc77befdae7647220d95ddf6277810d3168"
+}

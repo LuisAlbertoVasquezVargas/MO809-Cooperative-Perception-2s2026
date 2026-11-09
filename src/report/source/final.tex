@@ -1,0 +1,142 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{microtype}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\input{assets/branding/logo-ic-unicamp.sty}
+\renewcommand{\LogoIcUnicampFile}{assets/branding/logo-ic-unicamp.pdf}
+\usepackage[font=small,labelfont=bf]{caption}
+\usepackage[section]{placeins}
+\usepackage{booktabs,array,longtable,tabularx}
+\usepackage[table]{xcolor}
+\usepackage{listings}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\definecolor{ReportNavy}{HTML}{071E47}
+\definecolor{ReportCyan}{HTML}{0895A8}
+\definecolor{ReportOrange}{HTML}{CC7100}
+\input{final/tables}
+\usepackage[hidelinks]{hyperref}
+\input{metadata}
+\input{metrics.generated}
+\graphicspath{{assets/final/}{../../slides/source/assets/}}
+\setlength{\parindent}{1.2em}
+\setlength{\parskip}{0.25em}
+\setlength{\emergencystretch}{2em}
+\renewcommand{\arraystretch}{1.15}
+\renewcommand{\topfraction}{0.9}
+\renewcommand{\bottomfraction}{0.8}
+\renewcommand{\textfraction}{0.1}
+\renewcommand{\floatpagefraction}{0.7}
+\setcounter{topnumber}{3}
+\setcounter{totalnumber}{4}
+\lstset{language=Python,basicstyle=\ttfamily\footnotesize,
+  keywordstyle=\color{ReportNavy}\bfseries,commentstyle=\color{black!60},
+  frame=single,rulecolor=\color{black!20},breaklines=true,
+  columns=fullflexible,keepspaces=true,showstringspaces=false,tabsize=4}
+\hypersetup{pdftitle={\ProjectTitle: Final Project Report},pdfauthor={\ProjectAuthor},
+  pdfsubject={MO809 final report: detection quality and computational scalability}}
+\title{\ProjectTitle\\Under Perfect Communication\\[0.6em]\large Final Project Report}
+\author{\ProjectAuthor\\\ProjectCourse}
+\date{Presentation date: \FinalPresentationDate}
+
+% Keep the front matter, main text, appendix, and references on recto pages.
+% Inserted versos carry neither text nor page numbers.
+\newcommand{\cleartorecto}{%
+  \clearpage
+  \ifodd\value{page}\else
+    \hbox{}\thispagestyle{empty}\newpage
+  \fi}
+
+\begin{document}
+\hypersetup{pageanchor=false}
+\pagestyle{empty}
+\input{final/cover}
+\cleartorecto
+\input{final/title}
+\cleartorecto
+\pagenumbering{roman}
+\pagestyle{plain}
+\hypersetup{pageanchor=true}
+\begingroup
+\fontsize{11}{16}\selectfont
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{10pt}
+\section*{Abstract}
+\addcontentsline{toc}{section}{Abstract}
+Cooperative perception combines observations from several vehicles to reduce
+the limitations of a single viewpoint, particularly when objects are occluded.
+This project studies DiscoNet, a model that encodes local LiDAR observations,
+aligns neighboring feature maps, and combines them through spatial attention
+before predicting car detections. The experiments use a released pretrained
+student network on V2X-Sim 2.0 under ideal communication and alignment, with no
+retraining or checkpoint selection.
+
+The detection benchmark evaluates the same model with feature sharing
+disabled and enabled over 1,000 synchronized test frames and 4,000 active
+vehicle views. Cooperation increases Average Precision (AP) from
+\ReportOwnAPFifty\% to \ReportCoopAPFifty\% at an Intersection over Union (IoU)
+threshold of 0.5, and from \ReportOwnAPSeventy\% to \ReportCoopAPSeventy\% at 0.7.
+Because model weights remain fixed, this comparison measures the benefit of
+enabling information sharing in the evaluated student.
+
+A separate runtime experiment measures complete model execution for 1--20
+input slots on a fixed 30-frame cohort. Recorded scans are replayed above
+five inputs to increase computational load. A matched ablation then compares
+the original complete collaboration graph with a coarse-attention maximum
+spanning tree for 1--15 slots. The selected links restrict fine feature
+fusion while retaining bidirectional exchanges and self contributions.
+At 15 slots, the tree reduces median execution time by
+\ReportTreeReduction\%, while AP decreases by \ReportTreeDropFifty\ and
+\ReportTreeDropSeventy\ percentage points at IoU 0.5 and 0.7, respectively.
+
+Together, the results show a detection benefit from feature sharing and a
+concrete runtime--accuracy trade-off when collaboration is made sparse.
+The analysis connects these measurements to DiscoNet's encoder, alignment,
+attention, and decoder stages, distinguishing the information available to
+each receiver from the computation required to process the group.
+\par
+\medskip
+\begingroup
+\raggedright
+\noindent\textbf{Keywords:} Cooperative~perception; LiDAR; DiscoNet; V2X-Sim;
+sparse~collaboration; runtime~scalability.
+\par
+\endgroup
+\endgroup
+\clearpage
+\begingroup
+\small
+\setlength{\parskip}{0pt}
+\tableofcontents
+\endgroup
+\clearpage
+\phantomsection
+\addcontentsline{toc}{section}{List of Figures}
+\listoffigures
+\cleartorecto
+\pagenumbering{arabic}
+\input{final/01_introduction}
+\input{final/02_method}
+\input{final/03_protocol}
+\input{final/04_benchmark}
+\input{final/05_scaling}
+\input{final/06_tree}
+\input{final/07_discussion}
+\cleartorecto
+\appendix
+\input{final/08_implementation}
+\cleartorecto
+\phantomsection
+\addcontentsline{toc}{section}{References}
+\begingroup
+\small\raggedright
+% Let long repository links wrap at hyphens.
+\def\UrlBigBreaks{\do\-}
+\bibliographystyle{plain}
+\bibliography{references,final/evidence}
+\endgroup
+\end{document}

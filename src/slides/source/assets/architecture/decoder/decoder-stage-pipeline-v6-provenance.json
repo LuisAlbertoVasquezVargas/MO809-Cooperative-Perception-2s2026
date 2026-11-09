@@ -1,0 +1,1242 @@
+{
+  "created_at": "2026-11-01T19:38:14+00:00",
+  "request": "Final high-resolution, high-quality imagegen finish for the approved proportional decoder and concatenation diagrams.",
+  "tool": "Built-in image_gen.imagegen for style trials and surface materials; SVG composition preserves exact geometry and text.",
+  "method": "Map generated satin materials onto the approved vector faces, retaining all original outlines, text and arrows; compose at 6000 pixels wide rather than enlarging a full-diagram raster.",
+  "generator": "src/demos/disconet/export_decoder_rich_diagrams.py",
+  "generator_sha256": "cd0f13451609fccd56ffcccc6e001e7d2ef63e32c565afb1a324f0ec8ea2a1f7",
+  "reference": "decoder-stage-pipeline-v6-reference.svg",
+  "reference_sha256": "40ca601a75df94230ddb7c56965fc81a6e8b14b0b16f1dc68429c6aa5dd31301",
+  "contracts": "src/slides/weekly/src/img/disconet/custom-blocks/stage-pipelines-v5-contracts.json",
+  "contracts_sha256": "022626971e8d94cfd41958d1c5400c4c561bf6acaea170b1e68a137e4e04fa1c",
+  "diagram_contract": {
+    "assets": {
+      "decoder-stage-pipeline-v6-reference.svg": "40ca601a75df94230ddb7c56965fc81a6e8b14b0b16f1dc68429c6aa5dd31301",
+      "decoder-stage-pipeline-v6-reference.pdf": "037815b1daa3aeb678fdb1ee6580621d166f14d14ba605f7edff55a58e5db206",
+      "decoder-stage-pipeline-v6-reference.png": "c6efe8a528880c1392ccbc41bfb5dd85dd9ffea9db1148e922a17da4073c35e1"
+    },
+    "states": [
+      {
+        "id": "decoder-state-0",
+        "left": 64.0,
+        "right": 336.0,
+        "cy": 320,
+        "front_h": 16.0,
+        "front_w": 16.0,
+        "channel_dx": 256.0,
+        "channel_dy": 89.6,
+        "label": "16 \u00d7 16 \u00d7 512",
+        "numeric_hwc": [
+          16,
+          16,
+          512
+        ],
+        "cx": 200,
+        "bottom": 328.0,
+        "fill": "neutral",
+        "front_cy": 320,
+        "rear_cy": 230.4,
+        "spatial_unit": 1.0,
+        "channel_unit": 0.5,
+        "role": "main_path",
+        "tensor_name": "encoder_output"
+      },
+      {
+        "id": "decoder-state-1",
+        "left": 1380.0,
+        "right": 1540.0,
+        "cy": 320,
+        "front_h": 32.0,
+        "front_w": 32.0,
+        "channel_dx": 128.0,
+        "channel_dy": 44.8,
+        "label": "32 \u00d7 32 \u00d7 256",
+        "numeric_hwc": [
+          32,
+          32,
+          256
+        ],
+        "cx": 1460,
+        "bottom": 336.0,
+        "fill": "neutral",
+        "front_cy": 320,
+        "rear_cy": 275.2,
+        "spatial_unit": 1.0,
+        "channel_unit": 0.5,
+        "role": "main_path",
+        "tensor_name": "stage5_out"
+      },
+      {
+        "id": "decoder-state-2",
+        "left": 2856.0,
+        "right": 2984.0,
+        "cy": 320,
+        "front_h": 64.0,
+        "front_w": 64.0,
+        "channel_dx": 64.0,
+        "channel_dy": 22.4,
+        "label": "64 \u00d7 64 \u00d7 128",
+        "numeric_hwc": [
+          64,
+          64,
+          128
+        ],
+        "cx": 2920,
+        "bottom": 352.0,
+        "fill": "neutral",
+        "front_cy": 320,
+        "rear_cy": 297.6,
+        "spatial_unit": 1.0,
+        "channel_unit": 0.5,
+        "role": "main_path",
+        "tensor_name": "stage6_out"
+      },
+      {
+        "id": "decoder-state-3",
+        "left": 1380.0,
+        "right": 1540.0,
+        "cy": 920,
+        "front_h": 128.0,
+        "front_w": 128.0,
+        "channel_dx": 32.0,
+        "channel_dy": 11.2,
+        "label": "128 \u00d7 128 \u00d7 64",
+        "numeric_hwc": [
+          128,
+          128,
+          64
+        ],
+        "cx": 1460,
+        "bottom": 984.0,
+        "fill": "neutral",
+        "front_cy": 920,
+        "rear_cy": 908.8,
+        "spatial_unit": 1.0,
+        "channel_unit": 0.5,
+        "role": "main_path",
+        "tensor_name": "stage7_out"
+      },
+      {
+        "id": "decoder-state-4",
+        "left": 2784.0,
+        "right": 3056.0,
+        "cy": 920,
+        "front_h": 256.0,
+        "front_w": 256.0,
+        "channel_dx": 16.0,
+        "channel_dy": 5.6,
+        "label": "256 \u00d7 256 \u00d7 32",
+        "numeric_hwc": [
+          256,
+          256,
+          32
+        ],
+        "cx": 2920,
+        "bottom": 1048.0,
+        "fill": "neutral",
+        "front_cy": 920,
+        "rear_cy": 914.4,
+        "spatial_unit": 1.0,
+        "channel_unit": 0.5,
+        "role": "main_path",
+        "tensor_name": "decoded"
+      },
+      {
+        "id": "decoder-concat-0",
+        "left": 692.0,
+        "right": 1108.0,
+        "cy": 320,
+        "front_h": 32.0,
+        "front_w": 32.0,
+        "channel_dx": 384.0,
+        "channel_dy": 134.39999999999998,
+        "label": "32 \u00d7 32 \u00d7 768",
+        "numeric_hwc": [
+          32,
+          32,
+          768
+        ],
+        "cx": 900,
+        "bottom": 336.0,
+        "fill": "neutral",
+        "front_cy": 320,
+        "rear_cy": 185.60000000000002,
+        "spatial_unit": 1.0,
+        "channel_unit": 0.5,
+        "role": "concatenated_intermediate",
+        "channel_segments": [
+          {
+            "source": "decoder",
+            "first_channel": 0,
+            "last_channel_exclusive": 512,
+            "channels": 512,
+            "channel_dx": 256.0,
+            "color": "neutral"
+          },
+          {
+            "source": "skip",
+            "first_channel": 512,
+            "last_channel_exclusive": 768,
+            "channels": 256,
+            "channel_dx": 128.0,
+            "color": "#D3D8DE"
+          }
+        ],
+        "concatenation_axis": "C",
+        "channel_order": [
+          "decoder",
+          "skip"
+        ],
+        "skip_surface_point": [
+          1028.0,
+          192.0
+        ]
+      },
+      {
+        "id": "decoder-skip-0",
+        "left": 520.0,
+        "right": 680.0,
+        "cy": 100,
+        "front_h": 32.0,
+        "front_w": 32.0,
+        "channel_dx": 128.0,
+        "channel_dy": 44.8,
+        "label": "32 \u00d7 32 \u00d7 256",
+        "numeric_hwc": [
+          32,
+          32,
+          256
+        ],
+        "cx": 600,
+        "bottom": 116.0,
+        "fill": "#E5E8EC",
+        "front_cy": 100,
+        "rear_cy": 55.2,
+        "spatial_unit": 1.0,
+        "channel_unit": 0.5,
+        "role": "incoming_skip",
+        "display_scale": 1.0,
+        "tensor_name": "discograph"
+      },
+      {
+        "id": "decoder-concat-1",
+        "left": 2172.0,
+        "right": 2428.0,
+        "cy": 320,
+        "front_h": 64.0,
+        "front_w": 64.0,
+        "channel_dx": 192.0,
+        "channel_dy": 67.19999999999999,
+        "label": "64 \u00d7 64 \u00d7 384",
+        "numeric_hwc": [
+          64,
+          64,
+          384
+        ],
+        "cx": 2300,
+        "bottom": 352.0,
+        "fill": "neutral",
+        "front_cy": 320,
+        "rear_cy": 252.8,
+        "spatial_unit": 1.0,
+        "channel_unit": 0.5,
+        "role": "concatenated_intermediate",
+        "channel_segments": [
+          {
+            "source": "decoder",
+            "first_channel": 0,
+            "last_channel_exclusive": 256,
+            "channels": 256,
+            "channel_dx": 128.0,
+            "color": "neutral"
+          },
+          {
+            "source": "skip",
+            "first_channel": 256,
+            "last_channel_exclusive": 384,
+            "channels": 128,
+            "channel_dx": 64.0,
+            "color": "#AD82C3"
+          }
+        ],
+        "concatenation_axis": "C",
+        "channel_order": [
+          "decoder",
+          "skip"
+        ],
+        "skip_surface_point": [
+          2364.0,
+          232.0
+        ]
+      },
+      {
+        "id": "decoder-skip-1",
+        "left": 1886.0,
+        "right": 2014.0,
+        "cy": 100,
+        "front_h": 64.0,
+        "front_w": 64.0,
+        "channel_dx": 64.0,
+        "channel_dy": 22.4,
+        "label": "64 \u00d7 64 \u00d7 128",
+        "numeric_hwc": [
+          64,
+          64,
+          128
+        ],
+        "cx": 1950,
+        "bottom": 132.0,
+        "fill": "#AD82C3",
+        "front_cy": 100,
+        "rear_cy": 77.6,
+        "spatial_unit": 1.0,
+        "channel_unit": 0.5,
+        "role": "incoming_skip",
+        "display_scale": 1.0,
+        "tensor_name": "saved2"
+      },
+      {
+        "id": "decoder-concat-2",
+        "left": 788.0,
+        "right": 1012.0,
+        "cy": 920,
+        "front_h": 128.0,
+        "front_w": 128.0,
+        "channel_dx": 96.0,
+        "channel_dy": 33.599999999999994,
+        "label": "128 \u00d7 128 \u00d7 192",
+        "numeric_hwc": [
+          128,
+          128,
+          192
+        ],
+        "cx": 900,
+        "bottom": 984.0,
+        "fill": "neutral",
+        "front_cy": 920,
+        "rear_cy": 886.4,
+        "spatial_unit": 1.0,
+        "channel_unit": 0.5,
+        "role": "concatenated_intermediate",
+        "channel_segments": [
+          {
+            "source": "decoder",
+            "first_channel": 0,
+            "last_channel_exclusive": 128,
+            "channels": 128,
+            "channel_dx": 64.0,
+            "color": "neutral"
+          },
+          {
+            "source": "skip",
+            "first_channel": 128,
+            "last_channel_exclusive": 192,
+            "channels": 64,
+            "channel_dx": 32.0,
+            "color": "#1DC59B"
+          }
+        ],
+        "concatenation_axis": "C",
+        "channel_order": [
+          "decoder",
+          "skip"
+        ],
+        "skip_surface_point": [
+          932.0,
+          828.0
+        ]
+      },
+      {
+        "id": "decoder-skip-2",
+        "left": 520.0,
+        "right": 680.0,
+        "cy": 650,
+        "front_h": 128.0,
+        "front_w": 128.0,
+        "channel_dx": 32.0,
+        "channel_dy": 11.2,
+        "label": "128 \u00d7 128 \u00d7 64",
+        "numeric_hwc": [
+          128,
+          128,
+          64
+        ],
+        "cx": 600,
+        "bottom": 714.0,
+        "fill": "#1DC59B",
+        "front_cy": 650,
+        "rear_cy": 638.8,
+        "spatial_unit": 1.0,
+        "channel_unit": 0.5,
+        "role": "incoming_skip",
+        "display_scale": 1.0,
+        "tensor_name": "saved1"
+      },
+      {
+        "id": "decoder-concat-3",
+        "left": 2148.0,
+        "right": 2452.0,
+        "cy": 920,
+        "front_h": 256.0,
+        "front_w": 256.0,
+        "channel_dx": 48.0,
+        "channel_dy": 16.799999999999997,
+        "label": "256 \u00d7 256 \u00d7 96",
+        "numeric_hwc": [
+          256,
+          256,
+          96
+        ],
+        "cx": 2300,
+        "bottom": 1048.0,
+        "fill": "neutral",
+        "front_cy": 920,
+        "rear_cy": 903.2,
+        "spatial_unit": 1.0,
+        "channel_unit": 0.5,
+        "role": "concatenated_intermediate",
+        "channel_segments": [
+          {
+            "source": "decoder",
+            "first_channel": 0,
+            "last_channel_exclusive": 64,
+            "channels": 64,
+            "channel_dx": 32.0,
+            "color": "neutral"
+          },
+          {
+            "source": "skip",
+            "first_channel": 64,
+            "last_channel_exclusive": 96,
+            "channels": 32,
+            "channel_dx": 16.0,
+            "color": "#FE9A27"
+          }
+        ],
+        "concatenation_axis": "C",
+        "channel_order": [
+          "decoder",
+          "skip"
+        ],
+        "skip_surface_point": [
+          2316.0,
+          778.0
+        ]
+      },
+      {
+        "id": "decoder-skip-3",
+        "left": 1814.0,
+        "right": 2086.0,
+        "cy": 650,
+        "front_h": 256.0,
+        "front_w": 256.0,
+        "channel_dx": 16.0,
+        "channel_dy": 5.6,
+        "label": "256 \u00d7 256 \u00d7 32",
+        "numeric_hwc": [
+          256,
+          256,
+          32
+        ],
+        "cx": 1950,
+        "bottom": 778.0,
+        "fill": "#FE9A27",
+        "front_cy": 650,
+        "rear_cy": 644.4,
+        "spatial_unit": 1.0,
+        "channel_unit": 0.5,
+        "role": "incoming_skip",
+        "display_scale": 1.0,
+        "tensor_name": "saved0"
+      }
+    ],
+    "connections": [
+      {
+        "from": "decoder-state-0",
+        "to": "decoder-concat-0",
+        "skip": "decoder-skip-0",
+        "operation": "upsample_concat(decoder_features=encoder_output, skip_features=discograph)",
+        "argument_bindings": {
+          "decoder_features": "encoder_output",
+          "skip_features": "discograph"
+        }
+      },
+      {
+        "from": "decoder-concat-0",
+        "to": "decoder-state-1",
+        "operation": "decoder_block(768, 256)"
+      },
+      {
+        "from": "decoder-state-1",
+        "to": "decoder-concat-1",
+        "skip": "decoder-skip-1",
+        "operation": "upsample_concat(decoder_features=stage5_out, skip_features=saved2)",
+        "argument_bindings": {
+          "decoder_features": "stage5_out",
+          "skip_features": "saved2"
+        }
+      },
+      {
+        "from": "decoder-concat-1",
+        "to": "decoder-state-2",
+        "operation": "decoder_block(384, 128)"
+      },
+      {
+        "from": "decoder-state-2",
+        "to": "decoder-concat-2",
+        "skip": "decoder-skip-2",
+        "operation": "upsample_concat(decoder_features=stage6_out, skip_features=saved1)",
+        "argument_bindings": {
+          "decoder_features": "stage6_out",
+          "skip_features": "saved1"
+        }
+      },
+      {
+        "from": "decoder-concat-2",
+        "to": "decoder-state-3",
+        "operation": "decoder_block(192, 64)"
+      },
+      {
+        "from": "decoder-state-3",
+        "to": "decoder-concat-3",
+        "skip": "decoder-skip-3",
+        "operation": "upsample_concat(decoder_features=stage7_out, skip_features=saved0)",
+        "argument_bindings": {
+          "decoder_features": "stage7_out",
+          "skip_features": "saved0"
+        }
+      },
+      {
+        "from": "decoder-concat-3",
+        "to": "decoder-state-4",
+        "operation": "decoder_block(96, 32)"
+      }
+    ],
+    "raster_width_pixels": 6000,
+    "incoming_skips": [
+      {
+        "name": "DiscoGraph",
+        "shape_hwc": [
+          32,
+          32,
+          256
+        ],
+        "tensor_id": "decoder-skip-0",
+        "color": "#464B50",
+        "arrow_points": [
+          [
+            536.0,
+            116.0
+          ],
+          [
+            536.0,
+            145
+          ],
+          [
+            1028.0,
+            145
+          ],
+          [
+            1028.0,
+            192.0
+          ]
+        ],
+        "to": "decoder-concat-0"
+      },
+      {
+        "name": "Saved Stage 2",
+        "shape_hwc": [
+          64,
+          64,
+          128
+        ],
+        "tensor_id": "decoder-skip-1",
+        "color": "#AD82C3",
+        "arrow_points": [
+          [
+            1918.0,
+            132.0
+          ],
+          [
+            1918.0,
+            145
+          ],
+          [
+            2364.0,
+            145
+          ],
+          [
+            2364.0,
+            232.0
+          ]
+        ],
+        "to": "decoder-concat-1"
+      },
+      {
+        "name": "Saved Stage 1",
+        "shape_hwc": [
+          128,
+          128,
+          64
+        ],
+        "tensor_id": "decoder-skip-2",
+        "color": "#1DC59B",
+        "arrow_points": [
+          [
+            584.0,
+            714.0
+          ],
+          [
+            584.0,
+            735
+          ],
+          [
+            932.0,
+            735
+          ],
+          [
+            932.0,
+            828.0
+          ]
+        ],
+        "to": "decoder-concat-2"
+      },
+      {
+        "name": "Saved Stage 0",
+        "shape_hwc": [
+          256,
+          256,
+          32
+        ],
+        "tensor_id": "decoder-skip-3",
+        "color": "#FE9A27",
+        "arrow_points": [
+          [
+            2086.0,
+            644.4
+          ],
+          [
+            2316.0,
+            644.4
+          ],
+          [
+            2316.0,
+            778.0
+          ]
+        ],
+        "to": "decoder-concat-3"
+      }
+    ],
+    "stage_boundary_tensor_count": 5,
+    "concatenated_tensor_count": 4,
+    "incoming_skip_tensor_count": 4,
+    "purpose": "Proportional layout guide: reusable block calls above continuous navy connectors, rounded wrap, tensor shapes below cubes.",
+    "reused_block_calls": [
+      {
+        "stage": 5,
+        "upsample_concat": "upsample_concat(decoder_features=encoder_output, skip_features=discograph)",
+        "decoder_block": "decoder_block(768, 256)",
+        "stage_factory": "decoder_stage(512, 256, 256)",
+        "joined_channels": 768,
+        "output_channels": 256,
+        "argument_bindings": {
+          "decoder_features": "encoder_output",
+          "skip_features": "discograph"
+        }
+      },
+      {
+        "stage": 6,
+        "upsample_concat": "upsample_concat(decoder_features=stage5_out, skip_features=saved2)",
+        "decoder_block": "decoder_block(384, 128)",
+        "stage_factory": "decoder_stage(256, 128, 128)",
+        "joined_channels": 384,
+        "output_channels": 128,
+        "argument_bindings": {
+          "decoder_features": "stage5_out",
+          "skip_features": "saved2"
+        }
+      },
+      {
+        "stage": 7,
+        "upsample_concat": "upsample_concat(decoder_features=stage6_out, skip_features=saved1)",
+        "decoder_block": "decoder_block(192, 64)",
+        "stage_factory": "decoder_stage(128, 64, 64)",
+        "joined_channels": 192,
+        "output_channels": 64,
+        "argument_bindings": {
+          "decoder_features": "stage6_out",
+          "skip_features": "saved1"
+        }
+      },
+      {
+        "stage": 8,
+        "upsample_concat": "upsample_concat(decoder_features=stage7_out, skip_features=saved0)",
+        "decoder_block": "decoder_block(96, 32)",
+        "stage_factory": "decoder_stage(64, 32, 32)",
+        "joined_channels": 96,
+        "output_channels": 32,
+        "argument_bindings": {
+          "decoder_features": "stage7_out",
+          "skip_features": "saved0"
+        }
+      }
+    ],
+    "caption_policy": "Tensor captions contain H/W/C only; function calls label their operation arrows.",
+    "argument_policy": "decoder_features binds the current main-path feature map; skip_features binds the incoming saved encoder or DiscoGraph map. Every keyword value is printed on its source cube.",
+    "factory_signature": "upsample_concat(decoder_features, skip_features)"
+  },
+  "full_diagram_style_trial": {
+    "asset": "decoder-stage-pipeline-imagegen-v1.png",
+    "sha256": "6f47fb26476586e2d528326d059089f9551b86efe8117af7b1f8cbcecc7b5873",
+    "native_pixels": [
+      2100,
+      749
+    ],
+    "used_in_slide": false,
+    "prompt_file": "decoder-stage-pipeline-imagegen-v1-prompt.txt",
+    "prompt": "Use case: style-transfer, scientific educational diagram.\nImage 1 is the exact edit target: the approved proportional decoder pipeline. Image 2 is a style reference only: the satin-finish encoder diagram.\nCreate the final high-resolution presentation illustration from Image 1. Apply the restrained dimensional satin finish of Image 2 to the existing tensor faces: soft smooth highlights, clean light-gray neutral volumes, purple #AD82C3, teal #1DC59B and orange #FE9A27 saved tensors, crisp charcoal outlines. Keep pure white background and dark navy #071E47 text. Highest native resolution and sharp readable text; landscape aspect exactly matching Image 1 (3200:1140). No slide title, logos, footer, watermark, new boxes or decorative elements.\nCRITICAL INVARIANTS: Keep the exact layout, all positions, cube silhouettes, square front faces, relative dimensions, projection angles, arrows and text from Image 1. The linear proportions are scientifically meaningful: 16/32/64/128/256 front-face sides and C-proportional receding depth. Equal-shaped saved tensors and decoder outputs must retain equal geometry. Never normalize cubes to similar sizes.\nThere are exactly FIVE neutral stage-boundary cuboids, FOUR concatenated intermediate cuboids, and FOUR incoming skip cuboids. Preserve all 13. Concatenated top and right faces have closed contiguous gray decoder and saved-color sections, split at the exact 2:1 channel-depth ratio. Preserve all colored arrows ending on their corresponding appended section. Processed outputs stay gray. DiscoGraph and its appended section stay neutral.\nPreserve every label verbatim, spelling and punctuation:\nTop flow: Input; 16 \u00d7 16 \u00d7 512; decoder_stage(512, 256, 256); Concat: 32 \u00d7 32 \u00d7 768; Stage 5; 32 \u00d7 32 \u00d7 256; decoder_stage(256, 128, 128); Concat: 64 \u00d7 64 \u00d7 384; Stage 6; 64 \u00d7 64 \u00d7 128.\nIncoming top: DiscoGraph; 32 \u00d7 32 \u00d7 256; Saved Stage 2; 64 \u00d7 64 \u00d7 128.\nBottom flow: decoder_stage(128, 64, 64); Concat: 128 \u00d7 128 \u00d7 192; Stage 7; 128 \u00d7 128 \u00d7 64; decoder_stage(64, 32, 32); Concat: 256 \u00d7 256 \u00d7 96; Stage 8; 256 \u00d7 256 \u00d7 32.\nIncoming bottom: Saved Stage 1; 128 \u00d7 128 \u00d7 64; Saved Stage 0; 256 \u00d7 256 \u00d7 32.\nSerif shape labels and bold monospace calls match the edit target. Polish materials and antialiasing only; no architecture, geometry, text or color-meaning changes.\n",
+    "reason": "Retained as style reference; final composition preserves exact vector geometry and higher-resolution text."
+  },
+  "material_prompt_set": [
+    {
+      "asset": "decoder-v5-material-neutral-purple.png",
+      "source": "src/slides/weekly/src/img/disconet/decoder/decoder-v5-material-neutral-purple.png",
+      "sha256": "a05be98a5cad18938f8e0b70fc425bb9e370e075c9e29be509dc5504aa5aafb7",
+      "native_pixels": [
+        1774,
+        887
+      ],
+      "colors": [
+        "neutral",
+        "purple"
+      ],
+      "tile_pixels_after_edge_inset": 883,
+      "prompt_file": "src/slides/weekly/src/img/disconet/decoder/decoder-v5-material-neutral-purple-prompt.txt",
+      "prompt": "Use case: scientific-educational material atlas.\nCreate a new high-resolution two-panel material atlas, landscape aspect exactly 2:1, ideally 3072\u00d71536 pixels or highest native detail. Two equal square panels meet at the vertical center, edge-to-edge with no border or gap. LEFT is a light neutral silver-gray satin surface (#E5E8EC); RIGHT is a muted purple satin surface (#AD82C3). Each panel is perfectly flat and front-on and fills its entire half. This is for mapping onto exact scientific tensor cuboid faces. Premium restrained satin finish with a broad soft upper-left highlight, smooth midtones and subtle lower-right shading. Very fine material detail that remains clean on a presentation slide. Base hues remain recognizable and uniform; no blown-out whites, black shadows, surface bumps, patterns or strong brush strokes. NO cubes, perspective, objects, cast shadows, text, numbers, symbols, frames, white margins or watermarks. Just two full-bleed square satin material samples side by side.\n"
+    },
+    {
+      "asset": "decoder-v5-material-orange-teal.png",
+      "source": "src/slides/weekly/src/img/disconet/decoder/decoder-v5-material-orange-teal.png",
+      "sha256": "5781aa44fc773e69843421ed6be666b5de65bb8a1fbb42d9c83eb44c6357d1c2",
+      "native_pixels": [
+        1774,
+        887
+      ],
+      "colors": [
+        "orange",
+        "teal"
+      ],
+      "tile_pixels_after_edge_inset": 883,
+      "prompt_file": "src/slides/weekly/src/img/disconet/decoder/decoder-v5-material-orange-teal-prompt.txt",
+      "prompt": "Use case: scientific-educational material atlas.\nCreate a new high-resolution two-panel material atlas, landscape aspect exactly 2:1, ideally 3072\u00d71536 pixels or highest native detail. Two equal square panels meet at the vertical center, edge-to-edge with no border or gap. LEFT is an orange satin surface (#FE9A27); RIGHT is a teal satin surface (#1DC59B). Each panel is perfectly flat and front-on and fills its entire half. This is for mapping onto exact scientific tensor cuboid faces. Premium restrained satin finish with a broad soft upper-left highlight, smooth midtones and subtle lower-right shading. Very fine material detail that remains clean on a presentation slide. Base hues remain recognizable and uniform; no blown-out whites, black shadows, surface bumps, patterns or strong brush strokes. NO cubes, perspective, objects, cast shadows, text, numbers, symbols, frames, white margins or watermarks. Just two full-bleed square satin material samples side by side.\n"
+    }
+  ],
+  "raster_export_pixels": [
+    6000,
+    2250
+  ],
+  "physical_width_cm": 14.65,
+  "raster_pixels_per_inch_at_slide_width": 1040.273037542662,
+  "pdf_texture_sample_limit_ppi": 1200,
+  "pdf_optimization": "Bound excessive Cairo texture samples with lossless PDF image encoding; vector fonts/outlines and extracted layout text retained. The 6000-pixel PNG is unchanged.",
+  "material_tile_pixels_after_inset": 883,
+  "largest_projected_texture_pixels_at_export": 511.6990779058144,
+  "materials_upscaled_at_export": false,
+  "checks": {
+    "all_original_polygon_outlines_preserved": true,
+    "all_front_faces_square": true,
+    "all_original_text_and_arrows_preserved": true,
+    "exact_channel_section_geometry_and_order_preserved": true,
+    "tensor_operations_and_architecture_preserved": true
+  },
+  "front_faces": [
+    {
+      "width": 16.0,
+      "height": 16.0,
+      "origin": [
+        64.0,
+        312.0
+      ]
+    },
+    {
+      "width": 32.0,
+      "height": 32.0,
+      "origin": [
+        1380.0,
+        304.0
+      ]
+    },
+    {
+      "width": 64.0,
+      "height": 64.0,
+      "origin": [
+        2856.0,
+        288.0
+      ]
+    },
+    {
+      "width": 128.0,
+      "height": 128.0,
+      "origin": [
+        1380.0,
+        856.0
+      ]
+    },
+    {
+      "width": 256.0,
+      "height": 256.0,
+      "origin": [
+        2784.0,
+        792.0
+      ]
+    },
+    {
+      "width": 32.0,
+      "height": 32.0,
+      "origin": [
+        692.0,
+        304.0
+      ]
+    },
+    {
+      "width": 32.0,
+      "height": 32.0,
+      "origin": [
+        520.0,
+        84.0
+      ]
+    },
+    {
+      "width": 64.0,
+      "height": 64.0,
+      "origin": [
+        2172.0,
+        288.0
+      ]
+    },
+    {
+      "width": 64.0,
+      "height": 64.0,
+      "origin": [
+        1886.0,
+        68.0
+      ]
+    },
+    {
+      "width": 128.0,
+      "height": 128.0,
+      "origin": [
+        788.0,
+        856.0
+      ]
+    },
+    {
+      "width": 128.0,
+      "height": 128.0,
+      "origin": [
+        520.0,
+        586.0
+      ]
+    },
+    {
+      "width": 256.0,
+      "height": 256.0,
+      "origin": [
+        2148.0,
+        792.0
+      ]
+    },
+    {
+      "width": 256.0,
+      "height": 256.0,
+      "origin": [
+        1814.0,
+        522.0
+      ]
+    }
+  ],
+  "material_faces": [
+    {
+      "face": 0,
+      "tensor_group": null,
+      "channel_source": null,
+      "material": "neutral",
+      "points": "64.000,312.000 320.000,222.400 336.000,222.400 80.000,312.000",
+      "projected_texture_pixels_at_export": 509.33887089572033
+    },
+    {
+      "face": 1,
+      "tensor_group": null,
+      "channel_source": null,
+      "material": "neutral",
+      "points": "80.000,312.000 336.000,222.400 336.000,238.400 80.000,328.000",
+      "projected_texture_pixels_at_export": 508.64774017746976
+    },
+    {
+      "face": 2,
+      "tensor_group": null,
+      "channel_source": null,
+      "material": "neutral",
+      "points": "64.000,312.000 80.000,312.000 80.000,328.000 64.000,328.000",
+      "projected_texture_pixels_at_export": 30.0
+    },
+    {
+      "face": 3,
+      "tensor_group": null,
+      "channel_source": null,
+      "material": "neutral",
+      "points": "1380.000,304.000 1508.000,259.200 1540.000,259.200 1412.000,304.000",
+      "projected_texture_pixels_at_export": 260.5413529297379
+    },
+    {
+      "face": 4,
+      "tensor_group": null,
+      "channel_source": null,
+      "material": "neutral",
+      "points": "1412.000,304.000 1540.000,259.200 1540.000,291.200 1412.000,336.000",
+      "projected_texture_pixels_at_export": 255.08673197244713
+    },
+    {
+      "face": 5,
+      "tensor_group": null,
+      "channel_source": null,
+      "material": "neutral",
+      "points": "1380.000,304.000 1412.000,304.000 1412.000,336.000 1380.000,336.000",
+      "projected_texture_pixels_at_export": 60.0
+    },
+    {
+      "face": 6,
+      "tensor_group": null,
+      "channel_source": null,
+      "material": "neutral",
+      "points": "2856.000,288.000 2920.000,265.600 2984.000,265.600 2920.000,288.000",
+      "projected_texture_pixels_at_export": 172.36294834972804
+    },
+    {
+      "face": 7,
+      "tensor_group": null,
+      "channel_source": null,
+      "material": "neutral",
+      "points": "2920.000,288.000 2984.000,265.600 2984.000,329.600 2920.000,352.000",
+      "projected_texture_pixels_at_export": 142.82364302548166
+    },
+    {
+      "face": 8,
+      "tensor_group": null,
+      "channel_source": null,
+      "material": "neutral",
+      "points": "2856.000,288.000 2920.000,288.000 2920.000,352.000 2856.000,352.000",
+      "projected_texture_pixels_at_export": 120.0
+    },
+    {
+      "face": 9,
+      "tensor_group": null,
+      "channel_source": null,
+      "material": "neutral",
+      "points": "1380.000,856.000 1412.000,844.800 1540.000,844.800 1508.000,856.000",
+      "projected_texture_pixels_at_export": 247.43912025982846
+    },
+    {
+      "face": 10,
+      "tensor_group": null,
+      "channel_source": null,
+      "material": "neutral",
+      "points": "1508.000,856.000 1540.000,844.800 1540.000,972.800 1508.000,984.000",
+      "projected_texture_pixels_at_export": 240.97748077532685
+    },
+    {
+      "face": 11,
+      "tensor_group": null,
+      "channel_source": null,
+      "material": "neutral",
+      "points": "1380.000,856.000 1508.000,856.000 1508.000,984.000 1380.000,984.000",
+      "projected_texture_pixels_at_export": 240.0
+    },
+    {
+      "face": 12,
+      "tensor_group": null,
+      "channel_source": null,
+      "material": "neutral",
+      "points": "2784.000,792.000 2800.000,786.400 3056.000,786.400 3040.000,792.000",
+      "projected_texture_pixels_at_export": 480.9370324607022
+    },
+    {
+      "face": 13,
+      "tensor_group": null,
+      "channel_source": null,
+      "material": "neutral",
+      "points": "3040.000,792.000 3056.000,786.400 3056.000,1042.400 3040.000,1048.000",
+      "projected_texture_pixels_at_export": 480.1152800573302
+    },
+    {
+      "face": 14,
+      "tensor_group": null,
+      "channel_source": null,
+      "material": "neutral",
+      "points": "2784.000,792.000 3040.000,792.000 3040.000,1048.000 2784.000,1048.000",
+      "projected_texture_pixels_at_export": 480.0
+    },
+    {
+      "face": 15,
+      "tensor_group": "decoder-concat-0",
+      "channel_source": "decoder",
+      "material": "neutral",
+      "points": "692.000,304.000 724.000,304.000 980.000,214.400 948.000,214.400",
+      "projected_texture_pixels_at_export": 511.6990779058144
+    },
+    {
+      "face": 16,
+      "tensor_group": "decoder-concat-0",
+      "channel_source": "decoder",
+      "material": "neutral",
+      "points": "724.000,304.000 980.000,214.400 980.000,246.400 724.000,336.000",
+      "projected_texture_pixels_at_export": 508.9418419304054
+    },
+    {
+      "face": 17,
+      "tensor_group": "decoder-concat-0",
+      "channel_source": "skip",
+      "material": "neutral",
+      "points": "948.000,214.400 980.000,214.400 1108.000,169.600 1076.000,169.600",
+      "projected_texture_pixels_at_export": 260.5413529297379
+    },
+    {
+      "face": 18,
+      "tensor_group": "decoder-concat-0",
+      "channel_source": "skip",
+      "material": "neutral",
+      "points": "980.000,214.400 1108.000,169.600 1108.000,201.600 980.000,246.400",
+      "projected_texture_pixels_at_export": 255.08673197244713
+    },
+    {
+      "face": 19,
+      "tensor_group": "decoder-concat-0",
+      "channel_source": null,
+      "material": "neutral",
+      "points": "692.000,304.000 724.000,304.000 724.000,336.000 692.000,336.000",
+      "projected_texture_pixels_at_export": 60.0
+    },
+    {
+      "face": 20,
+      "tensor_group": "decoder-skip-0",
+      "channel_source": null,
+      "material": "neutral",
+      "points": "520.000,84.000 648.000,39.200 680.000,39.200 552.000,84.000",
+      "projected_texture_pixels_at_export": 260.5413529297379
+    },
+    {
+      "face": 21,
+      "tensor_group": "decoder-skip-0",
+      "channel_source": null,
+      "material": "neutral",
+      "points": "552.000,84.000 680.000,39.200 680.000,71.200 552.000,116.000",
+      "projected_texture_pixels_at_export": 255.08673197244713
+    },
+    {
+      "face": 22,
+      "tensor_group": "decoder-skip-0",
+      "channel_source": null,
+      "material": "neutral",
+      "points": "520.000,84.000 552.000,84.000 552.000,116.000 520.000,116.000",
+      "projected_texture_pixels_at_export": 60.0
+    },
+    {
+      "face": 23,
+      "tensor_group": "decoder-concat-1",
+      "channel_source": "decoder",
+      "material": "neutral",
+      "points": "2172.000,288.000 2236.000,288.000 2364.000,243.200 2300.000,243.200",
+      "projected_texture_pixels_at_export": 278.83534747782033
+    },
+    {
+      "face": 24,
+      "tensor_group": "decoder-concat-1",
+      "channel_source": "decoder",
+      "material": "neutral",
+      "points": "2236.000,288.000 2364.000,243.200 2364.000,307.200 2236.000,352.000",
+      "projected_texture_pixels_at_export": 258.07439530339457
+    },
+    {
+      "face": 25,
+      "tensor_group": "decoder-concat-1",
+      "channel_source": "skip",
+      "material": "purple",
+      "points": "2300.000,243.200 2364.000,243.200 2428.000,220.800 2364.000,220.800",
+      "projected_texture_pixels_at_export": 172.36294834972804
+    },
+    {
+      "face": 26,
+      "tensor_group": "decoder-concat-1",
+      "channel_source": "skip",
+      "material": "purple",
+      "points": "2364.000,243.200 2428.000,220.800 2428.000,284.800 2364.000,307.200",
+      "projected_texture_pixels_at_export": 142.82364302548166
+    },
+    {
+      "face": 27,
+      "tensor_group": "decoder-concat-1",
+      "channel_source": null,
+      "material": "neutral",
+      "points": "2172.000,288.000 2236.000,288.000 2236.000,352.000 2172.000,352.000",
+      "projected_texture_pixels_at_export": 120.0
+    },
+    {
+      "face": 28,
+      "tensor_group": "decoder-skip-1",
+      "channel_source": null,
+      "material": "purple",
+      "points": "1886.000,68.000 1950.000,45.600 2014.000,45.600 1950.000,68.000",
+      "projected_texture_pixels_at_export": 172.36294834972804
+    },
+    {
+      "face": 29,
+      "tensor_group": "decoder-skip-1",
+      "channel_source": null,
+      "material": "purple",
+      "points": "1950.000,68.000 2014.000,45.600 2014.000,109.600 1950.000,132.000",
+      "projected_texture_pixels_at_export": 142.82364302548172
+    },
+    {
+      "face": 30,
+      "tensor_group": "decoder-skip-1",
+      "channel_source": null,
+      "material": "purple",
+      "points": "1886.000,68.000 1950.000,68.000 1950.000,132.000 1886.000,132.000",
+      "projected_texture_pixels_at_export": 120.0
+    },
+    {
+      "face": 31,
+      "tensor_group": "decoder-concat-2",
+      "channel_source": "decoder",
+      "material": "neutral",
+      "points": "788.000,856.000 916.000,856.000 980.000,833.600 852.000,833.600",
+      "projected_texture_pixels_at_export": 268.99780175891397
+    },
+    {
+      "face": 32,
+      "tensor_group": "decoder-concat-2",
+      "channel_source": "decoder",
+      "material": "neutral",
+      "points": "916.000,856.000 980.000,833.600 980.000,961.600 916.000,984.000",
+      "projected_texture_pixels_at_export": 244.78972002771872
+    },
+    {
+      "face": 33,
+      "tensor_group": "decoder-concat-2",
+      "channel_source": "skip",
+      "material": "teal",
+      "points": "852.000,833.600 980.000,833.600 1012.000,822.400 884.000,822.400",
+      "projected_texture_pixels_at_export": 247.43912025982846
+    },
+    {
+      "face": 34,
+      "tensor_group": "decoder-concat-2",
+      "channel_source": "skip",
+      "material": "teal",
+      "points": "980.000,833.600 1012.000,822.400 1012.000,950.400 980.000,961.600",
+      "projected_texture_pixels_at_export": 240.97748077532685
+    },
+    {
+      "face": 35,
+      "tensor_group": "decoder-concat-2",
+      "channel_source": null,
+      "material": "neutral",
+      "points": "788.000,856.000 916.000,856.000 916.000,984.000 788.000,984.000",
+      "projected_texture_pixels_at_export": 240.0
+    },
+    {
+      "face": 36,
+      "tensor_group": "decoder-skip-2",
+      "channel_source": null,
+      "material": "teal",
+      "points": "520.000,586.000 552.000,574.800 680.000,574.800 648.000,586.000",
+      "projected_texture_pixels_at_export": 247.43912025982846
+    },
+    {
+      "face": 37,
+      "tensor_group": "decoder-skip-2",
+      "channel_source": null,
+      "material": "teal",
+      "points": "648.000,586.000 680.000,574.800 680.000,702.800 648.000,714.000",
+      "projected_texture_pixels_at_export": 240.97748077532685
+    },
+    {
+      "face": 38,
+      "tensor_group": "decoder-skip-2",
+      "channel_source": null,
+      "material": "teal",
+      "points": "520.000,586.000 648.000,586.000 648.000,714.000 520.000,714.000",
+      "projected_texture_pixels_at_export": 240.0
+    },
+    {
+      "face": 39,
+      "tensor_group": "decoder-concat-3",
+      "channel_source": "decoder",
+      "material": "neutral",
+      "points": "2148.000,792.000 2404.000,792.000 2436.000,780.800 2180.000,780.800",
+      "projected_texture_pixels_at_export": 483.7424906167531
+    },
+    {
+      "face": 40,
+      "tensor_group": "decoder-concat-3",
+      "channel_source": "decoder",
+      "material": "neutral",
+      "points": "2404.000,792.000 2436.000,780.800 2436.000,1036.800 2404.000,1048.000",
+      "projected_texture_pixels_at_export": 480.4664256745967
+    },
+    {
+      "face": 41,
+      "tensor_group": "decoder-concat-3",
+      "channel_source": "skip",
+      "material": "orange",
+      "points": "2180.000,780.800 2436.000,780.800 2452.000,775.200 2196.000,775.200",
+      "projected_texture_pixels_at_export": 480.9370324607022
+    },
+    {
+      "face": 42,
+      "tensor_group": "decoder-concat-3",
+      "channel_source": "skip",
+      "material": "orange",
+      "points": "2436.000,780.800 2452.000,775.200 2452.000,1031.200 2436.000,1036.800",
+      "projected_texture_pixels_at_export": 480.1152800573302
+    },
+    {
+      "face": 43,
+      "tensor_group": "decoder-concat-3",
+      "channel_source": null,
+      "material": "neutral",
+      "points": "2148.000,792.000 2404.000,792.000 2404.000,1048.000 2148.000,1048.000",
+      "projected_texture_pixels_at_export": 480.0
+    },
+    {
+      "face": 44,
+      "tensor_group": "decoder-skip-3",
+      "channel_source": null,
+      "material": "orange",
+      "points": "1814.000,522.000 1830.000,516.400 2086.000,516.400 2070.000,522.000",
+      "projected_texture_pixels_at_export": 480.9370324607022
+    },
+    {
+      "face": 45,
+      "tensor_group": "decoder-skip-3",
+      "channel_source": null,
+      "material": "orange",
+      "points": "2070.000,522.000 2086.000,516.400 2086.000,772.400 2070.000,778.000",
+      "projected_texture_pixels_at_export": 480.1152800573302
+    },
+    {
+      "face": 46,
+      "tensor_group": "decoder-skip-3",
+      "channel_source": null,
+      "material": "orange",
+      "points": "1814.000,522.000 2070.000,522.000 2070.000,778.000 1814.000,778.000",
+      "projected_texture_pixels_at_export": 480.0
+    }
+  ],
+  "source_legend": "AI generated illustration",
+  "assets": {
+    "decoder-stage-pipeline-v6.svg": "b0edc3dbc1d43bc06bfc5001a6bc844a1aa54f8a2388631fb04e89a1a8821d8b",
+    "decoder-stage-pipeline-v6.pdf": "66430a0f24823829c57aac8c9f91a4f71e4a0d16ec5c55353b110e386c197559",
+    "decoder-stage-pipeline-v6.png": "98fd74bc1257d4153c05c234771c60e9304759831c506fa6e7966f9d68fedeff"
+  }
+}

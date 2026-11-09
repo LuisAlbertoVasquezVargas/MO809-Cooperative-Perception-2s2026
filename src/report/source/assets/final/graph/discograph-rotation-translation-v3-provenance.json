@@ -1,0 +1,1368 @@
+{
+  "created_at": "2026-11-04T19:04:36+00:00",
+  "generator": "src/demos/disconet/export_discograph_rigid_alignment.py",
+  "generator_sha256": "df50b958945993546bb6feab533a6f35f90448518cdac7a3d3dcdb8fe4378026",
+  "purpose": "A visual rotation/translation example with minimal text for an oral presentation; enlarged grids and concise operation labels.",
+  "example": {
+    "grid_hw": [
+      8,
+      8
+    ],
+    "channels_shown": 1,
+    "angle_degrees": 90,
+    "direction": "Clockwise in array display coordinates: x right, y down.",
+    "rotation_center_rc": [
+      3.5,
+      3.5
+    ],
+    "translation_dx_dy_cells": [
+      1,
+      1
+    ],
+    "source_cells": [
+      [
+        2,
+        2,
+        1
+      ],
+      [
+        2,
+        3,
+        2
+      ],
+      [
+        3,
+        2,
+        3
+      ],
+      [
+        4,
+        2,
+        4
+      ]
+    ],
+    "rotated_cells": [
+      [
+        2,
+        5,
+        1
+      ],
+      [
+        3,
+        5,
+        2
+      ],
+      [
+        2,
+        4,
+        3
+      ],
+      [
+        2,
+        3,
+        4
+      ]
+    ],
+    "aligned_cells": [
+      [
+        3,
+        6,
+        1
+      ],
+      [
+        4,
+        6,
+        2
+      ],
+      [
+        3,
+        5,
+        3
+      ],
+      [
+        3,
+        4,
+        4
+      ]
+    ],
+    "source": "Illustrative feature values and pose; not measured model outputs."
+  },
+  "model_context": "In DiscoGraph, relative vehicle poses provide a planar rotation and translation after metric and axis conversion to feature-grid coordinates. The same geometric warp is applied to every channel.",
+  "code_example": "feature_alignment_example_v1.py",
+  "code_contract": "One floating-point square feature map [1,C,H,W], same sender/receiver grid size and resolution; shifts given in feature cells. The example is not the dataset-specific pose converter.",
+  "sampling": "The inverse source-to-receiver transform provides output-to-input coordinates to affine_grid and grid_sample. Bilinear interpolation, zero padding, align_corners=False.",
+  "sources": [
+    "https://docs.pytorch.org/docs/2.9/generated/torch.nn.functional.affine_grid.html",
+    "https://docs.pytorch.org/docs/2.9/generated/torch.nn.functional.grid_sample.html",
+    "https://github.com/coperception/coperception/blob/dd8fbb660300ee763e0bac870f63fc4987440a35/coperception/models/det/base/DetModelBase.py#L140"
+  ],
+  "raster_dimensions": [
+    6000,
+    1625
+  ],
+  "native_vector_cells_labels_and_arrows": true,
+  "reusable_blocks_materials": {
+    "created_at": "2026-11-04T19:04:36+00:00",
+    "tool": "Built-in imagegen materials, exact vector composition",
+    "generator_sha256": "e9a44395174717081e930f51b286f23055df2551c75aec9f0ae6cdfceb6f35c5",
+    "reference_sha256": "6d1fd636c4f996be83ccd161d2740571a5145a92987f152e00ce9c83c6c01ee1",
+    "source_note": "Single-channel tensor grids with exact 8-by-8 cells; Reusable Blocks quiet cell material and vector typography.",
+    "mode": "numeric",
+    "material_prompt_set": [
+      {
+        "role": "front",
+        "asset": "tensor-front-material-imagegen-v1.png",
+        "sha256": "cee3e10a8f9ade55016191fb6af271fcbbbb5797dea4c667ad5686c68bc64cf9",
+        "native_pixels": [
+          1254,
+          1254
+        ],
+        "prompt": "tensor-front-material-imagegen-v1-prompt.txt",
+        "prompt_sha256": "ef11a228d56f0abc2e234307edacf7b46edc580d4c4fea9a87cb6251c7c76976"
+      },
+      {
+        "role": "channels",
+        "asset": "tensor-channel-material-imagegen-v1.png",
+        "sha256": "cf5fbf37aa9e174f2ae2ba25a165f31ecf1a6be8e492d8bb878f7275f3900a13",
+        "native_pixels": [
+          1254,
+          1254
+        ],
+        "prompt": "tensor-channel-material-imagegen-v1-prompt.txt",
+        "prompt_sha256": "2d878a9486b7d22dc8cc8a8243ff1d1dabdd8af5f294289628f6ede9a8ce427d"
+      },
+      {
+        "role": "cell",
+        "asset": "tensor-cell-material-imagegen-v1.png",
+        "sha256": "c4eec17b6708cbeab9a3e19380d940ad33dd60572cad5c4d9d973e20407fad27",
+        "native_pixels": [
+          1254,
+          1254
+        ],
+        "prompt": "tensor-cell-material-imagegen-v1-prompt.txt",
+        "prompt_sha256": "d11a19b8eb100245492bcba5daf4c8c197e1e69feadd6bfbdf1c19b96ff321a7"
+      }
+    ],
+    "styled_faces": [
+      {
+        "role": "cell",
+        "original_geometry": "160.000,150.000 205.000,134.250 605.000,134.250 560.000,150.000",
+        "original_fill": "#FAFAFA",
+        "material_sampling_pixels": 1006.3178703729075
+      },
+      {
+        "role": "cell",
+        "original_geometry": "560.000,150.000 605.000,134.250 605.000,534.250 560.000,550.000",
+        "original_fill": "#F0F0F0",
+        "material_sampling_pixels": 1000.7848084009992
+      },
+      {
+        "role": "cell",
+        "original_geometry": "160,150 210,150 210,200 160,200",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "210,150 260,150 260,200 210,200",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "260,150 310,150 310,200 260,200",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "310,150 360,150 360,200 310,200",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "360,150 410,150 410,200 360,200",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "410,150 460,150 460,200 410,200",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "460,150 510,150 510,200 460,200",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "510,150 560,150 560,200 510,200",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "160,200 210,200 210,250 160,250",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "210,200 260,200 260,250 210,250",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "260,200 310,200 310,250 260,250",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "310,200 360,200 360,250 310,250",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "360,200 410,200 410,250 360,250",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "410,200 460,200 460,250 410,250",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "460,200 510,200 510,250 460,250",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "510,200 560,200 560,250 510,250",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "160,250 210,250 210,300 160,300",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "210,250 260,250 260,300 210,300",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "360,250 410,250 410,300 360,300",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "410,250 460,250 460,300 410,300",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "460,250 510,250 510,300 460,300",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "510,250 560,250 560,300 510,300",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "160,300 210,300 210,350 160,350",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "210,300 260,300 260,350 210,350",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "310,300 360,300 360,350 310,350",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "360,300 410,300 410,350 360,350",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "410,300 460,300 460,350 410,350",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "460,300 510,300 510,350 460,350",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "510,300 560,300 560,350 510,350",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "160,350 210,350 210,400 160,400",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "210,350 260,350 260,400 210,400",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "310,350 360,350 360,400 310,400",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "360,350 410,350 410,400 360,400",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "410,350 460,350 460,400 410,400",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "460,350 510,350 510,400 460,400",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "510,350 560,350 560,400 510,400",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "160,400 210,400 210,450 160,450",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "210,400 260,400 260,450 210,450",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "260,400 310,400 310,450 260,450",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "310,400 360,400 360,450 310,450",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "360,400 410,400 410,450 360,450",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "410,400 460,400 460,450 410,450",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "460,400 510,400 510,450 460,450",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "510,400 560,400 560,450 510,450",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "160,450 210,450 210,500 160,500",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "210,450 260,450 260,500 210,500",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "260,450 310,450 310,500 260,500",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "310,450 360,450 360,500 310,500",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "360,450 410,450 410,500 360,500",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "410,450 460,450 460,500 410,500",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "460,450 510,450 510,500 460,500",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "510,450 560,450 560,500 510,500",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "160,500 210,500 210,550 160,550",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "210,500 260,500 260,550 210,550",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "260,500 310,500 310,550 260,550",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "310,500 360,500 360,550 310,550",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "360,500 410,500 410,550 360,550",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "410,500 460,500 460,550 410,550",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "460,500 510,500 510,550 460,550",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "510,500 560,500 560,550 510,550",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "1000.000,150.000 1045.000,134.250 1445.000,134.250 1400.000,150.000",
+        "original_fill": "#FAFAFA",
+        "material_sampling_pixels": 1006.3178703729075
+      },
+      {
+        "role": "cell",
+        "original_geometry": "1400.000,150.000 1445.000,134.250 1445.000,534.250 1400.000,550.000",
+        "original_fill": "#F0F0F0",
+        "material_sampling_pixels": 1000.7848084009992
+      },
+      {
+        "role": "cell",
+        "original_geometry": "1000,150 1050,150 1050,200 1000,200",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "1050,150 1100,150 1100,200 1050,200",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "1100,150 1150,150 1150,200 1100,200",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "1150,150 1200,150 1200,200 1150,200",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "1200,150 1250,150 1250,200 1200,200",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "1250,150 1300,150 1300,200 1250,200",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "1300,150 1350,150 1350,200 1300,200",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "1350,150 1400,150 1400,200 1350,200",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "1000,200 1050,200 1050,250 1000,250",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "1050,200 1100,200 1100,250 1050,250",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "1100,200 1150,200 1150,250 1100,250",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "1150,200 1200,200 1200,250 1150,250",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "1200,200 1250,200 1250,250 1200,250",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "1250,200 1300,200 1300,250 1250,250",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "1300,200 1350,200 1350,250 1300,250",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "1350,200 1400,200 1400,250 1350,250",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "1000,250 1050,250 1050,300 1000,300",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "1050,250 1100,250 1100,300 1050,300",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "1100,250 1150,250 1150,300 1100,300",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "1300,250 1350,250 1350,300 1300,300",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "1350,250 1400,250 1400,300 1350,300",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "1000,300 1050,300 1050,350 1000,350",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "1050,300 1100,300 1100,350 1050,350",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "1100,300 1150,300 1150,350 1100,350",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "1150,300 1200,300 1200,350 1150,350",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "1200,300 1250,300 1250,350 1200,350",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "1300,300 1350,300 1350,350 1300,350",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "1350,300 1400,300 1400,350 1350,350",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "1000,350 1050,350 1050,400 1000,400",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "1050,350 1100,350 1100,400 1050,400",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "1100,350 1150,350 1150,400 1100,400",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "1150,350 1200,350 1200,400 1150,400",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "1200,350 1250,350 1250,400 1200,400",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "1250,350 1300,350 1300,400 1250,400",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "1300,350 1350,350 1350,400 1300,400",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "1350,350 1400,350 1400,400 1350,400",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "1000,400 1050,400 1050,450 1000,450",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "1050,400 1100,400 1100,450 1050,450",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "1100,400 1150,400 1150,450 1100,450",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "1150,400 1200,400 1200,450 1150,450",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "1200,400 1250,400 1250,450 1200,450",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "1250,400 1300,400 1300,450 1250,450",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "1300,400 1350,400 1350,450 1300,450",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "1350,400 1400,400 1400,450 1350,450",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "1000,450 1050,450 1050,500 1000,500",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "1050,450 1100,450 1100,500 1050,500",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "1100,450 1150,450 1150,500 1100,500",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "1150,450 1200,450 1200,500 1150,500",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "1200,450 1250,450 1250,500 1200,500",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "1250,450 1300,450 1300,500 1250,500",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "1300,450 1350,450 1350,500 1300,500",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "1350,450 1400,450 1400,500 1350,500",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "1000,500 1050,500 1050,550 1000,550",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "1050,500 1100,500 1100,550 1050,550",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "1100,500 1150,500 1150,550 1100,550",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "1150,500 1200,500 1200,550 1150,550",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "1200,500 1250,500 1250,550 1200,550",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "1250,500 1300,500 1300,550 1250,550",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "1300,500 1350,500 1350,550 1300,550",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "1350,500 1400,500 1400,550 1350,550",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "1840.000,150.000 1885.000,134.250 2285.000,134.250 2240.000,150.000",
+        "original_fill": "#FAFAFA",
+        "material_sampling_pixels": 1006.3178703729075
+      },
+      {
+        "role": "cell",
+        "original_geometry": "2240.000,150.000 2285.000,134.250 2285.000,534.250 2240.000,550.000",
+        "original_fill": "#F0F0F0",
+        "material_sampling_pixels": 1000.7848084009992
+      },
+      {
+        "role": "cell",
+        "original_geometry": "1840,150 1890,150 1890,200 1840,200",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "1890,150 1940,150 1940,200 1890,200",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "1940,150 1990,150 1990,200 1940,200",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "1990,150 2040,150 2040,200 1990,200",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "2040,150 2090,150 2090,200 2040,200",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "2090,150 2140,150 2140,200 2090,200",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "2140,150 2190,150 2190,200 2140,200",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "2190,150 2240,150 2240,200 2190,200",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "1840,200 1890,200 1890,250 1840,250",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "1890,200 1940,200 1940,250 1890,250",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "1940,200 1990,200 1990,250 1940,250",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "1990,200 2040,200 2040,250 1990,250",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "2040,200 2090,200 2090,250 2040,250",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "2090,200 2140,200 2140,250 2090,250",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "2140,200 2190,200 2190,250 2140,250",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "2190,200 2240,200 2240,250 2190,250",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "1840,250 1890,250 1890,300 1840,300",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "1890,250 1940,250 1940,300 1890,300",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "1940,250 1990,250 1990,300 1940,300",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "1990,250 2040,250 2040,300 1990,300",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "2040,250 2090,250 2090,300 2040,300",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "2090,250 2140,250 2140,300 2090,300",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "2140,250 2190,250 2190,300 2140,300",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "2190,250 2240,250 2240,300 2190,300",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "1840,300 1890,300 1890,350 1840,350",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "1890,300 1940,300 1940,350 1890,350",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "1940,300 1990,300 1990,350 1940,350",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "1990,300 2040,300 2040,350 1990,350",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "2190,300 2240,300 2240,350 2190,350",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "1840,350 1890,350 1890,400 1840,400",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "1890,350 1940,350 1940,400 1890,400",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "1940,350 1990,350 1990,400 1940,400",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "1990,350 2040,350 2040,400 1990,400",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "2040,350 2090,350 2090,400 2040,400",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "2090,350 2140,350 2140,400 2090,400",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "2190,350 2240,350 2240,400 2190,400",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "1840,400 1890,400 1890,450 1840,450",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "1890,400 1940,400 1940,450 1890,450",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "1940,400 1990,400 1990,450 1940,450",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "1990,400 2040,400 2040,450 1990,450",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "2040,400 2090,400 2090,450 2040,450",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "2090,400 2140,400 2140,450 2090,450",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "2140,400 2190,400 2190,450 2140,450",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "2190,400 2240,400 2240,450 2190,450",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "1840,450 1890,450 1890,500 1840,500",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "1890,450 1940,450 1940,500 1890,500",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "1940,450 1990,450 1990,500 1940,500",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "1990,450 2040,450 2040,500 1990,500",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "2040,450 2090,450 2090,500 2040,500",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "2090,450 2140,450 2140,500 2090,500",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "2140,450 2190,450 2190,500 2140,500",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "2190,450 2240,450 2240,500 2190,500",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "1840,500 1890,500 1890,550 1840,550",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "1890,500 1940,500 1940,550 1890,550",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "1940,500 1990,500 1990,550 1940,550",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "1990,500 2040,500 2040,550 1990,550",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "2040,500 2090,500 2090,550 2040,550",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "2090,500 2140,500 2140,550 2090,550",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "2140,500 2190,500 2190,550 2140,550",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      },
+      {
+        "role": "cell",
+        "original_geometry": "2190,500 2240,500 2240,550 2190,550",
+        "original_fill": "#F3F3F3",
+        "material_sampling_pixels": 125.0
+      }
+    ],
+    "physical_width_cm": 14.65,
+    "raster_export_pixels": [
+      6000,
+      1625
+    ],
+    "requested_raster_width": 6000,
+    "material_repeat_scale": 1,
+    "source_material_side_pixels": 1254,
+    "materials_upscaled": false,
+    "pdf_texture_limit_ppi": null,
+    "pdf_material_compositing": "Multiply blend on original face colors; no low-resolution SVG filter fallback.",
+    "checks": {
+      "all_original_geometry_preserved": true,
+      "all_text_and_glyph_labels_preserved": true,
+      "all_arrow_paths_preserved": true,
+      "semantic_palette_preserved": true,
+      "numerical_values_unchanged": true,
+      "rgb_data_faces_unchanged": true
+    },
+    "assets": {
+      "discograph-rotation-translation-v3.svg": "b8363adb63a36ab4d34c79b628a256826d5fc92d981adacaa60ab19aef9de647",
+      "discograph-rotation-translation-v3.pdf": "761c6b751c5cf40d129b997dd18f0c46102e12e18514d702d7cd3b7789249fb3",
+      "discograph-rotation-translation-v3.png": "205b9703939620dc80ddff01a21d19fa2c16852aff04076d9166ee7ba5d01760"
+    }
+  },
+  "assets": {
+    "discograph-rotation-translation-v3.svg": "b8363adb63a36ab4d34c79b628a256826d5fc92d981adacaa60ab19aef9de647",
+    "discograph-rotation-translation-v3.pdf": "761c6b751c5cf40d129b997dd18f0c46102e12e18514d702d7cd3b7789249fb3",
+    "discograph-rotation-translation-v3.png": "205b9703939620dc80ddff01a21d19fa2c16852aff04076d9166ee7ba5d01760"
+  },
+  "rendered_slides_visually_checked": true,
+  "pytorch_runtime_verification": {
+    "torch_version": "2.9.1+cu128",
+    "device": "cpu",
+    "code_sha256": "796128ea4e7294b3291e3e84ac5de410f6a1172a43a4c2da43671dde65fbf1e7",
+    "rotation_and_translation_match_rot90_then_integer_shift": true,
+    "rotation_only_matches_clockwise_rot90": true,
+    "translation_only_matches_positive_row_and_column_shift": true,
+    "identity_preserves_values": true,
+    "half_cell_translation_splits_impulse_into_four_equal_values": true,
+    "same_geometric_transform_applies_to_both_channels": true,
+    "max_example_error": 0.0,
+    "channel_one_output_nonzero": [
+      [
+        3,
+        4,
+        4.0
+      ],
+      [
+        3,
+        5,
+        3.0
+      ],
+      [
+        3,
+        6,
+        1.0
+      ],
+      [
+        4,
+        6,
+        2.0
+      ]
+    ],
+    "scope": "Illustrative square-grid geometry, independent of dataset-specific metric/axis conversion; no pretrained inference.",
+    "all_checks_rerun_after_final_code_layout": true
+  },
+  "reusable_blocks_style": {
+    "reference_figure": "unit-2d-rich-v1.svg",
+    "reference_sha256": "e127bd8e8a7bdf174ceacd68b768abfc0ed55ee89c20b3c60ca83eac13d30885",
+    "operation_font": {
+      "font-family": "Liberation Mono,monospace",
+      "font-size": "42",
+      "font-weight": "bold"
+    },
+    "tensor_names": "Bold serif headings above the tensor faces.",
+    "dimensions": "Italic H/W/C symbols below the tensors; square front faces.",
+    "material_sources": {
+      "tensor-front-material-imagegen-v1.png": "cee3e10a8f9ade55016191fb6af271fcbbbb5797dea4c667ad5686c68bc64cf9",
+      "tensor-channel-material-imagegen-v1.png": "cf5fbf37aa9e174f2ae2ba25a165f31ecf1a6be8e492d8bb878f7275f3900a13",
+      "tensor-cell-material-imagegen-v1.png": "c4eec17b6708cbeab9a3e19380d940ad33dd60572cad5c4d9d973e20407fad27"
+    },
+    "material_policy": "Reuse approved materials with exact vector composition and 6000-pixel exports. One quiet material cell per actual numerical cell. Recorded values and heatmap colors preserved.",
+    "combined_pdf_pages": [
+      23,
+      24,
+      26,
+      27,
+      28,
+      29,
+      30
+    ],
+    "combined_pdf_total_pages": 59,
+    "checks": {
+      "all_seven_figures_visually_checked": true,
+      "numeric_examples_and_tensor_dimensions_unchanged": true,
+      "shared_operation_font_verified": true,
+      "all_hw_front_faces_square": true,
+      "no_visible_overlaps": true
+    }
+  },
+  "combined_pdf_page": 25,
+  "combined_pdf_total_pages": 64,
+  "supersedes_in_active_deck": "discograph-rotation-translation-v2.pdf"
+}

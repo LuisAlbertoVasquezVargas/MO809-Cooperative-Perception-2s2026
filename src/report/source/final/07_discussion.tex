@@ -1,0 +1,61 @@
+\section{Discussion and Limitations}
+The full-test comparison establishes that feature sharing benefits the
+evaluated pretrained student under the stated conditions. It holds model
+weights fixed and changes collaboration availability. It does not determine
+the ranking of separately trained local, early-fusion, and intermediate-fusion
+models. In particular, the planned early-fusion baseline remains unmeasured.
+
+The scaling experiments address a different question: whether complete
+collaboration is computationally expensive as the number of slots increases,
+and what happens when its fine interactions are restricted. The tree ablation
+shows a measured runtime--accuracy trade-off. Removing fine edges can reduce
+access to complementary observations in a single fusion round. This is a
+plausible explanation of the AP loss, consistent with the mechanism, rather
+than a measured causal decomposition of every missed detection.
+
+Several limits constrain these conclusions:
+\begin{itemize}
+  \setlength{\itemsep}{0pt}
+  \setlength{\parsep}{0pt}
+  \item \textbf{Ideal communication and poses.} The experiments do not vary
+    latency, packet loss, bandwidth limits, asynchronous sensing, or pose
+    errors. Their forward times cannot be used directly as wireless latency.
+  \item \textbf{Replay beyond five inputs.} Larger workloads increase active
+    model slots without adding independent viewpoints or real vehicles.
+  \item \textbf{Different evaluation populations.} The full-test AP pools
+    4,000 active views; the tree AP uses 30 fixed ego views. Their numerical
+    levels are not interchangeable estimates of the same population.
+  \item \textbf{One checkpoint and device.} No retraining, model-family
+    comparison, multi-GPU experiment, or cross-hardware generalization is
+    established. The sparse graph was not trained to compensate for missing
+    fine links.
+  \item \textbf{Limited uncertainty analysis.} Repeated timings characterize
+    runtime variation on a fixed cohort. They do not create new independent
+    detection samples, and no confidence interval for population AP is
+    reported.
+  \item \textbf{Version and scope.} The evaluation uses V2X-Sim 2.0, unlike
+    the original paper's 1.0 benchmark. Fixed-checkpoint losses are not a
+    training history or evidence about convergence.
+\end{itemize}
+
+Follow-up experiments could hold the evaluation population and postprocessing
+fixed while varying retained neighbors, selection resolution, and fusion
+rounds. Further recordings would allow study beyond five independent
+vehicles. Fine-tuning a sparse student and testing communication impairments
+would require new training and an explicit transport model, respectively.
+
+\section{Conclusion}
+DiscoNet combines per-vehicle feature extraction, pose-based alignment,
+spatial attention, and decoder skip connections to produce cooperative car
+detections. On the complete prepared V2X-Sim 2.0 test split, enabling sharing
+in the same student raises AP by \ReportGainFifty\ and \ReportGainSeventy\
+percentage points at IoU 0.5 and 0.7. This directly answers the completed
+own-scan/cooperative comparison under ideal conditions.
+
+The separate workload sweep shows increasing full-group computation as
+model input count grows. The matched tree experiment reduces fine pair
+evaluations but also reduces detection quality: at 15 slots, median runtime
+is \ReportTreeReduction\% lower, with AP losses of \ReportTreeDropFifty\ and
+\ReportTreeDropSeventy\ points. The results support studying collaboration
+sparsity as a trade-off, while preserving the distinction between additional
+computation and additional independently observed information.

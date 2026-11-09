@@ -1,0 +1,18 @@
+% src/slides/source/final/architecture/02_preprocessing.tex
+
+\begin{frame}{LiDAR Preprocessing}
+  \SlideBody{\begin{VisualCanvas}
+    \node[final heading] at (3.0,5.35) {Point Cloud};
+    \node[final heading] at (10.8,5.35) {Occupancy Grid};
+    \node[inner sep=0pt] at (3.0,3.1)
+      {\includegraphics[width=5.8cm,height=4.05cm,keepaspectratio]{assets/architecture/preprocessing/w44_raw_scan-imagegen-v3.png}};
+    \node[inner sep=0pt] (occupancy) at (10.8,3.1)
+      {\includegraphics[width=7.2cm,height=4.05cm,keepaspectratio]{assets/architecture/preprocessing/w44_occupancy_layers-imagegen-v3.png}};
+    \draw[visual arrow] (6.0,3.15) -- (7.05,3.15);
+    \node[final caption,anchor=north]
+      at ($(occupancy.south)+(0,-0.20)$) {$256\times256\times13$};
+    \node[final caption,text width=14.4cm] at (7.4,0.10)
+      {1 = Occupied\qquad 0 = No Retained Return};
+  \end{VisualCanvas}}
+  \SlideSource{Source: CoPerception voxelization. AI generated illustrations.}
+\end{frame}

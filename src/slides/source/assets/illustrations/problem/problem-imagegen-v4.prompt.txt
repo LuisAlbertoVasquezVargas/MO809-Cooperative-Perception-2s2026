@@ -1,0 +1,19 @@
+Use case: scientific-educational; precise-object-edit.
+Asset type: polished teacher–student distillation illustration for the MO809 Problem slide, with all typography added separately in native LaTeX.
+Input image: edit target, problem-model-distillation-imagegen-v3.png. Preserve the two-role story and the wide left-to-right composition, while substantially refining its design.
+
+Primary request: redraw this teaching diagram as a restrained, publication-quality 3D scientific illustration with a clear visual hierarchy. Show a large holistic teacher network on the left guiding a compact collaborative student network on the right. Keep the networks as the dominant objects, with clean silhouettes, coherent connectivity, fewer overlapping lines, and consistent perspective. The size contrast is an illustrative metaphor, not a measured parameter-count comparison.
+
+Composition: panoramic 3:1 canvas, ideally native 3072 × 1024 or greater. Center the teacher around 25% of the width and the student around 80%. Keep the central region from approximately 48% to 70% of the width genuinely empty white for a native horizontal distillation arrow and its label. Neither network nor its input/output connectors may cross this region. Align corresponding input and output levels across both sides. Use the whole height efficiently with only a narrow outer margin.
+
+Teacher inputs: three small, evenly spaced isometric LiDAR-view tiles of the SAME simple traffic scene, with an orange target sedan and restrained point-cloud geometry, visibly converging before entering the teacher. Replace the oversized photographic panorama with compact, precise scientific input glyphs. The scene context supports the network; it must not dominate it.
+Teacher model: a substantial, organized neural-network sculpture with navy nodes arranged in four or five translucent vertical layers. Keep connections fine, cyan and geometrically coherent. Preserve clearly separated layers and a strong outline; avoid a tangled mesh or opaque mass of connections.
+
+Student inputs: one local LiDAR-view tile and one small stack of shared feature grids, rendered in the same perspective and materials as the teacher inputs. The shared-feature stack must look like learned grid features, not a second raw camera view. Give both short, clean connectors into a compact three-layer neural-network glyph. Keep the student large enough to read, while visibly smaller than the teacher. Do not imply that it directly receives all three teacher raw views.
+
+Outputs: directly beneath each network, show one identical small orange target sedan inside the same thin cyan detection outline, joined by a short downward arrow. Use the same sedan, view, size, output height and outline on both sides. These icons denote the shared detection task; do not add scores or equality claims.
+
+Finish: pure white background; dark navy #071E47 nodes, restrained cyan #0695A1 connections and translucent surfaces, muted orange #D97920 only for the target vehicle. Crisp edges, precise geometry, subtle local shadows, controlled translucency, and quiet scientific depth. Make each input–network–output path easy to follow. Avoid heavy glossy spheres, distracting glass platforms, excessive node counts, decorative halos and dramatic lighting.
+
+Text: NONE. Do not render any letters, digits, words, captions, headings, logos, watermarks, source credits or slide furniture. In particular, do not include “Conceptual Distillation”. All labels and the teacher-to-student arrow will be native slide elements.
+Scientific constraints: schematic model topology only; no parameter counts, architecture dimensions, compression ratios, accuracy scores, empirical predictions or claims of equal measured accuracy. Do not draw the cross-network training/distillation arrow in the bitmap. Preserve the teaching direction: teacher left, student right.

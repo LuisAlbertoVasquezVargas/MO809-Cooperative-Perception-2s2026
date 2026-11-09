@@ -1,0 +1,15 @@
+% src/slides/source/final/architecture/03_unit_2d.tex
+
+\begin{frame}{2D Unit}
+  \SlideBody{%
+    \centering
+    \includegraphics[width=14.65cm,height=3.65cm,keepaspectratio]{assets/architecture/blocks/unit-2d-cubes-v4.pdf}\par
+    \vspace{0.25cm}
+    {\fontsize{14}{18}\selectfont Conv2d $\to$ BatchNorm $\to$ ReLU\par}
+    \vspace{0.25cm}
+    {$r=1$: Keep $H/W$\qquad $r=2$: Halve Even $H/W$\par}
+    \vspace{0.25cm}
+    \FinalTensorLegend
+  }
+  \SlideSource{Based on CoPerception network blocks. AI generated illustration.}
+\end{frame}

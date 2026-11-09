@@ -1,0 +1,60 @@
+% src/slides/source/final.tex
+
+\documentclass[aspectratio=169]{beamer}
+
+\input{final/structure/engine}
+\input{metadata}
+\input{final/structure/metadata}
+\input{final/structure/layout}
+\input{structure/visuals}
+\input{final/structure/minimal-layout}
+\input{final/structure/appendix-layout}
+
+\title{MO809 Final Presentation: \ProjectTitle}
+\author{\ProjectAuthor}
+\hypersetup{pdftitle={MO809 Final Presentation: \ProjectTitle},
+  pdfauthor={\ProjectAuthor},pdfsubject={MO809 final project presentation}}
+
+% The delivered talk keeps its original 1--29 numbering. Supplementary pages
+% use the appendix counters defined in final/structure/layout.tex.
+
+\begin{document}
+
+\MoverTitleSlide
+\input{final/sections/00_agenda}
+
+\section{Motivation}
+\input{final/core/01_motivation}
+\input{final/core/01b_collaboration_strategies}
+\section{Problem}
+\input{final/core/02_problem}
+\input{final/core/02a_paper_strategy}
+\input{final/core/02b_paper_architecture}
+\section{Project Objective}
+\input{final/core/03_objective}
+\input{final/core/03b_scaling_proposal}
+\input{final/talk/03_qualitative}
+\section{Project Development}
+\input{final/core/04_development}
+\input{final/sections/01_method_visual}
+\input{final/architecture/02_preprocessing}
+\input{final/architecture/05_encoder_pipeline}
+\input{final/architecture/06_discograph}
+\input{final/architecture/08_decoder_pipeline}
+
+\section{Evaluation}
+\input{sections/communication_settings}
+\input{final/talk/01_setup}
+\input{final/talk/02_detection_results}
+
+\section{Results}
+\input{final/results/01_tree_method}
+\input{final/results/02_tree_results}
+\input{final/results/03_tree_takeaways}
+\MoverThanksSlide
+
+\appendix
+\FinalAppendixtrue
+\input{final/appendix/main}
+
+\end{document}

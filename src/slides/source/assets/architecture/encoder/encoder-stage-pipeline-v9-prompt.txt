@@ -1,0 +1,7 @@
+Use case: precise-object-edit.
+Input image is the complete encoder pipeline illustration. Fix ONLY the small DiscoGraph branch connection below the Stage 3-to-Stage 4 arrow.
+The branch currently has two visible gaps and does not join its connection dot. Erase the broken lower starting segment and replace it with ONE UNBROKEN navy/charcoal branch:
+start EXACTLY at the existing round fork dot on the main Stage 3 → Stage 4 arrow (approximately x=1138, y=543 in the 2048×768 reference); continue vertically downward from that dot to about y=623; curve smoothly right and run horizontally into the LEFT face of the separate DiscoGraph cube. End in one clear arrowhead immediately before that cube. No gap at the dot, no dashed segments, no floating or disconnected parts.
+Keep "To DiscoGraph" above the horizontal branch, with margin from the vertical bend and cube. The branch carries the Stage 3 tensor 32 × 32 × 256.
+Preserve absolutely everything else: all seven cubes, their square front faces and rich materials, all stage headings, all dimension captions, all five exact encoder_stage calls, the top arrows and wraparound connection. Keep all text unchanged, no extra annotations. Keep the white background, canvas size/aspect, and margins. This is a single connection repair, no redesign.
+Render the complete repaired illustration at the highest native resolution available, preferably 4096×1536.

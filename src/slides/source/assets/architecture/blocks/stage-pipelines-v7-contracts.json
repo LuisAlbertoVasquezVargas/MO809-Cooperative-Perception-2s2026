@@ -1,0 +1,1730 @@
+{
+  "created_at": "2026-11-03T08:47:20+00:00",
+  "generator": "src/demos/disconet/export_stage_diagrams.py",
+  "generator_sha256": "6304c3ed4811619f3644182f2b6e9a352115015ed3d8be9cadc8cdb6ba8380d4",
+  "stage_source": "src/slides/weekly/src/code/stage_blocks.py",
+  "stage_source_sha256": "3af9be9dc6557eac0e1b094b9df1b9f2e2528e79772e672e6ab4ecee8b5c44b0",
+  "contracts": {
+    "method": "Current Python AST and parameters checked against saved executed CPU tensor-shape records; no new forward execution in this export.",
+    "source_hashes": {
+      "src/slides/weekly/src/code/custom_blocks.py": "42fa40bc7d54c6cad749e494ed7fb26f4ab6b2b456e441842393da81d0eca54d",
+      "src/slides/weekly/src/code/encoder_unit.py": "17b8f1fc382ddd59e4f7e7ed012f8d02c33116bc701665d0983b179238cb52ca",
+      "src/slides/weekly/src/code/encoder_pipeline.py": "1c293d8af55dd1bec390bde66f61816c185426782c522a2ac1d1e3fea6305a7e",
+      "src/slides/weekly/src/code/decoder_pipeline.py": "c47f431a4629e55f6e6b9b5e1e530cb3df1136db6730685250dc4ddef1d5ec23"
+    },
+    "normalization_activation": {
+      "role": "Callable factory used by unit_2d through *norm_relu(c_out), preserving its flat layer layout.",
+      "signature": "norm_relu(c)",
+      "example": "block = norm_relu(64); y = block(x)",
+      "source": "src/slides/weekly/src/code/custom_blocks.py",
+      "operators": [
+        "BatchNorm2d(C)",
+        "ReLU()"
+      ],
+      "input_hwc": [
+        "H",
+        "W",
+        "C"
+      ],
+      "output_hwc": [
+        "H",
+        "W",
+        "C"
+      ],
+      "verified_shape_preserving_encoder_operations": 20
+    },
+    "unit_2d": {
+      "signature": "unit_2d(c_in, r, c_out)",
+      "all_arguments_required": true,
+      "operators": [
+        "Conv2d",
+        "BatchNorm2d",
+        "ReLU"
+      ],
+      "convolution": {
+        "kernel_size": 3,
+        "stride": "r",
+        "padding": 1
+      },
+      "output_hwc": [
+        "ceil(H_in/r)",
+        "ceil(W_in/r)",
+        "C_out"
+      ],
+      "deck_constraint": "H_in and W_in are divisible by r; r is 1 or 2 in this deck.",
+      "instances": [
+        {
+          "index": 0,
+          "c_in": 13,
+          "r": 1,
+          "c_out": 32,
+          "input_nchw": [
+            1,
+            13,
+            256,
+            256
+          ],
+          "output_nchw": [
+            1,
+            32,
+            256,
+            256
+          ]
+        },
+        {
+          "index": 3,
+          "c_in": 32,
+          "r": 1,
+          "c_out": 32,
+          "input_nchw": [
+            1,
+            32,
+            256,
+            256
+          ],
+          "output_nchw": [
+            1,
+            32,
+            256,
+            256
+          ]
+        },
+        {
+          "index": 6,
+          "c_in": 32,
+          "r": 2,
+          "c_out": 64,
+          "input_nchw": [
+            1,
+            32,
+            256,
+            256
+          ],
+          "output_nchw": [
+            1,
+            64,
+            128,
+            128
+          ]
+        },
+        {
+          "index": 9,
+          "c_in": 64,
+          "r": 1,
+          "c_out": 64,
+          "input_nchw": [
+            1,
+            64,
+            128,
+            128
+          ],
+          "output_nchw": [
+            1,
+            64,
+            128,
+            128
+          ]
+        },
+        {
+          "index": 15,
+          "c_in": 64,
+          "r": 2,
+          "c_out": 128,
+          "input_nchw": [
+            1,
+            64,
+            128,
+            128
+          ],
+          "output_nchw": [
+            1,
+            128,
+            64,
+            64
+          ]
+        },
+        {
+          "index": 18,
+          "c_in": 128,
+          "r": 1,
+          "c_out": 128,
+          "input_nchw": [
+            1,
+            128,
+            64,
+            64
+          ],
+          "output_nchw": [
+            1,
+            128,
+            64,
+            64
+          ]
+        },
+        {
+          "index": 24,
+          "c_in": 128,
+          "r": 2,
+          "c_out": 256,
+          "input_nchw": [
+            1,
+            128,
+            64,
+            64
+          ],
+          "output_nchw": [
+            1,
+            256,
+            32,
+            32
+          ]
+        },
+        {
+          "index": 27,
+          "c_in": 256,
+          "r": 1,
+          "c_out": 256,
+          "input_nchw": [
+            1,
+            256,
+            32,
+            32
+          ],
+          "output_nchw": [
+            1,
+            256,
+            32,
+            32
+          ]
+        },
+        {
+          "index": 30,
+          "c_in": 256,
+          "r": 2,
+          "c_out": 512,
+          "input_nchw": [
+            1,
+            256,
+            32,
+            32
+          ],
+          "output_nchw": [
+            1,
+            512,
+            16,
+            16
+          ]
+        },
+        {
+          "index": 33,
+          "c_in": 512,
+          "r": 1,
+          "c_out": 512,
+          "input_nchw": [
+            1,
+            512,
+            16,
+            16
+          ],
+          "output_nchw": [
+            1,
+            512,
+            16,
+            16
+          ]
+        }
+      ]
+    },
+    "unit_2d_variants": [
+      {
+        "signature": "unit_2d_initial(c_in, c_out)",
+        "definition": "unit_2d(c_in, 1, c_out)"
+      },
+      {
+        "signature": "unit_2d_keep(c_in)",
+        "definition": "unit_2d(c_in, 1, c_in)"
+      },
+      {
+        "signature": "unit_2d_down(c_in)",
+        "definition": "unit_2d(c_in, 2, 2 * c_in)"
+      }
+    ],
+    "decoder_block": {
+      "signature": "decoder_block(c_in, c_out)",
+      "units": [
+        "unit_2d_initial(c_in, c_out)",
+        "unit_2d_keep(c_out)"
+      ],
+      "r": [
+        1,
+        1
+      ],
+      "input_hwc": [
+        "H",
+        "W",
+        "C_in"
+      ],
+      "intermediate_hwc": [
+        "H",
+        "W",
+        "C_out"
+      ],
+      "output_hwc": [
+        "H",
+        "W",
+        "C_out"
+      ],
+      "calls": [
+        [
+          768,
+          256
+        ],
+        [
+          384,
+          128
+        ],
+        [
+          192,
+          64
+        ],
+        [
+          96,
+          32
+        ]
+      ]
+    },
+    "pointwise_3d": {
+      "role": "Callable factory matching the existing inline encoder sequence.",
+      "signature": "unit_3d(c)",
+      "source": "src/slides/weekly/src/code/custom_blocks.py",
+      "operators": [
+        "Unflatten(2, (1, -1))",
+        "Conv3d(C, C, kernel_size=1, stride=1, padding=0)",
+        "Flatten(2, 3)"
+      ],
+      "input_hwc": [
+        "H",
+        "W",
+        "C"
+      ],
+      "output_hwc": [
+        "H",
+        "W",
+        "C"
+      ],
+      "internal_order": [
+        "N",
+        "C",
+        "D=1",
+        "H",
+        "W"
+      ],
+      "effect": "Learned channel mixing at each cell; shape preservation does not mean unchanged values.",
+      "instances": [
+        {
+          "index": 13,
+          "channels": 64,
+          "input_ncdhw": [
+            1,
+            64,
+            1,
+            128,
+            128
+          ],
+          "output_ncdhw": [
+            1,
+            64,
+            1,
+            128,
+            128
+          ]
+        },
+        {
+          "index": 22,
+          "channels": 128,
+          "input_ncdhw": [
+            1,
+            128,
+            1,
+            64,
+            64
+          ],
+          "output_ncdhw": [
+            1,
+            128,
+            1,
+            64,
+            64
+          ]
+        }
+      ]
+    }
+  },
+  "encoder_stages": [
+    {
+      "stage": 0,
+      "spec": [
+        13,
+        32,
+        1,
+        false
+      ],
+      "input_hwc": [
+        256,
+        256,
+        13
+      ],
+      "output_hwc": [
+        256,
+        256,
+        32
+      ]
+    },
+    {
+      "stage": 1,
+      "spec": [
+        32,
+        64,
+        2,
+        true
+      ],
+      "input_hwc": [
+        256,
+        256,
+        32
+      ],
+      "output_hwc": [
+        128,
+        128,
+        64
+      ]
+    },
+    {
+      "stage": 2,
+      "spec": [
+        64,
+        128,
+        2,
+        true
+      ],
+      "input_hwc": [
+        128,
+        128,
+        64
+      ],
+      "output_hwc": [
+        64,
+        64,
+        128
+      ]
+    },
+    {
+      "stage": 3,
+      "spec": [
+        128,
+        256,
+        2,
+        false
+      ],
+      "input_hwc": [
+        64,
+        64,
+        128
+      ],
+      "output_hwc": [
+        32,
+        32,
+        256
+      ]
+    },
+    {
+      "stage": 4,
+      "spec": [
+        256,
+        512,
+        2,
+        false
+      ],
+      "input_hwc": [
+        32,
+        32,
+        256
+      ],
+      "output_hwc": [
+        16,
+        16,
+        512
+      ]
+    }
+  ],
+  "decoder_stages": [
+    {
+      "stage": 5,
+      "spec": [
+        512,
+        256,
+        256
+      ],
+      "input_hwc": [
+        16,
+        16,
+        512
+      ],
+      "skip_hwc": [
+        32,
+        32,
+        256
+      ],
+      "output_hwc": [
+        32,
+        32,
+        256
+      ]
+    },
+    {
+      "stage": 6,
+      "spec": [
+        256,
+        128,
+        128
+      ],
+      "input_hwc": [
+        32,
+        32,
+        256
+      ],
+      "skip_hwc": [
+        64,
+        64,
+        128
+      ],
+      "output_hwc": [
+        64,
+        64,
+        128
+      ]
+    },
+    {
+      "stage": 7,
+      "spec": [
+        128,
+        64,
+        64
+      ],
+      "input_hwc": [
+        64,
+        64,
+        128
+      ],
+      "skip_hwc": [
+        128,
+        128,
+        64
+      ],
+      "output_hwc": [
+        128,
+        128,
+        64
+      ]
+    },
+    {
+      "stage": 8,
+      "spec": [
+        64,
+        32,
+        32
+      ],
+      "input_hwc": [
+        128,
+        128,
+        64
+      ],
+      "skip_hwc": [
+        256,
+        256,
+        32
+      ],
+      "output_hwc": [
+        256,
+        256,
+        32
+      ]
+    }
+  ],
+  "diagrams": {
+    "encoder_stage": {
+      "assets": {
+        "encoder-stage-cubes-v2.svg": "cb200c99ad77244d8e9a9b6d2f2d349824318b58dfa827278e3c8cf613fc91a2",
+        "encoder-stage-cubes-v2.pdf": "7129faac7ec1f7690811ca06cb2bd123a05a38726f8e5633f60a2404573f443a",
+        "encoder-stage-cubes-v2.png": "80f77b35ab93a9b46667e7237cd8b20cf742c11b3920b5e8e56fe16e603ad124"
+      },
+      "states": [
+        {
+          "id": "enc-definition-0",
+          "left": 65.0,
+          "right": 295.0,
+          "cy": 285,
+          "front_h": 200,
+          "front_w": 200,
+          "channel_dx": 30,
+          "channel_dy": 10.5,
+          "label": "H_in \u00d7 W_in \u00d7 C_in",
+          "numeric_hwc": [
+            256,
+            256,
+            32
+          ],
+          "cx": 180,
+          "bottom": 390.25,
+          "fill": "neutral"
+        },
+        {
+          "id": "enc-definition-1",
+          "left": 870.0,
+          "right": 1030.0,
+          "cy": 285,
+          "front_h": 100,
+          "front_w": 100,
+          "channel_dx": 60,
+          "channel_dy": 21.0,
+          "label": "H_out \u00d7 W_out \u00d7 C_out",
+          "numeric_hwc": [
+            128,
+            128,
+            64
+          ],
+          "cx": 950,
+          "bottom": 345.5,
+          "fill": "neutral"
+        },
+        {
+          "id": "enc-definition-2",
+          "left": 1520.0,
+          "right": 1680.0,
+          "cy": 285,
+          "front_h": 100,
+          "front_w": 100,
+          "channel_dx": 60,
+          "channel_dy": 21.0,
+          "label": "H_out \u00d7 W_out \u00d7 C_out",
+          "numeric_hwc": [
+            128,
+            128,
+            64
+          ],
+          "cx": 1600,
+          "bottom": 345.5,
+          "fill": "neutral"
+        },
+        {
+          "id": "enc-definition-3",
+          "left": 2070.0,
+          "right": 2230.0,
+          "cy": 285,
+          "front_h": 100,
+          "front_w": 100,
+          "channel_dx": 60,
+          "channel_dy": 21.0,
+          "label": "H_out \u00d7 W_out \u00d7 C_out",
+          "numeric_hwc": [
+            128,
+            128,
+            64
+          ],
+          "cx": 2150,
+          "bottom": 345.5,
+          "fill": "neutral"
+        }
+      ],
+      "connections": [
+        {
+          "from": "enc-definition-0",
+          "to": "enc-definition-1",
+          "operation": "unit_2d_down(c_in)"
+        },
+        {
+          "from": "enc-definition-1",
+          "to": "enc-definition-2",
+          "operation": "unit_2d_keep(c_out)"
+        },
+        {
+          "from": "enc-definition-2",
+          "to": "enc-definition-3",
+          "operation": "unit_3d(c_out)"
+        }
+      ]
+    },
+    "upsample_concat": {
+      "assets": {
+        "upsample-concat-cubes-v2.svg": "15c570930d6b4533327fc2645aa10bd2bce4fc68ed5f9acdf4553579b8bab946",
+        "upsample-concat-cubes-v2.pdf": "c0be69ccae3f298cacd8b3c6ec40e70fd3a660eb2c59d0c0331167effa318bd5",
+        "upsample-concat-cubes-v2.png": "da165ef108e34f07d92ce097e797fafaecb524de8e81077dd13f66bc1dd50a59"
+      },
+      "states": [
+        {
+          "id": "prepare-input",
+          "left": 115.0,
+          "right": 285.0,
+          "cy": 350,
+          "front_h": 90,
+          "front_w": 90,
+          "channel_dx": 80,
+          "channel_dy": 28.0,
+          "label": "H \u00d7 W \u00d7 C_in",
+          "numeric_hwc": [
+            32,
+            32,
+            256
+          ],
+          "cx": 200,
+          "bottom": 409.0,
+          "fill": "neutral",
+          "tensor_name": "decoder_features"
+        },
+        {
+          "id": "prepare-resized",
+          "left": 770.0,
+          "right": 1030.0,
+          "cy": 350,
+          "front_h": 180,
+          "front_w": 180,
+          "channel_dx": 80,
+          "channel_dy": 28.0,
+          "label": "2H \u00d7 2W \u00d7 C_in",
+          "numeric_hwc": [
+            64,
+            64,
+            256
+          ],
+          "cx": 900,
+          "bottom": 454.0,
+          "fill": "neutral",
+          "tensor_name": "upsampled_features"
+        },
+        {
+          "id": "prepare-skip",
+          "left": 1380.0,
+          "right": 1600.0,
+          "cy": 160,
+          "front_h": 180,
+          "front_w": 180,
+          "channel_dx": 40,
+          "channel_dy": 14.0,
+          "label": "2H \u00d7 2W \u00d7 C_skip",
+          "numeric_hwc": [
+            64,
+            64,
+            128
+          ],
+          "cx": 1490,
+          "bottom": 257.0,
+          "fill": "#AD82C3",
+          "tensor_name": "skip_features"
+        },
+        {
+          "id": "prepare-joined",
+          "left": 1940.0,
+          "right": 2240.0,
+          "cy": 350,
+          "front_h": 180,
+          "front_w": 180,
+          "channel_dx": 120,
+          "channel_dy": 42.0,
+          "label": "2H \u00d7 2W \u00d7 C_join",
+          "numeric_hwc": [
+            64,
+            64,
+            384
+          ],
+          "cx": 2090,
+          "bottom": 461.0,
+          "fill": "neutral",
+          "tensor_name": "concatenated_features"
+        }
+      ],
+      "connections": [
+        {
+          "from": "prepare-input",
+          "to": "prepare-resized",
+          "operation": "interpolate(decoder_features,scale_factor=2,mode=\"nearest\")"
+        },
+        {
+          "from": [
+            "prepare-resized",
+            "prepare-skip"
+          ],
+          "to": "prepare-joined",
+          "operation": "torch.cat((upsampled_features, skip_features), dim=1)"
+        }
+      ],
+      "raster_width_pixels": 6000
+    },
+    "decoder_stage": {
+      "assets": {
+        "decoder-stage-cubes-v6-reference.svg": "37f71c4ed13ac0e6df76639c3afcb9315d3a52285cca4fcdcb6f82c852972d4c",
+        "decoder-stage-cubes-v6-reference.pdf": "a110f87abce63f234edbf737d394869a92978949b08c5ba64f060c4ec9c698bc",
+        "decoder-stage-cubes-v6-reference.png": "a6b476ff671c4820d44ebb1de5a13cc43f6671c57dd3314fab0d9031303fdd63"
+      },
+      "states": [
+        {
+          "id": "dec-definition-input",
+          "left": 100.0,
+          "right": 420.0,
+          "cy": 400,
+          "front_h": 64.0,
+          "front_w": 64.0,
+          "channel_dx": 256.0,
+          "channel_dy": 89.6,
+          "label": "H \u00d7 W \u00d7 C_in",
+          "numeric_hwc": [
+            32,
+            32,
+            256
+          ],
+          "cx": 260,
+          "bottom": 432.0,
+          "fill": "neutral",
+          "front_cy": 400,
+          "rear_cy": 310.4,
+          "spatial_unit": 2.0,
+          "channel_unit": 1.0,
+          "role": "main_path",
+          "tensor_name": "decoder_features"
+        },
+        {
+          "id": "dec-definition-joined",
+          "left": 1064.0,
+          "right": 1576.0,
+          "cy": 400,
+          "front_h": 128.0,
+          "front_w": 128.0,
+          "channel_dx": 384.0,
+          "channel_dy": 134.39999999999998,
+          "label": "2H \u00d7 2W \u00d7 C_join",
+          "numeric_hwc": [
+            64,
+            64,
+            384
+          ],
+          "cx": 1320,
+          "bottom": 464.0,
+          "fill": "neutral",
+          "front_cy": 400,
+          "rear_cy": 265.6,
+          "spatial_unit": 2.0,
+          "channel_unit": 1.0,
+          "role": "main_path",
+          "channel_segments": [
+            {
+              "source": "decoder",
+              "first_channel": 0,
+              "last_channel_exclusive": 256,
+              "channels": 256,
+              "channel_dx": 256.0,
+              "color": "neutral"
+            },
+            {
+              "source": "skip",
+              "first_channel": 256,
+              "last_channel_exclusive": 384,
+              "channels": 128,
+              "channel_dx": 128.0,
+              "color": "#AD82C3"
+            }
+          ],
+          "concatenation_axis": "C",
+          "channel_order": [
+            "decoder",
+            "skip"
+          ],
+          "skip_surface_point": [
+            1448.0,
+            224.0
+          ],
+          "tensor_name": "concatenated_features"
+        },
+        {
+          "id": "dec-definition-output",
+          "left": 2222.0,
+          "right": 2478.0,
+          "cy": 400,
+          "front_h": 128.0,
+          "front_w": 128.0,
+          "channel_dx": 128.0,
+          "channel_dy": 44.8,
+          "label": "2H \u00d7 2W \u00d7 C_out",
+          "numeric_hwc": [
+            64,
+            64,
+            128
+          ],
+          "cx": 2350,
+          "bottom": 464.0,
+          "fill": "neutral",
+          "front_cy": 400,
+          "rear_cy": 355.2,
+          "spatial_unit": 2.0,
+          "channel_unit": 1.0,
+          "role": "main_path",
+          "tensor_name": "decoded_features"
+        },
+        {
+          "id": "dec-definition-skip",
+          "left": 522.0,
+          "right": 778.0,
+          "cy": 175,
+          "front_h": 128.0,
+          "front_w": 128.0,
+          "channel_dx": 128.0,
+          "channel_dy": 44.8,
+          "label": "2H \u00d7 2W \u00d7 C_skip",
+          "numeric_hwc": [
+            64,
+            64,
+            128
+          ],
+          "cx": 650,
+          "bottom": 239.0,
+          "fill": "#AD82C3",
+          "front_cy": 175,
+          "rear_cy": 130.2,
+          "spatial_unit": 2.0,
+          "channel_unit": 1.0,
+          "role": "incoming_skip",
+          "tensor_name": "skip_features"
+        }
+      ],
+      "connections": [
+        {
+          "from": "dec-definition-input",
+          "to": "dec-definition-joined",
+          "operation": "upsample_concat(decoder_features,skip_features)"
+        },
+        {
+          "from": "dec-definition-joined",
+          "to": "dec-definition-output",
+          "operation": "decoder_block(c_join, c_out)"
+        }
+      ],
+      "raster_width_pixels": 6000,
+      "incoming_skips": [
+        {
+          "tensor_id": "dec-definition-skip",
+          "name": "Skip Features",
+          "shape_hwc": [
+            64,
+            64,
+            128
+          ],
+          "symbolic_hwc": "2H \u00d7 2W \u00d7 C_skip",
+          "illustrated_saved_stage": 2,
+          "color": "#AD82C3",
+          "arrow_points": [
+            [
+              778.0,
+              130.2
+            ],
+            [
+              1448.0,
+              130.2
+            ],
+            [
+              1448.0,
+              224.0
+            ]
+          ]
+        }
+      ],
+      "main_path_tensor_count": 3,
+      "uniform_view_zoom": 2.0
+    },
+    "encoder_pipeline": {
+      "assets": {
+        "encoder-stage-pipeline-v1.svg": "2542fb3d1912371b082ac38eceffad8716f2880ac8ef2788ff65e24bec15409e",
+        "encoder-stage-pipeline-v1.pdf": "557e3b498c006e36e65c4ecc37348dc786e1950f5b490005e4a2126b9ac4e26c",
+        "encoder-stage-pipeline-v1.png": "f8f70f79905142a582883420316b69b4757df1c11a82c740ba85b24ecb300ea1"
+      },
+      "states": [
+        {
+          "id": "encoder-state-0",
+          "left": 60.0,
+          "right": 340.0,
+          "cy": 265,
+          "front_h": 260,
+          "front_w": 260,
+          "channel_dx": 20,
+          "channel_dy": 7.0,
+          "label": "256 \u00d7 256 \u00d7 13",
+          "numeric_hwc": [
+            256,
+            256,
+            13
+          ],
+          "cx": 200,
+          "bottom": 398.5,
+          "fill": "neutral"
+        },
+        {
+          "id": "encoder-state-1",
+          "left": 1092.5,
+          "right": 1387.5,
+          "cy": 265,
+          "front_h": 260,
+          "front_w": 260,
+          "channel_dx": 35,
+          "channel_dy": 12.25,
+          "label": "256 \u00d7 256 \u00d7 32",
+          "numeric_hwc": [
+            256,
+            256,
+            32
+          ],
+          "cx": 1240,
+          "bottom": 401.125,
+          "fill": "#FE9A27"
+        },
+        {
+          "id": "encoder-state-2",
+          "left": 2100.0,
+          "right": 2360.0,
+          "cy": 265,
+          "front_h": 200,
+          "front_w": 200,
+          "channel_dx": 60,
+          "channel_dy": 21.0,
+          "label": "128 \u00d7 128 \u00d7 64",
+          "numeric_hwc": [
+            128,
+            128,
+            64
+          ],
+          "cx": 2230,
+          "bottom": 375.5,
+          "fill": "#1DC59B"
+        },
+        {
+          "id": "encoder-state-3",
+          "left": 80.0,
+          "right": 320.0,
+          "cy": 650,
+          "front_h": 145,
+          "front_w": 145,
+          "channel_dx": 95,
+          "channel_dy": 33.25,
+          "label": "64 \u00d7 64 \u00d7 128",
+          "numeric_hwc": [
+            64,
+            64,
+            128
+          ],
+          "cx": 200,
+          "bottom": 739.125,
+          "fill": "#AD82C3"
+        },
+        {
+          "id": "encoder-state-4",
+          "left": 1117.5,
+          "right": 1362.5,
+          "cy": 650,
+          "front_h": 110,
+          "front_w": 110,
+          "channel_dx": 135,
+          "channel_dy": 47.25,
+          "label": "32 \u00d7 32 \u00d7 256",
+          "numeric_hwc": [
+            32,
+            32,
+            256
+          ],
+          "cx": 1240,
+          "bottom": 728.625,
+          "fill": "neutral"
+        },
+        {
+          "id": "encoder-state-5",
+          "left": 2100.0,
+          "right": 2360.0,
+          "cy": 650,
+          "front_h": 80,
+          "front_w": 80,
+          "channel_dx": 180,
+          "channel_dy": 62.99999999999999,
+          "label": "16 \u00d7 16 \u00d7 512",
+          "numeric_hwc": [
+            16,
+            16,
+            512
+          ],
+          "cx": 2230,
+          "bottom": 721.5,
+          "fill": "neutral"
+        }
+      ],
+      "connections": [
+        {
+          "from": "encoder-state-0",
+          "to": "encoder-state-1",
+          "operation": "encoder_stage(13, 32,r=1)"
+        },
+        {
+          "from": "encoder-state-1",
+          "to": "encoder-state-2",
+          "operation": "encoder_stage(32, 64,with_3d=True)"
+        },
+        {
+          "from": "encoder-state-2",
+          "to": "encoder-state-3",
+          "operation": "encoder_stage(64, 128, with_3d=True)"
+        },
+        {
+          "from": "encoder-state-3",
+          "to": "encoder-state-4",
+          "operation": "encoder_stage(128, 256)"
+        },
+        {
+          "from": "encoder-state-4",
+          "to": "encoder-state-5",
+          "operation": "encoder_stage(256, 512)"
+        }
+      ]
+    },
+    "decoder_pipeline": {
+      "assets": {
+        "decoder-stage-pipeline-v4.svg": "bd872dae0f27378e8a9f0ee695cb9886ae98b531de997e0af1b2e601ec5f9f4a",
+        "decoder-stage-pipeline-v4.pdf": "37396e9d61015c16d97dbc43ec2c24ba4a5407823cd33f16dfaf11152c9b4bd5",
+        "decoder-stage-pipeline-v4.png": "9f8c26b989df6d3130252727bbb29c566f195003afb3b3a38c2ba29f958ffd1b"
+      },
+      "states": [
+        {
+          "id": "decoder-state-0",
+          "left": 64.0,
+          "right": 336.0,
+          "cy": 320,
+          "front_h": 16.0,
+          "front_w": 16.0,
+          "channel_dx": 256.0,
+          "channel_dy": 89.6,
+          "label": "16 \u00d7 16 \u00d7 512",
+          "numeric_hwc": [
+            16,
+            16,
+            512
+          ],
+          "cx": 200,
+          "bottom": 328.0,
+          "fill": "neutral",
+          "front_cy": 320,
+          "rear_cy": 230.4,
+          "spatial_unit": 1.0,
+          "channel_unit": 0.5,
+          "role": "main_path"
+        },
+        {
+          "id": "decoder-state-1",
+          "left": 1380.0,
+          "right": 1540.0,
+          "cy": 320,
+          "front_h": 32.0,
+          "front_w": 32.0,
+          "channel_dx": 128.0,
+          "channel_dy": 44.8,
+          "label": "32 \u00d7 32 \u00d7 256",
+          "numeric_hwc": [
+            32,
+            32,
+            256
+          ],
+          "cx": 1460,
+          "bottom": 336.0,
+          "fill": "neutral",
+          "front_cy": 320,
+          "rear_cy": 275.2,
+          "spatial_unit": 1.0,
+          "channel_unit": 0.5,
+          "role": "main_path"
+        },
+        {
+          "id": "decoder-state-2",
+          "left": 2856.0,
+          "right": 2984.0,
+          "cy": 320,
+          "front_h": 64.0,
+          "front_w": 64.0,
+          "channel_dx": 64.0,
+          "channel_dy": 22.4,
+          "label": "64 \u00d7 64 \u00d7 128",
+          "numeric_hwc": [
+            64,
+            64,
+            128
+          ],
+          "cx": 2920,
+          "bottom": 352.0,
+          "fill": "neutral",
+          "front_cy": 320,
+          "rear_cy": 297.6,
+          "spatial_unit": 1.0,
+          "channel_unit": 0.5,
+          "role": "main_path"
+        },
+        {
+          "id": "decoder-state-3",
+          "left": 1380.0,
+          "right": 1540.0,
+          "cy": 850,
+          "front_h": 128.0,
+          "front_w": 128.0,
+          "channel_dx": 32.0,
+          "channel_dy": 11.2,
+          "label": "128 \u00d7 128 \u00d7 64",
+          "numeric_hwc": [
+            128,
+            128,
+            64
+          ],
+          "cx": 1460,
+          "bottom": 914.0,
+          "fill": "neutral",
+          "front_cy": 850,
+          "rear_cy": 838.8,
+          "spatial_unit": 1.0,
+          "channel_unit": 0.5,
+          "role": "main_path"
+        },
+        {
+          "id": "decoder-state-4",
+          "left": 2784.0,
+          "right": 3056.0,
+          "cy": 850,
+          "front_h": 256.0,
+          "front_w": 256.0,
+          "channel_dx": 16.0,
+          "channel_dy": 5.6,
+          "label": "256 \u00d7 256 \u00d7 32",
+          "numeric_hwc": [
+            256,
+            256,
+            32
+          ],
+          "cx": 2920,
+          "bottom": 978.0,
+          "fill": "neutral",
+          "front_cy": 850,
+          "rear_cy": 844.4,
+          "spatial_unit": 1.0,
+          "channel_unit": 0.5,
+          "role": "main_path"
+        },
+        {
+          "id": "decoder-concat-0",
+          "left": 692.0,
+          "right": 1108.0,
+          "cy": 320,
+          "front_h": 32.0,
+          "front_w": 32.0,
+          "channel_dx": 384.0,
+          "channel_dy": 134.39999999999998,
+          "label": "Concat: 32 \u00d7 32 \u00d7 768",
+          "numeric_hwc": [
+            32,
+            32,
+            768
+          ],
+          "cx": 900,
+          "bottom": 336.0,
+          "fill": "neutral",
+          "front_cy": 320,
+          "rear_cy": 185.60000000000002,
+          "spatial_unit": 1.0,
+          "channel_unit": 0.5,
+          "role": "concatenated_intermediate",
+          "channel_segments": [
+            {
+              "source": "decoder",
+              "first_channel": 0,
+              "last_channel_exclusive": 512,
+              "channels": 512,
+              "channel_dx": 256.0,
+              "color": "neutral"
+            },
+            {
+              "source": "skip",
+              "first_channel": 512,
+              "last_channel_exclusive": 768,
+              "channels": 256,
+              "channel_dx": 128.0,
+              "color": "#D3D8DE"
+            }
+          ],
+          "concatenation_axis": "C",
+          "channel_order": [
+            "decoder",
+            "skip"
+          ],
+          "skip_surface_point": [
+            1028.0,
+            192.0
+          ]
+        },
+        {
+          "id": "decoder-skip-0",
+          "left": 520.0,
+          "right": 680.0,
+          "cy": 100,
+          "front_h": 32.0,
+          "front_w": 32.0,
+          "channel_dx": 128.0,
+          "channel_dy": 44.8,
+          "label": "32 \u00d7 32 \u00d7 256",
+          "numeric_hwc": [
+            32,
+            32,
+            256
+          ],
+          "cx": 600,
+          "bottom": 116.0,
+          "fill": "#E5E8EC",
+          "front_cy": 100,
+          "rear_cy": 55.2,
+          "spatial_unit": 1.0,
+          "channel_unit": 0.5,
+          "role": "incoming_skip",
+          "display_scale": 1.0
+        },
+        {
+          "id": "decoder-concat-1",
+          "left": 2172.0,
+          "right": 2428.0,
+          "cy": 320,
+          "front_h": 64.0,
+          "front_w": 64.0,
+          "channel_dx": 192.0,
+          "channel_dy": 67.19999999999999,
+          "label": "Concat: 64 \u00d7 64 \u00d7 384",
+          "numeric_hwc": [
+            64,
+            64,
+            384
+          ],
+          "cx": 2300,
+          "bottom": 352.0,
+          "fill": "neutral",
+          "front_cy": 320,
+          "rear_cy": 252.8,
+          "spatial_unit": 1.0,
+          "channel_unit": 0.5,
+          "role": "concatenated_intermediate",
+          "channel_segments": [
+            {
+              "source": "decoder",
+              "first_channel": 0,
+              "last_channel_exclusive": 256,
+              "channels": 256,
+              "channel_dx": 128.0,
+              "color": "neutral"
+            },
+            {
+              "source": "skip",
+              "first_channel": 256,
+              "last_channel_exclusive": 384,
+              "channels": 128,
+              "channel_dx": 64.0,
+              "color": "#AD82C3"
+            }
+          ],
+          "concatenation_axis": "C",
+          "channel_order": [
+            "decoder",
+            "skip"
+          ],
+          "skip_surface_point": [
+            2364.0,
+            232.0
+          ]
+        },
+        {
+          "id": "decoder-skip-1",
+          "left": 1886.0,
+          "right": 2014.0,
+          "cy": 100,
+          "front_h": 64.0,
+          "front_w": 64.0,
+          "channel_dx": 64.0,
+          "channel_dy": 22.4,
+          "label": "64 \u00d7 64 \u00d7 128",
+          "numeric_hwc": [
+            64,
+            64,
+            128
+          ],
+          "cx": 1950,
+          "bottom": 132.0,
+          "fill": "#AD82C3",
+          "front_cy": 100,
+          "rear_cy": 77.6,
+          "spatial_unit": 1.0,
+          "channel_unit": 0.5,
+          "role": "incoming_skip",
+          "display_scale": 1.0
+        },
+        {
+          "id": "decoder-concat-2",
+          "left": 788.0,
+          "right": 1012.0,
+          "cy": 850,
+          "front_h": 128.0,
+          "front_w": 128.0,
+          "channel_dx": 96.0,
+          "channel_dy": 33.599999999999994,
+          "label": "Concat: 128 \u00d7 128 \u00d7 192",
+          "numeric_hwc": [
+            128,
+            128,
+            192
+          ],
+          "cx": 900,
+          "bottom": 914.0,
+          "fill": "neutral",
+          "front_cy": 850,
+          "rear_cy": 816.4,
+          "spatial_unit": 1.0,
+          "channel_unit": 0.5,
+          "role": "concatenated_intermediate",
+          "channel_segments": [
+            {
+              "source": "decoder",
+              "first_channel": 0,
+              "last_channel_exclusive": 128,
+              "channels": 128,
+              "channel_dx": 64.0,
+              "color": "neutral"
+            },
+            {
+              "source": "skip",
+              "first_channel": 128,
+              "last_channel_exclusive": 192,
+              "channels": 64,
+              "channel_dx": 32.0,
+              "color": "#1DC59B"
+            }
+          ],
+          "concatenation_axis": "C",
+          "channel_order": [
+            "decoder",
+            "skip"
+          ],
+          "skip_surface_point": [
+            932.0,
+            758.0
+          ]
+        },
+        {
+          "id": "decoder-skip-2",
+          "left": 520.0,
+          "right": 680.0,
+          "cy": 650,
+          "front_h": 128.0,
+          "front_w": 128.0,
+          "channel_dx": 32.0,
+          "channel_dy": 11.2,
+          "label": "128 \u00d7 128 \u00d7 64",
+          "numeric_hwc": [
+            128,
+            128,
+            64
+          ],
+          "cx": 600,
+          "bottom": 714.0,
+          "fill": "#1DC59B",
+          "front_cy": 650,
+          "rear_cy": 638.8,
+          "spatial_unit": 1.0,
+          "channel_unit": 0.5,
+          "role": "incoming_skip",
+          "display_scale": 1.0
+        },
+        {
+          "id": "decoder-concat-3",
+          "left": 2148.0,
+          "right": 2452.0,
+          "cy": 850,
+          "front_h": 256.0,
+          "front_w": 256.0,
+          "channel_dx": 48.0,
+          "channel_dy": 16.799999999999997,
+          "label": "Concat: 256 \u00d7 256 \u00d7 96",
+          "numeric_hwc": [
+            256,
+            256,
+            96
+          ],
+          "cx": 2300,
+          "bottom": 978.0,
+          "fill": "neutral",
+          "front_cy": 850,
+          "rear_cy": 833.2,
+          "spatial_unit": 1.0,
+          "channel_unit": 0.5,
+          "role": "concatenated_intermediate",
+          "channel_segments": [
+            {
+              "source": "decoder",
+              "first_channel": 0,
+              "last_channel_exclusive": 64,
+              "channels": 64,
+              "channel_dx": 32.0,
+              "color": "neutral"
+            },
+            {
+              "source": "skip",
+              "first_channel": 64,
+              "last_channel_exclusive": 96,
+              "channels": 32,
+              "channel_dx": 16.0,
+              "color": "#FE9A27"
+            }
+          ],
+          "concatenation_axis": "C",
+          "channel_order": [
+            "decoder",
+            "skip"
+          ],
+          "skip_surface_point": [
+            2316.0,
+            708.0
+          ]
+        },
+        {
+          "id": "decoder-skip-3",
+          "left": 1814.0,
+          "right": 2086.0,
+          "cy": 650,
+          "front_h": 256.0,
+          "front_w": 256.0,
+          "channel_dx": 16.0,
+          "channel_dy": 5.6,
+          "label": "256 \u00d7 256 \u00d7 32",
+          "numeric_hwc": [
+            256,
+            256,
+            32
+          ],
+          "cx": 1950,
+          "bottom": 778.0,
+          "fill": "#FE9A27",
+          "front_cy": 650,
+          "rear_cy": 644.4,
+          "spatial_unit": 1.0,
+          "channel_unit": 0.5,
+          "role": "incoming_skip",
+          "display_scale": 1.0
+        }
+      ],
+      "connections": [
+        {
+          "from": "decoder-state-0",
+          "to": "decoder-state-1",
+          "operation": "decoder_stage(512, 256, 256)",
+          "via": "decoder-concat-0"
+        },
+        {
+          "from": "decoder-state-1",
+          "to": "decoder-state-2",
+          "operation": "decoder_stage(256, 128, 128)",
+          "via": "decoder-concat-1"
+        },
+        {
+          "from": "decoder-state-2",
+          "to": "decoder-state-3",
+          "operation": "decoder_stage(128, 64, 64)",
+          "via": "decoder-concat-2"
+        },
+        {
+          "from": "decoder-state-3",
+          "to": "decoder-state-4",
+          "operation": "decoder_stage(64, 32, 32)",
+          "via": "decoder-concat-3"
+        }
+      ],
+      "incoming_skips": [
+        {
+          "name": "DiscoGraph",
+          "shape_hwc": [
+            32,
+            32,
+            256
+          ],
+          "decoder_stage": 5,
+          "color": "#464B50",
+          "tensor_id": "decoder-skip-0",
+          "arrow_points": [
+            [
+              536.0,
+              116.0
+            ],
+            [
+              536.0,
+              145
+            ],
+            [
+              1028.0,
+              145
+            ],
+            [
+              1028.0,
+              192.0
+            ]
+          ],
+          "to": "decoder-concat-0",
+          "attached_channel_group": "skip"
+        },
+        {
+          "name": "Saved Stage 2",
+          "shape_hwc": [
+            64,
+            64,
+            128
+          ],
+          "decoder_stage": 6,
+          "color": "#AD82C3",
+          "tensor_id": "decoder-skip-1",
+          "arrow_points": [
+            [
+              1918.0,
+              132.0
+            ],
+            [
+              1918.0,
+              145
+            ],
+            [
+              2364.0,
+              145
+            ],
+            [
+              2364.0,
+              232.0
+            ]
+          ],
+          "to": "decoder-concat-1",
+          "attached_channel_group": "skip"
+        },
+        {
+          "name": "Saved Stage 1",
+          "shape_hwc": [
+            128,
+            128,
+            64
+          ],
+          "decoder_stage": 7,
+          "color": "#1DC59B",
+          "tensor_id": "decoder-skip-2",
+          "arrow_points": [
+            [
+              584.0,
+              714.0
+            ],
+            [
+              584.0,
+              735
+            ],
+            [
+              932.0,
+              735
+            ],
+            [
+              932.0,
+              758.0
+            ]
+          ],
+          "to": "decoder-concat-2",
+          "attached_channel_group": "skip"
+        },
+        {
+          "name": "Saved Stage 0",
+          "shape_hwc": [
+            256,
+            256,
+            32
+          ],
+          "decoder_stage": 8,
+          "color": "#FE9A27",
+          "tensor_id": "decoder-skip-3",
+          "arrow_points": [
+            [
+              2086.0,
+              644.4
+            ],
+            [
+              2316.0,
+              644.4
+            ],
+            [
+              2316.0,
+              708.0
+            ]
+          ],
+          "to": "decoder-concat-3",
+          "attached_channel_group": "skip"
+        }
+      ],
+      "main_path_tensor_count": 5,
+      "concatenated_intermediate_tensor_count": 4,
+      "incoming_tensor_display_scale": 1.0
+    }
+  },
+  "main_path_tensor_counts": {
+    "encoder": 6,
+    "decoder": 5
+  },
+  "incoming_skip_tensor_counts": {
+    "decoder_stage": 1,
+    "decoder_pipeline": 4
+  },
+  "concatenated_intermediate_tensor_counts": {
+    "decoder_pipeline": 4
+  },
+  "concatenation_geometry": "Joined tensors keep the skip H/W and append decoder channels then skip channels along C. Both visible channel faces split at the exact C_in:C_skip ratio; incoming arrows meet the appended skip section. Stage-boundary outputs remain neutral.",
+  "regenerated_diagrams": [],
+  "factory_signatures": [
+    "encoder_stage(c_in, c_out, r=2, with_3d=False)",
+    "upsample_concat(decoder_features, skip_features)",
+    "decoder_stage(c_in, c_skip, c_out)"
+  ],
+  "feature_input_roles": {
+    "decoder_features": "Current decoder feature map, resized by two before concatenation.",
+    "skip_features": "Matching saved encoder or DiscoGraph feature map, already at the target grid size."
+  },
+  "geometry": "Decoder cuboids use fixed linear H/W and C scales for every main and saved tensor. The Decoder Stage definition applies one uniform 2x view zoom. Unchanged encoder pipeline geometry retains its previous display lookup.",
+  "encoder_pipeline_spatial_scale": {
+    "16": 80,
+    "32": 110,
+    "64": 145,
+    "128": 200,
+    "256": 260
+  },
+  "encoder_pipeline_channel_scale": {
+    "13": 20,
+    "32": 35,
+    "64": 60,
+    "128": 95,
+    "256": 135,
+    "512": 180
+  },
+  "decoder_pipeline_axis_scale": {
+    "front_width_per_W": 1.0,
+    "front_height_per_H": 1.0,
+    "channel_dx_per_C": 0.5,
+    "channel_dy_per_C": 0.175
+  },
+  "decoder_stage_uniform_view_zoom": 2.0,
+  "incoming_tensor_display_scale": 1.0,
+  "incoming_tensor_geometry": "Saved and main decoder tensors use the same axis scales. Equal H/W/C tensors have identical geometry. Doubling H/W doubles both front-face dimensions, and halving C halves the receding channel vector.",
+  "palette": {
+    "saved_stage_0": "#FE9A27",
+    "saved_stage_1": "#1DC59B",
+    "saved_stage_2": "#AD82C3"
+  },
+  "runtime_scope": "Factories match existing operator sequences and recorded CPU stage shapes. This export performs static validation, not a new full tensor forward pass.",
+  "metadata_update": "unit_2d now requires c_in, r and c_out; existing stage geometry/calls and module sequences are preserved."
+}

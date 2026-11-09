@@ -1,0 +1,120 @@
+% Bundled course presentation style.
+% Local font files keep the template appearance independent of OS fonts.
+\usepackage{fontspec}
+\setsansfont{Carlito}[
+  Path=assets/fonts/,
+  Extension=.ttf,
+  UprightFont=*-Regular,
+  BoldFont=*-Bold,
+  ItalicFont=*-Italic,
+  BoldItalicFont=*-BoldItalic]
+\renewcommand{\familydefault}{\sfdefault}
+\usefonttheme{professionalfonts}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{calc,arrows.meta}
+\graphicspath{{assets/logos/}}
+
+\definecolor{MoverNavy}{HTML}{071E47}
+\definecolor{MoverBlue}{HTML}{006CA8}
+\definecolor{MoverCyan}{HTML}{0695A1}
+\definecolor{MoverDetailBlue}{HTML}{46789B}
+\definecolor{MoverPale}{HTML}{EEF5F8}
+\setbeamercolor{normal text}{fg=MoverNavy,bg=white}
+\setbeamercolor{structure}{fg=MoverNavy}
+\setbeamercolor{frametitle}{fg=white,bg=MoverBlue}
+% Match the current MOVER monthly deck: normal Carlito, no synthetic bolding
+% or horizontal scaling. Its ProgressTitle overrides the 25 pt banner default.
+\setbeamerfont{frametitle}{family=\sffamily,series=\mdseries,shape=\upshape}
+\newcommand{\ProgressTitle}[1]{{\fontsize{22}{26}\selectfont #1}}
+\newcommand{\SlideTitleWidth}{9.97cm}
+\setbeamersize{text margin left=0.56cm,text margin right=0.10cm}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{headline}{}
+\setbeamertemplate{footline}{}
+\hypersetup{colorlinks=true,urlcolor=MoverBlue,linkcolor=MoverBlue}
+
+\setbeamertemplate{background}{%
+  \begin{tikzpicture}[remember picture,overlay]
+    \node[anchor=north west,inner sep=0]
+      at ($(current page.north west)+(0.10cm,-0.08cm)$)
+      {\includegraphics[width=2.65cm]{mover_fubep.png}};
+    \node[anchor=south west,inner sep=0]
+      at ($(current page.south west)+(11.75cm,0.10cm)$)
+      {\includegraphics[height=0.62cm]{unicamp.png}};
+    \node[anchor=south west,inner sep=0]
+      at ($(current page.south west)+(12.62cm,0.10cm)$)
+      {\includegraphics[height=0.62cm]{ufmg.jpg}};
+    \node[anchor=south west,inner sep=0]
+      at ($(current page.south west)+(13.78cm,0.10cm)$)
+      {\includegraphics[width=2.05cm]{eldorado.png}};
+  \end{tikzpicture}%
+}
+
+\setbeamertemplate{frametitle}{%
+  \nointerlineskip
+  \vskip0.50cm
+
+  \hspace*{-0.56cm}%
+  \hbox{%
+    \begin{beamercolorbox}[
+      wd=\SlideTitleWidth,
+      ht=0.76cm,
+      dp=0.40cm,
+      leftskip=0.23cm,
+      rightskip=0.15cm
+    ]{frametitle}
+      \usebeamerfont{frametitle}
+      \fontsize{25}{30}\selectfont
+      \ProgressTitle{\insertframetitle}
+    \end{beamercolorbox}%
+  }
+
+  \vskip-0.22cm
+  \begin{tikzpicture}[remember picture,overlay]
+    \fill[MoverCyan] ($(current page.north west)+(11.47cm,0)$)
+      rectangle ($(current page.north east)+(0,-0.37cm)$);
+    \node[anchor=west,text=white,inner sep=0,
+      font=\sffamily\fontsize{7}{8}\selectfont]
+      at ($(current page.north west)+(11.59cm,-0.185cm)$)
+      {\insertframenumber{} / \inserttotalframenumber};
+  \end{tikzpicture}%
+}
+
+\newcommand{\Detail}[1]{\textcolor{MoverDetailBlue}{\textbf{#1}}}
+\newsavebox{\SlideMeasure}
+\newcommand{\SlideBody}[1]{%
+  \sbox{\SlideMeasure}{%
+    \begin{minipage}{14.80cm}
+      \sffamily\fontsize{10.5}{12.8}\selectfont\raggedright
+      #1\par
+    \end{minipage}}
+  \ifdim\dimexpr\ht\SlideMeasure+\dp\SlideMeasure\relax>5.90cm
+    \PackageWarning{course-slides}{Slide body height
+      \the\dimexpr\ht\SlideMeasure+\dp\SlideMeasure\relax\space exceeds 5.90cm}
+  \fi
+  \begin{tikzpicture}[remember picture,overlay]
+    \node[anchor=north west,inner sep=0]
+      at ($(current page.north west)+(0.60cm,-1.94cm)$)
+      {\usebox{\SlideMeasure}};
+  \end{tikzpicture}%
+}
+\newcommand{\SlideSource}[1]{%
+  \begin{tikzpicture}[remember picture,overlay]
+    \node[anchor=south west,inner sep=0,text width=10.8cm,align=left,
+      text=MoverDetailBlue,font=\sffamily\fontsize{7}{9}\selectfont]
+      at ($(current page.south west)+(0.60cm,0.39cm)$){#1};
+  \end{tikzpicture}%
+}
+\newcommand{\SlideCard}[3]{%
+  \begin{minipage}[t]{4.62cm}
+    \raggedright
+    \textcolor{MoverDetailBlue}{\rule{\linewidth}{0.8pt}}\par
+    \vspace{0.14cm}
+    {\fontsize{14}{17}\selectfont\textbf{#1}\par}
+    \vspace{0.18cm}
+    \Detail{#2}\par
+    \vspace{0.12cm}
+    #3\par
+  \end{minipage}%
+}

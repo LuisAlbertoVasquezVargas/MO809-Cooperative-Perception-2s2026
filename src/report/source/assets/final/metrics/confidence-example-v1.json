@@ -1,0 +1,90 @@
+{
+  "kind": "Illustrative logits reused from the experiment report; not measured benchmark detections",
+  "source_report": "src/demos/disconet/docs/experiments/single-frame-disconet-report.pdf",
+  "source_provenance_sha256": "ecd0ee410e1f6b09147904f5433c1fd25f29105fba1661ee0716750e88d5f31c",
+  "source_confidence_page_sha256": "392503bcdb46667f0a961ceacbebf8a6d7246b8244f06ad51672dc41e17cfd6f",
+  "source_function": "src/demos/disconet/disconet_demo/experiment_slides.py:confidence_worked_example",
+  "source_example": {
+    "kind": "Illustrative logits; not measured benchmark detections",
+    "class_order": [
+      "background",
+      "car"
+    ],
+    "logits": [
+      [
+        1.0,
+        3.0
+      ],
+      [
+        2.0,
+        1.0
+      ],
+      [
+        1.0,
+        4.0
+      ]
+    ],
+    "car_scores": [
+      0.8807970779778823,
+      0.2689414213699951,
+      0.9525741268224334
+    ],
+    "score_threshold_exclusive": 0.7,
+    "calculation": "softmax over background/car logits; car probability is the confidence score",
+    "head": "Learned Conv2d 3x3, BatchNorm2d, ReLU, then Conv2d 1x1; two logits per anchor",
+    "source_commit": "dd8fbb660300ee763e0bac870f63fc4987440a35",
+    "source_files": [
+      "coperception/models/det/base/DetModelBase.py",
+      "coperception/utils/detection_util.py"
+    ],
+    "illustration_credit": "AI generated illustration"
+  },
+  "class_order": [
+    "background",
+    "car"
+  ],
+  "rows": [
+    [
+      "A",
+      "1.0",
+      "3.0",
+      "0.881 (88.1%)",
+      "Keep"
+    ],
+    [
+      "B",
+      "2.0",
+      "1.0",
+      "0.269 (26.9%)",
+      "Discard"
+    ],
+    [
+      "C",
+      "1.0",
+      "4.0",
+      "0.953 (95.3%)",
+      "Keep"
+    ]
+  ],
+  "car_scores": [
+    0.8807970779778823,
+    0.2689414213699951,
+    0.9525741268224334
+  ],
+  "keep_after_score_filter": [
+    true,
+    false,
+    true
+  ],
+  "score_threshold_exclusive": 0.7,
+  "ranking_if_retained": [
+    "C",
+    "A"
+  ],
+  "native_slide": "02_confidence_scores.tex",
+  "new_inference_or_training": false,
+  "references": {
+    "classification_head": "https://github.com/coperception/coperception/blob/master/coperception/models/det/base/DetModelBase.py",
+    "softmax_scoring": "https://github.com/coperception/coperception/blob/master/coperception/utils/detection_util.py"
+  }
+}
